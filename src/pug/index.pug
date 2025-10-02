@@ -1,0 +1,368 @@
+extends ./_default
+block vars
+    - var path = "./"
+    - var title = ""
+    - var pageClass = ""
+
+block content
+    .p-top
+        // MV
+        section.p-top-mv.is-section-dark
+            picture.p-top-mv__bg
+                source(srcset=img + "p-top-mv-bg-sp.webp" media="(max-width: 1023px)")
+                img(src=img + "p-top-mv-bg.webp")
+
+            .p-top-mv__wrap
+                p.p-top-mv__typeSP
+                    | CREATING  FO-
+                    | RWARD LOOK-
+                    | ING
+                    span._case CASE FROM
+                    span._local LOCAL  AREA.
+                p.p-top-mv__type
+                    | CREATING
+                    span._forward FORWARD LOOKING
+                    span._case CASE
+                    span._from FROM LOCAL AREA.
+                p.p-top-mv__en
+                    |The digital content we have
+                    br
+                    | Utilizing marketing knowledge,
+                    br
+                    | We aim to solve corporate marketing ishelvetica neuees.
+                p.p-top-mv__ja
+                    | ローカルから最先端をつくる。
+        // promise
+        section.p-top-promise
+            .p-top-promise__telop
+                p デジタルコンテンツ支援で
+                    span.u-gradient
+                        span 地域に活力
+                    | をもたらす。
+                p デジタルコンテンツ支援で
+                    span.u-gradient
+                        span 地域に活力
+                    | をもたらす。
+            .p-top-promise__wrap
+                .p-top-promise__block.js-clone(data-clone-num="2")
+                    p.p-top-promise__type
+                        spa.u-gradient
+                            span メインストリーム
+                        | を
+                        br
+                        | ひっくり返す。
+                    h2.p-top-promise__title (Promise)
+                    .p-top-promise__message
+                        p
+                            | マーケットには“負けないための作法”がある。
+                            br
+                            | だがそこに美意識はなく、汎用的な式が残るだけ。
+                            br
+                            |
+                            br
+                            | 私たちは憂ます。
+                            br
+                            | “いっせーのーで”で、同じものをつくること。
+                            br
+                            | 負けないために、同じものになろうとすること。
+                            br
+                            |
+                            br
+                            | ロジックとは違うリベラルアーツこそ、
+                            br
+                            | 私たちが大切にすべきではないか。
+                            br
+                            | そんなふうに考えます。
+                        p
+                            | 市場原理の外側には、魅力があるにも関わらず、
+                            br
+                            | 気づかれていないモノやコトがあります。
+                            br
+                            | それらはそれぞれの環境で変形し、同じものはありません。
+                            br
+                            |
+                            br
+                            | 私たちは決めました。
+                            br
+                            | 本来の主役をデジタルの力で表舞台に押し上げることを。
+                            br
+                            |
+                            br
+                            | だから私たちは憂ません。
+                            br
+                            | スポットライトを当てたその対象に、
+                            br
+                            | また新たな影ができることを。
+                            br
+                            |
+                            br
+                            | かつての主役は、舞台ごと入れ替わる。
+                            br
+                            | さぁ、メインストリームをひっくり返そう。
+        //  (Service)
+        section.p-top-service
+            .p-top-service__bg
+                img(src=img+"p-top-service-bg.svg")
+            .l-container
+                .p-top-service__type
+                    p デジタル起点
+                    p 全方位支援
+                h2.p-top-service__title (Service)
+                .p-top-service__items
+                    .p-top-service-item
+                        picture.p-top-service-item__pic
+                            source(srcset=img + "p-top-service-marketing-sp.webp" media="(max-width: 1023px)")
+                            img(src=img + "p-top-service-marketing.webp")
+                        .p-top-service-item__wrap
+                            h3.p-top-service-item__title デジタルマーケティング
+                            .p-top-service-item__desc
+                                | SEOコンサルティングを中心としたデジタルマーケティング
+                    .p-top-service-item
+                        picture.p-top-service-item__pic
+                            source(srcset=img + "p-top-service-creative-sp.webp" media="(max-width: 1023px)")
+                            img(src=img + "p-top-service-creative.webp")
+                        .p-top-service-item__wrap
+                            h3.p-top-service-item__title クリエイティブワーク
+                            .p-top-service-item__desc
+                                | Webサイトをはじめとした、クリエイティブ制作サービスを
+                    .p-top-service-item
+                        picture.p-top-service-item__pic
+                            source(srcset=img + "p-top-service-media-sp.webp" media="(max-width: 1023px)")
+                            img(src=img + "p-top-service-media.webp")
+                        .p-top-service-item__wrap
+                            h3.p-top-service-item__title ローカルメディア運営
+                            .p-top-service-item__desc
+                                | 越谷市を中心とした、埼玉県のローカルメディアを運営して
+                .p-top-service__more
+                    p
+                        | Web戦略から制作までを<br class="sp">一貫して支援します。
+                    a(href= path + "service/").c-btn-more
+                        span.c-btn-more__txt
+                            span.js-clone MORE
+                        i.c-btn-more__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+
+        //  (Creative Work)
+        section.p-top-creative
+            .l-container
+                .p-top-creative__head
+                    .c-heading-section
+                        h2.c-heading-section__title (Creative Work)
+                        span.c-heading-section__line
+                .p-top-creative__figure
+                    figure
+                        img(src=img+"400x225.webp")
+                    figure
+                        img(src=img+"400x225_2.webp")
+                    figure
+                        img(src=img+"400x225.webp")
+                    figure
+                        img(src=img+"400x225_2.webp")
+                    figure
+                        img(src=img+"400x225.webp")
+                    figure
+                        img(src=img+"400x225_2.webp")
+                    figure
+                        img(src=img+"400x225.webp")
+                    figure
+                        img(src=img+"400x225_2.webp")
+
+                ul.p-top-creative__list
+                    -
+                        var serviceLists = [
+                            "世界へボカン様",
+                            "日本瓦斯株式会社様",
+                            "株式会社テクニケーション様",
+                            "株式会社大成総合不動産様",
+                            "ハイブリッドワークス様",
+                            "KOSHIGAYAZINE",
+                            "UME様",
+                            "株式会社IKKI様",
+                        ]
+                    each service in serviceLists
+                        li
+                            a(href=path+ "single-creative/").c-btn-creative
+                                span.c-btn-creative__txt
+                                    span.js-clone !{service}
+                                i.c-btn-creative__arrow
+                                    svg(width=40 height=40)
+                                        use(href="#ico-arrow")
+                .p-top-creative__more
+                    a(href= path + "creative-case/").c-btn-more
+                        span.c-btn-more__txt
+                            span.js-clone MORE
+                        i.c-btn-more__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+
+
+
+        //  (Partnership)
+        section.p-top-partnership
+            .l-container
+                .p-top-partnership__head
+                    .c-heading-section
+                        h2.c-heading-section__title (Partnership)
+                        span.c-heading-section__line
+                .p-top-partnership__body
+                    .p-top-partnership__blocks
+                        .p-top-partnership-block
+                            h3.p-top-partnership-block__head Aliance
+                            .p-top-partnership-block__body
+                                ul
+                                    li ARUTEGA
+                                    li ANA
+                                    li OPT
+                                    li SAITAMA SHINBUN
+                                    li ARUTEGA
+                                    li ANA
+                                    li OPT
+                                    li SAITAMA SHINBUN
+                        .p-top-partnership-block
+                            h3.p-top-partnership-block__head Creator
+                            .p-top-partnership-block__body
+                                ul
+                                    li Abe Haruka /
+                                    li Baba Kenta /
+                                    li Chiba Yui /
+                                    li Doi Riku /
+                                    li Endo Misaki /
+                                    li Fujii Takuya /
+                                    li Goto Rina /
+                                    li Hoshino Sota /
+                                    li Ito Manami /
+                                    li Jinbo Yuto /
+                                    li Kawamura Aoi /
+                                    li Lee Haruto /
+                                    li Murakami Saki /
+                                    li Nakagawa Ren /
+                                    li Okamoto Yuka /
+                                ul
+                                    li Petani Sho /
+                                    li Quon Nathelvetica neueki /
+                                    li Rikimaru Noa /
+                                    li Saito Hinata /
+                                    li Tanaka Mei /
+                                    li Ueda Koki /
+                                    li Vega Shun /
+                                    li Watanabe Hina /
+                                    li Xeno Riko /
+                                    li Yamada Ithelvetica neueki /
+                                    li Zaithelvetica neue Nao /
+                                    li Anzai Moe /
+                                    li Fukuda Hiroki /
+                                    li Nagano Emi /
+                                    li Helvetica neuezuki Reo /
+
+
+        //  (Voice)
+        section.p-top-voice
+            .l-container
+                .p-top-voice__head
+                    .c-heading-section
+                        h2.c-heading-section__title (Voice)
+                        span.c-heading-section__line
+                .p-top-voice__list
+                    - for (var x = 1; x <= 3; x++)
+                        .c-card-case
+                            a(href="#").c-card-case__link
+                                figure.c-card-case__pic
+                                    img(src=img + "300x200.webp" alt="")
+                                h3.c-card-case__name
+                                    | 株式会社HONE
+                                i.c-card-case__arrow
+                                    svg(width=40 height=40)
+                                        use(href="#ico-arrow")
+                                p.c-card-case__desc
+                                    | 企業のマーケティング戦略から実行まで、プロの提案力に驚きました。
+                .p-top-voice__more
+                    a(href= path + "voice/").c-btn-more
+                        span.c-btn-more__txt
+                            span.js-clone MORE
+                        i.c-btn-more__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+
+
+        // (Counter Media)
+        section.p-top-media
+            .l-container
+                .p-top-media__head
+                    figure.p-top-media__semicircle
+                        <svg width="176" height="176" viewBox="0 0 176 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M88 88C88 136.601 48.6011 176 -7.6932e-06 176L0 0C48.6011 2.12442e-06 88 39.3989 88 88Z" fill="#FF552B"/>
+                        <path d="M176 88C176 136.601 136.601 176 88 176L88 0C136.601 2.12442e-06 176 39.3989 176 88Z" fill="#FF552B"/>
+                        </svg>
+                    h2.p-top-media__title (Counter Media)
+                    p.p-top-media__desc
+                        | COUNTERのデジタルナレッジをシェアするメディアです。
+                        br
+                        | マーケティングからクリエイティブに関することまで発信しています。
+                .p-top-media__wrap
+                    .p-top-media-channel
+                        picture.p-top-media-channel__bg
+                            source(srcset=img + "p-top-media-channel-bg-sp.svg" media="(max-width: 1023px)")
+                            img(src=img + "p-top-media-channel-bg.svg")
+                        h3.p-top-media-channel__title COUNTER Channel
+                        .p-top-media-channel__wrap
+                            .p-top-media-channel__ico
+                                <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.5727 19.6622L35.6897 5.87988H32.8179L22.2969 17.8478L13.8917 5.87988H4.2002L16.9083 23.9766L4.2002 38.4299H7.07195L18.183 25.7921L27.0576 38.4299H36.7502L23.5706 19.6622H23.5727ZM19.6383 24.1352L18.351 22.3344L8.10619 7.99563H12.5162L20.7849 19.5666L22.0722 21.3695L32.819 36.4107H28.409L19.6383 24.1352Z" fill="white"/>
+                                </svg>
+                            ul.p-top-media-channel__list
+                                li
+                                    a(href="#" target="_blank" rel="noopener")
+                                        figure.p-top-media-channel__profile
+                                            img(src=img+"p-top-media-miyata.webp")
+                                            figcaption 宮田
+                                li
+                                    a(href="#" target="_blank" rel="noopener")
+                                        figure.p-top-media-channel__profile
+                                            img(src=img+"p-top-media-mori.webp")
+                                            figcaption 森
+                                li
+                                    a(href="#" target="_blank" rel="noopener")
+                                        figure.p-top-media-channel__profile
+                                            img(src=img+"p-top-media-kanazawa.webp")
+                                            figcaption 金沢
+                    .p-top-media-blog
+                        h3.p-top-media-blog__title Owned Blog Media
+                        .p-top-media-blog__list
+                            - for (var x = 1; x <= 3; x++)
+                                .c-card-media.c-card-media--top
+                                    a(href=path+"single-media/").c-card-media__link
+                                        p.c-card-media__date 25.6.29
+                                        figure.c-card-media__pic
+                                            img(src=img + "480x300.webp" alt="")
+                                        .c-card-media__wrap
+                                            h3.c-card-media__title
+                                                | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+                                            ul.c-card-media__category
+                                                li Category
+                                                li MailMagazine
+                                            i.c-card-media__arrow
+                                                svg(width=40 height=40)
+                                                    use(href="#ico-arrow")
+                .p-top-media-blog__more
+                    a(href= path + "counter-media/").c-btn-more
+                        span.c-btn-more__txt
+                            span.js-clone MORE
+                        i.c-btn-more__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+
+        // (Capability)
+        //-section.p-top-graphic
+            .l-container
+                h2.p-top-graphic__title (Capability)
+                .p-top-graphic__type
+                    p DIGITAL MARKETING
+                    p CREATIVE WORK
+                    p LOCAL MEDIA
+                .p-top-graphic__type
+                    | デジタルコンテンツ支援で
+                    br
+                    | 地域に活力をもたらす。
+                //-
+

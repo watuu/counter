@@ -1,0 +1,96 @@
+@use '../Base/config' as config;
+// ===================================================================
+// CSS 変数
+// ===================================================================
+:root {
+	--sans : TazuganeGothicStdN-Medium, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "メイリオ", "Meiryo", sans-serif;
+	--serif: "游明朝", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HG明朝E", "ＭＳ 明朝", serif;
+	--ITCGaramondW01-BookCn: ITCGaramondStd-BkCond, var(--serif);
+	--Tazugane-Regular: TazuganeGothicStdN-Regular;
+	--Tazugane: TazuganeGothicStdN-Medium;
+	--Tazugane-Bold: TazuganeGothicStdN-Bold;
+	--Helvetica: "HelveticaNeueeTextPro-Md", var(--sans);
+	--Suisse: "HelveticaNeueeTextPro-Md", var(--sans);
+	--Helvetica-Bold: "HelveticaNeueeTextPro-Bold", var(--sans);
+	--Suisse-Bold: "HelveticaNeueeTextPro-Bold", var(--sans);
+
+	--font : var(--sans);
+
+	--color: #3A3735;
+	--color-light: #584E49;
+	--color-inverse: #fff;
+	--color-main: #FF552B;
+	//--color-assort: #FF552B;
+	--color-assort: #FF552B;
+	--header-height: #{75/16+rem};
+	@include config.pc {
+		--header-height: #{100/16+rem};
+	}
+
+	// border
+	--border: 1px solid var(--color);
+	--border-wh: 1px solid #fff;
+	--border-gray: 1px solid #EFECEB;
+	--border-assort: 1px solid var(--color-assort);
+	--border-assort-light: 1px solid rgba(255, 85, 43, 0.30);
+	--border-assort-dot: 1px dotted var(--color-assort);
+
+	// 余白
+	--gap: #{12/16+rem};
+	//--padding-section: #{108/16+rem};
+	--padding-block-sm: #{20/16+rem};
+	--padding-block: #{50/16+rem};
+	--padding-section: #{55/16+rem};
+	--padding-page: #{80/16+rem};
+	@include config.pc {
+		--gap: #{16/16+rem};
+		//--padding-section: #{164/16+rem};
+		--padding-block-sm: #{40/16+rem};
+		--padding-block: #{50/16+rem};
+		--padding-section: #{100/16+rem};
+		--padding-page: #{120/16+rem};
+	}
+}
+:root {
+	--easeDuration: .4s;
+	// sine
+	--easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+	--easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+	--easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+	// quad poser1
+	--easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	--easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+	// cubic power2
+	--easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	--easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+	--easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	// quart power3
+	--easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	--easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+	--easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+
+	// quint power4
+	--easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	--easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+	--easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+
+	// expo
+	--easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+	--easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+	--easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+	// back
+	--easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	--easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	--easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.is-section-dark {
+	color: var(--color);
+	--color: #fff;
+}

@@ -1,0 +1,509 @@
+@use '../Base/config' as config;
+/*----------------------------------------------------
+	c-btn
+----------------------------------------------------*/
+.c-btn-arrow {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40/16+rem;
+	height: 40/16+rem;
+	padding: 0;
+	svg {
+		width: 100%;
+		height: auto;
+		fill: var(--color-main);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		.is-section-dark & {
+			fill: #fff;
+		}
+	}
+	@include config.hover {
+		svg {
+			animation: btnArrow var(--easeDuration) var(--easeOutSine) forwards;
+		}
+	}
+}
+.c-btn-arrow--sm {
+	width: 24/16+rem;
+	height: 24/16+rem;
+}
+@keyframes btnArrow {
+	0% {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	50% {
+		clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+	}
+	50.1% {
+		clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%);
+	}
+	100% {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+@keyframes btnDown {
+	0% {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	50% {
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+	}
+	50.1% {
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+	100% {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-down {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44/16+rem;
+	height: 44/16+rem;
+	padding: 0;
+	svg {
+		width: 100%;
+		height: auto;
+		fill: var(--color-main);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		.is-section-dark &,
+		.c-btn-download & {
+			fill: #fff;
+		}
+	}
+	@include config.hover {
+		svg {
+			animation: btnDown var(--easeDuration) var(--easeOutSine) forwards;
+		}
+	}
+	@include config.pc {
+		width: 60/16+rem;
+		height: 60/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-txt {
+	display: inline-flex;
+	position: relative;
+	overflow: hidden;
+	span {
+		display: inline-flex;
+		transition: var(--easeDuration) var(--easeOutQuart);
+	}
+	span:nth-child(1) {
+		transform: translate3d(0, 0, 0 );
+	}
+	span:nth-child(2) {
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: translate3d(0, 80%, 0 );
+		opacity: 0;
+	}
+	@include config.hover {
+		span:nth-child(1) {
+			transform: translate3d(0, -80%, 0 );
+			opacity: 0;
+		}
+		span:nth-child(2) {
+			transition-delay: .1s;
+			transform: translate3d(0, 0, 0 );
+			opacity: 1;
+		}
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-status {
+	position: relative;
+	width: 28/16+rem;
+	height: 28/16+rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 0;
+		position: absolute;
+		pointer-events: none;
+		border-top: 3/16+rem solid var(--color-assort);
+		transition: var(--easeDuration) var(--easeOutQuart);
+	}
+	&:after {
+		transform: rotate(90deg) scale(1,1);
+		.is-open & {
+			transform: rotate(90deg) scale(0,1);
+		}
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-more {
+	display: inline-flex;
+	align-items: center;
+	width: 200/16+rem;
+	height: 60/16+rem;
+	padding: 10/16+rem 12/16+rem;
+	background: var(--BASECOLOR, #FF552B);
+	font-family: var(--Helvetica);
+	color: #fff;
+	font-size: 20/16+rem;
+	@include config.pc {}
+}
+.c-btn-more__txt {
+	position: relative;
+	top: 0.2em;
+	align-self: flex-end;
+	@extend .c-btn-txt;
+	@include config.pc {}
+}
+.c-btn-more__arrow {
+	margin-left: auto;
+	svg {
+		fill: #fff;
+	}
+	@extend .c-btn-arrow;
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-aside {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10/16+rem 9/16+rem;
+	gap: 10/16+rem;
+
+	border: var(--border-assort);
+	color: #FF552B;
+	font-size: 14/16+rem;
+	@include config.pc {}
+}
+.c-btn-aside__txt {
+	@extend .c-btn-txt;
+	@include config.pc {}
+}
+.c-btn-aside__arrow {
+	margin-left: auto;
+	@extend .c-btn-arrow;
+	@extend .c-btn-arrow--sm;
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-menu {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 60/16+rem;
+	height: 60/16+rem;
+	cursor: pointer;
+	padding: 0;
+	border: var(--border-assort);
+	background: #fff;
+	border-radius: 100%;
+	will-change: transform;
+	&.is-nav-open {}
+}
+.c-btn-menu__square {
+	position: absolute;
+	width: 6/16+rem;
+	height: 6/16+rem;
+	background: var(--color-assort);
+	transition: .2s var(--easeOutQuart);
+	will-change: left, top, opacity;
+}
+.c-btn-menu__square:nth-child(1) {
+	left: calc(50% - #{7/16+rem});
+	top: calc(50% - #{7/16+rem});
+}
+.c-btn-menu__square:nth-child(2) {
+	left: calc(50% + #{1/16+rem});
+	top: calc(50% - #{7/16+rem});
+}
+.c-btn-menu__square:nth-child(3) {
+	left: calc(50% - #{7/16+rem});
+	top: calc(50% + #{1/16+rem});
+}
+.c-btn-menu__square:nth-child(4) {
+	left: calc(50% + #{1/16+rem});
+	top: calc(50% + #{1/16+rem});
+}
+.c-btn-menu__wrap2 {
+	.c-btn-menu__square {
+		left: calc(50% - #{3/16+rem});
+		top: calc(50% - #{3/16+rem});
+		opacity: 0;
+	}
+}
+.is-nav-open .c-btn-menu,
+.c-btn-menu:hover {
+	transform: rotate(45deg);
+	.c-btn-menu__wrap {
+		.c-btn-menu__square {
+			left: calc(50% - #{3/16+rem});
+			top: calc(50% - #{3/16+rem});
+			opacity: 0;
+		}
+	}
+	.c-btn-menu__wrap2 {
+		.c-btn-menu__square {
+			opacity: 1;
+			transition-delay: 0.15s;
+		}
+		.c-btn-menu__square:nth-child(1) {
+			left: calc(50% - #{7/16+rem});
+			top: calc(50% - #{7/16+rem});
+		}
+		.c-btn-menu__square:nth-child(2) {
+			left: calc(50% + #{1/16+rem});
+			top: calc(50% - #{7/16+rem});
+		}
+		.c-btn-menu__square:nth-child(3) {
+			left: calc(50% - #{7/16+rem});
+			top: calc(50% + #{1/16+rem});
+		}
+		.c-btn-menu__square:nth-child(4) {
+			left: calc(50% + #{1/16+rem});
+			top: calc(50% + #{1/16+rem});
+		}
+	}
+}
+
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.c-btn-download {
+	display: flex;
+	align-items: center;
+	height: 157/16+rem;
+	padding: 20/16+rem 37/16+rem 20/16+rem 23/16+rem;
+	background: var(--BASECOLOR, #FF552B);
+	color: #fff;
+	@include config.pc {
+		padding: 20/16+rem 77/16+rem 20/16+rem 23/16+rem;
+	}
+}
+.c-btn-download__txt {
+	@include config.pc {}
+}
+.c-btn-download__title {
+	font-size: 18/16+rem;
+	font-weight: 500;
+	@include config.pc {
+		font-size: 25/16+rem;
+	}
+}
+.c-btn-download__desc {
+	margin-top: 6/16+rem;
+	color: var(--Gray, #EFECEB);
+	font-size: 11/16+rem;
+	line-height: 1.2;
+	letter-spacing: 0.1/16+rem;
+	@include config.pc {
+		font-size: 12/16+rem;
+	}
+}
+.c-btn-download__down {
+	margin-left: auto;
+	@extend .c-btn-down;
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-creative {
+	display: flex;
+	padding: 7/16+rem 0 6/16+rem;
+	width: 100%;
+	align-items: center;
+	font-weight: 400;
+	color: var(--LightBlack, #584E49);
+	font-size: 16/16+rem;
+	letter-spacing: -0.05em;
+	text-transform: capitalize;
+
+	border-bottom: var(--border-assort-dot);
+	@include config.pc {
+		padding: 7/16+rem 0 5/16+rem 0;
+		font-size: 25/16+rem;
+	}
+}
+.c-btn-creative__txt {
+	@extend .c-btn-txt;
+	@include config.pc {}
+	@include config.pc {}
+}
+.c-btn-creative__arrow {
+	margin-left: auto;
+	@extend .c-btn-arrow;
+	@include config.sp-tab {
+		width: 16/16+rem;
+		height: 16/16+rem;
+	}
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-footer {
+	display: inline-flex;
+	padding: 5/16+rem 0;
+	width: 100%;
+	align-items: center;
+	font-family: var(--Helvetica);
+	font-size: 14/16+rem;
+	font-weight: 400;
+	letter-spacing: 0.14/16+rem;
+	border-bottom: var(--border-wh);
+	@include config.pc {
+		padding: 5/16+rem 0 5/16+rem 6/16+rem;
+	}
+}
+.c-btn-footer__txt {
+	flex: 1;
+	top: 6/16+rem;
+	@extend .c-btn-txt;
+}
+.c-btn-footer__arrow {
+	margin-left: auto;
+	@extend .c-btn-arrow;
+	width: 16/16+rem;
+	height: 16/16+rem;
+}
+.c-btn-footer--contact {
+	border-bottom: none;
+	font-size: 24/16+rem;
+	@include config.pc {
+		font-size: 40/16+rem;
+	}
+	.c-btn-footer__arrow {
+		width: 40/16+rem;
+		height: 40/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-round {
+	display: inline-flex;
+	padding: 5/16+rem 24/16+rem;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	gap: 10/16+rem;
+	flex-wrap: wrap;
+
+	border-radius: 70/16+rem;
+	border: var(--border-assort-light);
+	color: var(--BASECOLOR, #FF552B);
+	letter-spacing: -0.05em;
+
+	font-size: 16/16+rem;
+	font-weight: 500;
+	//letter-spacing: 0.01em;
+	@include config.pc {
+		padding: 5/16+rem 30/16+rem;
+		font-size: 25/16+rem;
+	}
+}
+.c-btn-round__txt {
+	@extend .c-btn-txt;
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-nav-heading {
+	display: flex;
+	justify-content: space-between;
+	gap: 10/16+rem;
+	color: var(--BASECOLOR, #FF552B);
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 36/16+rem;
+	font-weight: 400;
+	letter-spacing: -0.05em;
+	line-height: 0.9;
+	position: relative;
+	width: 100%;
+	@include config.sp-tab {
+		align-items: center;
+		padding: 10/16+rem 15/16+rem;
+		height: 60/16+rem;
+		background: #fff;
+	}
+	@include config.pc {
+		cursor: initial;
+		font-size: 64/16+rem;
+		//letter-spacing: 0.01em;
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 0;
+			position: absolute;
+			left: 0;
+			top: 70%;
+			pointer-events: none;
+			border-top: var(--border-assort);
+		}
+	}
+}
+.c-btn-nav-heading__txt {
+	@include config.sp-tab {
+		padding-top: 0.2em;
+	}
+	@include config.pc {}
+}
+.c-btn-nav-heading__status {
+	@extend .c-btn-status;
+	@include config.pc {
+		display: none;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-nav-cta {
+	display: flex;
+	justify-content: space-between;
+	gap: 10/16+rem;
+	color: var(--BASECOLOR, #FF552B);
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 36/16+rem;
+	font-weight: 400;
+	letter-spacing: -0.05em;
+	line-height: 1;
+	@include config.sp-tab {
+		align-items: center;
+		padding: 10/16+rem 15/16+rem;
+		height: 92/16+rem;
+		background: #fff;
+	}
+	@include config.pc {
+		gap: 50/16+rem;
+		font-size: 64/16+rem;
+		letter-spacing: 0.01em;
+	}
+}
+.c-btn-nav-cta__txt {
+	display: flex;
+	flex-direction: column;
+	gap: 6/16+rem;
+	@include config.pc {
+		gap: 0;
+	}
+}
+.c-btn-nav-cta__en {
+	@extend .c-btn-txt;
+	@include config.pc {}
+}
+.c-btn-nav-cta__ja {
+	letter-spacing: 0;
+	font-size: 9/16+rem;
+	font-family: var(--sans);
+	@include config.pc {
+		font-size: 14/16+rem;
+	}
+}
+.c-btn-nav-cta__arrow {
+	@extend .c-btn-arrow;
+	@include config.sp-tab {
+		width: 30/16+rem;
+		height: 30/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

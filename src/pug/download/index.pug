@@ -1,0 +1,70 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "資料ダウンロード"
+    - var pageClass = ""
+
+block content
+
+    .p-download
+        .cm-block-header
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en Download
+                    h1.cm-block-header__ja 資料ダウンロード
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span Download
+        .l-container
+            .p-download__wrap
+                .p-download__nav
+                    ul.cm-nav-category
+                        li
+                            a(href="#").cm-nav-category__link.is-current すべて
+                        li
+                            a(href="#").cm-nav-category__link サービス資料
+                        li
+                            a(href="#").cm-nav-category__link ホワイトペーパー
+                        li
+                            a(href="#").cm-nav-category__link 会社概要
+                        li
+                            a(href="#").cm-nav-category__link 作業テンプレート
+                .p-download__list
+                    - for (var x = 1; x <= 9; x++)
+                        .c-card-download
+                            a(href="#").c-card-download__link
+                                p.c-card-download__title
+                                    | 会社概要
+                                i.c-card-download__down
+                                    svg(width=60 height=60)
+                                        use(href="#ico-down")
+                                figure.c-card-download__pic
+                                    img(src=img + "400x225.webp" alt="")
+                                h3.c-card-download__title2
+                                    | 会社紹介資料
+                                p.c-card-download__desc
+                                    | 企業のマーケティング戦略から実行まで、プロの提案力に驚きました。
+                .p-download__paginate
+                    ul.cm-nav-paginate
+                        li.cm-nav-paginate__ctrl
+                            a(href="#") PREV
+                        li.cm-nav-paginate__page
+                            a(href="#").is-current 01
+                        li.cm-nav-paginate__page
+                            a(href="#") 02
+                        li.cm-nav-paginate__page
+                            a(href="#") 03
+                        li.cm-nav-paginate__ctrl
+                            a(href="#") NEXT
+
+
+
+
+
+
+
+
+
+

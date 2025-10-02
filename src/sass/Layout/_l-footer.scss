@@ -1,0 +1,121 @@
+@use '../Base/config' as config;
+/*----------------------------------------------------
+	フッター
+----------------------------------------------------*/
+.l-footer {
+	padding: 28/16+rem 0;
+	background: url(../img/bg-assort.webp);
+	@include config.pc {
+		padding: 34/16+rem 0;
+	}
+}
+.l-footer__wrap {
+	display: grid;
+	@include config.pc {
+		grid-template-areas:
+		"top top"
+		"type nav"
+		"bottom nav"
+		;
+		grid-template-columns: 1fr 329/16+rem;
+	}
+}
+.l-footer-top {
+	padding-bottom: 36/16+rem;
+	display: flex;
+	justify-content: space-between;
+	font-size: 10/16+rem;
+	@include config.pc {
+		padding-bottom: 98/16+rem;
+		grid-area: top;
+		font-size: 14/16+rem;
+	}
+}
+.l-footer-top__area {
+	display: flex;
+	align-items: center;
+	gap: 15/16+rem;
+	span {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+	}
+	span:nth-child(1) {
+		font-family: var(--Helvetica);
+	}
+	span:nth-child(2):before {
+		content: '';
+		display: block;
+		width: 6/16+rem;
+		height: 0;
+		position: absolute;
+		left: -11/16+rem;
+		pointer-events: none;
+		border-top: var(--border-wh);
+	}
+	@include config.pc {
+		gap: 40/16+rem;
+		span:nth-child(2):before {
+			width: 11/16+rem;
+			left: -24/16+rem;
+		}
+	}
+}
+.l-footer-type {
+	color: #FFF;
+	text-align: center;
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 32/16+rem;
+	font-weight: 400;
+	line-height: 100%; /* 32/16+rem */
+	@include config.pc {
+		grid-area: type;
+		padding-left: 329/16+rem;
+
+		color: #FFF;
+		text-align: center;
+
+		font-size: 64/16+rem;
+		line-height: 90%;
+		letter-spacing: -2.56/16+rem;
+	}
+}
+.l-footer-nav {
+	@include config.pc {
+		grid-area: nav;
+	}
+}
+.l-footer-nav__nav {
+	margin-top: 44/16+rem;
+	@include config.pc {
+		margin-top: -10/16+rem;
+	}
+}
+.l-footer-nav__contact {
+	margin-top: 14/16+rem;
+	@include config.pc {
+		margin-top: 54/16+rem;
+	}
+}
+.l-footer-bottom {
+	margin-top: 50/16+rem;
+	@include config.pc {
+		margin-top: 66/16+rem;
+		grid-area: bottom;
+	}
+}
+.l-footer-bottom__nav {
+	display: flex;
+	gap: 22/16+rem;
+	font-family: var(--Helvetica);
+	font-size: 14/16+rem;
+	letter-spacing: 0.01em;
+	@include config.pc {}
+}
+.l-footer-bottom__pic {
+	margin-top: 10/16+rem;
+	@include config.pc {
+		width: 417/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

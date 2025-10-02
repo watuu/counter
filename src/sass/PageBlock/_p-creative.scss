@@ -1,0 +1,72 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+@use '../Component/c-paragraph' as paragraph;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.p-case {
+	@include config.pc {}
+}
+.p-case__list {
+	margin-top: 42/16+rem;
+	display: grid;
+	gap: 39/16+rem;
+	@include config.pc {
+		margin-top: 100/16+rem;
+		display: flex;
+		flex-wrap: wrap;
+		//grid-template-columns: 1fr 1fr 1fr;
+		gap: 52/16+rem 8/16+rem;
+	}
+}
+.p-creative {
+	padding-bottom: var(--padding-page);
+	@include config.pc {}
+}
+.p-creative__pickup {
+	@include config.pc {}
+}
+.p-creative__list {
+	@include config.pc {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0 23/16+rem;
+	}
+}
+.p-creative__paginate {
+	padding-top: var(--padding-block);
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-creative-single {
+	@include config.pc {}
+}
+.p-creative-single__body {
+	padding-top: var(--padding-block);
+	@include config.pc {
+		width: 858/16+rem;
+	}
+}
+.p-creative-single__page {
+	margin-top: var(--padding-section);
+	@include config.pc {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0 23/16+rem;
+	}
+}
+.p-creative-single__index {
+	padding: 30/16+rem 0;
+	border-top: var(--border-assort);
+	text-align: center;
+
+	a {
+		color: var(--BASECOLOR, #FF552B);
+		font-family: var(--Suisse);
+		font-size: 20/16+rem;
+		letter-spacing: 0.01em;
+		text-transform: capitalize;
+	}
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

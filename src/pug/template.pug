@@ -1,0 +1,265 @@
+extends ./_default
+block vars
+    - var path = "./"
+    - var title = "テンプレート"
+    - var pageClass = ""
+
+block content
+    picture
+        source(srcset=img + "-sp.webp" media="(max-width: 1023px)")
+        img(src=img + ".webp")
+    .cm-block-header
+        .l-container
+            .cm-block-header__title
+                p.cm-block-header__en Case
+                h1.cm-block-header__ja お客様成功事例
+            ul.cm-block-header__bc
+                li
+                    a(href=path+"") TOP
+                li
+                    span Case
+    div(style="background: #eee;")
+        .l-container
+            .u-template
+                .u-gap
+                    p .c-heading-section
+                    .c-heading-section
+                        h2.c-heading-section__title (Creative Work)
+                        span.c-heading-section__line
+                    p .c-heading-caption
+                    h3.c-heading-caption (Creative Work)
+
+                    p .c-paragraph fz18
+                    p.c-paragraph 青山学院大学経済学部卒業後に外資系ITコンサルティングファーム2社にてエンジニア・ITコンサルタントとして複数のERPシステム導入・運用プロジェクトを経験。
+                hr
+                .u-gap
+                    p .c-link-external
+                    a(href="#" target="_blank" rel="noopener").c-link-external
+                        span.c-link-external__txt Launch Site
+                        i.c-link-external__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+                    p .c-btn-arrow
+                    button.c-btn-arrow
+                        svg(width=40 height=40)
+                            use(href="#ico-arrow")
+                    p .c-btn-down
+                    button.c-btn-down
+                        svg(width=60 height=60)
+                            use(href="#ico-down")
+
+                    p .c-btn-txt
+                    a(href="#").c-btn-txt
+                        span.js-clone 資料ダウンロード
+                    p .c-btn-status
+                    i.c-btn-status
+
+
+                    p .c-btn-more
+                    a(href= path + "").c-btn-more
+                        span.c-btn-more__txt
+                            span.js-clone MORE
+                        i.c-btn-more__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+                    p .c-btn-aside
+                    a(href= path + "").c-btn-aside
+                        span.c-btn-aside__txt
+                            span.js-clone 資料ダウンロード
+                        i.c-btn-aside__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+
+                    p .c-btn-menu
+                    button.c-btn-menu(aria-label="メニューを開く")
+                        span.c-btn-menu__wrap
+                            span.c-btn-menu__square
+                            span.c-btn-menu__square
+                            span.c-btn-menu__square
+                            span.c-btn-menu__square
+                        span.c-btn-menu__wrap2
+                            span.c-btn-menu__square
+                            span.c-btn-menu__square
+                            span.c-btn-menu__square
+                            span.c-btn-menu__square
+
+                        //-svg(width=60 height=60)
+                            use(href="#ico-btn-menu")
+                    p .c-btn-download
+                    a(href=path+"download/").c-btn-download
+                        .c-btn-download__txt
+                            p.c-btn-download__title 資料をダウンロードする
+                            p.c-btn-download__desc 送信することで、プライバシーポリシーに同意したものとします。
+                        i.c-btn-download__down
+                            svg(width=60 height=60)
+                                use(href="#ico-down")
+
+                    p .c-btn-creative
+                    a(href= path + "").c-btn-creative
+                        span.c-btn-creative__txt
+                            span.js-clone 世界へボカン様
+                        i.c-btn-creative__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+                    p .c-btn-footer
+                    a(href= path + "").c-btn-footer
+                        span.c-btn-footer__txt
+                            span.js-clone ABOUT US
+                        i.c-btn-footer__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+
+                    p .c-btn-footer.c-btn-footer--contact
+                    a(href= path + "").c-btn-footer.c-btn-footer--contact
+                        span.c-btn-footer__txt
+                            span.js-clone Contact Us
+                        i.c-btn-footer__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+                    p .c-btn-round
+                    a(href= path + "").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone サイトTOP
+                    p .c-btn-nav-heading
+                    button.c-btn-nav-heading
+                        span.c-btn-nav-heading__txt Digital Marketing
+                        i.c-btn-nav-heading__status
+
+                    p .c-btn-nav-cta
+                    a(href= path + "").c-btn-nav-cta
+                        span.c-btn-nav-cta__txt
+                            span.c-btn-nav-cta__en
+                                span.js-clone Download
+                            span.c-btn-nav-cta__ja 資料ダウンロード
+                        i.c-btn-nav-cta__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+
+
+
+
+                hr
+                .u-gap
+                    p .c-card-case
+                    - for (var x = 1; x <= 8; x++)
+                    .c-card-case
+                        a(href="#").c-card-case__link
+                            figure.c-card-case__pic
+                                img(src=img+"300x200.webp" alt="")
+                            h3.c-card-case__name
+                                | 株式会社HONE
+                            i.c-card-case__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
+                            p.c-card-case__desc
+                                | 企業のマーケティング戦略から実行まで、プロの提案力に驚きました。
+                    p .c-card-download
+                    - for (var x = 1; x <= 8; x++)
+                    .c-card-download
+                        a(href="#").c-card-download__link
+                            p.c-card-download__title
+                                | 会社概要
+                            i.c-card-download__down
+                                svg(width=60 height=60)
+                                    use(href="#ico-down")
+                            figure.c-card-download__pic
+                                img(src=img+"400x225.webp" alt="")
+                            h3.c-card-download__title2
+                                | 会社紹介資料
+                            p.c-card-download__desc
+                                | 企業のマーケティング戦略から実行まで、プロの提案力に驚きました。
+                    p .c-card-creative
+                    - for (var x = 1; x <= 2; x++)
+                    .c-card-creative
+                        a(href=path+ "single-creative/").c-card-creative__link
+                            figure.c-card-creative__pic
+                                img(src=img+"400x225.webp" alt="")
+                            .c-card-creative__wrap
+                                h3.c-card-creative__title
+                                    | ニチガス様 でが割55キャンペーンLP
+                                ul.c-card-creative__category
+                                    li 世界へボカン様
+                                    li LP
+                    p .c-card-creative.c-card-creative--lg
+                    - for (var x = 1; x <= 2; x++)
+                    .c-card-creative.c-card-creative--lg
+                        a(href=path+ "single-creative/").c-card-creative__link
+                            figure.c-card-creative__pic
+                                img(src=img + "400x225.webp" alt="")
+                            .c-card-creative__wrap
+                                h3.c-card-creative__title
+                                    | 世界へボカン様 BtoBコーポレートサイト
+                                ul.c-card-creative__category
+                                    li 世界へボカン様
+                                    li BtoBサービスサイト
+                                p.c-card-creative__excerpt
+                                    | 世界へボカン株式会社様のロゴデザイン、サイトリニューアル、撮影をCOUNTERで制作しました。「日本の魅力を世界へ届ける。」を体現するデザイン、そしてSEOに強いページを作らせていただきました。
+                                i.c-card-creative__arrow
+                                    svg(width=40 height=40)
+                                        use(href="#ico-arrow")
+                    p .c-card-media
+                    - for (var x = 1; x <= 2; x++)
+                    .c-card-media
+                        a(href=path+"single-media/").c-card-media__link
+                            p.c-card-media__date 25.6.29
+                            figure.c-card-media__pic
+                                img(src=img + "480x300.webp" alt="")
+                            .c-card-media__wrap
+                                h3.c-card-media__title
+                                    | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+                                ul.c-card-media__category
+                                    li Category
+                                    li MailMagazine
+                                i.c-card-media__arrow
+                                    svg(width=40 height=40)
+                                        use(href="#ico-arrow")
+
+                    p .c-card-news
+                    div
+                        - for (var x = 1; x <= 2; x++)
+                            .c-card-news
+                                a(href="#").c-card-news__link
+                                    p.c-card-news__date
+                                        | 2025.07.25
+                                    p.c-card-news__category News
+                                    h3.c-card-news__title
+                                        | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+
+        .l-container
+            .u-template
+                hr
+                .u-gap
+                    p .cm-nav-main
+                    include template/cm-nav-main
+                    p .cm-nav-paginate
+                    ul.cm-nav-paginate
+                        li.cm-nav-paginate__ctrl
+                            a(href="#") PREV
+                        li.cm-nav-paginate__page
+                            a(href="#").is-current 01
+                        li.cm-nav-paginate__page
+                            a(href="#") 02
+                        li.cm-nav-paginate__page
+                            a(href="#") 03
+                        li.cm-nav-paginate__ctrl
+                            a(href="#") NEXT
+                    p .cm-nav-category
+                    ul.cm-nav-category
+                        li
+                            a(href="#").cm-nav-category__link すべて
+                        li
+                            a(href="#").cm-nav-category__link サービス資料
+                        li
+                            a(href="#").cm-nav-category__link ホワイトペーパー
+                        li
+                            a(href="#").cm-nav-category__link 会社概要
+                        li
+                            a(href="#").cm-nav-category__link 作業テンプレート
+
+
+
+
+
+
+
+

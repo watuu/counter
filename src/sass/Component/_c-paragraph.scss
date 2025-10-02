@@ -1,0 +1,14 @@
+@use '../Base/config' as config;
+/*----------------------------------------------------
+	c-paragraph
+----------------------------------------------------*/
+.c-paragraph {
+	//font-family: var(--Tazugane);
+	font-size: 14/16+rem;
+	line-height: 1.4;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		font-size: 18/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

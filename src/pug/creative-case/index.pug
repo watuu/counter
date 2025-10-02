@@ -1,0 +1,72 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "制作実績一覧"
+    - var pageClass = ""
+
+block content
+
+    .p-creative
+        .cm-block-header
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en Creative work
+                    h1.cm-block-header__ja 制作実績一覧
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span Creative work
+        //-.l-container
+        .p-creative__pickup
+            - for (var x = 1; x <= 2; x++)
+                .c-card-creative.c-card-creative--lg
+                    a(href=path+ "single-creative/").c-card-creative__link
+                        figure.c-card-creative__pic
+                            img(src=img + "400x225.webp" alt="")
+                        .c-card-creative__wrap
+                            h3.c-card-creative__title
+                                | 世界へボカン様 BtoBコーポレートサイト
+                            ul.c-card-creative__category
+                                li 世界へボカン様
+                                li BtoBサービスサイト
+                            p.c-card-creative__excerpt
+                                | 世界へボカン株式会社様のロゴデザイン、サイトリニューアル、撮影をCOUNTERで制作しました。「日本の魅力を世界へ届ける。」を体現するデザイン、そしてSEOに強いページを作らせていただきました。
+                            i.c-card-creative__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
+            .l-container
+                .p-creative__list
+                    - for (var x = 1; x <= 8; x++)
+                        .c-card-creative
+                            a(href=path+ "single-creative/").c-card-creative__link
+                                figure.c-card-creative__pic
+                                    img(src=img + "400x225.webp" alt="")
+                                .c-card-creative__wrap
+                                    h3.c-card-creative__title
+                                        | ニチガス様 でが割55キャンペーンLP
+                                    ul.c-card-creative__category
+                                        li 世界へボカン様
+                                        li LP
+                .p-creative__paginate
+                    ul.cm-nav-paginate
+                        li.cm-nav-paginate__ctrl
+                            a(href="#") PREV
+                        li.cm-nav-paginate__page
+                            a(href="#").is-current 01
+                        li.cm-nav-paginate__page
+                            a(href="#") 02
+                        li.cm-nav-paginate__page
+                            a(href="#") 03
+                        li.cm-nav-paginate__ctrl
+                            a(href="#") NEXT
+
+
+
+
+
+
+
+
+
+

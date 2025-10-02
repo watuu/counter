@@ -1,0 +1,43 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "お客様成功事例"
+    - var pageClass = ""
+
+block content
+
+    .p-case
+        .cm-block-header
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en Case
+                    h1.cm-block-header__ja お客様成功事例
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span Case
+        .l-container
+            .p-case__list
+                - for (var x = 1; x <= 9; x++)
+                    .c-card-case
+                        a(href="#").c-card-case__link
+                            figure.c-card-case__pic
+                                img(src=img + "300x200.webp" alt="")
+                            h3.c-card-case__name
+                                | 株式会社HONE
+                            i.c-card-case__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
+                            p.c-card-case__desc
+                                | 企業のマーケティング戦略から実行まで、プロの提案力に驚きました。
+
+
+
+
+
+
+
+
+
+

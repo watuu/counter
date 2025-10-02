@@ -1,0 +1,71 @@
+@use '../Base/config' as config;
+/*----------------------------------------------------
+	ヘッダー
+----------------------------------------------------*/
+.l-header {
+	position: fixed;
+	z-index: 500;
+	width: 100%;
+	height: var(--header-height);
+	padding: 15/16+rem 15/16+rem 0;
+	@include config.pc {
+		padding: 0;
+	}
+}
+.l-header-logo {
+	width: 104/16+rem;
+	position: absolute;
+	left: 15/16+rem;
+	top: 37/16+rem;
+	z-index: 2;
+	svg {
+	    width: 100%;
+	    height: auto;
+		fill: #FF552B ;
+		.is-header-dark & {
+			fill: #fff;
+		}
+		.is-nav-open & {
+			fill: #FF552B ;
+		}
+	}
+	@include config.pc {
+		width: 160/16+rem;
+		left: 40/16+rem;
+		top: 40/16+rem;
+	}
+}
+.l-header-nav {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.70);
+	backdrop-filter: blur(25/16+rem);
+	top: 35/16+rem;
+	left: calc(50% - #{203/16+rem});
+	ul {
+		display: flex;
+		gap: 12/16+rem;
+		padding: 8/16+rem 30/16+rem 8/16+rem;
+	}
+	a {
+		color: var(--BASECOLOR, #FF552B);
+		font-family: var(--Helvetica);
+		font-size: 14/16+rem;
+		letter-spacing: 0.01em;
+		text-transform: capitalize;
+	}
+	@include config.sp-tab {
+		display: none;
+	}
+	@include config.pc {}
+}
+
+.l-header-menu.l-header-menu {
+	position: absolute;
+	right: 15/16+rem;
+	top: 15/16+rem;
+	z-index: 2;
+	@include config.pc {
+		right: 20/16+rem;
+		top: 20/16+rem;
+	}
+}

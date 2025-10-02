@@ -1,0 +1,102 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "サービス"
+    - var pageClass = ""
+
+block content
+
+    .p-service
+        .cm-block-header.cm-block-header--service
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en Service
+                    h1.cm-block-header__ja サービス
+                .cm-block-header__service
+                    figure
+                        img(src=img+"p-service-header1.webp")
+                    figure
+                        img(src=img+"p-service-header2.webp")
+                    figure
+                        img(src=img+"p-service-header3.webp")
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span Service
+        .l-container
+            .p-service__lead
+                | デジタルマーケティングを起点にした、オンラインでの売り上げと認知獲得に向けた戦略を立案。<br class="sp">実装までを一気通貫に行います。
+            .p-service__wrap
+                .p-service-item
+                    .p-service-item__head
+                        p.p-service-item__no (01)
+                        h2.p-service-item__title Digital Marketing
+                    p.p-service-item__desc
+                        | SEOコンサルティングを中心としたデジタルマーケティングサービスをご提供します。
+                    ul.p-service-item__list
+                        -
+                            var serviceLists = [
+                                "SEOコンサルティング",
+                                "AI-SEO記事制作/作成代行",
+                                "被リンク獲得運用代行",
+                                "データベース型サイトSEO支援",
+                                "オウンドメディアコンサルティング",
+                                "CRM・SFA運用代行",
+                                "Salesforce運用代行",
+                                "HubSpot導入支援/運用代行",
+                                "MA運用代行",
+                                "インタビュー/取材記事制作代行",
+                                "ホワイトペーパー制作/作成代行",
+                                "メルマガ制作/配信代行",
+                                "Facebook広告運用代行",
+                                "TikTok広告運用代行",
+                                "Instagram広告運用代行",
+                            ]
+                        each service in serviceLists
+                            li
+                                a(href= path + "").c-btn-round
+                                    span.c-btn-round__txt
+                                        span.js-clone !{service}
+                .p-service-item
+                    .p-service-item__head
+                        p.p-service-item__no (02)
+                        h2.p-service-item__title creative work
+                    p.p-service-item__desc
+                        | Webサイトをはじめとした、クリエイティブ制作サービスをご提供します。
+                    ul.p-service-item__list
+                        -
+                            var serviceLists = [
+                                "オウンドメディア制作・構築",
+                                "BtoBサイト制作",
+                                "コーポレートサイト制作",
+                                "LP制作",
+                                "ロゴ・VI制作",
+                                "Webサイトの保守・運用代行",
+                            ]
+                        each service in serviceLists
+                            li
+                                a(href= path + "").c-btn-round
+                                    span.c-btn-round__txt
+                                        span.js-clone !{service}
+                .p-service-item
+                    .p-service-item__head
+                        p.p-service-item__no (03)
+                        h2.p-service-item__title Local media management
+                    p.p-service-item__desc
+                        | 越谷市を中心とした、埼玉県のローカルメディアを運営しています。
+                    ul.p-service-item__list
+                        -
+                            var serviceLists = [
+                                "KOSHIGAYAZINE",
+                                "埼玉ベース",
+                            ]
+                        each service in serviceLists
+                            li
+                                a(href= path + "").c-btn-round
+                                    span.c-btn-round__txt
+                                        span.js-clone !{service}
+
+
+
+

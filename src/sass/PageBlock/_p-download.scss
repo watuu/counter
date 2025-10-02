@@ -1,0 +1,32 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+@use '../Component/c-paragraph' as paragraph;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.p-download {
+	padding-bottom: var(--padding-page);
+	@include config.pc {}
+}
+.p-download__wrap {
+	margin-top: 20/16+rem;
+	@include config.pc {
+		margin-top: 100/16+rem;
+	}
+}
+.p-download__list {
+	margin-top: 20/16+rem;
+	display: grid;
+	gap: 39/16+rem;
+	@include config.pc {
+		margin-top: 32/16+rem;
+		display: flex;
+		flex-wrap: wrap;
+		//grid-template-columns: 1fr 1fr 1fr;
+		gap: 52/16+rem 8/16+rem;
+	}
+}
+.p-download__paginate {
+	margin-top: var(--padding-block);
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

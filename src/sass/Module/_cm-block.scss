@@ -1,0 +1,173 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+@use '../Component/c-paragraph' as paragraph;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.cm-block-header {
+	padding: 150/16+rem 0 8/16+rem;
+	border-bottom: var(--border-assort);
+	@include config.pc {
+		padding: 190/16+rem 0 24/16+rem;
+	}
+}
+.cm-block-header__title {
+	color: var(--BASECOLOR, #FF552B);
+	@include config.pc {}
+}
+.cm-block-header__en {
+	font-family: var(--Helvetica);
+	font-size: 48/16+rem;
+	line-height: 0.9; /* 43.2/16+rem */
+	letter-spacing: -0.05em;
+	text-transform: capitalize;
+	@include config.pc {
+		font-size: 72/16+rem;
+	}
+}
+.cm-block-header__ja {
+	font-size: 14/16+rem;
+	font-weight: 500;
+	//letter-spacing: 0.01em;
+	@include config.pc {
+		margin-top: 4/16+rem;
+		font-size: 18/16+rem;
+	}
+}
+.cm-block-header__client {
+	color: var(--BASECOLOR, #FF552B);
+	font-size: 12/16+rem;
+	line-height: 1.4;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		font-size: 24/16+rem;
+	}
+}
+.cm-block-header__ja2 {
+	color: var(--BASECOLOR, #FF552B);
+	font-size: 26/16+rem;
+	line-height: 1.3;
+	@include config.pc {
+		font-size: 45/16+rem;
+	}
+}
+
+.cm-block-header__bc {
+	margin-top: 2/16+rem;
+	display: flex;
+	justify-content: flex-end;
+	gap: 15/16+rem;
+
+	color: var(--BASECOLOR, #FF552B);
+	font-family: var(--Helvetica);
+	font-size: 9/16+rem;
+	li {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	li:not(:first-child):before {
+		content: '';
+		display: block;
+		width: 7/16+rem;
+		height: 0;
+		position: absolute;
+		left: -11/16+rem;
+		pointer-events: none;
+		border-top: var(--border);
+		border-color: var(--caption, #807977);
+	}
+	a {
+		color: var(--caption, #807977);
+		&:hover {
+			color: var(--color-assort);
+		}
+	}
+	@include config.pc {
+		margin-top: 2/16+rem;
+		gap: 27/16+rem;
+		font-size: 14/16+rem;
+		li:not(:first-child):before {
+			left: -17/16+rem;
+		}
+	}
+}
+.cm-block-header__service {
+	margin-top: 28/16+rem;
+	padding-bottom: 2/16+rem;
+	display: flex;
+	justify-content: flex-end;
+	gap: 3/16+rem;
+	img {
+		height: 58/16+rem;
+	}
+	@include config.pc {
+		gap: 8/16+rem;
+		margin-top: -100/16+rem;
+		padding-bottom: 5/16+rem;
+		img {
+			height: 100/16+rem;
+		}
+	}
+}
+.cm-block-header--service {
+	border-bottom: none;
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.cm-block-cta {
+	display: flex;
+	border-top: var(--border-assort);
+	@include config.pc {}
+}
+.cm-block-cta-item {
+	flex: 1;
+	&:nth-child(2) {
+		border-left: var(--border-assort-dot);
+	}
+	@include config.pc {}
+}
+.cm-block-cta-item__link {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: 130/16+rem;
+	@include config.pc {
+		height: 335/16+rem;
+	}
+}
+.cm-block-cta-item__en {
+	margin-top: 6/16+rem;
+	color: #FF552B;
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 32/16+rem;
+	letter-spacing: -0.05em;
+	line-height: 0.9;
+	@include config.pc {
+		margin-top: 6/16+rem;
+		font-size: 64/16+rem;
+		letter-spacing: -0.001em;
+	}
+}
+.cm-block-cta-item__title {
+	font-size: 12/16+rem;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		margin-top: 16/16+rem;
+		font-size: 18/16+rem;
+	}
+}
+.cm-block-cta-item__desc {
+	margin-top: 8/16+rem;
+	color: var(--LightBlack, #584E49);
+	font-size: 14/16+rem;
+	line-height: 23.8/16+rem;
+	@include config.sp-tab {
+		display: none;
+	}
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

@@ -1,0 +1,37 @@
+@use '../Base/config' as config;
+/*----------------------------------------------------
+	c-heading
+----------------------------------------------------*/
+.c-heading-section {
+	@include config.pc {}
+}
+.c-heading-section__title {
+	color: #FF552B;
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 32/16+rem;
+	line-height: 0.9;
+	letter-spacing: -0.04em;
+	@include config.pc {
+		font-size: 64/16+rem;
+	}
+}
+.c-heading-section__line {
+	display: flex;
+	height: 16/16+rem;
+	background: linear-gradient(-270deg, #FF552B 37.02%, #FFF 100%);
+	@include config.pc {
+		height: 27/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-heading-caption {
+	color: var(--BASECOLOR, #FF552B);
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 24/16+rem;
+	font-weight: 400;
+	letter-spacing: -0.05em;
+	@include config.pc {
+		font-size: 36/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

@@ -1,0 +1,30 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.c-link-external {
+	display: inline-flex;
+	align-items: center;
+	gap: 6/16+rem;
+	color: var(--BASECOLOR, #FF552B);
+
+	font-size: 14/16+rem;
+	letter-spacing: 0.01em;
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+	&:hover {
+		text-decoration: none;
+	}
+	@include config.pc {}
+}
+.c-link-external__txt {
+	@include config.pc {}
+}
+.c-link-external__arrow {
+	@extend .c-btn-arrow;
+	width: 16/16+rem;
+	height: 16/16+rem;
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

@@ -1,0 +1,160 @@
+.cm-nav-main
+    .cm-nav-main__wrap
+        .cm-nav-main-index
+            p.cm-nav-main-index__label Index
+            ul.cm-nav-main-index__list
+                li
+                    a(href= path + "").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone サイトTOP
+                li
+                    a(href= path + "company/").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone 企業情報
+                li
+                    a(href= path + "creative-case/").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone 制作実績
+                li
+                    a(href= path + "case/").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone お客様成功事例
+                li
+                    a(href= path + "news/").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone ニュース
+                li
+                    a(href= path + "download/").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone 資料請求
+                li
+                    a(href= path + "contact/").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone お問い合わせ
+                li
+                    a(href= path + "service/").c-btn-round
+                        span.c-btn-round__txt
+                            span.js-clone サービス
+
+
+        .cm-nav-main-contents
+            p.cm-nav-main-contents__label Service Contents
+            .cm-nav-main-contents__list
+                .cm-nav-main-contents-item
+                    button.c-btn-nav-heading.js-accordion
+                        span.c-btn-nav-heading__txt Digital Marketing
+                        i.c-btn-nav-heading__status
+                    .cm-nav-main-contents-item__body
+                        .cm-nav-main-contents-item__category
+                            h3.cm-nav-main-contents-item__sub
+                                | SEO
+                            ul.cm-nav-main-contents-item__list
+                                li
+                                    a(href=path+"") SEOコンサルティング
+                                li
+                                    a(href=path+"") 被リンク獲得運用代行
+                                li
+                                    a(href=path+"") AI-SEO記事制作/作成代行
+                                li
+                                    a(href=path+"") データベース型サイトSEO支援
+                                li
+                                    a(href=path+"") オウンドメディアコンサルティング
+
+                        .cm-nav-main-contents-item__category
+                            h3.cm-nav-main-contents-item__sub
+                                | Web広告
+                            ul.cm-nav-main-contents-item__list
+                                li
+                                    a(href=path+"") Facebook広告運用代行
+                                li
+                                    a(href=path+"") TikTok広告運用代行
+                                li
+                                    a(href=path+"") Instagram広告運用代行
+                        .cm-nav-main-contents-item__category
+                            h3.cm-nav-main-contents-item__sub
+                                | CRM/MA運用
+                            ul.cm-nav-main-contents-item__list
+                                li
+                                    a(href=path+"") Hubspot導入支援/運用代行
+                                li
+                                    a(href=path+"") CRM・SFA運用代行
+                                li
+                                    a(href=path+"") Salesforce運用代行
+                                li
+                                    a(href=path+"") MA運用代行
+                        .cm-nav-main-contents-item__category
+                            h3.cm-nav-main-contents-item__sub
+                                | コンテンツ制作
+                            ul.cm-nav-main-contents-item__list
+                                li
+                                    a(href=path+"") ホワイトペーパー制作/作成代行
+                                li
+                                    a(href=path+"") インタビュー/取材記事制作代行
+                                li
+                                    a(href=path+"") メルマガ制作配信代行
+                .cm-nav-main-contents-item
+                    button.c-btn-nav-heading.js-accordion
+                        span.c-btn-nav-heading__txt Creative Work
+                        i.c-btn-nav-heading__status
+                    .cm-nav-main-contents-item__body
+                        .cm-nav-main-contents-item__category
+                            h3.cm-nav-main-contents-item__sub
+                                | Web制作
+                            ul.cm-nav-main-contents-item__list
+                                li
+                                    a(href=path+"") グラフィックデザイン
+                                li
+                                    a(href=path+"") オウンドメディア制作・構築
+                                li
+                                    a(href=path+"") ロゴ・VI制作
+                        .cm-nav-main-contents-item__category
+                            h3.cm-nav-main-contents-item__sub
+                                | グラフィックデザイン
+                            ul.cm-nav-main-contents-item__list
+                                li
+                                    a(href=path+"") ロゴ・VI制作
+                        .cm-nav-main-contents-item__category
+                            h3.cm-nav-main-contents-item__sub
+                                | 映像制作
+                            ul.cm-nav-main-contents-item__list
+                                li
+                                    a(href=path+"") 動画制作
+                                li
+                                    a(href=path+"") 採用動画制作
+                .cm-nav-main-contents-item
+                    button.c-btn-nav-heading.js-accordion
+                        span.c-btn-nav-heading__txt Local Media
+                        i.c-btn-nav-heading__status
+                    .cm-nav-main-contents-item__body
+                        .cm-nav-main-contents-item__category
+                            h3.cm-nav-main-contents-item__sub
+                                | メディア運営
+                            ul.cm-nav-main-contents-item__list
+                                li
+                                    a(href=path+"") SAITAMAZINE
+                                li
+                                    a(href=path+"") KOSHIGAYAZINE
+                                li
+                                    a(href=path+"") 埼玉ベース
+                ul.cm-nav-main-contents-cta
+                    li
+                        a(href= path + "download/").c-btn-nav-cta
+                            span.c-btn-nav-cta__txt
+                                span.c-btn-nav-cta__en
+                                    span.js-clone Download
+                                span.c-btn-nav-cta__ja 資料ダウンロード
+                            i.c-btn-nav-cta__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
+                    li
+                        a(href= path + "contact/").c-btn-nav-cta
+                            span.c-btn-nav-cta__txt
+                                span.c-btn-nav-cta__en
+                                    span.js-clone Contact Us
+                                span.c-btn-nav-cta__ja お問い合わせ
+                            i.c-btn-nav-cta__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
+
+
+
