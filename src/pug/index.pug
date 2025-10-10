@@ -7,23 +7,39 @@ block vars
 block content
     .p-top
         // MV
-        section.p-top-mv.is-section-dark
-            picture.p-top-mv__bg
+        section.p-top-mv.is-section-dark#mv
+            //-picture.p-top-mv__bg
                 source(srcset=img + "p-top-mv-bg-sp.webp" media="(max-width: 1023px)")
                 img(src=img + "p-top-mv-bg.webp")
 
             .p-top-mv__wrap
-                p.p-top-mv__typeSP
-                    | CREATING  FO-
-                    | RWARD LOOK-
-                    | ING
-                    span._case CASE FROM
-                    span._local LOCAL  AREA.
-                p.p-top-mv__type
-                    | CREATING
-                    span._forward FORWARD LOOKING
-                    span._case CASE
-                    span._from FROM LOCAL AREA.
+                .p-top-mv__typeSP.js-visible
+                    p
+                        span CREATING  FO-
+                    p
+                        span RWARD LOOK-
+                    p
+                        span ING
+                        span._case CASE
+                    p
+                        span
+                            | FROM
+                            span._local LOCAL
+                    p
+                        span AREA.
+                .p-top-mv__type.js-visible
+                    p
+                        span
+                            | CREATING
+                            span._forward FORWARD
+                    p
+                        span
+                            | LOOKING
+                            span._case CASE
+                            span._from FROM
+                    p
+                        span
+                            | LOCAL AREA.
                 p.p-top-mv__en
                     |The digital content we have
                     br
@@ -34,7 +50,11 @@ block content
                     | ローカルから最先端をつくる。
         // promise
         section.p-top-promise
-            .p-top-promise__telop
+            .p-top-promise__telop.js-visible.u-block-reveal
+                p デジタルコンテンツ支援で
+                    span.u-gradient
+                        span 地域に活力
+                    | をもたらす。
                 p デジタルコンテンツ支援で
                     span.u-gradient
                         span 地域に活力
@@ -45,14 +65,16 @@ block content
                     | をもたらす。
             .p-top-promise__wrap
                 .p-top-promise__block.js-clone(data-clone-num="2")
-                    p.p-top-promise__type
-                        spa.u-gradient
-                            span メインストリーム
-                        | を
-                        br
-                        | ひっくり返す。
-                    h2.p-top-promise__title (Promise)
-                    .p-top-promise__message
+                    .p-top-promise__type.js-visible
+                        p.u-block-reveal
+                            span
+                                span.u-gradient
+                                    span メインストリーム
+                                | を
+                        p.u-block-reveal
+                            span ひっくり返す。
+                    h2.p-top-promise__title.js-visible (Promise)
+                    .p-top-promise__message.js-visible.u-mask-block
                         p
                             | マーケットには“負けないための作法”がある。
                             br
@@ -102,38 +124,47 @@ block content
         //  (Service)
         section.p-top-service
             .p-top-service__bg
-                img(src=img+"p-top-service-bg.svg")
+                //-img(src=img+"p-top-service-bg.svg")
+                <svg xmlns="http://www.w3.org/2000/svg" data-name="レイヤー_1" viewBox="0 0 1440 1495">
+                <g fill="none" stroke="#ff552b"><path d="M0 186.5h626M0 248.5h626M0 311.5h626M187.5 0v335M374.5 0v335M124.5 0v335M311.5 0v335M249.5 0v335" opacity=".3"/></g>
+                <g fill="none" stroke="#ff552b"><path d="M1 664.5h1439M1 726.5h626M0 784.5h626M0 846.5h626M0 908.5h626M0 971.5h626M625.5 660v335M687.5 660v335M750.5 665v335M876.5 665v335M1063.5 665v335M562.5 660v335M499.5 660v335M188.5 665v335M375.5 665v335M125.5 665v335M312.5 665v335M63.5 665v335M250.5 665v335M437.5 660v335M1282.5 664v157M1251.5 664v157M1313.5 664v157M1345.5 664v157M1376.5 664v157M1407.5 664v157M1251.2 696.3H1439M1251.2 664.3H1439M1251.2 727.3H1439M1251.2 758.3H1439M1251.2 789.3H1439M1251.2 821.3H1439M1095.5 664v157M1064.5 664v157M1126.5 664v157M1158.5 664v157M1189.5 664v157M1220.5 664v157M1251.5 664v157M1064.2 696.3h187M1064.2 664.3h187M1064.2 727.3h187M1064.2 758.3h187M1064.2 789.3h187M1064.2 821.3h187M1282.4 821v179M1251.4 821v179M1313.4 821v179M1345.4 821v179M1376.4 821v179M1407.4 821v179M1251.2 853.3H1439M1251.2 821.3H1439M1251.2 884.3H1439M1251.2 915.3H1439M1251.2 946.3H1439M1251.2 978.3H1439M1095.4 821v179M1064.5 821v157M1126.4 821v179M1158.4 821v179M1189.4 821v179M1220.4 821v179M1251.4 821v179M1064 853.3h187M1064 821.3h187M1064 884.3h187M1064 915.3h187M1064 946.3h187M1064 978.3h187M892.8 665v78.5M892.8 822v78.5M892.8 743.5V822M892.6 900.5v99M970.8 665v78.5M970.8 822v78.5M970.8 743.5V822M970.6 900.5v99M908.3 665v78.5M908.3 822v78.5M924.3 665v78.5M924.3 822v78.5M908.3 743.5V822M908.6 900.5v99M939.8 665v78.5M939.8 822v78.5M955.3 665v78.5M955.3 822v78.5M924.3 743.5V822M924.6 900.5v99M877 680.9h93.9M877 664.9h93.9M877 696.4h93.9M877 711.9h93.9M877 727.4h93.9M877 743.4h93.9M877 837.9h93.9M877 821.9h93.9M877 853.4h93.9M877 868.9h93.9M877 884.4h93.9M877 900.4h93.9M939.8 743.5V822M939.6 900.5v99M955.3 743.5V822M955.6 900.5v99M877 759.4h93.9M877 743.4h93.9M877 774.9h93.9M877 790.4h93.9M877 805.9h93.9M877 821.9h93.9M877 916.4h93.9M877 900.4h93.9M877 931.9h93.9M877 947.4h93.9M877 962.9h93.9M877 978.9h93.9M877 994.5h93.9" opacity=".3"/></g>
+                <g fill="none" stroke="#ff552b"><path d="M637 1310.5h626M637 1372.5h626M637 1435.5h626M824.5 1124v335M1011.5 1124v335M761.5 1124v335M948.5 1124v335M886.5 1124v335" opacity=".3"/></g>
+                </svg>
             .l-container
-                .p-top-service__type
-                    p デジタル起点
-                    p 全方位支援
-                h2.p-top-service__title (Service)
+                .p-top-service__head
+                    .p-top-service__type.js-visible
+                        div
+                            p.js-split-text
+                                | デジタル起点
+                            p.js-split-text
+                                | 全方位支援
+                h2.p-top-service__title.js-visible (Service)
                 .p-top-service__items
-                    .p-top-service-item
-                        picture.p-top-service-item__pic
+                    .p-top-service-item.js-visible
+                        picture.p-top-service-item__pic.u-block-reveal
                             source(srcset=img + "p-top-service-marketing-sp.webp" media="(max-width: 1023px)")
                             img(src=img + "p-top-service-marketing.webp")
-                        .p-top-service-item__wrap
+                        .p-top-service-item__wrap.u-mask-block(data-delay=0.2)
                             h3.p-top-service-item__title デジタルマーケティング
                             .p-top-service-item__desc
                                 | SEOコンサルティングを中心としたデジタルマーケティング
-                    .p-top-service-item
-                        picture.p-top-service-item__pic
+                    .p-top-service-item.js-visible
+                        picture.p-top-service-item__pic.u-block-reveal
                             source(srcset=img + "p-top-service-creative-sp.webp" media="(max-width: 1023px)")
                             img(src=img + "p-top-service-creative.webp")
-                        .p-top-service-item__wrap
+                        .p-top-service-item__wrap.u-mask-block(data-delay=0.2)
                             h3.p-top-service-item__title クリエイティブワーク
                             .p-top-service-item__desc
                                 | Webサイトをはじめとした、クリエイティブ制作サービスを
-                    .p-top-service-item
-                        picture.p-top-service-item__pic
+                    .p-top-service-item.js-visible
+                        picture.p-top-service-item__pic.u-block-reveal
                             source(srcset=img + "p-top-service-media-sp.webp" media="(max-width: 1023px)")
                             img(src=img + "p-top-service-media.webp")
-                        .p-top-service-item__wrap
+                        .p-top-service-item__wrap.u-mask-block(data-delay=0.2)
                             h3.p-top-service-item__title ローカルメディア運営
                             .p-top-service-item__desc
                                 | 越谷市を中心とした、埼玉県のローカルメディアを運営して
-                .p-top-service__more
+                .p-top-service__more.js-visible.u-mask-block
                     p
                         | Web戦略から制作までを<br class="sp">一貫して支援します。
                     a(href= path + "service/").c-btn-more
@@ -147,7 +178,7 @@ block content
         section.p-top-creative
             .l-container
                 .p-top-creative__head
-                    .c-heading-section
+                    .c-heading-section.js-visible.js-visible
                         h2.c-heading-section__title (Creative Work)
                         span.c-heading-section__line
                 .p-top-creative__figure
@@ -168,7 +199,7 @@ block content
                     figure
                         img(src=img+"400x225_2.webp")
 
-                ul.p-top-creative__list
+                ul.p-top-creative__list.js-visible.u-mask-block
                     -
                         var serviceLists = [
                             "世界へボカン様",
@@ -188,7 +219,7 @@ block content
                                 i.c-btn-creative__arrow
                                     svg(width=40 height=40)
                                         use(href="#ico-arrow")
-                .p-top-creative__more
+                .p-top-creative__more.js-visible.u-mask-block
                     a(href= path + "creative-case/").c-btn-more
                         span.c-btn-more__txt
                             span.js-clone MORE
@@ -202,10 +233,10 @@ block content
         section.p-top-partnership
             .l-container
                 .p-top-partnership__head
-                    .c-heading-section
+                    .c-heading-section.js-visible
                         h2.c-heading-section__title (Partnership)
                         span.c-heading-section__line
-                .p-top-partnership__body
+                .p-top-partnership__body.js-visible.u-mask-block
                     .p-top-partnership__blocks
                         .p-top-partnership-block
                             h3.p-top-partnership-block__head Aliance
@@ -260,10 +291,10 @@ block content
         section.p-top-voice
             .l-container
                 .p-top-voice__head
-                    .c-heading-section
+                    .c-heading-section.js-visible
                         h2.c-heading-section__title (Voice)
                         span.c-heading-section__line
-                .p-top-voice__list
+                .p-top-voice__list.js-visible.u-mask-block
                     - for (var x = 1; x <= 3; x++)
                         .c-card-case
                             a(href="#").c-card-case__link
@@ -276,7 +307,7 @@ block content
                                         use(href="#ico-arrow")
                                 p.c-card-case__desc
                                     | 企業のマーケティング戦略から実行まで、プロの提案力に驚きました。
-                .p-top-voice__more
+                .p-top-voice__more.js-visible.u-mask-block
                     a(href= path + "voice/").c-btn-more
                         span.c-btn-more__txt
                             span.js-clone MORE

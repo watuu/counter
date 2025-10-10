@@ -39,14 +39,14 @@ head
     <!-- vendor -->
     = "\n"
     = "\n"
-    //-<script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?J-fMHawjerA%3D&box=cyeKXlARHxo%3D&aa=1&ab=2"></script>
-    <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?bXzQsqfpqjY%3D&box=HYCe57Ogj0k%3D&aa=1&ab=2"></script>
+    <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?J-fMHawjerA%3D&box=cyeKXlARHxo%3D&aa=1&ab=2"></script>
+    //-<script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?bXzQsqfpqjY%3D&box=HYCe57Ogj0k%3D&aa=1&ab=2"></script>
     //-
         link(href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
         link(href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanjp.min.css", rel="stylesheet")
         link(href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanmp.min.css", rel="stylesheet")
 
-body#body(class=pageClass)
+body#body(class=pageClass data-src=path)
     = "\n"
     a#top
     .l-body-wrap
@@ -121,6 +121,12 @@ body#body(class=pageClass)
                             br
                             | 担当者よりご連絡いたします。
 
+        aside.l-aside
+            .l-aside-stalker
+                .c-btn-stalker
+                    i.c-btn-stalker__arrow
+                        svg(width=40 height=40)
+                            use(href="#ico-arrow")
         footer.l-footer.is-section-dark
             .l-container
                 .l-footer__wrap

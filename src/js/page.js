@@ -3,6 +3,7 @@ import Utility from './utility';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin"
 
 import Swiper, { Navigation, Pagination, Autoplay, Scrollbar, EffectFade } from 'swiper';
 import 'swiper/css/bundle'
@@ -10,16 +11,59 @@ Swiper.use([Navigation, Pagination, Autoplay, Scrollbar, EffectFade]);
 
 export default class Page {
     constructor() {
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, DrawSVGPlugin);
         this.settings = {
             swipers: [],
             eventListeners: [],
             scrollY: 0,
         }
+        // this.cHeadingSection()
+        if (document.querySelector('.p-top-service')) {
+            this.pTopService()
+        }
         if (document.querySelector('.p-top-creative__list') && Utility.isPC()) {
             this.pTopCreative()
         }
+
     }
+    // cHeadingSection() {
+    //
+    // }
+    pTopService() {
+        gsap.fromTo(gsap.utils.toArray('.p-top-service__bg svg path'), {
+            drawSVG:"0 0"
+        },{
+            scrollTrigger: {
+                trigger: '.p-top-service',
+                start: 'top top',
+                markers: false,
+            },
+            duration: 20,
+            stagger: 0.5,
+            drawSVG:"100% 0",
+            ease: 'power3.out',
+        })
+        ScrollTrigger.create({
+            trigger: '.p-top-service',
+            start: 'top top',
+            //end: `bottom-=${200/1440*window.innerWidth} bottom`,
+            end: `bottom bottom`,
+            pin: '.p-top-service__bg',
+            pinSpacing: false,
+            markers: false,
+        })
+        if (Utility.isPC()) {
+            ScrollTrigger.create({
+                trigger: '.p-top-service',
+                start: 'top top',
+                end: 'bottom bottom',
+                pin: '.p-top-service__head',
+                pinSpacing: false,
+                markers: false,
+            })
+        }
+    }
+
     pTopCreative() {
         const xTo = gsap.quickTo('.p-top-creative__figure figure', "x", { duration: 0.4, ease: "power3" });
         const yTo = gsap.quickTo('.p-top-creative__figure figure', "y", { duration: 0.4, ease: "power3" });

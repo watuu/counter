@@ -142,6 +142,26 @@
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-stalker {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 60/16+rem;
+	height: 60/16+rem;
+	border-radius: 100%;
+	border: var(--border-assort);
+}
+.c-btn-stalker__arrow {
+	width: 20/16+rem;
+	height: 20/16+rem;
+	svg {
+		width: 100%;
+		height: auto;
+		fill: var(--color-main);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-btn-more {
 	display: inline-flex;
 	align-items: center;

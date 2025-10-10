@@ -22,6 +22,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
     "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.4",
     "cross-env": "^7.0.3",
     "dat.gui": "^0.7.9",
     "dotenv": "^16.4.5",
@@ -30,16 +31,22 @@
     "rollup": "^3.29.4",
     "rollup-plugin-import-css": "^3.5.0",
     "rollup-plugin-vue": "^6.0.0",
-    "sass": "^1.86.0"
+    "sass": "^1.86.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@barba/core": "^2.10.3",
     "budoux": "^0.7.0",
+    "glslify-bundle": "^5.1.1",
+    "glslify-loader": "^2.0.0",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "jquery-jpostal-ja": "^2.14.26",
+    "lil-gui": "^0.20.0",
     "micromodal": "^0.4.10",
     "overlayscrollbars": "^2.11.1",
-    "swiper": "^9.4.1"
+    "swiper": "^9.4.1",
+    "three": "^0.180.0",
+    "tslib": "^2.8.1"
   }
 }

@@ -106,7 +106,7 @@
 
 @for $i from 1 through 30 {
 	[data-delay="#{$i * 0.1}"] {
-		transition-delay: #{$i * 0.1}s;
+		transition-delay: #{$i * 0.1}s !important;
 	}
 }
 
@@ -140,5 +140,62 @@
 	}
 	to {
 		transform: translate3d(0, 0, 0);
+	}
+}
+.u-block-reveal {
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 0;
+		background: var(--color-assort);
+		z-index: 2;
+		pointer-events: none;
+		opacity: 1;
+
+	}
+	&.is-visible:before,
+	.is-visible &:before {
+		width: 100%;
+		left: 100%;
+		transition: width .3s var(--easeOutQuart), left .3s .3s var(--easeOutQuart);
+	}
+	> * {
+		opacity: 0;
+		transition: transform 2s var(--easeOutQuart), opacity 1s .2s var(--easeOutQuart);
+	}
+	img {
+		transition: transform 2s var(--easeOutQuart), opacity 1s .2s var(--easeOutQuart);
+		transform: scale(1.2);
+		opacity: 0;
+	}
+	&.is-visible,
+	.is-visible & {
+		img {
+			transform: scale(1);
+			opacity: 1;
+		}
+		> * {
+			opacity: 1;
+		}
+	}
+	@include config.pc {}
+}
+.u-mask-block {
+	clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+	//transform: translate3d(0, #{20px}, 0);
+	opacity: 0;
+	.is-visible &,
+	&.is-visible {
+		opacity: 1;
+		transition: .4s var(--easeOutQuart);
+		transform: translate3d(0,0,0);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }

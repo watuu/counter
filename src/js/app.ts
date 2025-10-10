@@ -1,10 +1,13 @@
-window.constants = {
-    enabled_legacy_browser: false,
-}
+// @ts-ignore
+import Utility from "./utility";
+// @ts-ignore
 import {default as Common} from './common';
-// import Barba from './barba';
+// @ts-ignore
 import Page from './page';
+// @ts-ignore
 import BudouX from './budoux';
+// @ts-ignore
+import GridViewer from './mv';
 
 class APP {
     constructor() {
@@ -13,6 +16,9 @@ class APP {
         // new Barba();
         new Page();
         new BudouX();
+        if (document.querySelector('#mv') && Utility.isPC()) {
+            new GridViewer();
+        }
     }
 }
 

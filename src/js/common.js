@@ -41,7 +41,8 @@ export default class common {
         this.setDeviceClassToBody();
         this.globalMenu();
         this.smoothScroll();
-        // this.cMouseStalker();
+        this.cMouseStalker();
+        this.jsSplitText();
         this.jsClone();
         this.jsStickySection();
         this.jsAccordion();
@@ -222,28 +223,29 @@ export default class common {
     }
 
     cMouseStalker() {
-        const btn = document.querySelector('.c-btn-stalker');
-        const circle = document.querySelector('.c-btn-stalker__circle');
-        const ico = document.querySelector('.c-btn-stalker__ico');
-        const stalkerTriggers = document.querySelectorAll('.js-stalker-show');
+        const btn = document.querySelector('.l-aside-stalker .c-btn-stalker');
+        const stalkerTriggers = document.querySelectorAll('.js-stalker-show, a[class^="c-card"]');
 
         if (btn && ScrollTrigger.isTouch !== 1) {
+            const xTo = gsap.quickTo(btn, "x", { duration: 0.4, ease: "power1.out" });
+            const yTo = gsap.quickTo(btn, "y", { duration: 0.4, ease: "power1.out" });
+
             document.addEventListener('mousemove', (e) => {
                 const shift = btn.offsetWidth / 2;
-
-                gsap.to(circle, {
-                    x: e.clientX - shift,
-                    y: e.clientY - shift,
-                    ease: 'power1.out',
-                });
-
-                gsap.to(ico, {
-                    x: e.clientX - shift,
-                    y: e.clientY - shift,
-                    ease: 'power1.out',
-                    delay: 0.005,
-                });
+                xTo(e.clientX - shift);
+                yTo(e.clientY - shift);
             });
+
+            // document.addEventListener('mousemove', (e) => {
+            //     const shift = btn.offsetWidth / 2;
+            //
+            //     gsap.to(btn, {
+            //         x: e.clientX - shift,
+            //         y: e.clientY - shift,
+            //         ease: 'power1.out',
+            //         delay: 0.005,
+            //     });
+            // });
 
             stalkerTriggers.forEach(trigger => {
                 trigger.addEventListener('mouseover', () => {
@@ -270,6 +272,16 @@ export default class common {
                 el.parentNode.insertBefore(clone, el.nextSibling);
             }
         });
+    }
+
+    jsSplitText() {
+        const domList = document.querySelectorAll('.js-split-text');
+
+        if (domList.length) {
+            domList.forEach(el => {
+                Utility.convertSpiltSpan(el);
+            });
+        }
     }
 
     jsStickySection() {

@@ -1,3 +1,4 @@
+import typescript from '@rollup/plugin-typescript';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
@@ -13,7 +14,7 @@ const env = dotenv.config({ path: `.env.${environment}` }).parsed;
 const outputPlugin = environment === 'production' ? [terser()] : [];
 
 export default {
-  input: 'src/js/app.js',
+  input: 'src/js/app.ts',
   output: [
     {
       format: 'iife',
@@ -28,6 +29,9 @@ export default {
     }),
     nodeResolve(),
     commonjs(),
+    typescript({
+      tsconfig: './tsconfig.json',
+    }),
     alias({
       entries: []
     }),

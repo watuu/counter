@@ -3,6 +3,7 @@
 	c-heading
 ----------------------------------------------------*/
 .c-heading-section {
+	overflow: hidden;
 	@include config.pc {}
 }
 .c-heading-section__title {
@@ -10,7 +11,15 @@
 	font-family: var(--ITCGaramondW01-BookCn);
 	font-size: 32/16+rem;
 	line-height: 0.9;
-	letter-spacing: -0.04em;
+	letter-spacing: 0.04em;
+	transform: translate3d(#{1em},0,0);
+	opacity: 0;
+	.is-visible & {
+		opacity: 1;
+		transition: 1s var(--easeOutQuart) 0.05s;
+		transform: translate3d(0,0,0);
+		letter-spacing: -0.04em;
+	}
 	@include config.pc {
 		font-size: 64/16+rem;
 	}
@@ -19,6 +28,11 @@
 	display: flex;
 	height: 16/16+rem;
 	background: linear-gradient(-270deg, #FF552B 37.02%, #FFF 100%);
+	width: 0;
+	.is-visible & {
+		width: 100%;
+		transition: .25s var(--easeOutQuart);
+	}
 	@include config.pc {
 		height: 27/16+rem;
 	}

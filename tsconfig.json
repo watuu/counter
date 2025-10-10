@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "noEmitOnError": false,
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "importHelpers": true,   // ← tslibを活かす設定
+    "moduleResolution": "node"
+  },
+  "include": ["src/js/**/*"],
+  "exclude": ["dist", "node_modules"]
+}

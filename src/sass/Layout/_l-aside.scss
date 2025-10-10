@@ -1,0 +1,26 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+@use '../Component/c-paragraph' as paragraph;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.l-aside-stalker {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 300;
+	pointer-events: none;
+	overflow: hidden;
+	.c-btn-stalker {
+		position: absolute;
+		opacity: 0;
+		transition: .3s var(--easeOutQuart);
+		&.on-stalker-show {
+			opacity: 1;
+		}
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
