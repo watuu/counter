@@ -28,11 +28,13 @@ var GridViewer = exports.default = /*#__PURE__*/function () {
     _defineProperty(this, "controls", void 0);
     _defineProperty(this, "shaderMaterials", []);
     _defineProperty(this, "modelSize", void 0);
+    _defineProperty(this, "modelGroups", []);
     _defineProperty(this, "gui", void 0);
     _defineProperty(this, "params", {
-      noiseStrength: 0.1,
+      noiseStrength: 0.15,
       scanWidth: 1.2,
-      baseSpeed: 0.4
+      baseSpeed: 0.4,
+      scrollSpeed: 0.2
     });
     _defineProperty(this, "speedMultipliers", {
       plane1: 10 / 6,
@@ -99,7 +101,7 @@ var GridViewer = exports.default = /*#__PURE__*/function () {
     value: function initGUI() {
       var _this2 = this;
       this.gui = new _lilGui.GUI();
-      this.gui.add(this.params, "noiseStrength", 0, 0.1, 0.001).name("Noise Strength").onChange(function (v) {
+      this.gui.add(this.params, "noiseStrength", 0, 1, 0.01).name("Noise Strength").onChange(function (v) {
         _this2.shaderMaterials.forEach(function (m) {
           return m.uniforms.noiseStrength.value = v;
         });
@@ -116,6 +118,7 @@ var GridViewer = exports.default = /*#__PURE__*/function () {
           m.uniforms.scanSpeed.value = v * speedMultiplier;
         });
       });
+      this.gui.add(this.params, "scrollSpeed", 0, 1, 0.01).name("Scroll Speed");
     }
   }, {
     key: "createGradientShader",
@@ -217,15 +220,29 @@ var GridViewer = exports.default = /*#__PURE__*/function () {
         var center = box.getCenter(new THREE.Vector3());
         var spacing = size.z;
         var positions = [-spacing, 0, spacing];
-        positions.forEach(function (zOffset, i) {
-          var group = new THREE.Group();
-          var model = gltf.scene.clone();
-          model.position.sub(center);
-          group.add(model);
-          if (i === 1) group.rotation.y = Math.PI;
-          group.position.z = zOffset;
-          _this4.applyMaterialsToModel(model);
-          _this4.scene.add(group);
+        var directions = [1, -1, 1];
+        positions.forEach(function (zOffset, modelIndex) {
+          var instances = [];
+          var direction = directions[modelIndex];
+          for (var i = 0; i < 2; i++) {
+            var group = new THREE.Group();
+            var model = gltf.scene.clone();
+            model.position.sub(center);
+            group.add(model);
+            if (modelIndex === 1) {
+              group.rotation.y = Math.PI;
+            }
+            group.position.z = zOffset;
+            group.position.x = i * size.x * direction;
+            _this4.applyMaterialsToModel(model);
+            _this4.scene.add(group);
+            instances.push(group);
+          }
+          _this4.modelGroups.push({
+            group: instances[0],
+            direction: direction,
+            instances: instances
+          });
         });
         var totalHeight = spacing * 2 + size.y;
         _this4.modelSize = new THREE.Vector3(size.x, totalHeight, size.z);
@@ -251,6 +268,20 @@ var GridViewer = exports.default = /*#__PURE__*/function () {
         _this5.shaderMaterials.forEach(function (m) {
           return m.uniforms.uTime.value = time;
         });
+        if (_this5.modelSize) {
+          _this5.modelGroups.forEach(function (_ref) {
+            var direction = _ref.direction,
+              instances = _ref.instances;
+            instances.forEach(function (instance) {
+              instance.position.x += direction * _this5.params.scrollSpeed * 0.001;
+              if (direction > 0 && instance.position.x > _this5.modelSize.x) {
+                instance.position.x -= _this5.modelSize.x * 2;
+              } else if (direction < 0 && instance.position.x < -_this5.modelSize.x) {
+                instance.position.x += _this5.modelSize.x * 2;
+              }
+            });
+          });
+        }
         _this5.controls.update();
         _this5.renderer.render(_this5.scene, _this5.camera);
       };

@@ -88,9 +88,17 @@ body#body(class=pageClass data-src=path)
                     span.c-btn-menu__square
                     span.c-btn-menu__square
                     span.c-btn-menu__square
-            .l-header-drawer
+            .l-header-drawer.is-section-dark
                 .l-header-drawer__bg
                 .l-header-drawer__wrap
+                    .l-header-drawer__search
+                        form(action="")
+                            .c-form-search
+                                .c-form-search__keyword
+                                    input(type="text")
+                                button.c-form-search__btn
+                                    svg(width=16 height=17)
+                                        use(href="#ico-search")
                     .l-header-drawer__nav
                         include template/cm-nav-main
 

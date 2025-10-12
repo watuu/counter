@@ -15,7 +15,7 @@
 	position: relative;
 	border: var(--border-assort);
 	padding: 0 16/16+rem 16/16+rem;
-	color: var(--color-light);
+	color: var(--color-assort);
 	grid-template-areas:
 		"name pic"
 		"arrow pic"
@@ -87,7 +87,7 @@
 	}
 }
 .c-card-download__title {
-	color: var(--LightBlack, #584E49);
+	color: var(--color-assort);
 	font-size: 11/16+rem;
 	letter-spacing: 0.01em;
 	@include config.pc {}
@@ -147,6 +147,7 @@
 	display: flex;
 	gap: 10/16+rem;
 	padding: 15/16+rem 0;
+	color: var(--color-assort);
 	@include config.pc {
 		padding: 20/16+rem 0;
 		gap: 26/16+rem;
@@ -167,7 +168,6 @@
 	gap: 8/16+rem;
 }
 .c-card-creative__title {
-	color: var(--LightBlack, #584E49);
 	font-size: 18/16+rem;
 	line-height: 1.4;
 	@include config.pc {
@@ -179,7 +179,6 @@
 	display: flex;
 	gap: 25/16+rem;
 	flex-wrap: wrap;
-	color: var(--caption, #807977);
 	font-size: 12/16+rem;
 	@include config.pc {
 		font-size: 14/16+rem;
@@ -187,7 +186,6 @@
 }
 .c-card-creative__excerpt {
 	margin-top: 30/16+rem;
-	color: var(--LightBlack, #584E49);
 	@extend .c-paragraph;
 	@include config.pc {
 		margin-top: auto;
@@ -256,8 +254,9 @@
 	display: flex;
 	gap: 8/16+rem;
 	padding: 40/16+rem 0 32/16+rem;
-	border-bottom: var(--border-assort-dot);
+	background: var(--border-assort-dot);
 	position: relative;
+	color: var(--color-assort);
 	@include config.pc {
 		padding: 67/16+rem 0 22/16+rem;
 		gap: 19/16+rem;
@@ -266,7 +265,6 @@
 .c-card-media__date {
 	position: absolute;
 	top: 24/16+rem;
-	color: var(--caption, #807977);
 	font-family: var(--Suisse);
 	font-size: 24/16+rem;
 	line-height: 0.9;
@@ -307,7 +305,6 @@
 	display: flex;
 	gap: 25/16+rem;
 	flex-wrap: wrap;
-	color: var(--LightBlack, #584E49);
 	font-family: var(--Suisse);
 	font-size: 12/16+rem;
 	font-weight: 400;
@@ -351,7 +348,7 @@
 }
 .c-card-news__link {
 	display: flex;
-	border-bottom: var(--border-assort-dot);
+	background: var(--border-assort-dot);
 	padding: 28/16+rem 0;
 	color: var(--LightBlack, #584E49);
 

@@ -23253,6 +23253,18 @@
             navClose();
           }
         });
+
+        // 検索ボタン
+        var formSearch = document.querySelector('.l-header-drawer__search .c-form-search');
+        var button = document.querySelector('.l-header-drawer__search .c-form-search__btn');
+        if (!Utility.isPC()) {
+          button.addEventListener('click', function (e) {
+            if (!formSearch.classList.contains('is-show')) {
+              e.preventDefault();
+              formSearch.classList.add('is-show');
+            }
+          });
+        }
       }
 
       /*
@@ -23441,7 +23453,7 @@
       key: "isSectionDark",
       value: function isSectionDark() {
         var shift = Utility.isPC() ? 100 / 1440 * window.innerWidth / 2 : 75 / 390 * window.innerWidth / 2;
-        document.querySelectorAll('.is-section-dark').forEach(function (section) {
+        document.querySelectorAll('.is-section-dark:not(.l-header-drawer)').forEach(function (section) {
           ScrollTrigger$1.create({
             trigger: section,
             start: "top-=".concat(shift, " top"),
@@ -103732,11 +103744,13 @@ void main() {
       controls;
       shaderMaterials = [];
       modelSize;
+      modelGroups = [];
       gui;
       params = {
-          noiseStrength: 0.1,
+          noiseStrength: 0.15,
           scanWidth: 1.2,
           baseSpeed: 0.4,
+          scrollSpeed: 0.2,
       };
       constructor(selector = "#mv") {
           this.container = document.querySelector(selector);
@@ -103779,7 +103793,7 @@ void main() {
       initGUI() {
           this.gui = new GUI();
           this.gui
-              .add(this.params, "noiseStrength", 0, 0.1, 0.001)
+              .add(this.params, "noiseStrength", 0, 1, 0.01)
               .name("Noise Strength")
               .onChange((v) => {
               this.shaderMaterials.forEach((m) => (m.uniforms.noiseStrength.value = v));
@@ -103800,6 +103814,7 @@ void main() {
                   m.uniforms.scanSpeed.value = v * speedMultiplier;
               });
           });
+          this.gui.add(this.params, "scrollSpeed", 0, 1, 0.01).name("Scroll Speed");
       }
       speedMultipliers = {
           plane1: 10 / 6,
@@ -103916,16 +103931,25 @@ void main() {
               const center = box.getCenter(new Vector3());
               const spacing = size.z;
               const positions = [-spacing, 0, spacing];
-              positions.forEach((zOffset, i) => {
-                  const group = new Group();
-                  const model = gltf.scene.clone();
-                  model.position.sub(center);
-                  group.add(model);
-                  if (i === 1)
-                      group.rotation.y = Math.PI;
-                  group.position.z = zOffset;
-                  this.applyMaterialsToModel(model);
-                  this.scene.add(group);
+              const directions = [1, -1, 1];
+              positions.forEach((zOffset, modelIndex) => {
+                  const instances = [];
+                  const direction = directions[modelIndex];
+                  for (let i = 0; i < 2; i++) {
+                      const group = new Group();
+                      const model = gltf.scene.clone();
+                      model.position.sub(center);
+                      group.add(model);
+                      if (modelIndex === 1) {
+                          group.rotation.y = Math.PI;
+                      }
+                      group.position.z = zOffset;
+                      group.position.x = i * size.x * direction;
+                      this.applyMaterialsToModel(model);
+                      this.scene.add(group);
+                      instances.push(group);
+                  }
+                  this.modelGroups.push({ group: instances[0], direction, instances });
               });
               const totalHeight = spacing * 2 + size.y;
               this.modelSize = new Vector3(size.x, totalHeight, size.z);
@@ -103944,6 +103968,19 @@ void main() {
               requestAnimationFrame(loop);
               const time = clock.getElapsedTime();
               this.shaderMaterials.forEach((m) => (m.uniforms.uTime.value = time));
+              if (this.modelSize) {
+                  this.modelGroups.forEach(({ direction, instances }) => {
+                      instances.forEach((instance) => {
+                          instance.position.x += direction * this.params.scrollSpeed * 0.001;
+                          if (direction > 0 && instance.position.x > this.modelSize.x) {
+                              instance.position.x -= this.modelSize.x * 2;
+                          }
+                          else if (direction < 0 && instance.position.x < -this.modelSize.x) {
+                              instance.position.x += this.modelSize.x * 2;
+                          }
+                      });
+                  });
+              }
               this.controls.update();
               this.renderer.render(this.scene, this.camera);
           };

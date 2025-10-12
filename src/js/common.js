@@ -177,6 +177,18 @@ export default class common {
                 navClose();
             }
         });
+
+        // 検索ボタン
+        const formSearch = document.querySelector('.l-header-drawer__search .c-form-search');
+        const button = document.querySelector('.l-header-drawer__search .c-form-search__btn');
+        if (!Utility.isPC()) {
+            button.addEventListener('click', (e) => {
+                if (!formSearch.classList.contains('is-show')) {
+                    e.preventDefault();
+                    formSearch.classList.add('is-show');
+                }
+            });
+        }
     }
 
     /*
@@ -365,7 +377,7 @@ export default class common {
             100/1440*window.innerWidth/2:
             75/390*window.innerWidth/2
 
-        document.querySelectorAll('.is-section-dark').forEach(section => {
+        document.querySelectorAll('.is-section-dark:not(.l-header-drawer)').forEach(section => {
             ScrollTrigger.create({
                 trigger: section,
                 start: `top-=${shift} top`,

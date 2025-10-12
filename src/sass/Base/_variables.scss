@@ -18,7 +18,7 @@
 
 	--color: #3A3735;
 	--color-light: #584E49;
-	--color-inverse: #fff;
+	--color-inverse: #EFECEB;
 	--color-main: #FF552B;
 	//--color-assort: #FF552B;
 	--color-assort: #FF552B;
@@ -33,7 +33,27 @@
 	--border-gray: 1px solid #EFECEB;
 	--border-assort: 1px solid var(--color-assort);
 	--border-assort-light: 1px solid rgba(255, 85, 43, 0.30);
-	--border-assort-dot: 1px dotted var(--color-assort);
+	//--border-assort-dot: 1px dotted var(--color-assort);
+	--border-assort-dot:
+		linear-gradient(to right, #FF552B, #FF552B 3px, transparent 3px, transparent 6px)
+		left bottom
+		/6px 1px
+		repeat-x
+	;
+	--border-assort-dot-wh:
+		linear-gradient(to right, #EFECEB, #EFECEB 3px, transparent 3px, transparent 6px)
+		left bottom
+		/6px 1px
+		repeat-x
+	;
+
+	--border-assort-vertical:
+		linear-gradient(to bottom, #FF552B, #FF552B 3px, transparent 3px, transparent 6px)
+		left top
+		/1px 6px
+		repeat-y
+	;
+
 
 	// 余白
 	--gap: #{12/16+rem};
@@ -92,5 +112,5 @@
 
 .is-section-dark {
 	color: var(--color);
-	--color: #fff;
+	--color: #EFECEB;
 }

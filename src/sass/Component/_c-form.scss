@@ -1,0 +1,72 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+@use '../Component/c-paragraph' as paragraph;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.c-form-search {
+	position: relative;
+	width: 240px;
+	@include config.sp-tab {
+		width: 17px;
+		transition: .3s var(--easeOutQuart);
+		&.is-show {
+			width: 150px;
+		}
+	}
+	@include config.pc {}
+}
+.c-form-search__keyword {
+	width: 100%;
+	input {
+		width: 100%;
+		height: 40px;
+		//padding: 0 1em;
+		background: var(--white, #FFF);
+		border: none;
+		background: #fff;
+		color: #3A3735;
+	}
+	@include config.sp-tab {
+		opacity: 0;
+		transition: .3s var(--easeOutQuart);
+		input {
+			padding: 0 1em;
+		}
+		.is-show & {
+			opacity: 1;
+		}
+	}
+	@include config.pc {
+		input {
+			padding: 0 1em;
+		}
+	}
+}
+.c-form-search__btn {
+	position: absolute;
+	top: calc(50% - #{8.5px});
+	right: 0;
+	width: 17px;
+	line-height: 0;
+	svg {
+		stroke: var(--color);
+		fill: transparent;
+	}
+	@include config.sp-tab {
+		transition: .2s var(--easeOutQuart);
+		.is-show & {
+			right: 6px;
+			svg {
+				stroke: #3A3735;
+			}
+		}
+	}
+	@include config.pc {
+		right: 6px;
+		svg {
+			stroke: #3A3735;
+		}
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

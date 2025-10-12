@@ -123,7 +123,7 @@
 .cm-block-cta-item {
 	flex: 1;
 	&:nth-child(2) {
-		border-left: var(--border-assort-dot);
+		background: var(--border-assort-vertical);
 	}
 	@include config.pc {}
 }
@@ -133,13 +133,13 @@
 	justify-content: center;
 	text-align: center;
 	height: 130/16+rem;
+	color: var(--color-assort);
 	@include config.pc {
 		height: 335/16+rem;
 	}
 }
 .cm-block-cta-item__en {
 	margin-top: 6/16+rem;
-	color: #FF552B;
 	font-family: var(--ITCGaramondW01-BookCn);
 	font-size: 32/16+rem;
 	letter-spacing: -0.05em;
@@ -162,7 +162,6 @@
 }
 .cm-block-cta-item__desc {
 	margin-top: 8/16+rem;
-	color: var(--LightBlack, #584E49);
 	font-size: 14/16+rem;
 	line-height: 23.8/16+rem;
 	@include config.sp-tab {

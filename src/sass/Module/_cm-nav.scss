@@ -21,7 +21,7 @@
 	}
 }
 .cm-nav-main-index__label {
-	color: var(--LightBlack, #584E49);
+	//color: var(--LightBlack, #584E49);
 	font-family: var(--Helvetica);
 	font-size: 14/16+rem;
 	letter-spacing: 0.01em;
@@ -43,8 +43,8 @@
 	display: flex;
 	flex-direction: column;
 	@include config.sp-tab {
-		border: var(--border-assort);
-		background: #fff;
+		border: var(--border-gray);
+		//background: #fff;
 	}
 	@include config.pc {
 		margin-top: 80/16+rem;
@@ -52,7 +52,7 @@
 	}
 }
 .cm-nav-main-contents__label {
-	color: var(--LightBlack, #584E49);
+	//color: var(--LightBlack, #584E49);
 	font-family: var(--Helvetica);
 	font-size: 14/16+rem;
 	letter-spacing: 0.01em;
@@ -73,7 +73,7 @@
 }
 .cm-nav-main-contents-item {
 	@include config.sp-tab {
-		border-bottom: var(--border-assort);
+		border-bottom: var(--border-gray);
 	}
 	@include config.pc {}
 }
@@ -136,8 +136,8 @@
 	display: flex;
 	flex-direction: column;
 	@include config.sp-tab {
-		li:not(:first-child) {
-			border-top: var(--border-assort-dot);
+		li:not(:last-child) {
+			background: var(--border-assort-dot-wh);
 		}
 	}
 	@include config.pc {
@@ -160,7 +160,7 @@
 		height: 64/16+rem;
 		background: var(--Gray, #EFECEB);
 
-		color: #000;
+		color: var(--color-assort);
 		text-align: justify;
 		font-family: var(--Suisse);
 		font-size: 14/16+rem;
@@ -168,7 +168,7 @@
 	}
 	a:hover {
 		color: #fff;
-		background: var(--BASEBlack, #3A3735);
+		background: var(--color-assort);
 	}
 	&:first-child {
 		margin-right: 12/16+rem;
@@ -190,6 +190,7 @@
 		font-size: 14/16+rem;
 		font-weight: 500;
 		letter-spacing: 0.01em;
+		color: var(--color-assort);
 		&:before {
 			content: '';
 			display: block;

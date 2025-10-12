@@ -25,13 +25,10 @@
 	left: 0;
 	top: 0;
 	pointer-events: none;
-	background: #fff;
+	background: var(--BASEBlack, #3A3735);
 	transition: .6s var(--easeOutQuart);
 	.is-nav-open & {
 		height: 100%;
-	}
-	@include config.sp-tab {
-		background: var(--Gray, #EFECEB);
 	}
 }
 .l-header-drawer__wrap {
@@ -42,6 +39,21 @@
 	padding: 138/16+rem 15/16+rem 60/16+rem;
 	@include config.pc {
 		padding: 166/16+rem 0 80/16+rem;
+	}
+}
+.l-header-drawer__search {
+	position: absolute;
+	right: 90/16+rem;
+	top: 26/16+rem;
+	transition: .3s var(--easeOutQuart);
+	opacity: 0;
+	.is-nav-open & {
+		transition-delay: .6s;
+		opacity: 1;
+	}
+	@include config.pc {
+		right: 116/16+rem;
+		top: 34/16+rem;
 	}
 }
 .l-header-drawer__nav {

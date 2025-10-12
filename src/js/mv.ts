@@ -11,11 +11,13 @@ export default class GridViewer {
     private controls!: OrbitControls;
     private shaderMaterials: THREE.ShaderMaterial[] = [];
     private modelSize?: THREE.Vector3;
+    private modelGroups: { group: THREE.Group; direction: number; instances: THREE.Group[] }[] = []
     private gui!: GUI;
     private params = {
-        noiseStrength: 0.1,
+        noiseStrength: 0.15,
         scanWidth: 1.2,
         baseSpeed: 0.4,
+        scrollSpeed: 0.2,
     };
 
     constructor(selector = "#mv") {
@@ -75,7 +77,7 @@ export default class GridViewer {
         this.gui = new GUI();
 
         this.gui
-            .add(this.params, "noiseStrength", 0, 0.1, 0.001)
+            .add(this.params, "noiseStrength", 0, 1, 0.01)
             .name("Noise Strength")
             .onChange((v: number) => {
                 this.shaderMaterials.forEach((m) => (m.uniforms.noiseStrength.value = v));
@@ -98,6 +100,7 @@ export default class GridViewer {
                     m.uniforms.scanSpeed.value = v * speedMultiplier;
                 });
             });
+        this.gui.add(this.params, "scrollSpeed", 0, 1, 0.01).name("Scroll Speed")
     }
 
     private speedMultipliers: Record<string, number> = {
@@ -221,16 +224,33 @@ export default class GridViewer {
 
                 const spacing = size.z;
                 const positions = [-spacing, 0, spacing];
+                const directions = [1, -1, 1]
 
-                positions.forEach((zOffset, i) => {
-                    const group = new THREE.Group();
-                    const model = gltf.scene.clone();
-                    model.position.sub(center);
-                    group.add(model);
-                    if (i === 1) group.rotation.y = Math.PI;
-                    group.position.z = zOffset;
-                    this.applyMaterialsToModel(model);
-                    this.scene.add(group);
+                positions.forEach((zOffset, modelIndex) => {
+                    const instances: THREE.Group[] = []
+                    const direction = directions[modelIndex]
+
+                    for (let i = 0; i < 2; i++) {
+                        const group = new THREE.Group()
+                        const model = gltf.scene.clone()
+
+                        model.position.sub(center)
+                        group.add(model)
+
+                        if (modelIndex === 1) {
+                            group.rotation.y = Math.PI
+                        }
+
+                        group.position.z = zOffset
+                        group.position.x = i * size.x * direction
+
+                        this.applyMaterialsToModel(model)
+                        this.scene.add(group)
+                        instances.push(group)
+                    }
+
+                    this.modelGroups.push({ group: instances[0], direction, instances })
+
                 });
 
                 const totalHeight = spacing * 2 + size.y;
@@ -256,6 +276,21 @@ export default class GridViewer {
             requestAnimationFrame(loop);
             const time = clock.getElapsedTime();
             this.shaderMaterials.forEach((m) => (m.uniforms.uTime.value = time));
+
+            if (this.modelSize) {
+                this.modelGroups.forEach(({ direction, instances }) => {
+                    instances.forEach((instance) => {
+                        instance.position.x += direction * this.params.scrollSpeed * 0.001
+
+                        if (direction > 0 && instance.position.x > this.modelSize.x) {
+                            instance.position.x -= this.modelSize.x * 2
+                        } else if (direction < 0 && instance.position.x < -this.modelSize.x) {
+                            instance.position.x += this.modelSize.x * 2
+                        }
+                    })
+                })
+            }
+
             this.controls.update();
             this.renderer.render(this.scene, this.camera);
         };
