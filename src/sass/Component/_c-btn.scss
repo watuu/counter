@@ -371,7 +371,7 @@
 	font-weight: 400;
 	color: var(--color-assort);
 	font-size: 16/16+rem;
-	letter-spacing: -0.05em;
+	letter-spacing: var(--letter-spacing-ja);
 	text-transform: capitalize;
 
 	background: var(--border-assort-dot);
@@ -444,7 +444,7 @@
 	border-radius: 70/16+rem;
 	border: var(--border-assort-light);
 	color: var(--BASECOLOR, #FF552B);
-	letter-spacing: -0.05em;
+	letter-spacing: var(--letter-spacing-ja);
 
 	font-size: 16/16+rem;
 	font-weight: 500;

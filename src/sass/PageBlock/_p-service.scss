@@ -27,7 +27,7 @@
 	color: var(--color-assort);
 	font-size: 20/16+rem;
 	line-height: 1.3;
-	letter-spacing: -0.05em;
+	letter-spacing: var(--letter-spacing-ja);
 	@include config.pc {
 		margin-top: 120/16+rem;
 		width: 900/16+rem;

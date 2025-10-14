@@ -3,16 +3,20 @@
 // CSS 変数
 // ===================================================================
 :root {
-	--sans : TazuganeGothicStdN-Medium, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "メイリオ", "Meiryo", sans-serif;
+	--sans : "Tazugane Gothic HondaMKTA Med", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "メイリオ", "Meiryo", sans-serif;
 	--serif: "游明朝", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HG明朝E", "ＭＳ 明朝", serif;
 	--ITCGaramondW01-BookCn: ITCGaramondStd-BkCond, var(--serif);
-	--Tazugane-Regular: TazuganeGothicStdN-Regular;
-	--Tazugane: TazuganeGothicStdN-Medium;
-	--Tazugane-Bold: TazuganeGothicStdN-Bold;
-	--Helvetica: "HelveticaNeueeTextPro-Md", var(--sans);
-	--Suisse: "HelveticaNeueeTextPro-Md", var(--sans);
-	--Helvetica-Bold: "HelveticaNeueeTextPro-Bold", var(--sans);
-	--Suisse-Bold: "HelveticaNeueeTextPro-Bold", var(--sans);
+	//--Tazugane-Regular: TazuganeGothicStdN-Regular;
+	//--Tazugane: TazuganeGothicStdN-Medium;
+	//--Tazugane-Bold: TazuganeGothicStdN-Bold;
+	--Helvetica: "HelveticaNeueeTextPro-Roman", var(--sans);
+	--Suisse: "HelveticaNeueeTextPro-Roman", var(--sans);
+	--Helvetica-Md: "HelveticaNeueeTextPro-Md", var(--sans);
+	--Suisse-Md: "HelveticaNeueeTextPro-Md", var(--sans);
+	//--Helvetica-Bold: "HelveticaNeueeTextPro-Bold", var(--sans);
+	//--Suisse-Bold: "HelveticaNeueeTextPro-Bold", var(--sans);
+	--letter-spacing-ja: 0; // -0.05em
+
 
 	--font : var(--sans);
 
