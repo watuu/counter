@@ -1,6 +1,7 @@
 @use '../Base/config' as config;
 @use '../Component/c-btn' as btn;
 @use '../Component/c-paragraph' as paragraph;
+@use '../Utility/u-utility' as utility;
 /*----------------------------------------------------
 	...
 ----------------------------------------------------*/
@@ -113,6 +114,67 @@
 .cm-block-header--service {
 	border-bottom: none;
 }
+// contact
+.cm-block-header--contact {
+	padding: 75/16+rem 0 8/16+rem;
+	border-bottom: var(--border-assort);
+	@include config.pc {
+		padding: 95/16+rem 0 24/16+rem;
+	}
+}
+// media
+.cm-block-header--media {
+	padding: 100/16+rem 0 0;
+	border-bottom: none;
+	@include config.pc {
+		padding: 100/16+rem 0 0;
+	}
+	.cm-block-header__title {
+		color: #FF552B;
+		font-family: var(--ITCGaramondW01-BookCn);
+		font-size: 48/16+rem;
+		font-weight: 400;
+		line-height: 0.9;
+		letter-spacing: -0.05em;
+		text-transform: capitalize;
+		@include config.pc {
+			font-size: 96/16+rem;
+		}
+	}
+	.cm-block-header__bc {
+		margin-top: 10/16+rem;
+		@include config.pc {
+			margin-top: 18/16+rem;
+		}
+	}
+}
+.cm-block-header__category {
+	display: flex;
+	padding: 18/16+rem 15/16+rem;
+	gap: 25/16+rem;
+	background: var(--color-assort);
+	color: var(--white, #FFF);
+
+	font-size: 14/16+rem;
+	a {
+		color: var(--color-inverse);
+	}
+	@include config.sp-tab {
+		white-space: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		&::-webkit-scrollbar {
+		  display: none;
+		  -webkit-appearance: none;
+		}
+	}
+	@include config.pc {
+		padding: 24/16+rem 15/16+rem;
+		justify-content: center;
+		font-size: 18/16+rem;
+	}
+}
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 .cm-block-cta {
@@ -168,5 +230,102 @@
 		display: none;
 	}
 	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.cm-block-media {
+	@include config.pc {}
+}
+.cm-block-media-youtube {
+	padding: var(--padding-block-sm) 0;
+	background: var(--border-assort-dot);
+	@include config.pc {}
+}
+.cm-block-media-youtube__head {
+	display: flex;
+	@include config.pc {}
+}
+.cm-block-media-youtube__logo {
+	margin-left: auto;
+	width: 81/16+rem;
+	align-self: center;
+	@extend .u-color-blend;
+	@include config.sp-tab {
+		display: none;
+	}
+	@include config.pc {
+		position: relative;
+		top: 8/16+rem;
+	}
+}
+.cm-block-media-youtube__slide {
+	margin-top: 16/16+rem;
+	figure {
+		@extend .u-color-blend;
+	}
+	@include config.pc {
+		margin-top: 26/16+rem;
+	}
+}
+.cm-block-media-youtube__paginate {
+	margin-top: 20/16+rem;
+	@include config.pc {
+		margin-top: 26/16+rem;
+	}
+}
+// sns
+.cm-block-media-sns {
+	padding: var(--padding-block-sm) 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10/16+rem;
+	@include config.pc {
+		flex-direction: row;
+		align-items: center;
+		gap: 88/16+rem;
+	}
+}
+.cm-block-media-sns__wrap {
+	display: flex;
+	gap: 18/16+rem;
+	@include config.pc {
+		gap: 36/16+rem;
+	}
+}
+.cm-block-media-sns__logo {
+	padding-top: 20/16+rem;
+	width: 42/16+rem;
+	@include config.pc {
+		padding-top: 24/16+rem;
+	}
+}
+.cm-block-media-sns__list {
+	display: flex;
+	gap: 12/16+rem;
+	@include config.pc {
+		gap: 16/16+rem;
+	}
+}
+.cm-block-media-sns__profile {
+	width: 80/16+rem;
+	display: flex;
+	flex-direction: column;
+	gap: 6/16+rem;
+	text-align: center;
+
+	color: var(--color-assort);
+	font-size: 12/16+rem;
+	letter-spacing: 0.05em;
+	img {
+		border-radius: 100%;
+		border: var(--border-assort);
+	}
+}
+.cm-block-media-sns__links {
+	display: flex;
+	gap: 32/16+rem;
+	@include config.pc {
+		gap: 64/16+rem;
+		font-size: 20/16+rem;
+	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

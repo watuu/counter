@@ -303,13 +303,13 @@
 .c-card-media__category {
 	margin-top: auto;
 	display: flex;
-	gap: 25/16+rem;
+	gap: 0 25/16+rem;
 	flex-wrap: wrap;
 	font-family: var(--Suisse);
 	font-size: 12/16+rem;
 	font-weight: 400;
 	@include config.pc {
-		gap: 46/16+rem;
+		gap: 0 46/16+rem;
 	}
 }
 .c-card-media__arrow {
@@ -343,48 +343,83 @@
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-card-media-pickup {
+	@include config.pc {}
+}
+.c-card-media-pickup__link {
+	display: flex;
+	flex-direction: column;
+	gap: 12/16+rem;
+	@include config.pc {
+		gap: 20/16+rem;
+	}
+}
+.c-card-media-pickup__pic {
+	@include config.pc {}
+}
+.c-card-media-pickup__title {
+	color: var(--BASECOLOR, #FF552B);
+	font-size: 16/16+rem;
+	font-weight: 500;
+	line-height: 1.3;
+	@include config.pc {
+		font-size: 25/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-card-news {
 	@include config.pc {}
 }
 .c-card-news__link {
 	display: flex;
 	background: var(--border-assort-dot);
-	padding: 28/16+rem 0;
-	color: var(--LightBlack, #584E49);
-
-	@include config.sp-tab {
-		flex-wrap: wrap;
+	padding: 18/16+rem 0;
+	color: var(--color-assort);
+	align-items: center;
+	@include config.pc {
+		padding: 28/16+rem 0;
 	}
-	@include config.pc {}
+}
+.c-card-news__meta {
+	display: flex;
+	flex-direction: column;
+	@include config.sp-tab {
+		width: 125/16+rem;
+		gap: 6/16+rem;
+	}
+	@include config.pc {
+		flex-direction: row;
+	}
 }
 .c-card-news__date {
 	font-family: var(--Suisse);
-	font-size: 12/16+rem;
+	font-size: 10/16+rem;
 	font-weight: 400;
 	letter-spacing: 0.05em;
 	@include config.pc {
 		width: 136/16+rem;
+		font-size: 12/16+rem;
 	}
 }
 .c-card-news__category {
 	font-family: var(--Suisse);
-	font-size: 12/16+rem;
+	font-size: 10/16+rem;
 	font-weight: 400;
 	letter-spacing: 0.05em;
 	@include config.pc {
 		width: 152/16+rem;
+		font-size: 12/16+rem;
 	}
 }
 .c-card-news__title {
-	font-size: 18/16+rem;
+	flex: 1;
+	font-size: 14/16+rem;
 	font-weight: 500;
 	line-height: 1.4;
 	letter-spacing: 0.01em;
-	@include config.sp-tab {
-		width: 100%;
-	}
 	@include config.pc {
-		flex: 1;
+		font-size: 18/16+rem;
+		line-height: 1.4;
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

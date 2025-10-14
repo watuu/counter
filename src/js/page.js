@@ -18,17 +18,42 @@ export default class Page {
             scrollY: 0,
         }
         // this.cHeadingSection()
+        if (document.querySelector('.cm-block-media-youtube')) {
+            this.cmBlockMediaYoutube()
+        }
         if (document.querySelector('.p-top-service')) {
             this.pTopService()
         }
         if (document.querySelector('.p-top-creative__list') && Utility.isPC()) {
             this.pTopCreative()
         }
+        if (document.querySelector('.p-media-pickup')) {
+            this.pMediaPickup()
+        }
+
 
     }
     // cHeadingSection() {
     //
     // }
+    cmBlockMediaYoutube() {
+        const mySwiper = new Swiper ('.cm-block-media-youtube .swiper', {
+            loop: true,
+            loopAdditionalSlides: 1,
+            slidesPerView: 1,
+            spaceBetween: 16,
+            pagination: {
+                el: '.cm-block-media-youtube__paginate',
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            },
+        });
+    }
+
     pTopService() {
         gsap.fromTo(gsap.utils.toArray('.p-top-service__bg svg path'), {
             drawSVG:"0 0"
@@ -86,5 +111,23 @@ export default class Page {
         });
 
         this.settings.eventListeners.push({ element: document, event: "mousemove", handler: moveElement });
+    }
+
+    pMediaPickup() {
+        const mySwiper = new Swiper ('.p-media-pickup .swiper', {
+            loop: true,
+            loopAdditionalSlides: 1,
+            slidesPerView: 1,
+            spaceBetween: 12,
+            initialSlide: 1,
+            pagination: {
+                el: '.p-media-pickup__paginate',
+            },
+            breakpoints: {
+                1024: {
+                    spaceBetween: 36,
+                }
+            },
+        });
     }
 }

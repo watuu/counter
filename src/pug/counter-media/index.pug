@@ -1,0 +1,175 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "COUNTER MEDIA"
+    - var pageClass = ""
+
+block content
+
+    .p-media
+        .cm-block-header.cm-block-header--media
+            ul.cm-block-header__category
+                li
+                    a(href="#") SEO
+                li
+                    a(href="#") WEBデザイン
+                li
+                    a(href="#") WEB制作
+                li
+                    a(href="#") WEB広告
+                li
+                    a(href="#") マーケティング
+                li
+                    a(href="#") ワードプレス
+                li
+                    a(href="#") 動画制作
+
+            .l-container
+                //-.cm-block-header__title
+                    p.cm-block-header__en Contact
+                    h1.cm-block-header__ja お問い合わせ
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span Blog
+                p.cm-block-header__title  (Counter Media)
+        .p-media-pickup
+            .swiper
+                .swiper-wrapper
+                    - for (var x = 1; x <= 3; x++)
+                        .swiper-slide
+                            .c-card-media-pickup
+                                a(href=path + "single-media/").c-card-media-pickup__link
+                                    figure.c-card-media-pickup__pic
+                                        img(src=img + "480x300.webp" alt="")
+                                    p.c-card-media-pickup__title メルマガの配信数を増やすタイミングとは？意識べきポイントも解説
+            .p-media-pickup__paginate
+
+        .l-container
+            .p-media__wrap
+                .p-media__aside
+                    .p-media-aside-block
+                        .p-media-aside-block__head
+                            h3.c-heading-caption Pick Up
+                        ul.p-media-aside-block__pickup
+                            li
+                                a(href=path + "single-media/")
+                                    figure
+                                        img(src=img+"400x225.webp" alt="")
+                            li
+                                a(href=path + "single-media/")
+                                    figure
+                                        img(src=img+"400x225.webp" alt="")
+                        .p-media-aside-block__search
+                            .c-form-search.c-form-search--aside
+                                .c-form-search__keyword
+                                    input(type="text")
+                                button.c-form-search__btn
+                                    svg(width=16 height=17)
+                                        use(href="#ico-search")
+                    .p-media-aside-block
+                        .p-media-aside-block__head
+                            h3.c-heading-caption Category
+                        ul.p-media-aside-block__category
+                            li
+                                a(href="#") SEO
+                            li
+                                a(href="#") WEBデザイン
+                            li
+                                a(href="#") WEB制作
+                            li
+                                a(href="#") WEB広告
+                            li
+                                a(href="#") マーケティング
+                            li
+                                a(href="#") ワードプレス
+                            li
+                                a(href="#") 動画制作
+                    .p-media-aside-block
+                        .p-media-aside-block__head
+                            h3.c-heading-caption Tags
+                        ul.p-media-aside-block__tag
+                            li
+                                a(href="#") #おすすめ記事
+                            li
+                                a(href="#") #ピックアップ
+                            li
+                                a(href="#") #ホワイトペーパ
+                            li
+                                a(href="#") #外部対策
+
+
+                .p-media__content
+                    section.p-media-list
+                        .p-media-list__head
+                            h3.c-heading-caption Recent Post
+                        .p-media-list__list
+                            - for (var x = 1; x <= 10; x++)
+                                .c-card-media
+                                    a(href=path + "single-media/").c-card-media__link
+                                        p.c-card-media__date 25.6.29
+                                        figure.c-card-media__pic
+                                            img(src=img + "480x300.webp" alt="")
+                                        .c-card-media__wrap
+                                            h3.c-card-media__title
+                                                | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+                                            ul.c-card-media__category
+                                                li Category
+                                                li MailMagazine
+            .p-media__paginate
+                ul.cm-nav-paginate
+                    li.cm-nav-paginate__ctrl
+                        a(href="#") PREV
+                    li.cm-nav-paginate__page
+                        a(href="#").is-current 01
+                    li.cm-nav-paginate__page
+                        a(href="#") 02
+                    li.cm-nav-paginate__page
+                        a(href="#") 03
+                    li.cm-nav-paginate__ctrl
+                        a(href="#") NEXT
+        section.p-media-ranking
+            .l-container
+                .p-media-ranking__head
+                    h3.c-heading-caption Ranking
+                .p-media-ranking__list
+                    - for (var x = 1; x <= 3; x++)
+                        .c-card-media
+                            a(href=path + "single-media/").c-card-media__link
+                                p.c-card-media__date 25.6.29
+                                figure.c-card-media__pic
+                                    img(src=img + "480x300.webp" alt="")
+                                .c-card-media__wrap
+                                    h3.c-card-media__title
+                                        | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+                                    ul.c-card-media__category
+                                        li Category
+                                        li MailMagazine
+        section.p-media-recommend
+            .l-container
+                .p-media-recommend__head
+                    h3.c-heading-caption Recommend
+                .p-media-recommend__list
+                    - for (var x = 1; x <= 3; x++)
+                        .c-card-media
+                            a(href=path + "single-media/").c-card-media__link
+                                p.c-card-media__date 25.6.29
+                                figure.c-card-media__pic
+                                    img(src=img + "480x300.webp" alt="")
+                                .c-card-media__wrap
+                                    h3.c-card-media__title
+                                        | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+                                    ul.c-card-media__category
+                                        li Category
+                                        li MailMagazine
+
+
+
+
+
+
+
+
+
+

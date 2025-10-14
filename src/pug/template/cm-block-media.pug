@@ -1,0 +1,56 @@
+.cm-block-media
+    .cm-block-media-youtube
+        .cm-block-media-youtube__head
+            h3.c-heading-caption COUNTER Channel
+            .cm-block-media-youtube__logo
+                img(src=img+"logo-youtube.svg" alt="YouTUbe")
+        .cm-block-media-youtube__slide
+            .swiper
+                .swiper-wrapper
+                    figure.swiper-slide
+                        img(src=img+"400x225.webp")
+                    figure.swiper-slide
+                        img(src=img+"400x225_2.webp")
+                    figure.swiper-slide
+                        img(src=img+"400x225.webp")
+                    figure.swiper-slide
+                        img(src=img+"400x225_2.webp")
+                    figure.swiper-slide
+                        img(src=img+"400x225.webp")
+
+            .cm-block-media-youtube__paginate
+    .cm-block-media-sns
+        .cm-block-media-sns__wrap
+            .cm-block-media-sns__logo
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.5727 19.0323L35.6897 5.25H32.8179L22.2969 17.2179L13.8917 5.25H4.2002L16.9083 23.3467L4.2002 37.8H7.07195L18.183 25.1622L27.0576 37.8H36.7502L23.5706 19.0323H23.5727ZM19.6383 23.5053L18.351 21.7045L8.10619 7.36575H12.5162L20.7849 18.9367L22.0722 20.7396L32.819 35.7808H28.409L19.6383 23.5053Z" fill="#FF552B"/>
+                </svg>
+            ul.cm-block-media-sns__list
+                li
+                    a(href="#" target="_blank" rel="noopener")
+                        figure.cm-block-media-sns__profile
+                            img(src=img + "media-miyata.webp")
+                            figcaption 宮田
+                li
+                    a(href="#" target="_blank" rel="noopener")
+                        figure.cm-block-media-sns__profile
+                            img(src=img + "media-mori.webp")
+                            figcaption 森
+                li
+                    a(href="#" target="_blank" rel="noopener")
+                        figure.cm-block-media-sns__profile
+                            img(src=img + "media-kanazawa.webp")
+                            figcaption 金沢
+        ul.cm-block-media-sns__links
+            li
+                a(href= path + "counter-media/").c-link-arrow
+                    span.c-link-arrow__txt Couter Media
+                    i.c-link-arrow__arrow
+                        svg(width=40 height=40)
+                            use(href="#ico-arrow")
+            li
+                a(href="#" target="_blank" rel="noopener").c-link-external
+                    span.c-link-external__txt note
+                    i.c-link-external__ico
+                        svg(width=24 height=19)
+                            use(href="#ico-external")

@@ -221,6 +221,41 @@
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.cm-nav-aside {
+	display: flex;
+	flex-direction: column;
+	gap: 6/16+rem;
+	@include config.pc {}
+}
+.cm-nav-aside__link {
+	display: inline-flex;
+	align-items: center;
+	padding-left: 12/16+rem;
+	position: relative;
+
+	color: #FF552B;
+	font-family: var(--Suisse);
+	font-size: 12/16+rem;
+	font-weight: 400;
+	letter-spacing: 0.04em;
+	&:before {
+		content: '';
+		display: block;
+		width: 7/16+rem;
+		height: 0;
+		position: absolute;
+		left: 0;
+		pointer-events: none;
+		border-top: var(--border-assort);
+		opacity: 0;
+	}
+	.is-current &:before,
+	&.is-current:before {
+		opacity: 1;
+	}
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .cm-nav-category {
 	display: flex;
 	gap: 15/16+rem;

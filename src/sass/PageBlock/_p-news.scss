@@ -4,20 +4,48 @@
 /*----------------------------------------------------
 	...
 ----------------------------------------------------*/
-.p-case {
-	padding-bottom: var(--padding-page);
+.p-news {
+	//padding-bottom: var(--padding-page);
 	@include config.pc {}
 }
-.p-case__list {
-	margin-top: 42/16+rem;
-	display: grid;
-	gap: 39/16+rem;
+//.p-news__list {
+//	margin-top: 42/16+rem;
+//	display: grid;
+//	gap: 39/16+rem;
+//	@include config.pc {
+//		margin-top: 100/16+rem;
+//		display: flex;
+//		flex-wrap: wrap;
+//		//grid-template-columns: 1fr 1fr 1fr;
+//		gap: 52/16+rem 8/16+rem;
+//	}
+//}
+.p-news__wrap {
+	display: flex;
+	flex-direction: column;
+	padding-top: var(--padding-section);
+	gap: 20/16+rem;
 	@include config.pc {
-		margin-top: 100/16+rem;
-		display: flex;
-		flex-wrap: wrap;
-		//grid-template-columns: 1fr 1fr 1fr;
-		gap: 52/16+rem 8/16+rem;
+		flex-direction: row;
+		gap: 0;
 	}
+}
+.p-news__aside {
+	@include config.pc {
+		width: 350/16+rem;
+	}
+}
+.p-news__list {
+	flex: 1;
+	@include config.pc {
+		margin-top: -20/16+rem;
+	}
+}
+.p-news__paginate {
+	margin-top: var(--padding-block);
+	@include config.pc {}
+}
+.p-news__media {
+	margin-top: var(--padding-section);
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

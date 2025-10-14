@@ -333,6 +333,36 @@
 	@include config.pc {}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-form {
+	display: inline-flex;
+	align-items: center;
+	width: 360/16+rem;
+	height: 157/16+rem;
+	padding: 20/16+rem 23/16+rem;
+	background: var(--BASECOLOR, #FF552B);
+
+	color: var(--white, #FFF);
+	font-size: 18/16+rem;
+	font-weight: 500;
+	@include config.pc {
+		width: 100%;
+		padding: 20/16+rem 70/16+rem 20/16+rem 23/16+rem;
+		font-size: 25/16+rem;
+	}
+}
+.c-btn-form__txt {
+	@include config.pc {}
+}
+.c-btn-form__arrow {
+	margin-left: auto;
+	@extend .c-btn-arrow;
+	svg {
+		fill: #fff;
+	}
+	transform: rotate(45deg);
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-btn-creative {
 	display: flex;
 	padding: 7/16+rem 0 6/16+rem;

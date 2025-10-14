@@ -5,3 +5,9 @@
 .l-container {
 	@include config.container;
 }
+.l-container--md {
+	@include config.pc {
+		padding-left: 92/16+rem;
+		padding-right: 92/16+rem;
+	}
+}

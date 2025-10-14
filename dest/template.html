@@ -26,8 +26,9 @@
           <li><a class="c-btn-txt" href="./service/"><span class="js-clone">service</span></a></li>
           <li><a class="c-btn-txt" href="./case/"><span class="js-clone">Casestudy</span></a></li>
           <li><a class="c-btn-txt" href="./voice/"><span class="js-clone">Voice</span></a></li>
-          <li><a class="c-btn-txt" href="./blog/"><span class="js-clone">Blog</span></a></li>
+          <li><a class="c-btn-txt" href="./counter-media/"><span class="js-clone">Blog</span></a></li>
           <li><a class="c-btn-txt" href="./news/"><span class="js-clone">News</span></a></li>
+          <li><a class="c-btn-txt" href="./download/"><span class="js-clone">Download</span></a></li>
         </ul>
       </nav>
       <button class="l-header-menu c-btn-menu" aria-label="メニューを開く"><span class="c-btn-menu__wrap"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span><span class="c-btn-menu__wrap2"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span></button>
@@ -188,17 +189,21 @@
               <div class="c-heading-section">
                 <h2 class="c-heading-section__title">(Creative Work)</h2><span class="c-heading-section__line"></span>
               </div>
-              <p>.c-heading-caption</p>
+              <p>.c-heading-caption fz36 fz24</p>
               <h3 class="c-heading-caption">(Creative Work)</h3>
               <p>.c-paragraph fz18</p>
               <p class="c-paragraph">青山学院大学経済学部卒業後に外資系ITコンサルティングファーム2社にてエンジニア・ITコンサルタントとして複数のERPシステム導入・運用プロジェクトを経験。</p>
             </div>
             <hr/>
             <div class="u-gap">
-              <p>.c-link-external</p><a class="c-link-external" href="#" target="_blank" rel="noopener"><span class="c-link-external__txt">Launch Site</span><i class="c-link-external__arrow">
-                  <svg width="40" height="40">
-                    <use href="#ico-arrow"></use>
-                  </svg></i></a>
+              <p>.c-link-arrow .c-link-external</p>
+              <div><a class="c-link-arrow" href="#" target="_blank" rel="noopener"><span class="c-link-arrow__txt">Launch Site</span><i class="c-link-arrow__arrow">
+                    <svg width="40" height="40">
+                      <use href="#ico-arrow"></use>
+                    </svg></i></a><a class="c-link-external" href="#" target="_blank" rel="noopener"><span class="c-link-external__txt">Launch Site</span><i class="c-link-external__ico">
+                    <svg width="24" height="19">
+                      <use href="#ico-external"></use>
+                    </svg></i></a></div>
               <p>.c-btn-arrow</p>
               <button class="c-btn-arrow">
                 <svg width="40" height="40">
@@ -236,6 +241,11 @@
                   <svg width="60" height="60">
                     <use href="#ico-down"></use>
                   </svg></i></a>
+              <p>.c-btn-form</p>
+              <button class="c-btn-form"><span class="c-btn-form__txt">送信する</span><i class="c-btn-form__arrow">
+                  <svg width="40" height="40">
+                    <use href="#ico-arrow"></use>
+                  </svg></i></button>
               <p>.c-btn-creative</p><a class="c-btn-creative" href="./"><span class="c-btn-creative__txt"><span class="js-clone">世界へボカン様</span></span><i class="c-btn-creative__arrow">
                   <svg width="40" height="40">
                     <use href="#ico-arrow"></use>
@@ -259,7 +269,7 @@
             <hr/>
             <div class="u-gap">
               <p>.c-card-case</p>
-              <div class="c-card-case"><a class="c-card-case__link" href="#">
+              <div class="c-card-case"><a class="c-card-case__link" href="./single-creative/">
                   <figure class="c-card-case__pic"><img src="./assets/img/300x200.webp" alt=""/></figure>
                   <h3 class="c-card-case__name">株式会社HONE</h3><i class="c-card-case__arrow">
                     <svg width="40" height="40">
@@ -316,27 +326,58 @@
               <p>.c-card-news</p>
               <div>
                 <div class="c-card-news"><a class="c-card-news__link" href="#">
-                    <p class="c-card-news__date">2025.07.25</p>
-                    <p class="c-card-news__category">News</p>
+                    <div class="c-card-news__meta">
+                      <p class="c-card-news__date">2025.07.25</p>
+                      <p class="c-card-news__category">News</p>
+                    </div>
                     <h3 class="c-card-news__title">コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…</h3></a></div>
                 <div class="c-card-news"><a class="c-card-news__link" href="#">
-                    <p class="c-card-news__date">2025.07.25</p>
-                    <p class="c-card-news__category">News</p>
+                    <div class="c-card-news__meta">
+                      <p class="c-card-news__date">2025.07.25</p>
+                      <p class="c-card-news__category">News</p>
+                    </div>
                     <h3 class="c-card-news__title">コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…</h3></a></div>
               </div>
             </div>
             <hr/>
             <div class="u-gap">
-              <p>.c-form-search</p>
-              <div class="c-form-search">
-                <div class="c-form-search__keyword">
-                  <input type="text"/>
+              <p>.c-form-search .c-form-search--aside</p>
+              <div>
+                <div class="c-form-search">
+                  <div class="c-form-search__keyword">
+                    <input type="text"/>
+                  </div>
+                  <button class="c-form-search__btn">
+                    <svg width="16" height="17">
+                      <use href="#ico-search"></use>
+                    </svg>
+                  </button>
                 </div>
-                <button class="c-form-search__btn">
-                  <svg width="16" height="17">
-                    <use href="#ico-search"></use>
-                  </svg>
-                </button>
+                <div class="c-form-search c-form-search--aside">
+                  <div class="c-form-search__keyword">
+                    <input type="text"/>
+                  </div>
+                  <button class="c-form-search__btn">
+                    <svg width="16" height="17">
+                      <use href="#ico-search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <p>.c-form-input</p>
+              <div class="cm-form__inputs">
+                <dl class="c-form-input">
+                  <dt><span>お名前</span><span class="_required">（必須）</span></dt>
+                  <dd>
+                    <input type="text" placeholder="例) 山田 太郎"/>
+                  </dd>
+                </dl>
+                <dl class="c-form-input">
+                  <dt><span>お名前</span><span class="_required">（必須）</span></dt>
+                  <dd>
+                    <input type="text" placeholder="例) 山田 太郎"/>
+                  </dd>
+                </dl>
               </div>
             </div>
           </div>
@@ -346,117 +387,7 @@
             <hr/>
             <div class="u-gap">
               <p>.cm-nav-main</p>
-              <div class="cm-nav-main">
-                <div class="cm-nav-main__wrap">
-                  <div class="cm-nav-main-index">
-                    <p class="cm-nav-main-index__label">Index</p>
-                    <ul class="cm-nav-main-index__list">
-                      <li><a class="c-btn-round" href="./"><span class="c-btn-round__txt"><span class="js-clone">サイトTOP</span></span></a></li>
-                      <li><a class="c-btn-round" href="./company/"><span class="c-btn-round__txt"><span class="js-clone">企業情報</span></span></a></li>
-                      <li><a class="c-btn-round" href="./creative-case/"><span class="c-btn-round__txt"><span class="js-clone">制作実績</span></span></a></li>
-                      <li><a class="c-btn-round" href="./case/"><span class="c-btn-round__txt"><span class="js-clone">お客様成功事例</span></span></a></li>
-                      <li><a class="c-btn-round" href="./news/"><span class="c-btn-round__txt"><span class="js-clone">ニュース</span></span></a></li>
-                      <li><a class="c-btn-round" href="./download/"><span class="c-btn-round__txt"><span class="js-clone">資料請求</span></span></a></li>
-                      <li><a class="c-btn-round" href="./contact/"><span class="c-btn-round__txt"><span class="js-clone">お問い合わせ</span></span></a></li>
-                      <li><a class="c-btn-round" href="./service/"><span class="c-btn-round__txt"><span class="js-clone">サービス</span></span></a></li>
-                    </ul>
-                  </div>
-                  <div class="cm-nav-main-contents">
-                    <p class="cm-nav-main-contents__label">Service Contents</p>
-                    <div class="cm-nav-main-contents__list">
-                      <div class="cm-nav-main-contents-item">
-                        <button class="c-btn-nav-heading js-accordion"><span class="c-btn-nav-heading__txt">Digital Marketing</span><i class="c-btn-nav-heading__status"></i></button>
-                        <div class="cm-nav-main-contents-item__body">
-                          <div class="cm-nav-main-contents-item__category">
-                            <h3 class="cm-nav-main-contents-item__sub">SEO</h3>
-                            <ul class="cm-nav-main-contents-item__list">
-                              <li><a href="./">SEOコンサルティング</a></li>
-                              <li><a href="./">被リンク獲得運用代行</a></li>
-                              <li><a href="./">AI-SEO記事制作/作成代行</a></li>
-                              <li><a href="./">データベース型サイトSEO支援</a></li>
-                              <li><a href="./">オウンドメディアコンサルティング</a></li>
-                            </ul>
-                          </div>
-                          <div class="cm-nav-main-contents-item__category">
-                            <h3 class="cm-nav-main-contents-item__sub">Web広告</h3>
-                            <ul class="cm-nav-main-contents-item__list">
-                              <li><a href="./">Facebook広告運用代行</a></li>
-                              <li><a href="./">TikTok広告運用代行</a></li>
-                              <li><a href="./">Instagram広告運用代行</a></li>
-                            </ul>
-                          </div>
-                          <div class="cm-nav-main-contents-item__category">
-                            <h3 class="cm-nav-main-contents-item__sub">CRM/MA運用</h3>
-                            <ul class="cm-nav-main-contents-item__list">
-                              <li><a href="./">Hubspot導入支援/運用代行</a></li>
-                              <li><a href="./">CRM・SFA運用代行</a></li>
-                              <li><a href="./">Salesforce運用代行</a></li>
-                              <li><a href="./">MA運用代行</a></li>
-                            </ul>
-                          </div>
-                          <div class="cm-nav-main-contents-item__category">
-                            <h3 class="cm-nav-main-contents-item__sub">コンテンツ制作</h3>
-                            <ul class="cm-nav-main-contents-item__list">
-                              <li><a href="./">ホワイトペーパー制作/作成代行</a></li>
-                              <li><a href="./">インタビュー/取材記事制作代行</a></li>
-                              <li><a href="./">メルマガ制作配信代行</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cm-nav-main-contents-item">
-                        <button class="c-btn-nav-heading js-accordion"><span class="c-btn-nav-heading__txt">Creative Work</span><i class="c-btn-nav-heading__status"></i></button>
-                        <div class="cm-nav-main-contents-item__body">
-                          <div class="cm-nav-main-contents-item__category">
-                            <h3 class="cm-nav-main-contents-item__sub">Web制作</h3>
-                            <ul class="cm-nav-main-contents-item__list">
-                              <li><a href="./">グラフィックデザイン</a></li>
-                              <li><a href="./">オウンドメディア制作・構築</a></li>
-                              <li><a href="./">ロゴ・VI制作</a></li>
-                            </ul>
-                          </div>
-                          <div class="cm-nav-main-contents-item__category">
-                            <h3 class="cm-nav-main-contents-item__sub">グラフィックデザイン</h3>
-                            <ul class="cm-nav-main-contents-item__list">
-                              <li><a href="./">ロゴ・VI制作</a></li>
-                            </ul>
-                          </div>
-                          <div class="cm-nav-main-contents-item__category">
-                            <h3 class="cm-nav-main-contents-item__sub">映像制作</h3>
-                            <ul class="cm-nav-main-contents-item__list">
-                              <li><a href="./">動画制作</a></li>
-                              <li><a href="./">採用動画制作</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cm-nav-main-contents-item">
-                        <button class="c-btn-nav-heading js-accordion"><span class="c-btn-nav-heading__txt">Local Media</span><i class="c-btn-nav-heading__status"></i></button>
-                        <div class="cm-nav-main-contents-item__body">
-                          <div class="cm-nav-main-contents-item__category">
-                            <h3 class="cm-nav-main-contents-item__sub">メディア運営</h3>
-                            <ul class="cm-nav-main-contents-item__list">
-                              <li><a href="./">SAITAMAZINE</a></li>
-                              <li><a href="./">KOSHIGAYAZINE</a></li>
-                              <li><a href="./">埼玉ベース</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <ul class="cm-nav-main-contents-cta">
-                        <li><a class="c-btn-nav-cta" href="./download/"><span class="c-btn-nav-cta__txt"><span class="c-btn-nav-cta__en"><span class="js-clone">Download</span></span><span class="c-btn-nav-cta__ja">資料ダウンロード</span></span><i class="c-btn-nav-cta__arrow">
-                              <svg width="40" height="40">
-                                <use href="#ico-arrow"></use>
-                              </svg></i></a></li>
-                        <li><a class="c-btn-nav-cta" href="./contact/"><span class="c-btn-nav-cta__txt"><span class="c-btn-nav-cta__en"><span class="js-clone">Contact Us</span></span><span class="c-btn-nav-cta__ja">お問い合わせ</span></span><i class="c-btn-nav-cta__arrow">
-                              <svg width="40" height="40">
-                                <use href="#ico-arrow"></use>
-                              </svg></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <!--include template/cm-nav-main-->
               <p>.cm-nav-paginate</p>
               <ul class="cm-nav-paginate">
                 <li class="cm-nav-paginate__ctrl"><a href="#">PREV</a></li>
@@ -465,6 +396,12 @@
                 <li class="cm-nav-paginate__page"><a href="#">03</a></li>
                 <li class="cm-nav-paginate__ctrl"><a href="#">NEXT</a></li>
               </ul>
+              <p>.cm-nav-aside</p>
+              <ul class="cm-nav-aside">
+                <li><a class="cm-nav-aside__link is-current" href="#">All Post</a></li>
+                <li><a class="cm-nav-aside__link" href="#">News</a></li>
+                <li><a class="cm-nav-aside__link" href="#">Press Release</a></li>
+              </ul>
               <p>.cm-nav-category</p>
               <ul class="cm-nav-category">
                 <li><a class="cm-nav-category__link" href="#">すべて</a></li>
@@ -472,6 +409,61 @@
                 <li><a class="cm-nav-category__link" href="#">ホワイトペーパー</a></li>
                 <li><a class="cm-nav-category__link" href="#">会社概要</a></li>
                 <li><a class="cm-nav-category__link" href="#">作業テンプレート</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="l-container l-container--md">
+          <p>.cm-block-media</p>
+          <div class="cm-block-media">
+            <div class="cm-block-media-youtube">
+              <div class="cm-block-media-youtube__head">
+                <h3 class="c-heading-caption">COUNTER Channel</h3>
+                <div class="cm-block-media-youtube__logo"><img src="./assets/img/logo-youtube.svg" alt="YouTUbe"/></div>
+              </div>
+              <div class="cm-block-media-youtube__slide">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <figure class="swiper-slide"><img src="./assets/img/400x225.webp"/></figure>
+                    <figure class="swiper-slide"><img src="./assets/img/400x225_2.webp"/></figure>
+                    <figure class="swiper-slide"><img src="./assets/img/400x225.webp"/></figure>
+                    <figure class="swiper-slide"><img src="./assets/img/400x225_2.webp"/></figure>
+                    <figure class="swiper-slide"><img src="./assets/img/400x225.webp"/></figure>
+                  </div>
+                </div>
+                <div class="cm-block-media-youtube__paginate"></div>
+              </div>
+            </div>
+            <div class="cm-block-media-sns">
+              <div class="cm-block-media-sns__wrap">
+                <div class="cm-block-media-sns__logo"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.5727 19.0323L35.6897 5.25H32.8179L22.2969 17.2179L13.8917 5.25H4.2002L16.9083 23.3467L4.2002 37.8H7.07195L18.183 25.1622L27.0576 37.8H36.7502L23.5706 19.0323H23.5727ZM19.6383 23.5053L18.351 21.7045L8.10619 7.36575H12.5162L20.7849 18.9367L22.0722 20.7396L32.819 35.7808H28.409L19.6383 23.5053Z" fill="#FF552B"/>
+</svg>
+                </div>
+                <ul class="cm-block-media-sns__list">
+                  <li><a href="#" target="_blank" rel="noopener">
+                      <figure class="cm-block-media-sns__profile"><img src="./assets/img/media-miyata.webp"/>
+                        <figcaption>宮田</figcaption>
+                      </figure></a></li>
+                  <li><a href="#" target="_blank" rel="noopener">
+                      <figure class="cm-block-media-sns__profile"><img src="./assets/img/media-mori.webp"/>
+                        <figcaption>森</figcaption>
+                      </figure></a></li>
+                  <li><a href="#" target="_blank" rel="noopener">
+                      <figure class="cm-block-media-sns__profile"><img src="./assets/img/media-kanazawa.webp"/>
+                        <figcaption>金沢</figcaption>
+                      </figure></a></li>
+                </ul>
+              </div>
+              <ul class="cm-block-media-sns__links">
+                <li><a class="c-link-arrow" href="./counter-media/"><span class="c-link-arrow__txt">Couter Media</span><i class="c-link-arrow__arrow">
+                      <svg width="40" height="40">
+                        <use href="#ico-arrow"></use>
+                      </svg></i></a></li>
+                <li><a class="c-link-external" href="#" target="_blank" rel="noopener"><span class="c-link-external__txt">note</span><i class="c-link-external__ico">
+                      <svg width="24" height="19">
+                        <use href="#ico-external"></use>
+                      </svg></i></a></li>
               </ul>
             </div>
           </div>
@@ -527,6 +519,10 @@
                     <svg width="40" height="40">
                       <use href="#ico-arrow"></use>
                     </svg></i></a></li>
+              <li><a class="c-btn-footer" href="./download/"><span class="c-btn-footer__txt"><span class="js-clone">Download</span></span><i class="c-btn-footer__arrow">
+                    <svg width="40" height="40">
+                      <use href="#ico-arrow"></use>
+                    </svg></i></a></li>
             </ul>
             <p class="l-footer-nav__contact"><a class="c-btn-footer c-btn-footer--contact" href="./contact/"><span class="c-btn-footer__txt"><span class="js-clone">Contact Us</span></span><i class="c-btn-footer__arrow">
                   <svg width="40" height="40">
@@ -564,6 +560,10 @@
 <symbol id="ico-search" viewBox="0 0 16 17">
 <path d="M11 12L15.5 16.5" />
 <circle cx="7" cy="7" r="6.5" />
+</symbol>
+<symbol id="ico-external" viewBox="0 0 24 19">
+<path d="M24 1.49609V15.9932H21.8916V3.60449L9.50293 15.9932L8 14.4951L22.4951 0L24 1.49609ZM20.3096 2.11133H8.00879V0.00292969H20.3096V2.11133Z" fill="#FF552B"/>
+<rect x="1" y="6" width="17" height="12" stroke="#FF552B" fill="transparent" stroke-width="2"/>
 </symbol>
 <symbol id="ico_arrow_r" viewBox="0 0 24 24">
 </symbol>

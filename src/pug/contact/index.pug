@@ -1,0 +1,107 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "お問い合わせ"
+    - var pageClass = "page-contact"
+
+block content
+
+    .p-contact
+        .cm-block-header.cm-block-header--contact
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en Contact
+                    h1.cm-block-header__ja お問い合わせ
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span Contact
+        .l-container
+            .p-contact__wrap
+                .cm-form
+                    form(action="")
+                        .cm-form__inputs
+                            dl.c-form-input
+                                dt
+                                    span お名前
+                                    span._required （必須）
+                                dd
+                                    input(type="text" placeholder="例) 山田 太郎")
+                            dl.c-form-input
+                                dt
+                                    span メールアドレス
+                                    span._required （必須）
+                                dd
+                                    input(type="text" placeholder="例) abc@sample.com")
+                            dl.c-form-input
+                                dt
+                                    span 電話番号
+                                dd
+                                    input(type="text" placeholder="例) 000-0000-0000")
+                            dl.c-form-input
+                                dt
+                                    span 会社名
+                                dd
+                                    input(type="text" placeholder="株式会社abc")
+                            dl.c-form-input
+                                dt
+                                    span サービス
+                                    span._required （必須）
+                                dd
+                                    .c-form-input__select
+                                        select
+                                            option(value="") 選択してください
+                                            option(value="") SEOコンサルティング
+                                            option(value="") SEO記事制作
+                                            option(value="") SEO外部対策
+                                            option(value="") データベースサイトSEO支援
+                                            option(value="") オウンドメディアコンサルティング
+                                            option(value="") コンサルティング
+                                            option(value="") CRM・SFA運用代行
+                                            option(value="") MA運用代行
+                                            option(value="") Salesforce運用代行
+                                            option(value="") HubSpot導入支援/運用代行
+                                            option(value="") メルマガ制作/配信代行
+                                            option(value="") インタビュー/取材記事制作代行
+                                            option(value="") Facebook広告運用代行
+                                            option(value="") TikTok広告運用代行
+                                            option(value="") Instagram広告運用代行
+                                            option(value="") Webサイト保守・運用代行
+                                            option(value="") オウンドメディア制作・構築
+                                            option(value="") BtoBサイト制作
+                                            option(value="") ホワイトペーパー制作/作成代行
+                                            option(value="") コーポレートサイト制作
+                                            option(value="") LP制作
+                                            option(value="") ロゴ・VI制作
+                                            option(value="") その他
+                            dl.c-form-input
+                                dt
+                                    span 現在のURL
+                                dd
+                                    input(type="text" placeholder="sample.com")
+                            dl.c-form-input
+                                dt
+                                    span お問い合わせ・ご相談内容
+                                dd
+                                    textarea(placeholder="お問い合わせやご相談内容を入力してください。　")
+                        .cm-form__agree
+                            p
+                                a(href="#") 「プライバシーポリシー」
+                                | に同意して送信する
+                        .cm-form__action
+                            button.c-btn-form
+                                span.c-btn-form__txt 送信する
+                                i.c-btn-form__arrow
+                                    svg(width=40 height=40)
+                                        use(href="#ico-arrow")
+
+
+
+
+
+
+
+
+
+

@@ -239,8 +239,8 @@ export default class common {
         const stalkerTriggers = document.querySelectorAll('.js-stalker-show, a[class^="c-card"]');
 
         if (btn && ScrollTrigger.isTouch !== 1) {
-            const xTo = gsap.quickTo(btn, "x", { duration: 0.4, ease: "power1.out" });
-            const yTo = gsap.quickTo(btn, "y", { duration: 0.4, ease: "power1.out" });
+            const xTo = gsap.quickTo(btn, "x", { duration: 0.3, ease: "power2.out" });
+            const yTo = gsap.quickTo(btn, "y", { duration: 0.3, ease: "power2.out" });
 
             document.addEventListener('mousemove', (e) => {
                 const shift = btn.offsetWidth / 2;

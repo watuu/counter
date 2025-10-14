@@ -26,19 +26,26 @@ block content
                     .c-heading-section
                         h2.c-heading-section__title (Creative Work)
                         span.c-heading-section__line
-                    p .c-heading-caption
+                    p .c-heading-caption fz36 fz24
                     h3.c-heading-caption (Creative Work)
 
                     p .c-paragraph fz18
                     p.c-paragraph 青山学院大学経済学部卒業後に外資系ITコンサルティングファーム2社にてエンジニア・ITコンサルタントとして複数のERPシステム導入・運用プロジェクトを経験。
                 hr
                 .u-gap
-                    p .c-link-external
-                    a(href="#" target="_blank" rel="noopener").c-link-external
-                        span.c-link-external__txt Launch Site
-                        i.c-link-external__arrow
-                            svg(width=40 height=40)
-                                use(href="#ico-arrow")
+                    p .c-link-arrow .c-link-external
+                    div
+                        a(href="#" target="_blank" rel="noopener").c-link-arrow
+                            span.c-link-arrow__txt Launch Site
+                            i.c-link-arrow__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
+                        a(href="#" target="_blank" rel="noopener").c-link-external
+                            span.c-link-external__txt Launch Site
+                            i.c-link-external__ico
+                                svg(width=24 height=19)
+                                    use(href="#ico-external")
+
                     p .c-btn-arrow
                     button.c-btn-arrow
                         svg(width=40 height=40)
@@ -99,6 +106,12 @@ block content
                         i.c-btn-download__down
                             svg(width=60 height=60)
                                 use(href="#ico-down")
+                    p .c-btn-form
+                    button.c-btn-form
+                        span.c-btn-form__txt 送信する
+                        i.c-btn-form__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
 
                     p .c-btn-creative
                     a(href= path + "").c-btn-creative
@@ -149,7 +162,7 @@ block content
                     p .c-card-case
                     - for (var x = 1; x <= 8; x++)
                     .c-card-case
-                        a(href="#").c-card-case__link
+                        a(href=path + "single-creative/").c-card-case__link
                             figure.c-card-case__pic
                                 img(src=img+"300x200.webp" alt="")
                             h3.c-card-case__name
@@ -225,22 +238,43 @@ block content
                         - for (var x = 1; x <= 2; x++)
                             .c-card-news
                                 a(href="#").c-card-news__link
-                                    p.c-card-news__date
-                                        | 2025.07.25
-                                    p.c-card-news__category News
+                                    .c-card-news__meta
+                                        p.c-card-news__date
+                                            | 2025.07.25
+                                        p.c-card-news__category News
                                     h3.c-card-news__title
                                         | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
                 hr
                 .u-gap
-                    p .c-form-search
-                    .c-form-search
-                        .c-form-search__keyword
-                            input(type="text")
-                        button.c-form-search__btn
-                            svg(width=16 height=17)
-                                use(href="#ico-search")
+                    p .c-form-search .c-form-search--aside
+                    div
+                        .c-form-search
+                            .c-form-search__keyword
+                                input(type="text")
+                            button.c-form-search__btn
+                                svg(width=16 height=17)
+                                    use(href="#ico-search")
+                        .c-form-search.c-form-search--aside
+                            .c-form-search__keyword
+                                input(type="text")
+                            button.c-form-search__btn
+                                svg(width=16 height=17)
+                                    use(href="#ico-search")
 
-
+                    p .c-form-input
+                    .cm-form__inputs
+                        dl.c-form-input
+                            dt
+                                span お名前
+                                span._required （必須）
+                            dd
+                                input(type="text" placeholder="例) 山田 太郎")
+                        dl.c-form-input
+                            dt
+                                span お名前
+                                span._required （必須）
+                            dd
+                                input(type="text" placeholder="例) 山田 太郎")
 
 
 
@@ -249,7 +283,7 @@ block content
                 hr
                 .u-gap
                     p .cm-nav-main
-                    include template/cm-nav-main
+                    //include template/cm-nav-main
                     p .cm-nav-paginate
                     ul.cm-nav-paginate
                         li.cm-nav-paginate__ctrl
@@ -262,6 +296,15 @@ block content
                             a(href="#") 03
                         li.cm-nav-paginate__ctrl
                             a(href="#") NEXT
+                    p .cm-nav-aside
+                    ul.cm-nav-aside
+                        li
+                            a(href="#").cm-nav-aside__link.is-current All Post
+                        li
+                            a(href="#").cm-nav-aside__link News
+                        li
+                            a(href="#").cm-nav-aside__link Press Release
+
                     p .cm-nav-category
                     ul.cm-nav-category
                         li
@@ -274,6 +317,11 @@ block content
                             a(href="#").cm-nav-category__link 会社概要
                         li
                             a(href="#").cm-nav-category__link 作業テンプレート
+
+        .l-container.l-container--md
+            p .cm-block-media
+            include ./template/cm-block-media
+
 
 
 

@@ -71,11 +71,15 @@ body#body(class=pageClass data-src=path)
                         a(href=path+"voice/").c-btn-txt
                             span.js-clone Voice
                     li
-                        a(href=path+"blog/").c-btn-txt
+                        a(href=path+"counter-media/").c-btn-txt
                             span.js-clone Blog
                     li
                         a(href=path+"news/").c-btn-txt
                             span.js-clone News
+                    li
+                        a(href=path+"download/").c-btn-txt
+                            span.js-clone Download
+
 
             button.l-header-menu.c-btn-menu(aria-label="メニューを開く")
                 span.c-btn-menu__wrap
@@ -183,6 +187,14 @@ body#body(class=pageClass data-src=path)
                                     i.c-btn-footer__arrow
                                         svg(width=40 height=40)
                                             use(href="#ico-arrow")
+                            li
+                                a(href= path + "download/").c-btn-footer
+                                    span.c-btn-footer__txt
+                                        span.js-clone Download
+                                    i.c-btn-footer__arrow
+                                        svg(width=40 height=40)
+                                            use(href="#ico-arrow")
+
                         p.l-footer-nav__contact
                             a(href= path + "contact/").c-btn-footer.c-btn-footer--contact
                                 span.c-btn-footer__txt

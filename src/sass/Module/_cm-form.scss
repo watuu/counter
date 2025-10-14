@@ -2,5 +2,38 @@
 /*----------------------------------------------------
 	...
 ----------------------------------------------------*/
+.cm-form {
+	@include config.pc {}
+}
+.cm-form__inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 38/16+rem;
+	@include config.pc {
+		gap: 38/16+rem;
+	}
+}
+.cm-form__agree {
+	margin-top: var(--padding-block);
+	text-align: center;
 
+	font-size: 16/16+rem;
+	font-weight: 500;
+	//line-height: 1.4;
+	//letter-spacing: 0.01em;
+	a {
+		text-decoration: underline;
+		color: var(--color-assort);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	@include config.pc {
+		font-size: 18/16+rem;
+	}
+}
+.cm-form__action {
+	margin-top: var(--padding-block);
+	@include config.pc {}
+}
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

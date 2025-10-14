@@ -1,0 +1,63 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "ニュース"
+    - var pageClass = ""
+
+block content
+
+    .p-news
+        .cm-block-header
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en News
+                    h1.cm-block-header__ja ニュース
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span News
+        .l-container
+            .p-news__wrap
+                .p-news__aside
+                    ul.cm-nav-aside
+                        li
+                            a(href="#").cm-nav-aside__link.is-current All Post
+                        li
+                            a(href="#").cm-nav-aside__link News
+                        li
+                            a(href="#").cm-nav-aside__link Press Release
+                .p-news__list
+                    - for (var x = 1; x <= 10; x++)
+                        .c-card-news
+                            a(href="#").c-card-news__link
+                                .c-card-news__meta
+                                    p.c-card-news__date
+                                        | 2025.07.25
+                                    p.c-card-news__category News
+                                h3.c-card-news__title
+                                    | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+
+            .p-news__paginate
+                ul.cm-nav-paginate
+                    li.cm-nav-paginate__ctrl
+                        a(href="#") PREV
+                    li.cm-nav-paginate__page
+                        a(href="#").is-current 01
+                    li.cm-nav-paginate__page
+                        a(href="#") 02
+                    li.cm-nav-paginate__page
+                        a(href="#") 03
+                    li.cm-nav-paginate__ctrl
+                        a(href="#") NEXT
+        .p-news__media
+            .l-container.l-container--md
+                include ../template/cm-block-media
+
+
+
+
+
+
+
+

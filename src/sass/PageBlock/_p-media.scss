@@ -1,0 +1,161 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+@use '../Component/c-paragraph' as paragraph;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.p-media {
+	padding-bottom: var(--padding-page);
+	--gapAside: #{12/16+rem};
+	--paddingHeading: #{6/16+rem} 0;
+	@include config.pc {
+		--gapAside: #{20/16+rem};
+		--paddingHeading: #{12/16+rem} 0  0;
+	}
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-media-pickup {
+	overflow: hidden;
+	.swiper {
+		overflow: initial;
+		width: 258/16+rem;
+	}
+	img {
+		width: 100%;
+	}
+	@include config.pc {
+		.swiper {
+			width: 613/16+rem;
+		}
+	}
+}
+.p-media-pickup__paginate {
+	margin-top: var(--padding-block-sm);
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-media__wrap {
+	margin-top: 36/16+rem;
+	display: flex;
+	flex-direction: column;
+	border-top: var(--border-assort);
+	gap: 50/16+rem;
+	@include config.pc {
+		margin-top: 54/16+rem;
+		flex-direction: row-reverse;
+		gap: 37/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+.p-media__aside {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-block);
+	@include config.pc {
+		width: 330/16+rem;
+	}
+}
+.p-media-aside-block {
+	&:not(:first-child) {
+		border-top: var(--border-assort);
+	}
+	@include config.pc {}
+}
+.p-media-aside-block__head {
+	padding: var(--paddingHeading);
+	background: var(--border-assort-dot);
+}
+.p-media-aside-block__pickup {
+	padding-top: var(--gapAside);
+	display: flex;
+	flex-direction: column;
+	gap: 20/16+rem;
+	@include config.pc {}
+}
+.p-media-aside-block__search {
+	margin-top: var(--padding-block-sm);
+	@include config.pc {}
+}
+.p-media-aside-block__category {
+	padding-top: var(--gapAside);
+	display: flex;
+	flex-direction: column;
+	gap: 10/16+rem;
+	font-size: 14/16+rem;
+	font-weight: 500;
+	a {
+		color: var(--BASECOLOR, #FF552B);
+	}
+	@include config.pc {
+		gap: 20/16+rem;
+		font-size: 18/16+rem;
+	}
+}
+.p-media-aside-block__tag {
+	padding-top: var(--gapAside);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8/16+rem 15/16+rem;
+	font-size: 14/16+rem;
+	font-weight: 500;
+	a {
+		color: var(--BASECOLOR, #FF552B);
+	}
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-media__content {
+	flex: 1;
+	@include config.sp-tab {
+		border-top: var(--border-assort);
+	}
+}
+.p-media-list {
+	@include config.pc {}
+}
+.p-media-list__head {
+	padding: var(--paddingHeading);
+	background: var(--border-assort-dot);
+}
+.p-media-list__list {
+	display: grid;
+	@include config.pc {
+		grid-template-columns: 1fr 1fr;
+		gap: 0 10/16+rem;
+	}
+}
+.p-media__paginate {
+	margin-top: var(--padding-block);
+	padding-bottom: var(--padding-section);
+	border-bottom: var(--border-assort);
+	@include config.pc {}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-media-ranking,
+.p-media-recommend {
+	position: relative;
+	overflow: hidden;
+	@include config.pc {}
+}
+.p-media-ranking__head,
+.p-media-recommend__head {
+	padding: var(--paddingHeading);
+	background: var(--border-assort-dot);
+}
+.p-media-ranking__list,
+.p-media-recommend__list {
+	display: grid;
+	@include config.pc {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 0 10/16+rem;
+		margin-right: -150/16+rem;
+	}
+}
+.p-media-recommend {
+	margin-top: var(--padding-block-sm);
+	@include config.pc {}
+}
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

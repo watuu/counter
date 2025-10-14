@@ -8,6 +8,9 @@
 	width: 100%;
 	height: var(--header-height);
 	padding: 15/16+rem 15/16+rem 0;
+	.page-contact & {
+		display: none;
+	}
 	@include config.pc {
 		padding: 0;
 	}

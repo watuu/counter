@@ -4,20 +4,15 @@
 /*----------------------------------------------------
 	...
 ----------------------------------------------------*/
-.p-case {
+.p-contact {
 	padding-bottom: var(--padding-page);
 	@include config.pc {}
 }
-.p-case__list {
-	margin-top: 42/16+rem;
-	display: grid;
-	gap: 39/16+rem;
+.p-contact__wrap {
+	padding-top: var(--padding-section);
 	@include config.pc {
-		margin-top: 100/16+rem;
-		display: flex;
-		flex-wrap: wrap;
-		//grid-template-columns: 1fr 1fr 1fr;
-		gap: 52/16+rem 8/16+rem;
+		width: 792/16+rem;
+		margin-inline: auto;
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

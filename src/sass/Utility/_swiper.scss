@@ -41,8 +41,26 @@ $colors: (
 }
 
 
-.swiper-pagination {
+.swiper-pagination-horizontal.swiper-pagination-horizontal.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   &.swiper-pagination-hidden {
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    border: var(--border-assort);
+    background: transparent;
+    border-radius: 0;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--color-assort);
+  }
+  @include config.pc {
+    gap: 15px;
   }
 }
 /* Common Styles */
