@@ -9,6 +9,8 @@ import Swiper, { Navigation, Pagination, Autoplay, Scrollbar, EffectFade } from 
 import 'swiper/css/bundle'
 Swiper.use([Navigation, Pagination, Autoplay, Scrollbar, EffectFade]);
 
+import MicroModal from 'micromodal'
+
 export default class Page {
     constructor() {
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, DrawSVGPlugin);
@@ -18,6 +20,9 @@ export default class Page {
             scrollY: 0,
         }
         // this.cHeadingSection()
+        if (document.querySelector('.cm-post')) {
+            this.cmPost()
+        }
         if (document.querySelector('.cm-block-media-youtube')) {
             this.cmBlockMediaYoutube()
         }
@@ -30,12 +35,48 @@ export default class Page {
         if (document.querySelector('.p-media-pickup')) {
             this.pMediaPickup()
         }
+        if (document.querySelector('.cm-modal-blog')) {
+            this.cmModalBlog()
+        }
+
 
 
     }
     // cHeadingSection() {
     //
     // }
+    cmPost() {
+        // プロフィール
+        document.querySelectorAll('.single-media__card-more').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.single-media__card');
+                if (!card) return;
+
+                const text = card.querySelector('.single-media__card-text--hidden');
+                if (text) {
+                    text.classList.remove('single-media__card-text--hidden');
+                }
+
+                button.remove();
+            });
+        });
+        // ボタン装飾
+        document.querySelectorAll('a.wp-block-button__link').forEach(el => {
+            // テキスト「->」を削除
+            if (el.textContent.includes('->')) {
+                el.textContent = el.textContent.replace(/->/g, '').trim();
+            }
+            // アイコン
+            const icon = document.createElement('i');
+            icon.className = 'c-btn-more__arrow';
+            icon.innerHTML = `
+    <svg width="40" height="40">
+      <use href="#ico-arrow"></use>
+    </svg>
+  `;
+            el.appendChild(icon);
+        });
+    }
     cmBlockMediaYoutube() {
         const mySwiper = new Swiper ('.cm-block-media-youtube .swiper', {
             loop: true,
@@ -130,4 +171,21 @@ export default class Page {
             },
         });
     }
+
+    cmModalBlog() {
+        document.addEventListener('DOMContentLoaded', function () {
+            MicroModal.init();
+
+            let isOpened = false;
+
+            window.addEventListener('scroll', function () {
+                if (isOpened) return;
+                if (window.scrollY > window.innerHeight) {
+                    MicroModal.show('modal-blog');
+                    isOpened = true;
+                }
+            });
+        });
+    }
+
 }

@@ -46,5 +46,13 @@ export default class Utility {
             return document.querySelector(element);
         }
     }
+
+    static getHeight = el => {
+        const computedStyle = getComputedStyle(el);
+
+        let elementHeight = el.clientHeight;  // height with padding
+        elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
+        return elementHeight;
+    }
 }
 

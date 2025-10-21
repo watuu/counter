@@ -1,0 +1,450 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "COUNTER MEDIA"
+    - var pageClass = ""
+
+block content
+    <link rel='stylesheet' id='vk-blocks-build-css-css' href='https://counter-digital.jp/wp-content/plugins/vk-blocks/build/block-build.css?ver=1.102.0.1' media='all' />
+    <link rel='stylesheet' id='vk-blocks-build-css-css' href='https://counter-digital.jp/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3' media='all' />
+    <link rel='stylesheet' id='vk-blocks-build-css-css' href='https://counter-digital.jp/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.73' media='all' />
+    .p-media.p-media--single
+        .cm-block-header.cm-block-header--mediaSingle
+            ul.cm-block-header__category
+                li
+                    a(href="#").c-btn-txt
+                        span.js-clone SEO
+                li
+                    a(href="#").c-btn-txt
+                        span.js-clone WEBデザイン
+                li
+                    a(href="#").c-btn-txt
+                        span.js-clone WEB制作
+                li
+                    a(href="#").c-btn-txt
+                        span.js-clone WEB広告
+                li
+                    a(href="#").c-btn-txt
+                        span.js-clone マーケティング
+                li
+                    a(href="#").c-btn-txt
+                        span.js-clone ワードプレス
+                li
+                    a(href="#").c-btn-txt
+                        span.js-clone 動画制作
+
+            .l-container
+                //-.cm-block-header__title
+                    p.cm-block-header__en Contact
+                    h1.cm-block-header__ja お問い合わせ
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        a(href=path + "counter-media/") Blog
+
+                    li
+                        span コンテンツマーケティングとデジタルマーケティングの違いとは？メリットとデメリットを解説
+
+        .l-container
+            .p-media__wrap
+                .p-media__aside
+                    include ../template/p-media-aside
+
+                .p-media__content
+                    .p-media-post
+                        .p-media-post__meta
+                            p.p-media-post__date 25.6.29
+                            p.p-media-post__category MailMagazine
+                        h1.p-media-post__title
+                            | コンテンツマーケティングとデジタルマーケティングの違いとは？メリットとデメリットを解説
+                    .p-media-post__body.cm-post
+                        figure.cm-post-eyecatch
+                            img(src="https://counter-digital.jp/wp-content/uploads/2025/07/content-marketing-digital-marketing.png")
+                        p コンテンツを発信しても思うような成果につながらない、デジタル広告に頼りすぎて費用対効果が見えにくい、そんな悩みを抱える方も多いのではないでしょうか。
+                        p 本記事では、コンテンツマーケティングとデジタルマーケティングの定義と違いを明確にし、それぞれの特徴や目的の違いを解説します。
+                        p
+                        .wp-block-vk-blocks-border-box.vk_borderBox.vk_borderBox-background-transparent.has-text-color.has-black-color.is-style-vk_borderBox-style-solid-kado-tit-onborder
+                            .vk_borderBox_title_container
+                                i
+                                h4.vk_borderBox_title 本記事で解説する内容
+                            .vk_borderBox_body
+                                p(style='font-size:15px')
+                                    | ① コンテンツマーケティングの種類
+                                    br
+                                    | ② デジタルマーケティングの種類
+                                    br
+                                    | ③ それぞれのメリット・デメリット
+                        p マーケティングの全体像を把握し、リソースの無駄を減らすことで持続可能な成長につながる戦略構築が可能になるでしょう。
+                        .wp-block-buttons.single-media__button-1.is-content-justification-center.is-layout-flex.wp-container-core-buttons-is-layout-16018d1d.wp-block-buttons-is-layout-flex
+                            .wp-block-button.is-style-fill.vk_block-margin-md--margin-top
+                                a.wp-block-button__link.has-background.has-text-align-center.has-custom-font-size.wp-element-button(href='https://counter-digital.jp/service/owned-media-consulting/' style='border-radius:100px;background-color:#d85a24;font-size:16px')
+                                    strong オウンドメディアコンサルティングサービス ->
+                        // 著者カード
+                        .single-media__card
+                            .single-media__card-image.utils-aspect-fix-image
+                                img(src='https://counter-digital.jp/wp-content/uploads/2024/01/kazuya-miyata-profile.png' alt decoding='async')
+                            .single-media__card-title COUNTER 株式会社
+                            .single-media__card-name 宮田 和也
+                            p.single-media__card-text.single-media__card-text--hidden
+                                | X(旧: Twitter):
+                                a(href='https://twitter.com/webkirin') @webkirin
+                                br
+                                | COUNTER株式会社 代表取締役/SEOコンサルタント。
+                                br
+                                | 1993年生まれ。大学卒業後に外資系ITコンサルティング企業にてERP導入コンサルタントとして複数のシステム運用プロジェクトを経験。その後、CINCにてWebアナリスト、株式会社バンケッツにて不動産メディア事業責任者を経験し独立。フリーランスSEOコンサルタントを経験した後にニュートラルワークスにジョイン。SEO/コンテンツマーケティング戦略を得意分野とする。
+                                br
+                                br
+                                | ◆ 経歴
+                                br
+                                | 2017年　日本タタ・コンサルタンシー・サービシズ株式会社/システムエンジニア(SAP Basis)
+                                br
+                                | 2018年　キャップジェミニ株式会社/ITコンサルタント(SAP SD/MM)
+                                br
+                                | 2019年　株式会社CINC/Webマーケティングアナリスト
+                                br
+                                | 2019年　株式会社バンケッツ/事業責任者(不動産メディア事業)
+                                br
+                                | 2020年　独立/Webマーケティングコンサルタント
+                                br
+                                | 2022年　株式会社ニュートラルワークス/執行役員 SEOコンサルティングリード
+                                br
+                                | 2024年　COUNTER株式会社 代表取締役
+                                br
+                                br
+                                | ◆ 得意領域
+                                br
+                                | ・SEO戦略策定から実装支援(データベース・コンテンツ)
+                                br
+                                | ・コンテンツマーケティング戦略策定から実装支援
+                                br
+                            button.single-media__card-more.js-card-more 続きを読む
+                        #ez-toc-container.ez-toc-v2_0_73.counter-hierarchy.ez-toc-counter.ez-toc-grey.ez-toc-container-direction
+                            .ez-toc-title-container
+                                p.ez-toc-title(style='cursor:inherit') 目次
+                                span.ez-toc-title-toggle
+                                    a.ez-toc-pull-right.ez-toc-btn.ez-toc-btn-xs.ez-toc-btn-default.ez-toc-toggle.ez-toc-loaded(href='#' aria-label='Toggle Table of Content')
+                                        span.ez-toc-js-icon-con
+                                            span
+                                                span.eztoc-hide(style='display:none;') Toggle
+                                                span.ez-toc-icon-toggle-span
+                                                    svg.list-377408(style='fill: #999;color:#999' xmlns='http://www.w3.org/2000/svg' width='20px' height='20px' viewBox='0 0 24 24' fill='none')
+                                                        path(d='M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z' fill='currentColor')
+                                                    svg.arrow-unsorted-368013(style='fill: #999;color:#999' xmlns='http://www.w3.org/2000/svg' width='10px' height='10px' viewBox='0 0 24 24' version='1.2' baseProfile='tiny')
+                                                        path(d='M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z')
+                            nav
+                                ul.ez-toc-list.ez-toc-list-level-1
+                                    li.ez-toc-page-1.ez-toc-heading-level-2
+                                        a.ez-toc-link.ez-toc-heading-1(href='#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF' title='コンテンツマーケティングとデジタルマーケティングの違いとは') コンテンツマーケティングとデジタルマーケティングの違いとは
+                                    li.ez-toc-page-1.ez-toc-heading-level-2
+                                        a.ez-toc-link.ez-toc-heading-2(href='#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E7%A8%AE%E9%A1%9E' title='コンテンツマーケティングの種類') コンテンツマーケティングの種類
+                                    li.ez-toc-page-1.ez-toc-heading-level-2
+                                        a.ez-toc-link.ez-toc-heading-3(href='#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E7%A8%AE%E9%A1%9E' title='デジタルマーケティングの種類') デジタルマーケティングの種類
+                                    li.ez-toc-page-1.ez-toc-heading-level-2
+                                        a.ez-toc-link.ez-toc-heading-4(href='#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88' title='コンテンツマーケティングのメリット') コンテンツマーケティングのメリット
+                                        ul.ez-toc-list-level-3
+                                            li.ez-toc-heading-level-3
+                                                a.ez-toc-link.ez-toc-heading-5(href='#%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E5%8A%9B%E3%81%AE%E5%90%91%E4%B8%8A%E3%81%AB%E7%B9%8B%E3%81%8C%E3%82%8B' title='ブランド力の向上に繋がる') ブランド力の向上に繋がる
+                                            li.ez-toc-page-1.ez-toc-heading-level-3
+                                                a.ez-toc-link.ez-toc-heading-6(href='#%E9%A1%A7%E5%AE%A2%E3%81%AE%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E3%81%A8LTV%E3%81%AE%E5%90%91%E4%B8%8A' title='顧客のエンゲージメントとLTVの向上') 顧客のエンゲージメントとLTVの向上
+                                            li.ez-toc-page-1.ez-toc-heading-level-3
+                                                a.ez-toc-link.ez-toc-heading-7(href='#%E3%83%AA%E3%83%BC%E3%83%89%E3%83%8A%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AB%E3%82%88%E3%82%8A%E8%B3%BC%E5%85%A5%E7%8E%87%E3%82%84%E5%95%86%E8%AB%87%E5%8F%97%E6%B3%A8%E7%8E%87%E3%81%8C%E4%B8%8A%E3%81%8C%E3%82%8B' title='リードナーチャリングにより購入率や商談受注率が上がる') リードナーチャリングにより購入率や商談受注率が上がる
+                                    li.ez-toc-page-1.ez-toc-heading-level-2
+                                        a.ez-toc-link.ez-toc-heading-8(href='#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88' title='デジタルマーケティングのメリット') デジタルマーケティングのメリット
+                                        ul.ez-toc-list-level-3
+                                            li.ez-toc-heading-level-3
+                                                a.ez-toc-link.ez-toc-heading-9(href='#Web%E3%81%8B%E3%82%89%E3%81%AE%E9%9B%86%E5%AE%A2%E3%82%92%E6%9C%9F%E5%BE%85%E3%81%A7%E3%81%8D%E3%82%8B' title='Webからの集客を期待できる') Webからの集客を期待できる
+                                            li.ez-toc-page-1.ez-toc-heading-level-3
+                                                a.ez-toc-link.ez-toc-heading-10(href='#%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%82%84%E6%95%B0%E5%80%A4%E6%94%B9%E5%96%84%E3%81%8C%E5%AE%B9%E6%98%93' title='データ分析や数値改善が容易') データ分析や数値改善が容易
+                                            li.ez-toc-page-1.ez-toc-heading-level-3
+                                                a.ez-toc-link.ez-toc-heading-11(href='#%E8%B3%87%E7%94%A3%E6%80%A7%E3%81%8C%E9%AB%98%E3%81%84' title='資産性が高い') 資産性が高い
+                                    li.ez-toc-page-1.ez-toc-heading-level-2
+                                        a.ez-toc-link.ez-toc-heading-12(href='#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E4%BB%95%E4%BA%8B%E5%86%85%E5%AE%B9%E3%81%AE%E9%81%95%E3%81%84' title='コンテンツマーケティングとデジタルマーケティングの仕事内容の違い') コンテンツマーケティングとデジタルマーケティングの仕事内容の違い
+                                    li.ez-toc-page-1.ez-toc-heading-level-2
+                                        a.ez-toc-link.ez-toc-heading-13(href='#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%8B%EF%BC%9F' title='コンテンツマーケティングとデジタルマーケティングどちらがおすすめか？') コンテンツマーケティングとデジタルマーケティングどちらがおすすめか？
+                                    li.ez-toc-page-1.ez-toc-heading-level-2
+                                        a.ez-toc-link.ez-toc-heading-14(href='#%E3%81%BE%E3%81%A8%E3%82%81' title='まとめ') まとめ
+                        h2.wp-block-heading
+                            span.ez-toc-section(id='%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%84%E3%81%A8%E3%81%AF' ez-toc-data-id='#コンテンツマーケティングとデジタルマーケティングの違いとは')
+                            | コンテンツマーケティングとデジタルマーケティングの違いとは
+                            span.ez-toc-section-end
+                        p コンテンツマーケティングとデジタルマーケティングは、現代のビジネス環境において重要な役割を果たしますが、それぞれのアプローチや目的には明確な違いがあります。
+                        figure.wp-block-table.is-style-vk-table-border.has-small-font-size.is-style-vk-table-scrollable(data-scroll-breakpoint='table-scrollable-mobile')
+                            table
+                                thead
+                                    tr
+                                        th.has-text-align-center(data-align='center') 項目
+                                        th 目的
+                                tbody
+                                    tr
+                                        td.has-text-align-center(data-align='center') コンテンツマーケティング
+                                        td ブランドの認知度を高める・顧客との信頼関係を築く
+                                    tr
+                                        td.has-text-align-center(data-align='center') デジタルマーケティング
+                                        td オンラインプラットフォームを活用して製品やサービスをプロモーションする・広告を通じて直接的な売上を促進する
+                        p
+                            | コンテンツマーケティングは、価値あるコンテンツを作成し、ターゲットオーディエンスに提供することでブランドの認知度を高めたり、顧客との信頼関係を築いたりすることを目的としています。
+                        p
+                            | 一方、デジタルマーケティングはオンラインプラットフォームを活用して製品やサービスをプロモーションする広範な戦略です。検索エンジンマーケティング（SEM）、ソーシャルメディア広告、アフィリエイトマーケティングなどが含まれ、主に広告を通じて直接的な売上を促進することを目指します。
+                        p
+                            | コンテンツマーケティングは長期的な関係構築を重視し、デジタルマーケティングは短期的な成果を追求しているのが特徴です。両者は相互に補完し合う関係にあり、効果的なマーケティング戦略を構築するためには、それぞれの特性を理解し、適切に組み合わせることが重要です。
+                        h2.wp-block-heading
+                            span.ez-toc-section(id='%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E7%A8%AE%E9%A1%9E' ez-toc-data-id='#コンテンツマーケティングの種類')
+                            | コンテンツマーケティングの種類
+                            span.ez-toc-section-end
+                        p コンテンツマーケティングの主な種類としては、ブログ記事、動画コンテンツ、インフォグラフィック、ポッドキャスト、ホワイトペーパー、eブックなどが挙げられます。
+                        p
+                            | まず、ブログ記事は情報提供や専門知識の発信に適しており、SEO対策を通じて検索エンジンからの集客を狙うことが可能です。次に、動画コンテンツは視覚的な要素を活用し、ユーザーの関心を引きやすいため、特にSNSでのシェアが期待できます。
+                        p
+                            | また、インフォグラフィックは、複雑な情報を視覚的に整理することで、理解を助ける役割を果たします。他にも、ポッドキャストは音声コンテンツとして、移動中や作業中に気軽に情報を得られる利点があります。
+                        p 一方、ホワイトペーパーやeブックは、より深い知識を提供するための詳細な資料であり、リード獲得の手段としても効果的です。
+                        p
+                            | コンテンツ形式はそれぞれ異なる特性を持ち、ターゲットに応じた戦略的な活用が重要です。企業は自社の目的やリソースに応じてコンテンツを組み合わせることで、より効果的なマーケティングを実現できることでしょう。
+                        .wp-block-buttons.single-media__button-1.is-content-justification-center.is-layout-flex.wp-container-core-buttons-is-layout-16018d1d.wp-block-buttons-is-layout-flex
+                            .wp-block-button.is-style-fill.vk_block-margin-md--margin-top
+                                a.wp-block-button__link.has-background.has-text-align-center.has-custom-font-size.wp-element-button(href='https://counter-digital.jp/service/owned-media-consulting/' style='border-radius:100px;background-color:#d85a24;font-size:16px')
+                                    strong オウンドメディアコンサルティングサービス ->
+                        h2.wp-block-heading
+                            span.ez-toc-section(id='%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E7%A8%AE%E9%A1%9E' ez-toc-data-id='#デジタルマーケティングの種類')
+                            | デジタルマーケティングの種類
+                            span.ez-toc-section-end
+                        p デジタルマーケティングは、インターネットやデジタルデバイスを活用して行うマーケティング手法の総称です。
+                        figure.wp-block-table.is-style-vk-table-border.has-small-font-size.is-style-vk-table-scrollable(data-scroll-breakpoint='table-scrollable-mobile')
+                            table
+                                thead
+                                    tr
+                                        th デジタルマーケティングの種類
+                                        th 概要
+                                tbody
+                                    tr
+                                        td 検索エンジンマーケティング（SEM）
+                                        td GoogleやYahoo!などの検索エンジンを利用して、広告を表示させることで集客を図る
+                                    tr
+                                        td ソーシャルメディアマーケティング
+                                        td プラットフォームを通じて、ターゲットオーディエンスと直接コミュニケーションを図る
+                                    tr
+                                        td メールマーケティング
+                                        td 顧客のメールアドレスを活用して、リピート率を向上させる
+                                    tr
+                                        td コンテンツマーケティング
+                                        td ブログや動画、インフォグラフィックなどを通じて、価値ある情報を提供する
+                                    tr
+                                        td アフィリエイトマーケティング
+                                        td 個人が自社の商品を紹介し、その成果に応じて報酬を支払う
+                        p
+                            | 最も一般的な手法の一つが「検索エンジンマーケティング（SEM）」です。これは、GoogleやYahoo!などの検索エンジンを利用して、広告を表示させることで集客を図る方法です。特に、リスティング広告は即効性があり、多くの企業が導入しています。
+                        p
+                            | 次に「ソーシャルメディアマーケティング」があります。Facebook、Instagram、Twitterなどのプラットフォームを通じて、ターゲットオーディエンスと直接コミュニケーションを図る手法です。ブランドの認知度を高めたり、顧客との関係を深めたりするのに効果的です。
+                        p さらに「メールマーケティング」も重要な手法の一つです。顧客のメールアドレスを活用して、定期的に情報を発信することで、リピート率を向上させることができます。
+                        p
+                            | また、「コンテンツマーケティング」もデジタルマーケティングの一部として位置づけられます。ブログや動画、インフォグラフィックなどを通じて、価値ある情報を提供し、顧客の関心を引く手法です。
+                        p 最後に「アフィリエイトマーケティング」があります。他のサイトや個人が自社の商品を紹介し、その成果に応じて報酬を支払う仕組みです。
+                        p
+                            | 関連記事:
+                            a(href='https://counter-digital.jp/counter-media/what-is-content-marketing/') コンテンツマーケティングとは？メリットや始め方・成功事例と企業戦略をわかりやすく解説
+                        h2.wp-block-heading
+                            span.ez-toc-section(id='%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88' ez-toc-data-id='#コンテンツマーケティングのメリット')
+                            | コンテンツマーケティングのメリット
+                            span.ez-toc-section-end
+                        p コンテンツマーケティングは企業が顧客との関係を深め、ブランドの認知度を高めるための強力な手法です。
+                        p
+                        .wp-block-vk-blocks-border-box.vk_borderBox.vk_borderBox-background-transparent.has-text-color.has-black-color.is-style-vk_borderBox-style-solid-kado-tit-onborder
+                            .vk_borderBox_title_container
+                                i
+                                h4.vk_borderBox_title コンテンツマーケティングのメリット
+                            .vk_borderBox_body
+                                p(style='font-size:15px')
+                                    | ① ブランド力の向上に繋がる
+                                    br
+                                    | ② 顧客のエンゲージメントとLTVの向上
+                                    br
+                                    | ③ リードナーチャリングにより購入率や商談受注率が上がる
+                        p メリットを活かし、持続的な成長を実現できるようにしていきましょう。
+                        h3.wp-block-heading
+                            span.ez-toc-section(id='%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E5%8A%9B%E3%81%AE%E5%90%91%E4%B8%8A%E3%81%AB%E7%B9%8B%E3%81%8C%E3%82%8B' ez-toc-data-id='#ブランド力の向上に繋がる')
+                            | ブランド力の向上に繋がる
+                            span.ez-toc-section-end
+                        p
+                            | コンテンツマーケティングは、企業のブランド力を向上させるための強力な手段です。質の高いコンテンツを提供することで、顧客との信頼関係を築き、ブランドの認知度を高めることができます。
+                        p 例えば、専門的な知識や業界のトレンドに関する情報を発信することで、企業はその分野における権威としての地位を確立できます。
+                        p
+                            | さらに、コンテンツマーケティングは顧客の心に残るストーリーを語るため、ブランドの個性を際立たせられるのもメリットです。ユニークなコンテンツは顧客の記憶に残りやすく、他の競合と差別化する要因となります。
+                        h3.wp-block-heading
+                            span.ez-toc-section(id='%E9%A1%A7%E5%AE%A2%E3%81%AE%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E3%81%A8LTV%E3%81%AE%E5%90%91%E4%B8%8A' ez-toc-data-id='#顧客のエンゲージメントとLTVの向上')
+                            | 顧客のエンゲージメントとLTVの向上
+                            span.ez-toc-section-end
+                        p 質の高いコンテンツを提供することで、顧客はブランドに対して信頼感を抱き、エンゲージメントが向上します。
+                        p
+                            | 例えば、ブログ記事や動画、インフォグラフィックなどのコンテンツは、顧客が求める情報を提供することで興味を引きつけることが可能です。顧客がブランドとの接点を持つ機会を増やし、結果としてロイヤルティを高めることに繋がります。
+                        p
+                            | さらに、顧客のライフタイムバリュー（LTV）が増加することもメリットです。LTVとは、顧客が生涯にわたって企業にもたらす利益のことです。コンテンツマーケティングを通じて顧客との関係を強化することで、リピート購入やクロスセル、アップセルの機会が増え、最終的には収益の向上に寄与します。
+                        h3.wp-block-heading
+                            span.ez-toc-section(id='%E3%83%AA%E3%83%BC%E3%83%89%E3%83%8A%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AB%E3%82%88%E3%82%8A%E8%B3%BC%E5%85%A5%E7%8E%87%E3%82%84%E5%95%86%E8%AB%87%E5%8F%97%E6%B3%A8%E7%8E%87%E3%81%8C%E4%B8%8A%E3%81%8C%E3%82%8B' ez-toc-data-id='#リードナーチャリングにより購入率や商談受注率が上がる')
+                            | リードナーチャリングにより購入率や商談受注率が上がる
+                            span.ez-toc-section-end
+                        p
+                            | リードナーチャリングとは、見込み客（リード）との関係を構築し、育成するプロセスです。コンテンツマーケティングにおいては、質の高いコンテンツを通じてリードに価値を提供し、興味や関心を引き続き喚起することが重要です。
+                        p
+                            | 具体的には、ブログ記事やホワイトペーパー、ウェビナーなどのコンテンツを提供することで、リードは自らのニーズに合った情報を得られます。また、リードナーチャリングは、見込み客が購入に至るまでのプロセスをスムーズに進めるための重要な手段でもあります。
+                        p
+                            | さらに、リードナーチャリングを通じて得られるデータやフィードバックを活用することで、商談受注率の向上にも寄与するのが特徴です。リードの行動や反応を分析することで、どのコンテンツが効果的であったかを把握し、次のアプローチに活かせるでしょう。
+                        .wp-block-buttons.single-media__button-1.is-content-justification-center.is-layout-flex.wp-container-core-buttons-is-layout-16018d1d.wp-block-buttons-is-layout-flex
+                            .wp-block-button.is-style-fill.vk_block-margin-md--margin-top
+                                a.wp-block-button__link.has-background.has-text-align-center.has-custom-font-size.wp-element-button(href='https://counter-digital.jp/service/owned-media-consulting/' style='border-radius:100px;background-color:#d85a24;font-size:16px')
+                                    strong オウンドメディアコンサルティングサービス ->
+                        h2.wp-block-heading
+                            span.ez-toc-section(id='%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88' ez-toc-data-id='#デジタルマーケティングのメリット')
+                            | デジタルマーケティングのメリット
+                            span.ez-toc-section-end
+                        p デジタルマーケティングは、現代のビジネス環境において重要な役割を果たしています。
+                        p
+                        .wp-block-vk-blocks-border-box.vk_borderBox.vk_borderBox-background-transparent.has-text-color.has-black-color.is-style-vk_borderBox-style-solid-kado-tit-onborder
+                            .vk_borderBox_title_container
+                                i
+                                h4.vk_borderBox_title デジタルマーケティングのメリット
+                            .vk_borderBox_body
+                                p(style='font-size:15px')
+                                    | ① Webからの集客を期待できる
+                                    br
+                                    | ② データ分析や数値改善が容易
+                                    br
+                                    | ③ 資産性が高い
+                        p メリットを活かし、競争力を高められるようにしていきましょう。
+                        h3.wp-block-heading
+                            span.ez-toc-section(id='Web%E3%81%8B%E3%82%89%E3%81%AE%E9%9B%86%E5%AE%A2%E3%82%92%E6%9C%9F%E5%BE%85%E3%81%A7%E3%81%8D%E3%82%8B' ez-toc-data-id='#Webからの集客を期待できる')
+                            | Webからの集客を期待できる
+                            span.ez-toc-section-end
+                        p
+                            | デジタルマーケティングの魅力の一つは、Webからの集客を期待できる点です。インターネットの普及により、消費者は情報をオンラインで探すことが一般的になりました。このため、企業が自社の製品やサービスを効果的にアピールするためには、Web上での存在感を高めることが不可欠です。
+                        p
+                            | デジタルマーケティングでは、SEO（検索エンジン最適化）やPPC（クリック課金広告）などの手法を用いて、ターゲットとなる顧客にリーチすることが目的です。これにより、見込み客が自社のサイトに訪れる機会を増やし、最終的には購入や問い合わせに繋がる可能性が高まります。
+                        p また、SNS（ソーシャルネットワーキングサービス）を活用することで、より広範囲なオーディエンスにアプローチできるため、集客の幅が広がります。
+                        p
+                            | さらに、デジタルマーケティングはリアルタイムでのデータ分析が可能であり、集客の効果を即座に測定できるのが特徴です。どの施策が効果的であったのかを把握し、次の戦略に活かせるため、効率的な集客が実現します。
+                        h3.wp-block-heading
+                            span.ez-toc-section(id='%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%82%84%E6%95%B0%E5%80%A4%E6%94%B9%E5%96%84%E3%81%8C%E5%AE%B9%E6%98%93' ez-toc-data-id='#データ分析や数値改善が容易')
+                            | データ分析や数値改善が容易
+                            span.ez-toc-section-end
+                        p
+                            | デジタルマーケティングの大きな強みの一つに、数値の可視化と分析のしやすさがあります。ユーザーの行動や反応を数値として把握できるため、施策の効果を客観的に評価しやすくなるのが特徴です。
+                        p クリック数や滞在時間、コンバージョン率など、さまざまなデータを基に改善点を具体的に洗い出すことが可能です。
+                        p 結果として、感覚に頼らない根拠のある判断ができ、マーケティングの精度や効率を高めることにつながります。こうした柔軟で素早い対応力が、成果への近道となります。
+                        h3.wp-block-heading
+                            span.ez-toc-section(id='%E8%B3%87%E7%94%A3%E6%80%A7%E3%81%8C%E9%AB%98%E3%81%84' ez-toc-data-id='#資産性が高い')
+                            | 資産性が高い
+                            span.ez-toc-section-end
+                        p
+                            | デジタルマーケティングは、資産性の高さもメリットの一つです。デジタルコンテンツは、一度作成すれば長期間にわたって利用できるため、企業にとって持続的な価値を生み出す資産となります。
+                        p 例えば、ブログ記事や動画、インフォグラフィックなどのコンテンツは、適切にSEO対策を施すことで、検索エンジンからのトラフィックを継続的に獲得することが可能です。
+                        p
+                            | さらに、デジタルマーケティングでは、広告やキャンペーンの効果を数値で測定しやすいため、投資対効果（ROI）を明確に把握できます。これにより、どの施策が効果的であったかを分析し、次回の戦略に活かせるのです。
+                        p デジタルマーケティングは一時的な効果だけでなく、長期的な資産としての価値を持つため、企業にとって重要な戦略となります。
+                        .wp-block-buttons.single-media__button-1.is-content-justification-center.is-layout-flex.wp-container-core-buttons-is-layout-16018d1d.wp-block-buttons-is-layout-flex
+                            .wp-block-button.is-style-fill.vk_block-margin-md--margin-top
+                                a.wp-block-button__link.has-background.has-text-align-center.has-custom-font-size.wp-element-button(href='https://counter-digital.jp/service/owned-media-consulting/' style='border-radius:100px;background-color:#d85a24;font-size:16px')
+                                    strong オウンドメディアコンサルティングサービス ->
+                        h2.wp-block-heading
+                            span.ez-toc-section(id='%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E4%BB%95%E4%BA%8B%E5%86%85%E5%AE%B9%E3%81%AE%E9%81%95%E3%81%84' ez-toc-data-id='#コンテンツマーケティングとデジタルマーケティングの仕事内容の違い')
+                            | コンテンツマーケティングとデジタルマーケティングの仕事内容の違い
+                            span.ez-toc-section-end
+                        p コンテンツマーケティングとデジタルマーケティングは、どちらも企業の成長を支える重要な手法ですが、その仕事内容には明確な違いがあります。
+                        figure.wp-block-table.is-style-vk-table-border.has-small-font-size.is-style-vk-table-scrollable(data-scroll-breakpoint='table-scrollable-mobile')
+                            table
+                                thead
+                                    tr
+                                        th 種類
+                                        th
+                                tbody
+                                    tr
+                                        td コンテンツマーケティング
+                                        td 価値あるコンテンツを作成し、配信すること
+                                    tr
+                                        td デジタルマーケティング
+                                        td オンラインプラットフォームを利用して製品やサービスをプロモーションすること
+                        p
+                            | コンテンツマーケティングは、主に価値あるコンテンツを作成していきます。具体的には、ブログ記事、動画、インフォグラフィック、ポッドキャストなど、多様な形式のコンテンツを通じて、関心を引くことが大切です。コンテンツの質や関連性が重視され、長期的な関係構築を目指すアプローチです。
+                        p
+                            | 一方、デジタルマーケティングは、オンラインプラットフォームを利用して製品やサービスをプロモーションする広範な戦略を指します。SEO、PPC広告、ソーシャルメディアマーケティング、メールマーケティングなど、さまざまな手法を駆使して、短期的な成果を追求することが特徴です。
+                        p
+                            | コンテンツマーケティングは「価値の提供」を重視し、デジタルマーケティングは「結果の追求」を重視するため、仕事内容やアプローチが異なります。企業は自社の目的やリソースに応じて、どちらの手法を重視するかを検討する必要があります。
+                        h2.wp-block-heading
+                            span.ez-toc-section(id='%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%8B%EF%BC%9F' ez-toc-data-id='#コンテンツマーケティングとデジタルマーケティングどちらがおすすめか？')
+                            | コンテンツマーケティングとデジタルマーケティングどちらがおすすめか？
+                            span.ez-toc-section-end
+                        p コンテンツマーケティングとデジタルマーケティングのどちらが自社にとって最適かを判断する際には、まず自社のビジネスモデルやターゲット市場を考慮することが重要です。
+                        p
+                            | コンテンツマーケティングは、長期的な関係構築を重視し、価値ある情報を提供することで顧客の信頼を得る手法です。特に、ブランドの認知度を高めたい企業や、顧客とのエンゲージメントを深めたい企業に効果的です。
+                        p
+                            | 一方、デジタルマーケティングは、短期的な成果を求める場合に適しています。特に、即効性のある集客や売上向上を目指す企業にとっては、SEOやPPC広告などの手法が有効です。
+                        p
+                            | 最終的には、両者の手法を組み合わせることで、より効果的なマーケティング戦略を構築することができます。自社のニーズや目標に応じて、どちらの手法を重視するかを慎重に検討することが成功への鍵となるでしょう。
+                        h2.wp-block-heading
+                            span.ez-toc-section(id='%E3%81%BE%E3%81%A8%E3%82%81' ez-toc-data-id='#まとめ')
+                            | まとめ
+                            span.ez-toc-section-end
+                        p
+                            | コンテンツマーケティングとデジタルマーケティングは、それぞれ異なるアプローチと手法を持ちながらも、企業の成長において重要な役割を果たします。どちらの手法も、企業の目的やターゲットに応じて適切に選択することが重要です。
+                        p
+                            | 自社のニーズに合ったマーケティング戦略を見極め、効果的に活用することで、持続的な成長を実現することができるでしょう。今後のマーケティング活動において、コンテンツとデジタルの両方の特性を理解し、バランスよく取り入れることが成功の鍵となります。
+                        .wp-block-buttons.single-media__button-1.is-content-justification-center.is-layout-flex.wp-container-core-buttons-is-layout-16018d1d.wp-block-buttons-is-layout-flex
+                            .wp-block-button.is-style-fill.vk_block-margin-md--margin-top
+                                a.wp-block-button__link.has-background.has-text-align-center.has-custom-font-size.wp-element-button(href='https://counter-digital.jp/service/owned-media-consulting/' style='border-radius:100px;background-color:#d85a24;font-size:16px')
+                                    strong オウンドメディアコンサルティングサービス ->
+
+
+
+        section.p-media-ranking
+            .l-container
+                .p-media-ranking__head
+                    h3.c-heading-caption Ranking
+                .p-media-ranking__list
+                    - for (var x = 1; x <= 3; x++)
+                        .c-card-media
+                            a(href=path + "single-media/").c-card-media__link
+                                p.c-card-media__date 25.6.29
+                                figure.c-card-media__pic
+                                    img(src=img + "480x300.webp" alt="")
+                                .c-card-media__wrap
+                                    h3.c-card-media__title
+                                        | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+                                    ul.c-card-media__category
+                                        li Category
+                                        li MailMagazine
+        section.p-media-recommend
+            .l-container
+                .p-media-recommend__head
+                    h3.c-heading-caption Recommend
+                .p-media-recommend__list
+                    - for (var x = 1; x <= 3; x++)
+                        .c-card-media
+                            a(href=path + "single-media/").c-card-media__link
+                                p.c-card-media__date 25.6.29
+                                figure.c-card-media__pic
+                                    img(src=img + "480x300.webp" alt="")
+                                .c-card-media__wrap
+                                    h3.c-card-media__title
+                                        | コンテンツマーケティングとデジタルマーケティングの違いとは？メリッ…
+                                    ul.c-card-media__category
+                                        li Category
+                                        li MailMagazine
+    //-#modal-blog.cm-modal(aria-hidden='false')
+    #modal-blog.cm-modal(aria-hidden='true')
+        .cm-modal__overlay(tabindex='-1' data-micromodal-close='')
+            .cm-modal__wrap(role='dialog' aria-modal='true')
+                button.cm-modal__close(aria-label='Close modal' data-micromodal-close='')
+                    span
+                    span
+                .cm-modal__container
+                    .cm-modal-blog
+                        figure.cm-modal-blog__bnr
+                            a(href="#")
+                                img(src=img+"480x300.webp" alt="")
+
+
+
+
+
+
+
+
+

@@ -34,14 +34,14 @@ block content
                 .p-download__list
                     - for (var x = 1; x <= 9; x++)
                         .c-card-download
-                            a(href="#").c-card-download__link
+                            a(href=path+"single-download/").c-card-download__link
                                 p.c-card-download__title
                                     | 会社概要
                                 i.c-card-download__down
                                     svg(width=60 height=60)
                                         use(href="#ico-down")
                                 figure.c-card-download__pic
-                                    img(src=img + "400x225.webp" alt="")
+                                    img(src=img + "16x9.webp" alt="")
                                 h3.c-card-download__title2
                                     | 会社紹介資料
                                 p.c-card-download__desc
@@ -58,7 +58,9 @@ block content
                             a(href="#") 03
                         li.cm-nav-paginate__ctrl
                             a(href="#") NEXT
-
+        .p-download__media
+            .l-container.l-container--md
+                include ../template/cm-block-media
 
 
 

@@ -14,7 +14,8 @@ export default class GridViewer {
     private modelGroups: { group: THREE.Group; direction: number; instances: THREE.Group[] }[] = []
     private gui!: GUI;
     private params = {
-        noiseStrength: 0.15,
+        noiseStrength: 0.05,
+        noiseDark: 0.8,
         scanWidth: 1.2,
         baseSpeed: 0.4,
         scrollSpeed: 0.2,
@@ -82,6 +83,12 @@ export default class GridViewer {
             .onChange((v: number) => {
                 this.shaderMaterials.forEach((m) => (m.uniforms.noiseStrength.value = v));
             });
+        this.gui
+            .add(this.params, "noiseDark", 0, 1, 0.05)
+            .name("Noise Dark")
+            .onChange((v: number) => {
+                this.shaderMaterials.forEach((m) => (m.uniforms.noiseDark.value = v));
+            });
 
         this.gui
             .add(this.params, "scanWidth", 0.1, 3.0, 0.01)
@@ -121,6 +128,7 @@ export default class GridViewer {
                 minX: { value: minX },
                 maxX: { value: maxX },
                 noiseStrength: { value: this.params.noiseStrength },
+                noiseDark: { value: this.params.noiseDark },
             },
             vertexShader: `
         varying vec3 vPosition;
@@ -137,6 +145,7 @@ export default class GridViewer {
         uniform float minX;
         uniform float maxX;
         uniform float noiseStrength;
+        uniform float noiseDark;
         varying vec3 vPosition;
         float random(vec2 st){
           return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
@@ -149,9 +158,13 @@ export default class GridViewer {
           float distance2=abs(normalizedX-scanPosition2);
           float distance=min(distance1,distance2);
           float alpha=smoothstep(0.0,scanWidth,distance);
+          
           vec2 noiseCoord=gl_FragCoord.xy+uTime*10.0;
-          float noise=random(noiseCoord)*noiseStrength;
-          vec3 finalColor=baseColor+vec3(noise);
+          // float noise=random(noiseCoord)*noiseStrength;
+          // vec3 finalColor=baseColor+vec3(noise);
+          
+          float noise = (random(noiseCoord) - noiseDark) * 2.0 * noiseStrength;
+          vec3 finalColor = baseColor + vec3(noise);
           gl_FragColor=vec4(finalColor,alpha);
         }
       `,
@@ -215,7 +228,7 @@ export default class GridViewer {
         const clock = new THREE.Clock();
 
         loader.load(
-            "./assets/model/grid.glb",
+            document.body.getAttribute('data-src') + '/assets/model/grid.glb',
             (gltf) => {
                 const temp = gltf.scene.clone();
                 const box = new THREE.Box3().setFromObject(temp);

@@ -47,6 +47,12 @@
 		gap: 37/16+rem;
 	}
 }
+.p-media--single .p-media__wrap {
+	@include config.pc {
+		margin-top: 14/16+rem;
+		gap: 114/16+rem;
+	}
+}
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 .p-media__aside {
@@ -159,3 +165,44 @@
 }
 
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-media-post {
+	@include config.pc {}
+}
+.p-media-post__meta {
+	display: flex;
+	justify-content: space-between;
+	padding: 6/16+rem 0 32/16+rem;
+
+	color: #FF552B;
+	font-family: var(--Suisse);
+	font-size: 12/16+rem;
+	@include config.pc {
+		padding: 12/16+rem 0 62/16+rem;
+	}
+}
+.p-media-post__date {
+	@include config.pc {}
+}
+.p-media-post__category {
+	@include config.pc {}
+}
+.p-media-post__title {
+	font-size: 26/16+rem;
+	line-height: 1.3;
+	@include config.pc {
+		width: 872/16+rem;
+		margin-left: auto;
+		font-size: 45/16+rem;
+	}
+}
+.p-media-post__body {
+	padding-bottom: var(--padding-block);
+	@include config.pc {
+		width: 872/16+rem;
+		margin-left: auto;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+
+

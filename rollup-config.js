@@ -49,5 +49,9 @@ export default {
       exclude: 'node_modules/**',  // バンドルに含めないファイル
       presets: ['@babel/preset-env'],
     }),
-  ]
+  ],
+  watch: {
+    include: ['src/js/**'],
+    exclude: ['node_modules/**']
+  }
 };

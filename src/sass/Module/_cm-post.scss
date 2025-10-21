@@ -12,25 +12,30 @@ body figure {
 	flex-direction: column;
 	gap: var(--padding-block);
 	color: var(--LightBlack, #584E49);
-	font-size: 14px;
+	font-size: 14/16+rem;
 	line-height: 1.4;
 	letter-spacing: 0.01em;
 
 	@include config.pc {
-		font-size: 18px;
+		font-size: 18/16+rem;
 	}
 	//h1 {
 	//	font-size: 2em;
 	//	margin-top: 0.67em;
 	//	font-weight: bold;
 	//}
-	h2,
-	h3 {
-		@extend .c-heading-caption;
+	> h2 {
+		@extend .c-heading-bar;
+	}
+	> h3 {
+		@extend .c-heading-border;
 	}
 	> h2 + *,
 	> h3 + * {
-		margin-top: -32px;
+		margin-top: -32/16+rem;
+	}
+	> p + p {
+		margin-top: -1em;
 	}
 
 	//h3 {
@@ -70,14 +75,14 @@ body figure {
 	table th,
 	table td {
 		padding: .5em .5em;
-		border: 1px solid #ccc;
+		border: 1/16+rem solid #ccc;
 	}
 	a {
-		color: var(--color-assort);
-		text-decoration: underline;
-		&:hover {
-			text-decoration: none;
-		}
+		//color: var(--color-assort);
+		//text-decoration: underline;
+		//&:hover {
+		//	text-decoration: none;
+		//}
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -109,25 +114,42 @@ body figure {
 	.wp-block-table {
 	}
 	// btn
-	.wp-block-buttons {}
-	.wp-block-button {
-		.wp-block-button__link {}
+	.wp-block-buttons {
 	}
+	.wp-block-button {
+		display: flex;
+		width: 100%;
+		text-align: center;
+		.wp-block-button__link {
+			@extend .c-btn-more;
+			@extend .c-btn-more--lg;
+			border-radius: 0 !important;
+			background: var(--color-assort) !important;
+			font-size: 14/16+rem !important;
+			@include config.pc {
+				font-size: 18/16+rem !important;
+			}
+		}
+	}
+
 	//blockquote
 	blockquote.wp-block-quote {
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .cm-post-lead {
-	padding-left: 64px;
+	@include config.pc {
+		padding-left: 64/16+rem;
+	}
 }
 .cm-post-lead__wrap {
 	display: flex;
 	flex-direction: column;
+	color: var(--color-assort);
 	@include config.pc {
 		flex-direction: row;
-		margin-right: #{-500+64+px};
-		gap: 200px;
+		margin-right: #{(-500+64)/16+rem};
+		gap: 200/16+rem;
 	}
 }
 .cm-post-lead__body {
@@ -135,17 +157,19 @@ body figure {
 }
 .cm-post-lead__aside {
 	@include config.pc {
-		width: 352px;
+		width: 352/16+rem;
 	}
 }
 .cm-post-lead__info {
 	display: grid;
-	grid-template-columns: 54px 1fr;
-	gap: 12px 12px;
-	font-size: 14px;
+	grid-template-columns: 54/16+rem 1fr;
+	gap: 12/16+rem 12/16+rem;
+	font-size: 14/16+rem;
 	dt {
-		font-family: var(--Suisse);
-		font-size: 12px;
+		//font-family: var(--Suisse);
+		font-family: var(--Helvetica-Md);
+		letter-spacing: 0.04em;
+		font-size: 12/16+rem;
 	}
 	@include config.pc {
 
@@ -158,3 +182,212 @@ body figure {
 	@include config.pc {}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.cm-post-credit {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 6/16+rem;
+	color: var(--BASECOLOR, #FF552B);
+	@include config.pc {
+		padding-left: 64/16+rem;
+		flex-direction: row;
+	}
+}
+.cm-post-credit__title {
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 24/16+rem;
+	line-height: 1;
+	letter-spacing: -0.04em;
+	@include config.pc {
+		font-size: 36/16+rem;
+	}
+}
+.cm-post-credit__list {
+	margin-left: auto;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 2/16+rem;
+	font-family: var(--Suisse);
+	font-size: 14/16+rem;
+	line-height: 1.3;
+	text-align: right;
+	li {
+		list-style: none;
+	}
+	@include config.pc {}
+}
+/*----------------------------------------------------
+	cm-post vk block
+----------------------------------------------------*/
+.cm-post.cm-post.cm-post {
+	.wp-block-vk-blocks-border-box {
+		margin: 0;
+		border: var(--border-assort);
+		width: 100%;
+	}
+	.vk_borderBox_title_container {
+		margin-bottom: -0.5em;
+		background: #fff url(../img/bg-noise.webp);
+	}
+	.vk_borderBox_title {
+		color: var(--BASECOLOR, #FF552B);
+		font-size: 18/16+rem;
+		font-weight: 500;
+	}
+	.vk_borderBox_body {
+		margin: 0;
+		p {
+			font-size: 18/16+rem;
+			letter-spacing: 0.18/16+rem;
+			color: var(--color);
+		}
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.cm-post.cm-post.cm-post #ez-toc-container {
+	background: var(--Gray, #EFECEB);
+	border: none;
+	border-radius: 0;
+	padding: 24/16+rem 15/16+rem;
+
+	@include config.pc {
+		padding: 35/16+rem 24/16+rem;
+	}
+	.ez-toc-title {
+		font-size: 14/16+rem;
+		@include config.pc {
+			font-size: 18/16+rem;
+		}
+	}
+	a.ez-toc-toggle {
+		@extend .c-btn-status;
+		transform: rotate(45deg);
+		.ez-toc-js-icon-con {
+			display: none;
+		}
+	}
+	.toc_close .a.ez-toc-toggle {
+		transform: rotate(0deg);
+	}
+	.ez-toc-list.ez-toc-list-level-1 {
+		padding: 20/16+rem 0 0;
+		@include config.pc {
+			padding: 20/16+rem 20/16+rem 0;
+		}
+	}
+	.ez-toc-heading-level-2 {
+		margin-top: 12/16+rem;
+		padding-left: 28/16+rem;
+		font-size: 14/16+rem;
+		font-weight: 500;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			width: 16/16+rem;
+			height: 16/16+rem;
+			position: absolute;
+			left: 0;
+			top: 4/16+rem;
+			pointer-events: none;
+			background: url(../img/ico-gradient-index.webp) center center /contain no-repeat;
+		}
+		@include config.pc {
+			padding-left: 34/16+rem;
+			font-size: 18/16+rem;
+			&:before {
+				width: 22/16+rem;
+				height: 22/16+rem;
+				top: 4/16+rem;
+			}
+		}
+	}
+	.ez-toc-list-level-3 {
+		margin: 6/16+rem 0 0 0;
+		counter-reset: num;
+		font-size: 11/16+rem;
+		@include config.pc {
+			font-size: 14/16+rem;
+		}
+	}
+	.ez-toc-heading-level-3 {
+		margin-top: 6/16+rem;
+		padding-left: 24/16+rem;
+		position: relative;
+		counter-increment: num;
+		&:before {
+			content: counter(num, decimal-leading-zero);
+			color: var(--BASECOLOR, #FF552B);
+			position: absolute;
+			left: 0;
+			top: 0;
+			pointer-events: none;
+		}
+		@include config.pc {
+			padding-left: 27/16+rem;
+		}
+	}
+	.ez-toc-heading-level-3 {
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.single-media__card {
+	position: relative;
+	padding: 0 0 32/16+rem;
+	display: grid;
+	grid-template-areas:
+        "image title"
+        "image name"
+        "text text";
+	grid-template-columns: 145/16+rem 1fr;
+	gap: 10/16+rem;
+	@include config.pc {
+		grid-template-areas:
+			"image title"
+			"image name"
+			"image text";
+		grid-template-columns: 145/16+rem 1fr;
+		grid-template-rows: auto auto 1fr;
+		gap: 12/16+rem 30/16+rem;
+		padding: 0 0 0 88/16+rem;
+	}
+}
+.single-media__card-image {
+	grid-area: image;
+}
+.single-media__card-title {
+	grid-area: title;
+	font-size: 16/16+rem;
+	align-self: flex-end;
+}
+.single-media__card-name {
+	grid-area: name;
+	font-size: 25/16+rem;
+}
+.single-media__card-text {
+	grid-area: text;
+	font-size: 14/16+rem;
+	@include config.pc {
+		font-size: 18/16+rem;
+	}
+
+}
+.single-media__card-text--hidden {
+	overflow: hidden;
+	height: 1.4*7+em;
+	@include config.pc {
+		height: 1.4*2+em;
+	}
+}
+.single-media__card-more {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 14/16+rem;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+

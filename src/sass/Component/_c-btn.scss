@@ -92,6 +92,7 @@
 	span {
 		display: inline-flex;
 		transition: var(--easeDuration) var(--easeOutQuart);
+		will-change: transform, opacity;
 	}
 	span:nth-child(1) {
 		transform: translate3d(0, 0, 0 );
@@ -172,14 +173,14 @@
 	font-family: var(--Helvetica);
 	color: #fff;
 	font-size: 20/16+rem;
-	@include config.pc {}
+	gap: 10/16+rem;
 }
 .c-btn-more__txt {
 	position: relative;
 	top: 0.2em;
 	align-self: flex-end;
+	flex: 1;
 	@extend .c-btn-txt;
-	@include config.pc {}
 }
 .c-btn-more__arrow {
 	margin-left: auto;
@@ -187,7 +188,21 @@
 		fill: #fff;
 	}
 	@extend .c-btn-arrow;
-	@include config.pc {}
+}
+.c-btn-more--lg {
+	padding: 10/16+rem 24/16+rem 10/16+rem 15/16+rem;
+	width: 100%;
+	height: 106/16+rem;
+	font-size: 14/16+rem;
+	@include config.pc {
+		width: 528/16+rem;
+		padding: 10/16+rem 34/16+rem 10/16+rem 24/16+rem;
+		font-size: 18/16+rem;
+	}
+	.c-btn-more__txt {
+		top: initial;
+		align-self: center;
+	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-btn-aside {
@@ -196,21 +211,20 @@
 	justify-content: center;
 	padding: 10/16+rem 9/16+rem;
 	gap: 10/16+rem;
+	min-width: 130/16+rem;
 
 	border: var(--border-assort);
 	color: #FF552B;
-	font-size: 14/16+rem;
-	@include config.pc {}
+	font-size: 11/16+rem;
+	background: #fff;
 }
 .c-btn-aside__txt {
 	@extend .c-btn-txt;
-	@include config.pc {}
 }
 .c-btn-aside__arrow {
 	margin-left: auto;
 	@extend .c-btn-arrow;
 	@extend .c-btn-arrow--sm;
-	@include config.pc {}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-btn-menu {
@@ -299,6 +313,7 @@
 .c-btn-download {
 	display: flex;
 	align-items: center;
+	width: 100%;
 	height: 157/16+rem;
 	padding: 20/16+rem 37/16+rem 20/16+rem 23/16+rem;
 	background: var(--BASECOLOR, #FF552B);
@@ -308,7 +323,12 @@
 	}
 }
 .c-btn-download__txt {
-	@include config.pc {}
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	@include config.pc {
+		padding-bottom: 6/16+rem;
+	}
 }
 .c-btn-download__title {
 	font-size: 18/16+rem;
@@ -318,11 +338,13 @@
 	}
 }
 .c-btn-download__desc {
-	margin-top: 6/16+rem;
 	color: var(--Gray, #EFECEB);
 	font-size: 11/16+rem;
 	line-height: 1.2;
 	letter-spacing: 0.1/16+rem;
+	@include config.sp-tab {
+		width: 222/16+rem;
+	}
 	@include config.pc {
 		font-size: 12/16+rem;
 	}
@@ -330,7 +352,6 @@
 .c-btn-download__down {
 	margin-left: auto;
 	@extend .c-btn-down;
-	@include config.pc {}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-btn-form {
@@ -351,7 +372,6 @@
 	}
 }
 .c-btn-form__txt {
-	@include config.pc {}
 }
 .c-btn-form__arrow {
 	margin-left: auto;
@@ -360,7 +380,6 @@
 		fill: #fff;
 	}
 	transform: rotate(45deg);
-	@include config.pc {}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-btn-creative {
@@ -382,8 +401,6 @@
 }
 .c-btn-creative__txt {
 	@extend .c-btn-txt;
-	@include config.pc {}
-	@include config.pc {}
 }
 .c-btn-creative__arrow {
 	margin-left: auto;
@@ -392,7 +409,6 @@
 		width: 16/16+rem;
 		height: 16/16+rem;
 	}
-	@include config.pc {}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-btn-footer {
@@ -460,7 +476,6 @@
 }
 .c-btn-round__txt {
 	@extend .c-btn-txt;
-	@include config.pc {}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .c-btn-nav-heading {
@@ -501,7 +516,6 @@
 	@include config.sp-tab {
 		padding-top: 0.2em;
 	}
-	@include config.pc {}
 }
 .c-btn-nav-heading__status {
 	@extend .c-btn-status;
@@ -541,7 +555,6 @@
 }
 .c-btn-nav-cta__en {
 	@extend .c-btn-txt;
-	@include config.pc {}
 }
 .c-btn-nav-cta__ja {
 	letter-spacing: 0;
@@ -560,6 +573,43 @@
 	@include config.sp-tab {
 		width: 30/16+rem;
 		height: 30/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.c-btn-member {
+	padding: 0 24/16+rem 0 0;
+	display: flex;
+	flex-direction: column;
+	border-bottom: var(--border-assort);
+	color: var(--BASECOLOR, #FF552B);
+	font-weight: 500;
+	text-align: left;
+	position: relative;
+	@include config.pc {
+		padding: 0 24/16+rem 0 0;
+	}
+}
+.c-btn-member__job {
+	font-size: 10/16+rem;
+	@include config.pc {
+		font-size: 14/16+rem;
+	}
+}
+.c-btn-member__name {
+	font-size: 18/16+rem;
+	@include config.pc {
+		font-size: 25/16+rem;
+	}
+}
+.c-btn-member__status {
+	@extend .c-btn-status;
+	width: 20/16+rem;
+	height: 20/16+rem;
+	position: absolute;
+	right: 0;
+	bottom: 8/16+rem;
+	@include config.pc {
+		bottom: 12/16+rem;
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

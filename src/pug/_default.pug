@@ -66,10 +66,10 @@ body#body(class=pageClass data-src=path)
                         a(href=path+"service/").c-btn-txt
                             span.js-clone service
                     li
-                        a(href=path+"case/").c-btn-txt
+                        a(href=path+"creative-case/").c-btn-txt
                             span.js-clone Casestudy
                     li
-                        a(href=path+"voice/").c-btn-txt
+                        a(href=path+"case/").c-btn-txt
                             span.js-clone Voice
                     li
                         a(href=path+"counter-media/").c-btn-txt
@@ -77,9 +77,6 @@ body#body(class=pageClass data-src=path)
                     li
                         a(href=path+"news/").c-btn-txt
                             span.js-clone News
-                    li
-                        a(href=path+"download/").c-btn-txt
-                            span.js-clone Download
 
 
             button.l-header-menu.c-btn-menu(aria-label="メニューを開く")
@@ -135,6 +132,23 @@ body#body(class=pageClass data-src=path)
                             | 担当者よりご連絡いたします。
 
         aside.l-aside
+            ul.l-aside-cta
+                li
+                    a(href= path + "download/").c-btn-aside
+                        span.c-btn-aside__txt
+                            span.js-clone 資料ダウンロード
+                        i.c-btn-aside__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+                li
+                    a(href= path + "contact/").c-btn-aside
+                        span.c-btn-aside__txt
+                            span.js-clone お問い合わせ
+                        i.c-btn-aside__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+
+
             .l-aside-stalker
                 .c-btn-stalker
                     i.c-btn-stalker__arrow
@@ -168,14 +182,14 @@ body#body(class=pageClass data-src=path)
                                         svg(width=40 height=40)
                                             use(href="#ico-arrow")
                             li
-                                a(href= path + "case/").c-btn-footer
+                                a(href= path + "creative-case/").c-btn-footer
                                     span.c-btn-footer__txt
                                         span.js-clone CASESTUDY
                                     i.c-btn-footer__arrow
                                         svg(width=40 height=40)
                                             use(href="#ico-arrow")
                             li
-                                a(href= path + "voice/").c-btn-footer
+                                a(href= path + "case/").c-btn-footer
                                     span.c-btn-footer__txt
                                         span.js-clone VOICE
                                     i.c-btn-footer__arrow
@@ -185,13 +199,6 @@ body#body(class=pageClass data-src=path)
                                 a(href= path + "news/").c-btn-footer
                                     span.c-btn-footer__txt
                                         span.js-clone NEWS
-                                    i.c-btn-footer__arrow
-                                        svg(width=40 height=40)
-                                            use(href="#ico-arrow")
-                            li
-                                a(href= path + "download/").c-btn-footer
-                                    span.c-btn-footer__txt
-                                        span.js-clone Download
                                     i.c-btn-footer__arrow
                                         svg(width=40 height=40)
                                             use(href="#ico-arrow")

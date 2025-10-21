@@ -44,12 +44,12 @@ $colors: (
 .swiper-pagination-horizontal.swiper-pagination-horizontal.swiper-pagination-horizontal {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 10/16+rem;
   &.swiper-pagination-hidden {
   }
   .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
+    width: 12/16+rem;
+    height: 12/16+rem;
     margin: 0;
     border: var(--border-assort);
     background: transparent;
@@ -60,7 +60,7 @@ $colors: (
     background: var(--color-assort);
   }
   @include config.pc {
-    gap: 15px;
+    gap: 15/16+rem;
   }
 }
 /* Common Styles */

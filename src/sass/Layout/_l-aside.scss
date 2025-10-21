@@ -4,6 +4,19 @@
 /*----------------------------------------------------
 	...
 ----------------------------------------------------*/
+.l-aside-cta {
+	position: fixed;
+	z-index: 100;
+	display: flex;
+	gap: 3/16+rem;
+	right: 15/16+rem;
+	bottom: 15/16+rem;
+	@include config.pc {
+		right: 28/16+rem;
+		bottom: 28/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .l-aside-stalker {
 	display: block;
 	width: 100%;

@@ -1,0 +1,83 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = "資料ダウンロード"
+    - var pageClass = ""
+
+block content
+
+    .p-download-single
+        .cm-block-header.cm-block-header--download
+            .l-container
+                .cm-block-header__title
+                    h1.cm-block-header__ja AI時代に「勝つメディア」と「負けるメディア」の違い
+                    p.cm-block-header__desc AI時代のSEOへの影響と勝てるメディアの特徴を解説します。
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        a(href=path + "download/")  Download
+                    li
+                        span AI時代に「勝つメディア」と「負けるメディア」の違い
+
+        .l-container.l-container--md
+            .p-download-single__wrap
+                aside.p-download-single__aside
+                    figure
+                        img(src=img+"16x9.webp" alt="")
+                    figure
+                        img(src=img+"16x9.webp" alt="")
+                    figure
+                        img(src=img+"16x9.webp" alt="")
+                .p-download-single__form
+                    .cm-form.cm-form--download
+                        form(action="")
+                            .cm-form__inputs
+                                dl.c-form-input
+                                    dt
+                                        span お名前
+                                        span._required （必須）
+                                    dd
+                                        input(type="text" placeholder="例) 山田 太郎")
+                                dl.c-form-input
+                                    dt
+                                        span 会社名
+                                        span._required （必須）
+                                    dd
+                                        input(type="text" placeholder="株式会社abc")
+                                dl.c-form-input
+                                    dt
+                                        span メールアドレス
+                                        span._required （必須）
+                                    dd
+                                        input(type="text" placeholder="例) abc@sample.com")
+                                dl.c-form-input
+                                    dt
+                                        span 電話番号
+                                        span._required （必須）
+                                    dd
+                                        input(type="text" placeholder="例) 000-0000-0000")
+                            .cm-form__action
+                                button.c-btn-download
+                                    span.c-btn-download__txt
+                                        span.c-btn-download__title 資料をダウンロードする
+                                        span.c-btn-download__desc 送信することで、プライバシーポリシーに同意したものとします。
+                                    i.c-btn-download__down
+                                        svg(width=60 height=60)
+                                            use(href="#ico-down")
+        .p-download-single__bottom
+            .p-download-single__client
+                figure.js-clone
+                    img(src=img+"p-download-client.webp")
+            .p-download-single__media
+                .l-container.l-container--md
+                    include ../template/cm-block-media
+
+
+
+
+
+
+
+
+

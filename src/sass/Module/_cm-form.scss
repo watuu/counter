@@ -34,6 +34,7 @@
 }
 .cm-form__action {
 	margin-top: var(--padding-block);
+	width: 100%;
 	@include config.pc {}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

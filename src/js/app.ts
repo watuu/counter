@@ -9,6 +9,8 @@ import BudouX from './budoux';
 // @ts-ignore
 import GridViewer from './mv';
 
+import { RepeatTextScrollFx } from './repeatTextScrollFx';
+
 class APP {
     constructor() {
         const common = new Common();
@@ -16,9 +18,10 @@ class APP {
         // new Barba();
         new Page();
         new BudouX();
-        if (document.querySelector('#mv') && Utility.isPC()) {
+        if (document.querySelector('#mv') ) {
             new GridViewer();
         }
+        new RepeatTextScrollFx();
     }
 }
 

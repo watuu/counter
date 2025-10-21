@@ -126,14 +126,14 @@
 	&.is-visible {
 		transform: translate3d(0,0,0);
 	}
-	._forward {
-		padding-left: 2.9em;
-	}
-	._case {
-		padding-left: 1.2em;
+	._cutting {
+		padding-left: 0.75em;
 	}
 	._from {
-		padding-left: 1.6em;
+		padding-left: 1.0em;
+	}
+	._local {
+		padding-left: 1.2em;
 	}
 	@include config.sp-tab {
 		display: none;
@@ -149,11 +149,12 @@
 	@include config.pc {
 		margin-top: 0;
 		position: absolute;
+		width: 244/16+rem;
 		top: 204/16+rem;
 		left: calc(100% - #{114/16+rem});
 		transform: rotate(90deg);
 		transform-origin: left top;
-		white-space: nowrap;
+		//white-space: nowrap;
 	}
 }
 .p-top-mv__ja {
@@ -735,13 +736,28 @@
 		font-size: 24/16+rem;
 	}
 }
+.p-top-media-channel__video {
+	position: relative;
+	margin: 8/16+rem 0 0 15/16+rem;
+	iframe {
+		width: 360/16+rem;
+		height: auto;
+		aspect-ratio: 16 / 9;
+	}
+	@include config.pc {
+		margin: 12/16+rem 0 0 66/16+rem;
+		iframe {
+			width: 438/16+rem;
+		}
+	}
+}
 .p-top-media-channel__wrap {
 	position: relative;
-	padding: 260/16+rem 15/16+rem 0;
+	padding: 60/16+rem 15/16+rem 0;
 	display: flex;
 	gap: 18/16+rem;
 	@include config.pc {
-		padding: 300/16+rem 0 0 66/16+rem;
+		padding: 40/16+rem 0 0 66/16+rem;
 		gap: 75/16+rem;
 	}
 }

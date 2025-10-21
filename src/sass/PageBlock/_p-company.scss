@@ -1,23 +1,467 @@
 @use '../Base/config' as config;
 @use '../Component/c-btn' as btn;
 @use '../Component/c-paragraph' as paragraph;
+@use '../Utility/u-utility' as utility;
 /*----------------------------------------------------
 	...
 ----------------------------------------------------*/
-.p-case {
+.p-company {
 	padding-bottom: var(--padding-page);
 	@include config.pc {}
 }
-.p-case__list {
-	margin-top: 42/16+rem;
-	display: grid;
-	gap: 39/16+rem;
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-company-mv {
+	position: relative;
+	overflow: hidden;
+	height: 450/16+rem;
+
 	@include config.pc {
-		margin-top: 100/16+rem;
+		height: 660/16+rem;
+	}
+}
+.p-company-mv__bg {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	canvas {
+		width: 100%;
+		height: 100vh !important;
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+		object-fit: cover;
+		//img,
+		//svg {
+		//	width: 100%;
+		//	height: 100%;
+		//}
+	}
+}
+.p-company-mv__wrap {
+	position: relative;
+	z-index: 5;
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-company-mission {
+	padding-top: 20/16+rem;
+	position: relative;
+	overflow: hidden;
+	@include config.pc {}
+}
+.p-company-mission__head {
+	display: flex;
+	flex-direction: column;
+	gap: 8/16+rem;
+	@include config.pc {
+		flex-direction: row;
+		padding-left: 110/16+rem;
+	}
+}
+.p-company-mission__title {
+	display: flex;
+	flex-direction: column;
+	@include config.pc {}
+}
+.p-company-mission__en {
+	color: var(--BASECOLOR, #FF552B);
+	text-align: justify;
+	font-family: var(--Suisse);
+	font-size: 12/16+rem;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		font-size: 14/16+rem;
+	}
+}
+.p-company-mission__ja {
+	margin-top: 0.1em;
+	align-self: flex-start;
+	color: var(--BASECOLOR, #FF552B);
+	font-size: 26/16+rem;
+	font-weight: 500;
+	line-height: 1.1;
+	background: #fff;
+	@include config.pc {
+		font-size: 32/16+rem;
+	}
+}
+.p-company-mission__desc {
+	text-indent: 4em;
+	color: var(--BASECOLOR, #FF552B);
+	font-weight: 500;
+	line-height: 1.3;
+	//letter-spacing: 0.01em;
+	@include config.pc {
+		margin: 24/16+rem 0 0  auto;
+		width: 705/16+rem;
+		font-size: 25/16+rem;
+		text-align: justify;
+	}
+}
+.p-company-mission-capability {
+	margin-top: 55/16+rem;
+	@include config.pc {
+		margin-top: 140/16+rem;
+	}
+}
+.p-company-mission-capability__head {
+	margin-top: 16/16+rem;
+	display: flex;
+	justify-content: center;
+	gap: 30/16+rem;
+	color: var(--BASECOLOR, #FF552B);
+
+	font-family: var(--Helvetica);
+	font-size: 14/16+rem;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		margin-top: 24/16+rem;
+		gap: 452/16+rem;
+		font-size: 14/16+rem;
+		letter-spacing: -0.04em;
+	}
+}
+.p-company-mission-capability__list {
+	margin-top: 20/16+rem;
+	display: grid;
+	grid-template-columns: 195/16+rem 195/16+rem;
+	li {
 		display: flex;
-		flex-wrap: wrap;
-		//grid-template-columns: 1fr 1fr 1fr;
-		gap: 52/16+rem 8/16+rem;
+		align-items: center;
+		justify-content: center;
+		height: 212/16+rem;
+		position: relative;
+		color: var(--BASECOLOR, #FF552B);
+		font-family: var(--ITCGaramondW01-BookCn);
+		font-size: 24/16+rem;
+		font-weight: 400;
+		line-height: 110%;
+		text-align: center;
+		letter-spacing: -0.04em;
+	}
+	figure {
+		position: absolute;
+		width: 236/16+rem;
+		height: 236/16+rem;
+		svg {
+		    width: 100%;
+		    height: auto;
+		}
+	}
+	@include config.sp-tab {
+		margin-inline: -15/16+rem;
+	}
+	@include config.pc {
+		margin-top: 10/16+rem;
+		display: flex;
+		justify-content: center;
+		li {
+			width: 296/16+rem;
+			height: 342/16+rem;
+		}
+		figure {
+			width: 342/16+rem;
+			height: 342/16+rem;
+		}
+	}
+}
+.p-company-mission__desc2 {
+	margin-top: var(--padding-block-sm);
+	color: var(--BASECOLOR, #FF552B);
+	font-size: 16/16+rem;
+	font-weight: 500;
+	line-height: 1.3;
+	@include config.sp-tab {
+		text-align: center;
+	}
+	@include config.pc {
+		width: 758/16+rem;
+		margin-inline: auto;
+		font-size: 25/16+rem;
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-company-statement {
+	margin-top: 110/16+rem;
+	@include config.pc {
+		margin-top: 210/16+rem;
+	}
+}
+.p-company-statement__items {
+	margin-top: 12/16+rem;
+	@include config.pc {}
+}
+.p-company-statement-item {
+	border-top: var(--border-assort);
+	padding: 28/16+rem 15/16+rem 32/16+rem;
+	@include config.pc {
+		padding: 80/16+rem 28/16+rem;
+	}
+}
+.p-company-statement-item__wrap {
+	display: grid;
+	gap: 10/16+rem;
+	color: var(--BASECOLOR, #FF552B);
+	@include config.pc {
+		max-width: 1920/16+rem;
+		margin-inline: auto;
+		display: flex;
+		gap: 16/16+rem 88/16+rem;
+	}
+}
+.p-company-statement-item__label {
+	font-family: var(--Suisse);
+	font-size: 12/16+rem;
+	font-weight: 400;
+	letter-spacing: 0.12/16+rem;
+	text-transform: capitalize;
+	@include config.pc {
+		width: 266/16+rem;
+		font-size: 14/16+rem;
+	}
+}
+.p-company-statement-item__body {
+	flex: 1;
+}
+.p-company-statement-item__title {
+	margin-top: 10/16+rem;
+	font-size: 26/16+rem;
+	font-weight: 500;
+	line-height: 1.3;
+	@include config.pc {
+		margin-top: 0;
+		font-size: 45/16+rem;
+	}
+}
+.p-company-statement-item__desc {
+	margin-top: 20/16+rem;
+	font-size: 14/16+rem;
+	font-weight: 500;
+	line-height: 1.4;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		margin-top: 24/16+rem;
+		width: 700/16+rem;
+		font-size: 25/16+rem;
+		line-height: 1.3;
+	}
+}
+.p-company-statement-item__value {
+	flex: 1;
+	display: grid;
+	gap: 16/16+rem;
+	@include config.pc {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 42/16+rem 30/16+rem;
+	}
+}
+.p-company-statement-item-value {
+	@include config.pc {}
+}
+.p-company-statement-item-value__en {
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 28/16+rem;
+	font-weight: 400;
+	letter-spacing: -0.04em;
+	@include config.pc {
+		font-size: 36/16+rem;
+	}
+}
+.p-company-statement-item-value__title {
+	margin-top: -2/16+rem;
+	font-size: 14/16+rem;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		margin-top: -6/16+rem;
+		font-size: 18/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-company-member {
+	@include config.pc {}
+}
+.p-company-member__wrap {
+	position: relative;
+	overflow: hidden;
+	background: var(--color-assort);
+	padding: var(--padding-block) 0 var(--padding-section);
+	@include config.pc {}
+}
+.p-company-member__bg {
+	content: '';
+	display: block;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 77/16+rem;
+	pointer-events: none;
+	img {
+		max-width: none;
+		height: 183/16+rem;
+	}
+	@include config.pc {
+		top: 140/16+rem;
+		img {
+			height: 350/16+rem;
+		}
+	}
+}
+.p-company-member__head {
+	.c-heading-section__title {
+		color: var(--color);
+	}
+	@include config.pc {}
+}
+/* profile */
+.p-company-member-profile {
+	margin-top: 30/16+rem;
+	position: relative;
+	display: grid;
+	grid-template-areas:
+		"pic head"
+		"desc desc"
+	;
+	grid-template-columns: 154/16+rem 1fr;
+	gap: 18/16+rem 26/16+rem;
+	@include config.pc {
+		margin-top: 30/16+rem;
+		grid-template-areas:
+			"pic head"
+			"pic desc"
+		;
+		grid-template-columns: 264/16+rem 1fr;
+		grid-template-rows: auto 1fr;
+		gap: 12/16+rem 26/16+rem;
+	}
+}
+.p-company-member-profile__pic {
+	grid-area: pic;
+	align-self: flex-start;
+	@extend .u-color-blend;
+}
+.p-company-member-profile__head {
+	grid-area: head;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	@include config.sp-tab {
+		justify-content: flex-end;
+	}
+	@include config.pc {}
+}
+.p-company-member-profile__job {
+	color: var(--BASECOLOR, #FF552B);
+	font-size: 12/16+rem;
+	letter-spacing: 0.12/16+rem;
+	background: var(--Gray, #EFECEB);
+	@include config.pc {
+		line-height: 1;
+		font-size: 18/16+rem;
+	}
+}
+.p-company-member-profile__name {
+	color: var(--BASECOLOR, #FF552B);
+	font-size: 26/16+rem;
+	background: var(--Gray, #EFECEB);
+	@include config.pc {
+		font-size: 45/16+rem;
+		line-height: 1;
+	}
+}
+.p-company-member-profile__desc {
+	grid-area: desc;
+	padding: 16/16+rem 12/16+rem;
+	@extend .c-paragraph;
+	color: var(--BASECOLOR, #FF552B);
+	background: var(--Gray, #EFECEB);
+	@include config.pc {
+		align-self: flex-start;
+		width: 480/16+rem;
+		padding: 0;
+	}
+}
+/* list */
+.p-company-member__list {
+	padding-top: var(--padding-block);
+	display: grid;
+	grid-template-columns: 1fr 1fr ;
+	gap: 16/16+rem 10/16+rem;
+	@include config.pc {
+		grid-template-columns: 1fr 1fr 1fr 1fr ;
+		gap: 30/16+rem 24/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-company-info {
+	padding-top: var(--padding-section);
+	@include config.pc {
+		padding-left: 65/16+rem;
+	}
+}
+.p-company-info__data {
+	padding: 30/16+rem 0 0 0;
+	table {
+		width: 100%;
+		color: var(--BASECOLOR, #FF552B);
+		font-size: 14/16+rem;
+		font-weight: 500;
+		line-height: 1.4;
+		letter-spacing: 0.01em;
+	}
+	tr {
+		background: var(--border-assort-dot);
+	}
+	th, td {
+		padding: 24/16+rem 0;
+		text-align: left;
+	}
+	th {
+		width: 112/16+rem;
+	}
+	tr:first-child {
+		th,td {
+			padding-top: 0;
+		}
+	}
+	@include config.pc {
+		padding: 50/16+rem 0 0 350/16+rem;
+		table {
+			font-size: 18/16+rem;
+		}
+		th, td {
+			padding: 29/16+rem 0;
+		}
+		th {
+			width: 288/16+rem;
+		}
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-company-sponsored {
+	padding-top: var(--padding-section);
+	@include config.pc {
+		padding-left: 65/16+rem;
+	}
+}
+.p-company-sponsored__wrap {
+	@include config.pc {}
+}
+.p-company-sponsored__list {
+	padding: 50/16+rem 0 0 0;
+	display: grid;
+	gap: 24/16+rem;
+	@include config.pc {
+		padding: 50/16+rem 0 0 61/16+rem;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 8/16+rem;
+	}
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+

@@ -5,7 +5,7 @@
 	...
 ----------------------------------------------------*/
 .p-download {
-	padding-bottom: var(--padding-page);
+	//padding-bottom: var(--padding-page);
 	@include config.pc {}
 }
 .p-download__wrap {
@@ -28,5 +28,78 @@
 }
 .p-download__paginate {
 	margin-top: var(--padding-block);
+}
+.p-download__media {
+	margin-top: var(--padding-section);
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.p-download-single {
+	@include config.pc {}
+}
+.p-download-single__wrap {
+	display: flex;
+	flex-direction: column;
+	@include config.sp-tab {
+		padding: var(--padding-section) 0;
+		gap: var(--padding-section);
+	}
+	@include config.pc {
+		flex-direction: row;
+		gap: 90/16+rem;
+	}
+}
+.p-download-single__aside {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-block);
+	img {
+		box-shadow: 0 4/16+rem 15/16+rem 0 rgba(0, 0, 0, 0.08);
+	}
+	@include config.pc {
+		width: 250/16+rem;
+		padding: 60/16+rem 0;
+	}
+}
+.p-download-single__form {
+	flex: 1;
+	@include config.pc {
+		padding: 60/16+rem 0 60/16+rem 90/16+rem;
+		border-left: var(--border-assort);
+	}
+}
+.p-download-single__bottom {
+	border-top: var(--border-assort);
+	background: #fff;
+	@include config.pc {}
+}
+.p-download-single__client {
+	overflow: hidden;
+	padding: 20/16+rem 0;
+	display: flex;
+	figure {
+		animation: loopLeft linear 40s infinite;
+		will-change: transform;
+	}
+	img {
+		width: auto;
+		max-width: none;
+		height: 45/16+rem;
+	}
+	@include config.pc {
+		figure {
+			animation: loopLeft linear 50s infinite;
+		}
+		img {
+			height: 60/16+rem;
+		}
+	}
+	@include config.pc {
+		padding: 40/16+rem 0;
+	}
+}
+.p-download-single__media {
+	@include config.pc {
+		margin-top: 40/16+rem;
+	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

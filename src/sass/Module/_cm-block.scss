@@ -6,6 +6,8 @@
 	...
 ----------------------------------------------------*/
 .cm-block-header {
+	position: relative;
+	overflow: hidden;
 	padding: 150/16+rem 0 8/16+rem;
 	border-bottom: var(--border-assort);
 	@include config.pc {
@@ -14,16 +16,36 @@
 }
 .cm-block-header__title {
 	color: var(--BASECOLOR, #FF552B);
+	.is-section-dark & {
+		color: #fff;
+		text-shadow: 1/16+rem 1/16+rem 0 #FF552B;
+	}
 	@include config.pc {}
 }
 .cm-block-header__en {
 	font-family: var(--Helvetica-Md);
 	font-size: 48/16+rem;
 	line-height: 0.9; /* 43.2/16+rem */
-	letter-spacing: -0.05em;
+	letter-spacing: -0.08em;
 	text-transform: capitalize;
+	&[data-text-rep] {
+		display: grid;
+	}
+	&[data-text-rep] span {
+		grid-area: 1 / 1 / 2 / 2;
+		background: #fff url(../img/bg-noise.webp);
+		will-change: transform;
+		line-height: 0.8;
+		padding-top: 0.1em;
+	}
+	&[data-text-rep] span:not(:last-child) {
+		color: var(--color-rep-text);
+	}
 	@include config.pc {
 		font-size: 72/16+rem;
+		&[data-text-rep] {
+			font-size: 110/16+rem;
+		}
 	}
 }
 .cm-block-header__ja {
@@ -36,6 +58,7 @@
 	}
 }
 .cm-block-header__client {
+	padding-bottom: 6/16+rem;
 	color: var(--BASECOLOR, #FF552B);
 	font-size: 12/16+rem;
 	line-height: 1.4;
@@ -44,20 +67,24 @@
 		font-size: 24/16+rem;
 	}
 }
-.cm-block-header__ja2 {
-	color: var(--BASECOLOR, #FF552B);
-	font-size: 26/16+rem;
-	line-height: 1.3;
+.cm-block-header__desc {
+	margin-top: 10/16+rem;
+	color: var(--color);
+	font-size: 14/16+rem;
+	font-weight: 500;
+	line-height: 1.4;
+	//letter-spacing: 0.14/16+rem;
 	@include config.pc {
-		font-size: 45/16+rem;
+		margin-top: 12/16+rem;
+		font-size: 18/16+rem;
 	}
 }
-
 .cm-block-header__bc {
 	margin-top: 2/16+rem;
 	display: flex;
 	justify-content: flex-end;
-	gap: 15/16+rem;
+	flex-wrap: wrap;
+	gap: 0 15/16+rem;
 
 	color: var(--BASECOLOR, #FF552B);
 	font-family: var(--Helvetica);
@@ -84,6 +111,16 @@
 			color: var(--color-assort);
 		}
 	}
+	@include config.sp-tab {
+		//white-space: nowrap;
+		//overflow-x: auto;
+		//-webkit-overflow-scrolling: touch;
+		//-ms-overflow-style: -ms-autohiding-scrollbar;
+		//&::-webkit-scrollbar {
+		//  display: none;
+		//  -webkit-appearance: none;
+		//}
+	}
 	@include config.pc {
 		margin-top: 2/16+rem;
 		gap: 27/16+rem;
@@ -95,6 +132,7 @@
 }
 .cm-block-header__service {
 	margin-top: 28/16+rem;
+	position: relative;
 	padding-bottom: 2/16+rem;
 	display: flex;
 	justify-content: flex-end;
@@ -111,8 +149,47 @@
 		}
 	}
 }
+.cm-block-header--company {
+	padding: 200/16+rem 0 8/16+rem;
+	@include config.pc {
+		padding: 300/16+rem 0 24/16+rem;
+	}
+	.cm-block-header__title {
+		color: var(--BASECOLOR, #FF552B);
+		.is-section-dark & {
+			color: #fff;
+			text-shadow: 1/16+rem 1/16+rem 0 #FF552B;
+		}
+		@include config.pc {}
+	}
+	.cm-block-header__en {
+		font-size: 52/16+rem;
+		&[data-text-rep] span {
+			background: none;
+		}
+		@include config.pc {
+			font-size: 110/16+rem;
+		}
+	}
+	.cm-block-header__ja {
+		margin-top: 40/16+rem;
+		@include config.pc {
+			margin-top: 64/16+rem;
+		}
+	}
+}
 .cm-block-header--service {
-	border-bottom: none;
+	//border-bottom: none;
+	padding: 90/16+rem 0 8/16+rem;
+	@include config.pc {
+		padding: 130/16+rem 0 24/16+rem;
+	}
+	.cm-block-header__ja {
+		margin-top: 40/16+rem;
+		@include config.pc {
+			margin-top: 64/16+rem;
+		}
+	}
 }
 // contact
 .cm-block-header--contact {
@@ -122,7 +199,50 @@
 		padding: 95/16+rem 0 24/16+rem;
 	}
 }
+// work
+.cm-block-header--work {
+	padding-top: 110/16+rem;
+	@include config.pc {
+		padding-top: 130/16+rem;
+	}
+	.cm-block-header__title {
+		padding-bottom: 20/16+rem;
+		@include config.pc {
+			padding-bottom: 10/16+rem;
+		}
+	}
+	.cm-block-header__ja {
+		margin-top: 0;
+		color: var(--BASECOLOR, #FF552B);
+		font-size: 26/16+rem;
+		line-height: 1.3;
+		@include config.pc {
+			font-size: 45/16+rem;
+		}
+	}
+}
+// download
+.cm-block-header--download {
+	padding-top: 110/16+rem;
+	@include config.pc {
+		padding-top: 130/16+rem;
+	}
+	.cm-block-header__title {
+		padding-bottom: 20/16+rem;
+		@include config.pc {
+			padding-bottom: 10/16+rem;
+		}
+	}
+	.cm-block-header__ja {
+		font-size: 26/16+rem;
+		line-height: 1.3;
+		@include config.pc {
+			font-size: 45/16+rem;
+		}
+	}
+}
 // media
+.cm-block-header--mediaSingle,
 .cm-block-header--media {
 	padding: 100/16+rem 0 0;
 	border-bottom: none;
@@ -153,8 +273,9 @@
 	padding: 18/16+rem 15/16+rem;
 	gap: 25/16+rem;
 	background: var(--color-assort);
-	color: var(--white, #FFF);
+	position: relative;
 
+	color: var(--white, #FFF);
 	font-size: 14/16+rem;
 	a {
 		color: var(--color-inverse);
@@ -173,6 +294,19 @@
 		padding: 24/16+rem 15/16+rem;
 		justify-content: center;
 		font-size: 18/16+rem;
+		.cm-block-header--mediaSingle & {
+			&:before {
+				content: '';
+				display: block;
+				width: 176/16+rem;
+				height: 50/16+rem;
+				position: absolute;
+				left: 24/16+rem;
+				bottom: 0;
+				pointer-events: none;
+				background: url(../img/cm-block-header-category-bg.webp) left bottom /contain no-repeat;
+			}
+		}
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

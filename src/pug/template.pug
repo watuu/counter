@@ -23,11 +23,13 @@ block content
             .u-template
                 .u-gap
                     p .c-heading-section
-                    .c-heading-section
+                    .c-heading-section.js-visible
                         h2.c-heading-section__title (Creative Work)
                         span.c-heading-section__line
                     p .c-heading-caption fz36 fz24
                     h3.c-heading-caption (Creative Work)
+                    h2.c-heading-bar h2コンテンツマーケティングで潜在顧客を獲得する戦略立案手順
+                    h3.c-heading-border h3コンテンツマーケティングで潜在顧客を獲得する戦略立案手順
 
                     p .c-paragraph fz18
                     p.c-paragraph 青山学院大学経済学部卒業後に外資系ITコンサルティングファーム2社にてエンジニア・ITコンサルタントとして複数のERPシステム導入・運用プロジェクトを経験。
@@ -69,12 +71,20 @@ block content
                                 use(href="#ico-arrow")
 
                     p .c-btn-more
-                    a(href= path + "").c-btn-more
-                        span.c-btn-more__txt
-                            span.js-clone MORE
-                        i.c-btn-more__arrow
-                            svg(width=40 height=40)
-                                use(href="#ico-arrow")
+                    div
+                        a(href= path + "").c-btn-more
+                            span.c-btn-more__txt
+                                span.js-clone MORE
+                            i.c-btn-more__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
+                        a(href= path + "").c-btn-more.c-btn-more--lg
+                            span.c-btn-more__txt
+                                span.js-clone オウンドメディアコンサルティングサービス
+                            i.c-btn-more__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
+
                     p .c-btn-aside
                     a(href= path + "").c-btn-aside
                         span.c-btn-aside__txt
@@ -100,9 +110,9 @@ block content
                             use(href="#ico-btn-menu")
                     p .c-btn-download
                     a(href=path+"download/").c-btn-download
-                        .c-btn-download__txt
-                            p.c-btn-download__title 資料をダウンロードする
-                            p.c-btn-download__desc 送信することで、プライバシーポリシーに同意したものとします。
+                        span.c-btn-download__txt
+                            span.c-btn-download__title 資料をダウンロードする
+                            span.c-btn-download__desc 送信することで、プライバシーポリシーに同意したものとします。
                         i.c-btn-download__down
                             svg(width=60 height=60)
                                 use(href="#ico-down")
@@ -159,12 +169,17 @@ block content
 
                 hr
                 .u-gap
+                    p .c-btn-member
+                    button.c-btn-member
+                        span.c-btn-member__job CCO/制作プロデューサー
+                        span.c-btn-member__name 森 正吾
+                        i.c-btn-member__status
                     p .c-card-case
                     - for (var x = 1; x <= 8; x++)
                     .c-card-case
                         a(href=path + "single-creative/").c-card-case__link
                             figure.c-card-case__pic
-                                img(src=img+"300x200.webp" alt="")
+                                img(src=img+"3x2.webp" alt="")
                             h3.c-card-case__name
                                 | 株式会社HONE
                             i.c-card-case__arrow
@@ -175,14 +190,14 @@ block content
                     p .c-card-download
                     - for (var x = 1; x <= 8; x++)
                     .c-card-download
-                        a(href="#").c-card-download__link
+                        a(href=path+"single-download/").c-card-download__link
                             p.c-card-download__title
                                 | 会社概要
                             i.c-card-download__down
                                 svg(width=60 height=60)
                                     use(href="#ico-down")
                             figure.c-card-download__pic
-                                img(src=img+"400x225.webp" alt="")
+                                img(src=img+"16x9.webp" alt="")
                             h3.c-card-download__title2
                                 | 会社紹介資料
                             p.c-card-download__desc
@@ -192,7 +207,7 @@ block content
                     .c-card-creative
                         a(href=path+ "single-creative/").c-card-creative__link
                             figure.c-card-creative__pic
-                                img(src=img+"400x225.webp" alt="")
+                                img(src=img+"16x9.webp" alt="")
                             .c-card-creative__wrap
                                 h3.c-card-creative__title
                                     | ニチガス様 でが割55キャンペーンLP
@@ -204,7 +219,7 @@ block content
                     .c-card-creative.c-card-creative--lg
                         a(href=path+ "single-creative/").c-card-creative__link
                             figure.c-card-creative__pic
-                                img(src=img + "400x225.webp" alt="")
+                                img(src=img + "16x9.webp" alt="")
                             .c-card-creative__wrap
                                 h3.c-card-creative__title
                                     | 世界へボカン様 BtoBコーポレートサイト
@@ -237,7 +252,7 @@ block content
                     div
                         - for (var x = 1; x <= 2; x++)
                             .c-card-news
-                                a(href="#").c-card-news__link
+                                a(href=path+"single-news/").c-card-news__link
                                     .c-card-news__meta
                                         p.c-card-news__date
                                             | 2025.07.25
@@ -323,6 +338,18 @@ block content
             include ./template/cm-block-media
 
 
+    #modal-blog.cm-modal(aria-hidden='true')
+    //-#modal-blog.cm-modal(aria-hidden='false')
+        .cm-modal__overlay(tabindex='-1' data-micromodal-close='')
+            .cm-modal__wrap(role='dialog' aria-modal='true')
+                button.cm-modal__close(aria-label='Close modal' data-micromodal-close='')
+                    span
+                    span
+                .cm-modal__container
+                    .cm-modal-blog
+                        figure.cm-modal-blog__bnr
+                            a(href="#")
+                                img(src=img+"480x300.webp" alt="")
 
 
 
