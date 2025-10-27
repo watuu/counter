@@ -4,6 +4,7 @@ import Utility from "./utility";
 import {default as Common} from './common';
 // @ts-ignore
 import Page from './page';
+import VFX from './vfx';
 // @ts-ignore
 import BudouX from './budoux';
 // @ts-ignore
@@ -22,6 +23,7 @@ class APP {
             new GridViewer();
         }
         new RepeatTextScrollFx();
+        // new VFX();
     }
 }
 

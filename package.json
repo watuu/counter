@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@barba/core": "^2.10.3",
+    "@vfx-js/core": "^0.8.0",
     "budoux": "^0.7.0",
     "glslify-bundle": "^5.1.1",
     "glslify-loader": "^2.0.0",

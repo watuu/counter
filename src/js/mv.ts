@@ -14,8 +14,8 @@ export default class GridViewer {
     private modelGroups: { group: THREE.Group; direction: number; instances: THREE.Group[] }[] = []
     private gui!: GUI;
     private params = {
-        noiseStrength: 0.05,
-        noiseDark: 0.8,
+        noiseStrength: 0, // 0.05,
+        noiseDark: 0, // 0.8,
         scanWidth: 1.2,
         baseSpeed: 0.4,
         scrollSpeed: 0.2,
@@ -256,6 +256,8 @@ export default class GridViewer {
 
                         group.position.z = zOffset
                         group.position.x = i * size.x * direction
+                        group.position.y = modelIndex * 0.001
+                        console.log(group.position.y)
 
                         this.applyMaterialsToModel(model)
                         this.scene.add(group)

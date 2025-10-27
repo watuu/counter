@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Three.js SVGLoader Example</title>
+  <style>
+    body { margin: 0; background: #ddd; }
+    canvas { display: block; }
+    #mv {
+      height: 100vh;
+    }
+    .wrap {
+      height: 150vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #canvas_pic {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body data-src="./">
+<div class="wrap">
+  <picture class="p-top-service-item__pic u-block-reveal" id="canvas_pic">
+    <source srcset="./assets/img/p-top-service-creative-sp.webp" media="(max-width: 1023px)"/><img src="./assets/img/p-top-service-creative.webp"/>
+  </picture>
+</div>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>

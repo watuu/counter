@@ -41,6 +41,49 @@
 .p-creative-single {
 	@include config.pc {}
 }
+.p-creative-single__wrap {
+	position: relative;
+}
+.p-creative-single__aside {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: flex-start;
+	z-index: 10;
+	//overflow: hidden;
+	@include config.sp-tab {
+		display: none;
+	}
+}
+.p-creative-single__asidePrev,
+.p-creative-single__asideNext, {
+	position: sticky;
+	top: calc(50vh - #{400/16+rem});
+	width: 100%;
+	height: 800/16+rem;
+	max-height: 90vh;
+	.c-btn-page {
+		top: 800/16+rem;
+		position: absolute;
+	}
+}
+.p-creative-single__asidePrev {
+	.c-btn-page {
+		transform: rotate(-90deg);
+		transform-origin: left top;
+	}
+}
+.p-creative-single__asideNext {
+	text-align: right;
+	.c-btn-page {
+		right: 0;
+		transform: rotate(90deg);
+		transform-origin: right top;
+	}
+}
 .p-creative-single__body {
 	padding-top: var(--padding-block);
 	@include config.pc {

@@ -67,7 +67,7 @@
 		height: 85%;
 		position: absolute;
 		left: -0.05em;
-		top: 0.01em;
+		top: 0.1em;
 		pointer-events: none;
 		background: linear-gradient(90deg, #FF552B 37.02%, transparent 100%);
 	}
@@ -165,14 +165,14 @@
 	.is-visible &:before {
 		width: 100%;
 		left: 100%;
-		transition: width .3s var(--easeOutQuart), left .3s .3s var(--easeOutQuart);
+		transition: width .3s var(--easeOutTheme), left .3s .3s var(--easeOutTheme);
 	}
 	> * {
 		opacity: 0;
-		transition: transform 2s var(--easeOutQuart), opacity 1s .2s var(--easeOutQuart);
+		transition: transform 2s var(--easeOutTheme), opacity 1s .2s var(--easeOutTheme);
 	}
 	img {
-		transition: transform 2s var(--easeOutQuart), opacity 1s .2s var(--easeOutQuart);
+		transition: transform 2s var(--easeOutTheme), opacity 1s .2s var(--easeOutTheme);
 		transform: scale(1.2);
 		opacity: 0;
 	}
@@ -195,7 +195,7 @@
 	.is-visible &,
 	&.is-visible {
 		opacity: 1;
-		transition: .4s var(--easeOutQuart);
+		transition: var(--easeDuration) var(--easeOutTheme);
 		transform: translate3d(0,0,0);
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}

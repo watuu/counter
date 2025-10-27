@@ -110,26 +110,28 @@ body#body(class=pageClass data-src=path)
             .cm-block-cta
                 .cm-block-cta-item
                     a(href= path + "download/").cm-block-cta-item__link
-                        p.cm-block-cta-item__en
-                            | (Download)
-                        h3.cm-block-cta-item__title 資料請求
-                        p.cm-block-cta-item__desc
-                            | COUNTERの会社案内や
-                            br
-                            | デジタルマーケティング、WEBサイト制作の
-                            br
-                            | お役立ち資料が無料でダウンロード頂けます。
+                        .cm-block-cta-item__wrap
+                            p.cm-block-cta-item__en
+                                | (Download)
+                            h3.cm-block-cta-item__title 資料請求
+                            p.cm-block-cta-item__desc
+                                | COUNTERの会社案内や
+                                br
+                                | デジタルマーケティング、WEBサイト制作の
+                                br
+                                | お役立ち資料が無料でダウンロード頂けます。
                 .cm-block-cta-item
                     a(href= path + "contact/").cm-block-cta-item__link
-                        p.cm-block-cta-item__en
-                            | (Contact)
-                        h3.cm-block-cta-item__title お問い合わせ
-                        p.cm-block-cta-item__desc
-                            | COUNTERに無料で相談したい方は、
-                            br
-                            | お気軽にお問い合わせください。
-                            br
-                            | 担当者よりご連絡いたします。
+                        .cm-block-cta-item__wrap
+                            p.cm-block-cta-item__en
+                                | (Contact)
+                            h3.cm-block-cta-item__title お問い合わせ
+                            p.cm-block-cta-item__desc
+                                | COUNTERに無料で相談したい方は、
+                                br
+                                | お気軽にお問い合わせください。
+                                br
+                                | 担当者よりご連絡いたします。
 
         aside.l-aside
             ul.l-aside-cta
@@ -151,9 +153,10 @@ body#body(class=pageClass data-src=path)
 
             .l-aside-stalker
                 .c-btn-stalker
-                    i.c-btn-stalker__arrow
-                        svg(width=40 height=40)
-                            use(href="#ico-arrow")
+                    .c-btn-stalker__wrap
+                        i.c-btn-stalker__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
         footer.l-footer.is-section-dark
             .l-container
                 .l-footer__wrap

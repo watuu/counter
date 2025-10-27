@@ -9,7 +9,7 @@
 	width: 240/16+rem;
 	@include config.sp-tab {
 		width: 17/16+rem;
-		transition: .3s var(--easeOutQuart);
+		transition: .3s var(--easeOutTheme);
 		&.is-show {
 			width: 150/16+rem;
 		}
@@ -53,7 +53,7 @@
 	}
 	@include config.sp-tab {
 		opacity: 0;
-		transition: .3s var(--easeOutQuart);
+		transition: .3s var(--easeOutTheme);
 		input {
 			padding: 0 1em;
 		}
@@ -78,7 +78,7 @@
 		fill: transparent;
 	}
 	@include config.sp-tab {
-		transition: .2s var(--easeOutQuart);
+		transition: .2s var(--easeOutTheme);
 		.is-show & {
 			right: 6/16+rem;
 			svg {

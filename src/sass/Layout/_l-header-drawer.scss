@@ -26,7 +26,7 @@
 	top: 0;
 	pointer-events: none;
 	background: var(--BASEBlack, #3A3735);
-	transition: .6s var(--easeOutQuart);
+	transition: .6s var(--easeOutTheme);
 	.is-nav-open & {
 		height: 100%;
 	}
@@ -45,7 +45,7 @@
 	position: absolute;
 	right: 90/16+rem;
 	top: 26/16+rem;
-	transition: .3s var(--easeOutQuart);
+	transition: .3s var(--easeOutTheme);
 	opacity: 0;
 	.is-nav-open & {
 		transition-delay: .6s;
@@ -60,7 +60,7 @@
 	@include config.sp-tab {
 		.cm-nav-main-contents {
 			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-			transition: .2s var(--easeOutQuart);
+			transition: .2s var(--easeOutTheme);
 			.is-nav-open & {
 				transition-duration: .8s;
 				transition-delay: .2s;
@@ -74,7 +74,7 @@
 	.cm-nav-main-contents-cta,
 	.cm-nav-main-contents-item {
 		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-		transition: .2s var(--easeOutQuart);
+		transition: .2s var(--easeOutTheme);
 		.is-nav-open & {
 			transition-duration: .8s;
 			transition-delay: .2s;

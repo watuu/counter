@@ -66,9 +66,10 @@ block content
 
                     p .c-btn-stalker
                     .c-btn-stalker
-                        i.c-btn-stalker__arrow
-                            svg(width=40 height=40)
-                                use(href="#ico-arrow")
+                        .c-btn-stalker__wrap
+                            i.c-btn-stalker__arrow
+                                svg(width=40 height=40)
+                                    use(href="#ico-arrow")
 
                     p .c-btn-more
                     div
@@ -174,6 +175,10 @@ block content
                         span.c-btn-member__job CCO/制作プロデューサー
                         span.c-btn-member__name 森 正吾
                         i.c-btn-member__status
+                    p .c-btn-page
+                    button.c-btn-page
+                        span.c-btn-page__txt Next
+
                     p .c-card-case
                     - for (var x = 1; x <= 8; x++)
                     .c-card-case

@@ -4,6 +4,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 var _utility = _interopRequireDefault(require("./utility"));
 var _common = _interopRequireDefault(require("./common"));
 var _page = _interopRequireDefault(require("./page"));
+var _vfx = _interopRequireDefault(require("./vfx"));
 var _budoux = _interopRequireDefault(require("./budoux"));
 var _mv = _interopRequireDefault(require("./mv"));
 var _repeatTextScrollFx = require("./repeatTextScrollFx");
@@ -28,5 +29,6 @@ var APP = /*#__PURE__*/_createClass(function APP() {
     new _mv.default();
   }
   new _repeatTextScrollFx.RepeatTextScrollFx();
+  // new VFX();
 });
 new APP();
