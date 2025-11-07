@@ -48,6 +48,7 @@ export default class common {
         this.jsAccordion();
         this.isSectionDark();
         this.isVisible();
+        this.isVisibleSpan();
         this.isVisibleType();
     }
 
@@ -403,6 +404,33 @@ export default class common {
                 once: true,
             });
         });
+    }
+
+    isVisibleSpan() {
+        const domList = document.querySelectorAll('.js-visible-span');
+
+        if (domList.length) {
+            domList.forEach(el => {
+                const spans = el.querySelectorAll('span');
+
+                gsap.set(spans, { opacity: 0, y: 10 });
+                gsap.set(el, { opacity: 1});
+
+                gsap.to(spans, {
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top bottom-=20%',
+                    },
+                    delay: 0.5,
+                    opacity: 1,
+                    stagger: {
+                        each: 0.01,
+                        from: "random",
+                    },
+                    ease: 'power3.out',
+                });
+            });
+        }
     }
 
     isVisibleType() {

@@ -178,6 +178,7 @@
 	}
 }
 .cm-nav-paginate__page {
+	span,
 	a {
 		display: inline-flex;
 		align-items: center;
@@ -213,6 +214,7 @@
 			right: auto;
 		}
 	}
+	span.is-current,
 	a.is-current {
 		color: var(--color-assort);
 		&:before {

@@ -4,6 +4,7 @@
 ----------------------------------------------------*/
 .l-header {
 	position: fixed;
+	top: 0;
 	z-index: 500;
 	width: 100%;
 	height: var(--header-height);
@@ -38,7 +39,7 @@
 		top: 40/16+rem;
 	}
 }
-.l-header-nav {
+.l-header-nav.l-header-nav {
 	position: absolute;
 	background: rgba(255, 255, 255, 0.70);
 	backdrop-filter: blur(25/16+rem);

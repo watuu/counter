@@ -87,6 +87,8 @@
 		display: none;
 	}
 }
+$delay: 0.8;
+$interval: 0.08;
 .p-top-mv__typeSP,
 .p-top-mv__type {
 	p {
@@ -95,26 +97,27 @@
 		> span {
 			display: block;
 			transform: translate(0, 105%);
-			transition: 0.6s var(--easeDuration);
+			transition: 0.6s var(--easeDuration) var(--easeOutTheme);
+			transition-delay: $delay + $interval * 0 + 0s;
 		}
 		&:nth-child(2) {
 			> span {
-				transition-delay: .3s;
+				transition-delay: $delay + $interval * 1 + 0s;
 			}
 		}
 		&:nth-child(3) {
 			> span {
-				transition-delay: .5s;
+				transition-delay: $delay + $interval * 2 + 0s;
 			}
 		}
 		&:nth-child(4) {
 			> span {
-				transition-delay: .6s;
+				transition-delay: $delay + $interval * 3 + 0s;
 			}
 		}
 		&:nth-child(5) {
 			> span {
-				transition-delay: .7s;
+				transition-delay: $delay + $interval * 4 + 0s;
 			}
 		}
 
@@ -161,6 +164,10 @@
 	font-size: 12/16+rem;
 	font-weight: 500;
 	line-height: 130%;
+	opacity: 0;
+	span {
+		opacity: 0;
+	}
 	@include config.pc {
 		margin-top: 0;
 		position: absolute;
@@ -175,6 +182,12 @@
 .p-top-mv__ja {
 	margin-top: 10/16+rem;
 	font-size: 25/16+rem;
+	opacity: 0;
+	.p-top-mv__en.is-visible + &,
+	&.is-visible {
+		opacity: 1;
+		transition: var(--easeDuration) var(--easeOutTheme) $delay+0.5s;
+	}
 	@include config.pc {
 		margin-top: 0;
 		position: absolute;
@@ -285,7 +298,6 @@
 	letter-spacing: var(--letter-spacing-ja);
 	pointer-events: none;
 	white-space: nowrap;
-
 	@include config.pc {
 		top: 100/16+rem;
 		left: calc(100% - #{30/16+rem});
@@ -323,7 +335,7 @@
 	letter-spacing: var(--letter-spacing-ja);
 	&.p-top-promise__message {
 		transition-delay: .5s !important;
-		transition-duration: 1.5s;
+		transition-duration: 2s;
 	}
 	@include config.sp-tab {
 		p:nth-child(1) {
@@ -362,6 +374,10 @@
 	}
 }
 .p-top-service__head {
+	p {
+		position: relative;
+		z-index: 5;
+	}
 	@include config.pc {
 		height: 100vh;
 		display: flex;
@@ -458,13 +474,20 @@
 }
 .p-top-service-item {
 	color: var(--color-assort);
+	@include config.pc {
+		transform: scale(1.2) translate3d(0, #{50/16+rem}, 0);
+		transition: .8s var(--easeOutQuart);
+		transform-origin: left top;
+		&.is-visible {
+			transform: scale(1) translate3d(0, 0, 0);
+		}
+	}
 }
 .p-top-service-item:nth-child(1) {
 	@include config.pc {
 		width: 562/16+rem;
 		margin-top: -10/16+rem;
 		margin-left: -28/16+rem;
-
 		.p-top-service-item__wrap {
 			padding: 20/16+rem 0 0 80/16+rem;
 		}
@@ -475,6 +498,7 @@
 		margin-left: auto;
 		margin-top: -30/16+rem;
 		width: 440/16+rem;
+		transform-origin: right top;
 	}
 }
 .p-top-service-item:nth-child(3) {
@@ -482,10 +506,26 @@
 		width: 328/16+rem;
 		margin-top: -106/16+rem;
 		margin-left: 180/16+rem;
-
 	}
 }
-.p-top-service-item__pic {}
+.p-top-service-item__pic {
+	position: relative;
+	img {
+		height: auto;
+		aspect-ratio: 1124 / 580;
+		object-fit: cover;
+		opacity: 0;
+	}
+	canvas {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+	}
+}
 .p-top-service-item__wrap {
 	padding: 12/16+rem 0 0 14/16+rem;
 	@include config.pc {
@@ -549,6 +589,10 @@
 	top: 0;
 	pointer-events: none;
 	overflow: hidden;
+	img {
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+	}
 	@include config.sp-tab {
 		display: none;
 	}

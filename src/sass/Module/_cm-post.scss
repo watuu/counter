@@ -84,6 +84,9 @@ body figure {
 		//	text-decoration: none;
 		//}
 	}
+	img {
+		height: auto;
+	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .editor-styles-wrapper.editor-styles-wrapper.editor-styles-wrapper,
@@ -218,6 +221,40 @@ body figure {
 	@include config.pc {}
 }
 /*----------------------------------------------------
+	cm-post creative
+----------------------------------------------------*/
+.cm-post--creative.cm-post--creative.cm-post--creative {
+	color: var(--BASECOLOR, #FF552B);
+	.single-creative-case__container {
+		display: flex;
+		flex-direction: column;
+		> h2:not(:first-child) {
+			margin-top: var(--padding-block);
+		}
+	}
+	h2 {
+		padding: 0;
+		background: transparent;
+		color: var(--BASECOLOR, #FF552B);
+		font-family: var(--ITCGaramondW01-BookCn);
+		font-size: 24/16+rem;
+		line-height: 1;
+		letter-spacing: -0.04em;
+		@include config.pc {
+			font-size: 36/16+rem;
+		}
+	}
+	dl {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: 2/16+rem;
+		font-family: var(--Suisse);
+		font-size: 14/16+rem;
+		line-height: 1.3;
+		text-align: right;
+	}
+}
+/*----------------------------------------------------
 	cm-post vk block
 ----------------------------------------------------*/
 .cm-post.cm-post.cm-post {
@@ -250,9 +287,11 @@ body figure {
 	border: none;
 	border-radius: 0;
 	padding: 24/16+rem 15/16+rem;
-
 	@include config.pc {
 		padding: 35/16+rem 24/16+rem;
+	}
+	nav ul li a::before {
+		content: '';
 	}
 	.ez-toc-title {
 		font-size: 14/16+rem;

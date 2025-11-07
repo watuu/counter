@@ -36,6 +36,10 @@
 	grid-area: pic;
 	margin-top: -14/16+rem;
 	align-self: flex-start;
+	img {
+		aspect-ratio: 584 / 414;
+		object-fit: cover;
+	}
 	@extend .u-color-blend;
 	.c-card-case--sponsored & {
 		&:after {
@@ -87,6 +91,7 @@
 .c-card-download__link {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 	border: var(--border-assort);
 	padding: 16/16+rem 24/16+rem 28/16+rem;
 	position: relative;
@@ -164,6 +169,10 @@
 }
 .c-card-creative__pic {
 	width: 136/16+rem;
+	img {
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+	}
 	@extend .u-color-blend;
 	@include config.pc {
 		width: 266/16+rem;
@@ -284,6 +293,10 @@
 }
 .c-card-media__pic {
 	width: 144/16+rem;
+	img {
+		aspect-ratio: 480 / 300;
+		object-fit: cover;
+	}
 	@include config.pc {
 		width: 264/16+rem;
 	}
@@ -364,6 +377,10 @@
 	}
 }
 .c-card-media-pickup__pic {
+	img {
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+	}
 	@include config.pc {}
 }
 .c-card-media-pickup__title {

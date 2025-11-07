@@ -1,0 +1,54 @@
+@charset "utf-8";
+@use "Base/config";
+@use "Base/variables";
+@use "Layout/_l-container";
+@use "Layout/_l-header";
+@use "Layout/_l-header-drawer";
+@use "Layout/_l-footer";
+@use "Module/_cm-block";
+@use "Module/_cm-nav";
+@use "Module/_cm-post";
+@use "Module/_cm-form";
+@use "Module/_cm-modal";
+@use "Component/_c-btn";
+@use "Component/_c-card";
+@use "Component/_c-link";
+@use "Component/_c-form";
+
+html {
+	font-size: 16px;
+	@include config.sp {
+		font-size: (16/390*100vw);
+	}
+	@include config.tab {
+		font-size: (16/750*100vw);
+	}
+	@include config.pc {
+		font-size: (16/1440*100vw);
+	}
+	@include config.wide {
+		font-size: (16*1920/1600+px);
+	}
+}
+.l-header,
+.l-footer {
+	font-family: var(--font);
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	word-wrap:break-word;
+	color: var(--color);
+	font-weight: 500;
+	a {
+		color: var(--color);
+		transition: var(--easeDuration) var(--easeOutTheme);
+	}
+	button {
+		appearance: none;
+		outline: none;
+		background: transparent;
+		color: var(--color);
+	}
+}
+
+

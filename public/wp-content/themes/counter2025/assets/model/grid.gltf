@@ -1,0 +1,638 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.6.16",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "Light",
+            "rotation" : [
+                0.16907575726509094,
+                0.7558803558349609,
+                -0.27217137813568115,
+                0.570947527885437
+            ],
+            "translation" : [
+                4.076245307922363,
+                5.903861999511719,
+                -1.0054539442062378
+            ]
+        },
+        {
+            "name" : "Camera",
+            "rotation" : [
+                0.483536034822464,
+                0.33687159419059753,
+                -0.20870360732078552,
+                0.7804827094078064
+            ],
+            "translation" : [
+                7.358891487121582,
+                4.958309173583984,
+                6.925790786743164
+            ]
+        },
+        {
+            "name" : "Curve"
+        },
+        {
+            "name" : "Curve.001"
+        },
+        {
+            "name" : "Curve.002"
+        },
+        {
+            "name" : "Curve.003"
+        },
+        {
+            "name" : "Curve.004"
+        },
+        {
+            "name" : "Curve.005"
+        },
+        {
+            "name" : "Curve.006"
+        },
+        {
+            "name" : "Curve.007"
+        },
+        {
+            "name" : "Curve.008"
+        },
+        {
+            "name" : "Curve.009"
+        },
+        {
+            "name" : "Curve.010"
+        },
+        {
+            "name" : "Curve.011"
+        },
+        {
+            "name" : "Curve.012"
+        },
+        {
+            "name" : "Curve.013"
+        },
+        {
+            "name" : "Curve.014"
+        },
+        {
+            "name" : "Curve.015"
+        },
+        {
+            "name" : "Curve.016"
+        },
+        {
+            "name" : "Curve.017"
+        },
+        {
+            "name" : "Curve.018"
+        },
+        {
+            "name" : "Curve.019"
+        },
+        {
+            "name" : "Curve.020"
+        },
+        {
+            "name" : "Curve.021"
+        },
+        {
+            "name" : "Curve.022"
+        },
+        {
+            "name" : "Curve.023"
+        },
+        {
+            "name" : "Curve.024"
+        },
+        {
+            "name" : "Curve.025"
+        },
+        {
+            "name" : "Curve.026"
+        },
+        {
+            "name" : "Curve.027"
+        },
+        {
+            "name" : "Curve.028"
+        },
+        {
+            "name" : "Curve.029"
+        },
+        {
+            "name" : "Curve.030"
+        },
+        {
+            "name" : "Curve.031"
+        },
+        {
+            "name" : "Curve.032"
+        },
+        {
+            "name" : "Curve.033"
+        },
+        {
+            "name" : "Curve.034"
+        },
+        {
+            "name" : "Curve.035"
+        },
+        {
+            "name" : "Curve.036"
+        },
+        {
+            "name" : "Curve.037"
+        },
+        {
+            "name" : "Curve.038"
+        },
+        {
+            "name" : "Curve.039"
+        },
+        {
+            "name" : "Curve.040"
+        },
+        {
+            "name" : "Curve.041"
+        },
+        {
+            "name" : "Curve.042"
+        },
+        {
+            "name" : "Curve.043"
+        },
+        {
+            "name" : "Curve.044"
+        },
+        {
+            "name" : "Curve.045"
+        },
+        {
+            "name" : "Curve.046"
+        },
+        {
+            "name" : "Curve.047"
+        },
+        {
+            "name" : "Curve.048"
+        },
+        {
+            "name" : "Curve.049"
+        },
+        {
+            "name" : "Curve.050"
+        },
+        {
+            "name" : "Curve.051"
+        },
+        {
+            "name" : "Curve.052"
+        },
+        {
+            "name" : "Curve.053"
+        },
+        {
+            "name" : "Curve.054"
+        },
+        {
+            "name" : "Curve.055"
+        },
+        {
+            "name" : "Curve.056"
+        },
+        {
+            "name" : "Curve.057"
+        },
+        {
+            "name" : "Curve.058"
+        },
+        {
+            "name" : "Curve.059"
+        },
+        {
+            "name" : "Curve.060"
+        },
+        {
+            "name" : "Curve.061"
+        },
+        {
+            "name" : "Curve.062"
+        },
+        {
+            "name" : "Curve.063"
+        },
+        {
+            "name" : "Curve.064"
+        },
+        {
+            "name" : "Curve.065"
+        },
+        {
+            "name" : "Curve.066"
+        },
+        {
+            "name" : "Curve.067"
+        },
+        {
+            "name" : "Curve.068"
+        },
+        {
+            "name" : "Curve.069"
+        },
+        {
+            "name" : "Curve.070"
+        },
+        {
+            "name" : "Curve.071"
+        },
+        {
+            "name" : "Curve.072"
+        },
+        {
+            "name" : "Curve.073"
+        },
+        {
+            "name" : "Curve.074"
+        },
+        {
+            "name" : "Curve.075"
+        },
+        {
+            "name" : "Curve.076"
+        },
+        {
+            "name" : "Curve.077"
+        },
+        {
+            "name" : "Curve.078"
+        },
+        {
+            "name" : "Curve.079"
+        },
+        {
+            "name" : "Curve.080"
+        },
+        {
+            "name" : "Curve.081"
+        },
+        {
+            "name" : "Curve.082"
+        },
+        {
+            "name" : "Curve.083"
+        },
+        {
+            "name" : "Curve.084"
+        },
+        {
+            "name" : "Curve.085"
+        },
+        {
+            "name" : "Curve.086"
+        },
+        {
+            "name" : "Curve.087"
+        },
+        {
+            "name" : "Curve.088"
+        },
+        {
+            "name" : "Curve.089"
+        },
+        {
+            "name" : "Curve.090"
+        },
+        {
+            "name" : "Curve.091"
+        },
+        {
+            "name" : "Curve.092"
+        },
+        {
+            "name" : "Curve.093"
+        },
+        {
+            "name" : "Curve.094"
+        },
+        {
+            "name" : "Curve.095"
+        },
+        {
+            "name" : "Curve.096"
+        },
+        {
+            "name" : "Curve.097"
+        },
+        {
+            "name" : "Curve.098"
+        },
+        {
+            "name" : "Curve.099"
+        },
+        {
+            "name" : "Curve.100"
+        },
+        {
+            "name" : "Curve.101"
+        },
+        {
+            "name" : "Curve.102"
+        },
+        {
+            "name" : "Curve.103"
+        },
+        {
+            "name" : "Curve.104"
+        },
+        {
+            "name" : "Curve.105"
+        },
+        {
+            "name" : "Curve.106"
+        },
+        {
+            "name" : "Curve.107"
+        },
+        {
+            "name" : "Curve.108"
+        },
+        {
+            "name" : "Curve.109"
+        },
+        {
+            "name" : "Curve.110"
+        },
+        {
+            "name" : "Curve.111"
+        },
+        {
+            "name" : "Curve.112"
+        },
+        {
+            "name" : "Curve.113"
+        },
+        {
+            "name" : "Curve.114"
+        },
+        {
+            "name" : "Curve.115"
+        },
+        {
+            "name" : "Curve.116"
+        },
+        {
+            "name" : "Curve.117"
+        },
+        {
+            "name" : "Curve.118"
+        },
+        {
+            "name" : "Curve.119"
+        },
+        {
+            "name" : "Curve.120"
+        },
+        {
+            "name" : "Curve.121"
+        },
+        {
+            "name" : "Curve.122"
+        },
+        {
+            "name" : "Curve.123"
+        },
+        {
+            "name" : "Curve.124"
+        },
+        {
+            "name" : "Curve.125"
+        },
+        {
+            "name" : "Curve.126"
+        },
+        {
+            "name" : "Curve.127"
+        },
+        {
+            "name" : "Curve.128"
+        },
+        {
+            "name" : "Curve.129"
+        },
+        {
+            "name" : "Curve.130"
+        },
+        {
+            "name" : "Curve.131"
+        },
+        {
+            "name" : "Curve.132"
+        },
+        {
+            "name" : "Curve.133"
+        },
+        {
+            "name" : "Curve.134"
+        },
+        {
+            "name" : "Curve.135"
+        },
+        {
+            "name" : "Curve.136"
+        },
+        {
+            "name" : "Curve.137"
+        },
+        {
+            "name" : "Curve.138"
+        },
+        {
+            "name" : "Curve.139"
+        },
+        {
+            "name" : "Curve.140"
+        },
+        {
+            "name" : "Curve.141"
+        },
+        {
+            "name" : "Curve.142"
+        },
+        {
+            "name" : "Curve.143"
+        },
+        {
+            "name" : "Curve.144"
+        },
+        {
+            "name" : "Curve.145"
+        },
+        {
+            "name" : "Curve.146"
+        },
+        {
+            "name" : "Curve.147"
+        }
+    ]
+}

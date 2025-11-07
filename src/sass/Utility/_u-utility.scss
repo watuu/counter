@@ -188,6 +188,15 @@
 	}
 	@include config.pc {}
 }
+.u-block-reveal--promise {
+	&.is-visible:before,
+	.is-visible &:before {
+		transition: width .6s var(--easeOutTheme), left .6s .6s var(--easeOutTheme);
+	}
+	> * {
+		transition: transform 2s var(--easeOutTheme), opacity 1s .2s var(--easeOutTheme);
+	}
+}
 .u-mask-block {
 	clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 	//transform: translate3d(0, #{20px}, 0);

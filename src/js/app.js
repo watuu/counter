@@ -5,9 +5,10 @@ var _utility = _interopRequireDefault(require("./utility"));
 var _common = _interopRequireDefault(require("./common"));
 var _page = _interopRequireDefault(require("./page"));
 var _vfx = _interopRequireDefault(require("./vfx"));
+var _glitchText = _interopRequireDefault(require("./glitch-text"));
+var _glitch = _interopRequireDefault(require("./glitch"));
 var _budoux = _interopRequireDefault(require("./budoux"));
 var _mv = _interopRequireDefault(require("./mv"));
-var _repeatTextScrollFx = require("./repeatTextScrollFx");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
@@ -18,6 +19,7 @@ function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Can
 // @ts-ignore
 // @ts-ignore
 // @ts-ignore
+// import { RepeatTextScrollFx } from './repeatTextScrollFx';
 var APP = /*#__PURE__*/_createClass(function APP() {
   _classCallCheck(this, APP);
   var common = new _common.default();
@@ -28,7 +30,9 @@ var APP = /*#__PURE__*/_createClass(function APP() {
   if (document.querySelector('#mv')) {
     new _mv.default();
   }
-  new _repeatTextScrollFx.RepeatTextScrollFx();
+  // new RepeatTextScrollFx();
   // new VFX();
+  new _glitchText.default();
+  new _glitch.default();
 });
 new APP();

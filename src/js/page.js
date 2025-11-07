@@ -22,6 +22,9 @@ export default class Page {
         // this.cHeadingSection()
         if (document.querySelector('.cm-post')) {
             this.cmPost()
+            if (document.querySelector('.cm-post--creative')) {
+                this.cmPostCreative()
+            }
         }
         if (document.querySelector('.cm-block-media-youtube')) {
             this.cmBlockMediaYoutube()
@@ -73,8 +76,35 @@ export default class Page {
     <svg width="40" height="40">
       <use href="#ico-arrow"></use>
     </svg>
-  `;
+    `;
             el.appendChild(icon);
+        });
+    }
+    cmPostCreative() {
+        // H2装飾
+        document.querySelectorAll('.cm-post h2').forEach(h2 => {
+            if (h2.textContent.trim().startsWith("(")) return;
+
+            h2.innerHTML = `(${h2.innerHTML.trim()})`;
+            h2.classList.add("is-bracketed");
+        });
+        // ボタン装飾
+        document.querySelectorAll('.cm-post a[rel="noopener"]:not(.c-link-arrow)').forEach(link => {
+            const text = link.textContent.trim();
+            link.innerHTML = '';
+            link.classList.add('c-link-arrow');
+
+            // テキスト部分
+            const span = document.createElement('span');
+            span.className = 'c-link-arrow__txt';
+            span.textContent = text;
+            link.appendChild(span);
+
+            // アイコン
+            const icon = document.createElement('i');
+            icon.className = 'c-link-arrow__arrow';
+            icon.innerHTML = '<svg width="40" height="40"><use href="#ico-arrow"></use></svg>';
+            link.appendChild(icon);
         });
     }
     cmBlockMediaYoutube() {

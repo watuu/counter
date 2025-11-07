@@ -1,0 +1,261 @@
+.contact-form__agree {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.contact-form__agree a {
+    color: #e85a24;
+}
+
+.top-fv__copy span {
+    letter-spacing: 0.06rem !important;
+}
+.top-fv__copy span {
+    padding-left: 5px !important;
+}
+
+.service-contents__items {
+    grid-template-columns: min(21.78125vw, 313px) min(25.78125vw, 218px) 1fr;
+}
+
+@media screen and (min-width: 1280px) {
+    .top-fv__inner {
+        min-height: 580px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .top-fv {
+        padding-top: min(13vh, 163px) !important;
+    }
+    .single-media__content-container figure.wp-block-image {
+        margin-top: 10px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .top-fv__news {
+        /* bottom: 40% !important; */
+    }
+    .top-fv__news-title {
+        font-size: 12px !important;
+    }
+    .top-fv__news-text {
+        font-size: 12px !important;
+        line-height: 2 !important;
+    }
+    .ranking-section {
+        margin-bottom: 55px;
+    }
+    #single-counter-media .ranking-section {
+        padding-top: 60px !important;
+    }
+    .single-media__content-container .single-media__button-2 .wp-block-button__link {
+        font-size: 16px !important;
+        padding-left: 30px !important;
+    }
+}
+@media screen and (min-width: 390px) and (max-width: 430px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+    /* .cta-fixed {
+        bottom: 12% !important;
+    } */
+    .top-fv__news {
+        bottom: 47% !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .cta-fixed {
+        bottom: 3%;
+    }
+    #archive-creative-case .sub-page-title {
+        padding-bottom: 5px !important;
+    }
+    #archive-case .sub-page-title {
+        padding-bottom: 5px !important;
+    }
+    #archive-news .sub-page-title {
+        padding-bottom: 40px !important;
+    }
+
+    .company-top__content-container + .company-top__content-container {
+        margin-top: 40px !important;
+    }
+    .cta-section {
+        padding-bottom: 40px !important;
+    }
+    .cta-section__item {
+        padding-bottom: 60px !important;
+    }
+    /* .breadcrumbs {
+    margin-bottom: 20px!important;
+} */
+    .single-media__sidebar {
+        margin-top: 40px !important;
+    }
+    .top-fv__news-title {
+        font-size: 12px !important;
+    }
+    .top-fv__news {
+        bottom: 40% !important;
+    }
+}
+
+@media screen and (max-width: 390px) and (max-height: 700px) {
+    .drawer {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+.archive-creative-case__card:nth-of-type(4) {
+    border-left: none !important;
+}
+.archive-creative-case__card:nth-of-type(7) {
+    border-left: none !important;
+}
+.archive-creative-case__card:nth-of-type(10) {
+    border-left: none !important;
+}
+
+#ez-toc-container li {
+    line-height: 1.75 !important;
+}
+
+.ez-toc-link {
+    font-size: 14px !important;
+}
+
+#single-counter-media .ranking-section {
+    padding-top: 0 !important;
+}
+
+@media screen and (max-width: 600px) {
+    #single-counter-media .ranking-section {
+        padding-top: 60px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .blog-card2__number {
+        padding-bottom: 20px !important;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .single-media__card {
+        margin-top: 60px !important;
+    }
+}
+@media screen and (max-width: 959px) {
+    .single-media__card {
+        margin-top: 20px !important;
+    }
+}
+
+.contact-form__submit {
+    text-align: center;
+}
+.download-form__submit {
+    text-align: center;
+}
+
+@media screen and (min-width: 961px) {
+    .pickup-slider__card-image:before {
+        padding-top: 57% !important;
+    }
+    .wp-block-embed-youtube iframe {
+        height: 430px !important;
+    }
+    .service-contents__item {
+        padding-left: min(2.734375vw, 34px) !important;
+        gap: 39px min(6.25vw, 30px) !important;
+    }
+    .work-card__title {
+        font-size: 17px;
+    }
+    .table__item--unique {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .service-ai .service-ai-fv .content__heading {
+        font-size: clamp(10px, 10.46vw, 45px) !important;
+    }
+    .service-ai .service-ai-fv .object {
+        top: -30px !important;
+        width: 24vw;
+    }
+    .download-card__term {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .service-backlink-howto001 .list__item .content {
+        height: 100px;
+    }
+}
+
+.wp-block-image img {
+    width: 100% !important;
+}
+
+.utils-aspect-fix-image img {
+    object-fit: contain !important;
+}
+
+.case-card img {
+    object-fit: cover !important;
+}
+
+@media screen and (min-width: 961px) {
+    .inner-sponsor__countet {
+        width: 48%;
+    }
+    .inner-sponsor {
+        width: 68%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+    .inner-sponsor p {
+        margin-top: 16px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .inner-sponsor a {
+        text-decoration: underline;
+        color: black;
+    }
+    .drawer__nav-service-item .drawer__nav-link {
+        font-size: min(1.09375vw, 11px);
+    }
+}
+@media screen and (max-width: 960px) {
+    .inner-sponsor {
+        width: 290px;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+    .inner-sponsor p {
+        margin-top: 16px;
+        font-size: 12px;
+        text-align: center;
+    }
+    .inner-sponsor a {
+        text-decoration: underline;
+        color: black;
+    }
+    .company-info {
+        padding-bottom: 50px;
+    }
+    .inner-sponsor__countet:nth-of-type(1) {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .section__title2-ja--u {
+        font-size: 13px;
+    }
+}

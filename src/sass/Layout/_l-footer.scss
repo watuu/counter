@@ -68,6 +68,10 @@
 	font-size: 32/16+rem;
 	font-weight: 400;
 	line-height: 100%; /* 32/16+rem */
+	opacity: 0;
+	span {
+		opacity: 0;
+	}
 	@include config.pc {
 		grid-area: type;
 		padding-left: 329/16+rem;

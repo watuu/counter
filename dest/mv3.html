@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Three.js SVGLoader Example</title>
+  <style>
+    body { margin: 0; background: #ddd; }
+    canvas { display: block; }
+    .wrap {
+      min-height: 150vh;
+      display: flex;
+      flex-direction: column;
+      padding: 50vh 0;
+      gap: 200px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .jsGlitchPic {
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+    }
+    .jsGlitchPic canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body data-src="./">
+<div class="wrap">
+  <picture class="p-top-service-item__pic u-block-reveal jsGlitchPic" id="canvas_pic">
+    <source srcset="./assets/img/p-top-service-creative-sp.webp" media="(max-width: 1023px)"/>
+    <img src="./assets/img/p-top-service-creative.webp"/>
+  </picture>
+  <picture class="p-top-service-item__pic u-block-reveal jsGlitchPic" id="canvas_pic2">
+    <source srcset="./assets/img/p-top-service-creative-sp.webp" media="(max-width: 1023px)"/>
+    <img src="./assets/img/p-top-service-creative.webp"/>
+  </picture>
+
+</div>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>

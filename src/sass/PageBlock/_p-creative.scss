@@ -19,6 +19,9 @@
 		gap: 52/16+rem 8/16+rem;
 	}
 }
+.p-case__paginate {
+	padding-top: var(--padding-block);
+}
 .p-creative {
 	padding-bottom: var(--padding-page);
 	@include config.pc {}
@@ -52,7 +55,7 @@
 	top: 0;
 	display: flex;
 	align-items: flex-start;
-	z-index: 10;
+	z-index: 5;
 	//overflow: hidden;
 	@include config.sp-tab {
 		display: none;
@@ -68,6 +71,7 @@
 	.c-btn-page {
 		top: 800/16+rem;
 		position: absolute;
+		z-index: 20;
 	}
 }
 .p-creative-single__asidePrev {
@@ -87,7 +91,10 @@
 .p-creative-single__body {
 	padding-top: var(--padding-block);
 	@include config.pc {
+		position: relative;
+		z-index: 10;
 		width: 872/16+rem;
+		margin-left: 64/16+rem;
 	}
 }
 .p-creative-single__page {

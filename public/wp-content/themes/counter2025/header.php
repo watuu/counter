@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <!-- css -->
+    <link href="<?= get_stylesheet_directory_uri() ?>/assets/css/style.css" rel="stylesheet"/>
+
+    <!-- vendor -->
+
+    <link href="https://db.onlinewebfonts.com/c/7c7b079cf59c70d55d0b33eae89f1f38?family=Tazugane+Gothic+HondaMKTA+Med" rel="stylesheet" type="text/css"/>
+    <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?J-fMHawjerA%3D&box=cyeKXlARHxo%3D&aa=1&ab=2"></script>
+
+    <?php
+    $bodyClass = 'js-scroll-anime ';
+    if (is_front_page()) {
+        $bodyClass .= 'page-front';
+    }
+    if ( is_parent_slug() == 'service' && (is_page('thanks') )) {
+        $bodyClass .= 'thanks';
+    }
+    ?>
+<?php wp_head(); ?>
+</head>
+<body <?php body_class($bodyClass); ?> id="body" data-anime="fadeIn" data-src="<?= get_stylesheet_directory_uri() ?>">
+<a id="top"></a>
+<div class="l-body-wrap">
+    <header class="l-header">
+        <figure class="l-header-logo"><a href="<?= home_url() ?>/"><svg width="160" height="23" viewBox="0 0 160 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.25703 19.7219C1.08117 17.5632 0 14.8181 0 11.4867C0 8.15527 1.08117 5.4102 3.25703 3.25145C5.43289 1.0927 8.08176 0 11.2307 0C13.6633 0 15.8257 0.66628 17.7177 1.98552C19.6098 3.30475 20.9342 5.14368 21.6775 7.48899H15.3121C14.4742 5.84994 13.1498 5.02375 11.3253 5.02375C9.5008 5.02375 8.05473 5.61008 7.00059 6.78273C5.94645 7.95539 5.41938 9.52781 5.41938 11.4867C5.41938 13.4455 5.94645 15.018 7.00059 16.1906C8.05473 17.3633 9.48729 17.9496 11.3253 17.9496C13.1633 17.9496 14.4877 17.1234 15.3121 15.4844H21.6775C20.9342 17.8297 19.6098 19.6686 17.7177 20.9878C15.8257 22.3071 13.6633 22.9733 11.2307 22.9733C8.09528 22.9733 5.43289 21.894 3.25703 19.7219ZM28.6376 19.7352C26.4617 17.5632 25.3805 14.8048 25.3805 11.4867C25.3805 8.1686 26.4617 5.4102 28.6376 3.25145C30.8134 1.0927 33.4758 0 36.6247 0C39.7736 0 42.4225 1.07937 44.5713 3.25145C46.7202 5.4102 47.8013 8.15527 47.8013 11.4867C47.8013 14.8181 46.7202 17.5632 44.5578 19.7352C42.3955 21.9073 39.7466 23 36.6112 23C33.4758 23 30.8134 21.9073 28.6376 19.7352ZM40.8007 16.1906C41.8549 15.018 42.382 13.4455 42.382 11.4867C42.382 9.52781 41.8549 7.95539 40.8007 6.78273C39.7466 5.61008 38.3546 5.02375 36.5977 5.02375C34.8408 5.02375 33.4353 5.61008 32.3811 6.78273C31.327 7.95539 30.7999 9.52781 30.7999 11.4867C30.7999 13.4455 31.327 15.018 32.3811 16.1906C33.4353 17.3633 34.8273 17.9496 36.5977 17.9496C38.3681 17.9496 39.7601 17.3633 40.8007 16.1906ZM52.7072 13.7254V0.319815H58.0454V13.7254C58.0454 15.0713 58.3698 16.0973 59.005 16.8302C59.6402 17.5632 60.5997 17.9229 61.8431 17.9229C63.0864 17.9229 64.0459 17.5632 64.7082 16.8302C65.3704 16.0973 65.7082 15.0713 65.7082 13.7254V0.319815H71.0465V13.7254C71.0465 15.7109 70.6006 17.4166 69.6951 18.8557C68.7896 20.2949 67.6408 21.3476 66.2624 22.0006C64.8839 22.6669 63.3837 22.9867 61.762 22.9867C59.2212 22.9867 57.0859 22.1738 55.3425 20.5614C53.5991 18.949 52.7207 16.657 52.7207 13.7121L52.7072 13.7254ZM91.3996 0.253187H96.7379V22.7735H91.3996L82.4799 8.60834V22.7735H77.1417V0.253187H82.4799L91.3996 14.4183V0.253187ZM101.468 4.4774V0.319815H118.74V4.4774H112.753V22.7735H107.414V4.4774H101.455H101.468ZM136.741 0.253187V4.41078H128.822V9.23465H135.809V13.3922H128.822V18.6025H136.741V22.7601H123.483V0.253187H136.741ZM148.215 14.0452V22.7735H142.877V0.319815H151.513C154.054 0.319815 156.027 0.986095 157.432 2.33198C158.851 3.67787 159.554 5.29027 159.554 7.19583C159.554 8.50174 159.162 9.76767 158.405 11.007C157.635 12.2462 156.378 13.1124 154.635 13.6321L160 22.7735H153.756L148.823 14.0452H148.202H148.215ZM148.215 4.4774V9.8876H151.526C152.337 9.8876 152.972 9.64774 153.445 9.15469C153.918 8.66164 154.148 8.02202 154.148 7.22248C154.148 6.42294 153.905 5.76999 153.432 5.25029C152.959 4.74392 152.324 4.4774 151.526 4.4774H148.215Z"/></svg></a></figure>
+        <nav class="l-header-nav">
+            <ul>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/company/"><span class="js-clone">about</span></a></li>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/service/"><span class="js-clone">service</span></a></li>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/creative-case/"><span class="js-clone">Casestudy</span></a></li>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/case/"><span class="js-clone">Voice</span></a></li>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/counter-media/"><span class="js-clone">Blog</span></a></li>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/news/"><span class="js-clone">News</span></a></li>
+            </ul>
+        </nav>
+        <button class="l-header-menu c-btn-menu" aria-label="メニューを開く"><span class="c-btn-menu__wrap"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span><span class="c-btn-menu__wrap2"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span></button>
+        <div class="l-header-drawer is-section-dark">
+            <div class="l-header-drawer__bg"></div>
+            <div class="l-header-drawer__wrap">
+                <div class="l-header-drawer__search">
+                    <form role="search" method="get" action="<?php echo home_url('/'); ?>">
+                        <input type="hidden" name="post_type" value="counter-media" />
+                        <div class="c-form-search">
+                            <div class="c-form-search__keyword">
+                                <input type="text" name="s" <?php echo get_search_query(); ?>/>
+                            </div>
+                            <button class="c-form-search__btn">
+                                <svg width="16" height="17"><use href="#ico-search"></use></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="l-header-drawer__nav">
+                    <?php get_template_part('template/cm-nav-main') ?>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="l-main" id="main">
