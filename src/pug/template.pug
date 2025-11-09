@@ -30,6 +30,7 @@ block content
                     h3.c-heading-caption (Creative Work)
                     h2.c-heading-bar h2コンテンツマーケティングで潜在顧客を獲得する戦略立案手順
                     h3.c-heading-border h3コンテンツマーケティングで潜在顧客を獲得する戦略立案手順
+                    h3.c-heading-text fz25 fz18 h3コンテンツマーケティングで潜在顧客を獲得する戦略立案手順
 
                     p .c-paragraph fz18
                     p.c-paragraph 青山学院大学経済学部卒業後に外資系ITコンサルティングファーム2社にてエンジニア・ITコンサルタントとして複数のERPシステム導入・運用プロジェクトを経験。
@@ -342,6 +343,28 @@ block content
             p .cm-block-media
             include ./template/cm-block-media
 
+
+    //-#modal-member.cm-modal(aria-hidden='true')
+    //-#modal-member.cm-modal(aria-hidden='false')
+        .cm-modal__overlay(tabindex='-1' data-micromodal-close='')
+            .cm-modal__wrap(role='dialog' aria-modal='true')
+                button.cm-modal__close(aria-label='Close modal' data-micromodal-close='')
+                    span
+                    span
+                .cm-modal__container
+                    .cm-modal-member
+                        .cm-modal-member__pic
+                            figure
+                                img(src=img+"3x4.webp")
+                        .cm-modal-member__head
+                            p.cm-modal-member__job 代表取締役 CEO
+                            p.cm-modal-member__name 宮田 和也
+                        p.cm-modal-member__desc
+                            | 青山学院大学経済学部卒業後に外資系ITコンサルティングファーム2社にてエンジニア・ITコンサルタントとして複数のERPシステム導入・運用プロジェクトを経験。
+                            br
+                            | その後、株式会社CINCにてWebマーケティングアナリスト、株式会社バンケッツにてメディア事業責任者を経験し独立。提案・プロジェクトマネジメントスキルを活かし、ニュートラルワークスで執行役員、SEOコンサルティング部門責任者を経験。
+                            br
+                            | 2024年1月、COUNTER株式会社を創業。事業貢献するSEOコンサルティングを得意とする。
 
     #modal-blog.cm-modal(aria-hidden='true')
     //-#modal-blog.cm-modal(aria-hidden='false')

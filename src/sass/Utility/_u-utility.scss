@@ -34,6 +34,10 @@
 .u-color-accent {
 	color: var(--color-assort);
 }
+.u-border {
+	height: 1px;
+	background: var(--border-assort-dot);
+}
 .u-color-blend {
 	position: relative;
 	svg,

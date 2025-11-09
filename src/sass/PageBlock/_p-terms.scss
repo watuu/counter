@@ -1,0 +1,31 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+@use '../Component/c-paragraph' as paragraph;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.p-terms {
+	@include config.pc {}
+}
+.p-terms__wrap {
+	margin-top: var(--padding-section);
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-block);
+
+	color: var(--color-assort);
+	> h2 + *,
+	> h3 + * {
+		margin-top: -32/16+rem;
+	}
+	p {
+		@extend .c-paragraph;
+	}
+	@include config.pc {
+		width: 992/16+rem;
+	}
+}
+.p-terms__media {
+	margin-top: var(--padding-section);
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

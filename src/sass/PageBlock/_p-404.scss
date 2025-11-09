@@ -1,0 +1,51 @@
+@use '../Base/config' as config;
+@use '../Component/c-btn' as btn;
+@use '../Component/c-paragraph' as paragraph;
+/*----------------------------------------------------
+	...
+----------------------------------------------------*/
+.p-404 {
+	@include config.pc {}
+}
+.p-404__wrap {
+	padding-top: var(--padding-page);
+	@include config.pc {}
+}
+.p-404-catch {
+	margin-inline: auto;
+	text-align: center;
+	color: var(--color-assort);
+	@include config.pc {
+		width: 500/16+rem;
+	}
+}
+.p-404-catch__ja {
+	font-size: 10/16+rem;
+	@include config.pc {
+		font-size: 14/16+rem;
+	}
+}
+.p-404-catch__en {
+	margin-top: 16/16+rem;
+	font-family: var(--ITCGaramondW01-BookCn);
+	font-size: 32/16+rem;
+	font-weight: 400;
+	line-height: 100%;
+	//span {
+	//	opacity: 0;
+	//}
+	@include config.pc {
+		font-size: 64/16+rem;
+		line-height: 90%;
+		letter-spacing: -2.56/16+rem;
+	}
+}
+.p-404__link {
+	margin-top: var(--padding-block);
+	text-align: center;
+	@include config.pc {}
+}
+.p-404__media {
+	margin-top: var(--padding-page);
+}
+/*::::::::::::::::::::::::::::::::::::::::::::::::::*/

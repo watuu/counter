@@ -35,6 +35,9 @@ export default class Page {
         if (document.querySelector('.p-top-creative__list') && Utility.isPC()) {
             this.pTopCreative()
         }
+        if (document.querySelector('.p-company-member__list')) {
+            this.pCompanyModal()
+        }
         if (document.querySelector('.p-media-pickup')) {
             this.pMediaPickup()
         }
@@ -182,6 +185,76 @@ export default class Page {
         });
 
         this.settings.eventListeners.push({ element: document, event: "mousemove", handler: moveElement });
+    }
+
+    pCompanyModal() {
+        MicroModal.init({
+            onClose: modal => {
+                // メンバー
+                const img = modal.querySelector('.cm-modal-member__pic img');
+                if (img) {
+                    img.src = '';
+                }
+            }
+        });
+
+        const jsonDataElement = document.getElementById('memberData');
+        const modal = document.getElementById('modal-member');
+        if ($('.c-btn-member').length && jsonDataElement && modal) {
+            let currentOrder = 1;
+            const memberData = JSON.parse(jsonDataElement.textContent);
+
+            const preloadedImages = {};
+            if (memberData) {
+                memberData.forEach(member => {
+                    if (member['pic']) {
+                        const img = new Image();
+                        img.src = member['pic'];
+                        preloadedImages[member.order] = img;
+                    }
+                });
+            }
+
+            function updateModal(order) {
+                const member = memberData.find(item => item.order === order);
+                if (!member) return;
+                gsap.timeline({
+                    defaults: {
+                        ease: 'none'
+                    }
+                })
+                    .to('.cm-modal-member', {
+                        opacity: 0,
+                        duration: 0.3,
+                        ease: 'power3.out',
+                    })
+                    .add( function(){
+                        // モーダル内のDOM要素を更新
+                        document.querySelector(".cm-modal-member__pic img").src = member['pic'];
+                        document.querySelector(".cm-modal-member #job").textContent = member.job;
+                        document.querySelector(".cm-modal-member #name").textContent = member.name;
+                        document.querySelector(".cm-modal-member #message p").innerHTML = member.message;
+
+                        currentOrder = order;
+                    })
+                    .to('.cm-modal-member', {
+                        opacity: 1,
+                        delay: 0.1,
+                        duration: 0.3,
+                        ease: 'power3.out',
+                    })
+
+            }
+
+            document.querySelectorAll(".c-btn-member").forEach(button => {
+                button.addEventListener("click", () => {
+                    const order = parseInt(button.getAttribute("data-order"));
+                    updateModal(order);
+                });
+            });
+
+        }
+
     }
 
     pMediaPickup() {

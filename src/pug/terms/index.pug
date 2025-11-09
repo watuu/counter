@@ -1,0 +1,38 @@
+extends ../_default
+block vars
+    - var path = "../"
+    - var title = ""
+    - var pageClass = ""
+
+block content
+    .p-terms
+        .cm-block-header
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en Terms
+                    h1.cm-block-header__ja 利用規約
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span Terms
+        .l-container.l-container--md
+            .p-terms__wrap
+                h2.c-heading-text 1. 著作権について
+                p
+                    | 本ウェブサイト上のすべてのコンテンツに関する著作権は、特段の表示のない限り当社に帰属しております。そのすべてまたは一部を、法律にて定められる私的使用等の範囲を超えて、無断で複製、転用、改変、公衆送信、販売などの行為を行うことはできません。
+                h2.c-heading-text 2. 商標について
+                p
+                    | 本ウェブサイトで使用されている商標・ロゴマーク・商号は、当社の登録商標または商標です。商標法またはその他の法律により認められている場合を除き、当社の事前の承諾なしに、これらを使用等することはできません。
+                h2.c-heading-text 3. 免責事項
+                p
+                    | 当社は、本ウェブサイトに掲載されている内容について、その正確性、有用性、確実性について保証するものではなく、一切の責任を負わないものといたします。 当社は、予告なしに、本ウェブサイトの運営を中断または中止、掲載内容を修正、変更、削除する場合がありますが、それらによって生じるいかなる損害についても一切責任を負いません。また本ウェブサイトのご利用によりお客様または第三者のハードウェアおよびソフトウェア上に生じた事故、データの毀損・滅失等の損害について一切責任を負いません。
+                h2.c-heading-text 4. リンクについて
+                p
+                    | 営利、非営利、イントラネットを問わず、本ウェブサイトへのリンクは自由です。 ただし、公序良俗に反するサイトなど、当社の信用、品位を損なうサイトからのリンクはお断りします。また事前事後にかかわらず、その他の理由によりリンクをお断りする場合もあります。
+
+        .p-terms__media
+            .l-container
+                .u-border
+            .l-container.l-container--md
+                include ../template/cm-block-media

@@ -1,0 +1,37 @@
+extends ./_default
+block vars
+    - var path = "./"
+    - var title = ""
+    - var pageClass = ""
+
+block content
+    .p-404
+        .cm-block-header
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en 404 Not Found
+                    h1.cm-block-header__ja ページが見つかりません
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span 404 Not Found
+        .l-container.l-container--md
+            .p-404__wrap
+                .p-404-catch
+                    p.p-404-catch__ja ローカルから最先端をつくる。
+                    p.p-404-catch__en
+                        | Turn The Mainstream
+                        br
+                        | Upside Down.
+                .p-404__link
+                    a(href=path + "").c-link-arrow
+                        span.c-link-arrow__txt トップページへ戻る
+                        i.c-link-arrow__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+        .p-404__media
+            .l-container
+                .u-border
+            .l-container.l-container--md
+                include ./template/cm-block-media

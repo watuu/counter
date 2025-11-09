@@ -110,6 +110,7 @@ block content
                             | その後、株式会社CINCにてWebマーケティングアナリスト、株式会社バンケッツにてメディア事業責任者を経験し独立。提案・プロジェクトマネジメントスキルを活かし、ニュートラルワークスで執行役員、SEOコンサルティング部門責任者を経験。
                             br
                             | 2024年1月、COUNTER株式会社を創業。事業貢献するSEOコンサルティングを得意とする。
+            include ./member
             .l-container
                 -
                     var memberLists = [
@@ -130,9 +131,10 @@ block content
                         { "job": "技術顧問", "name": "佐々木 大輔" },
                         { "job": "顧問", "name": "喜多埜 裕明" }
                     ]
+
                 .p-company-member__list
                     each member in memberLists
-                        button.c-btn-member
+                        button.c-btn-member(aria-label="詳細を見る" data-micromodal-trigger="modal-member" data-order=1)
                             span.c-btn-member__job #{member.job}
                             span.c-btn-member__name #{member.name}
                             i.c-btn-member__status
@@ -199,3 +201,19 @@ block content
                                     use(href="#ico-arrow")
                             p.c-card-case__desc
                                 | 埼玉武蔵ヒートベアーズ認知拡大の公式スポンサーです。
+    #modal-member.cm-modal(aria-hidden='true')
+        .cm-modal__overlay(tabindex='-1' data-micromodal-close='')
+            .cm-modal__wrap(role='dialog' aria-modal='true')
+                button.cm-modal__close(aria-label='Close modal' data-micromodal-close='')
+                    span
+                    span
+                .cm-modal__container
+                    .cm-modal-member
+                        .cm-modal-member__pic
+                            figure
+                                img(src=img + "3x4.webp")
+                        .cm-modal-member__head
+                            p.cm-modal-member__job#job
+                            p.cm-modal-member__name#name
+                        .cm-modal-member__desc#message
+                            p
