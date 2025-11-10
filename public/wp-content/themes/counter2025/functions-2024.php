@@ -12,7 +12,7 @@ define('HOME_URL', esc_url(home_url('/')));
  *
  * @var string
  */
-define('IMAGE_DIR', get_template_directory_uri() . '/assets/img/');
+define('IMAGE_DIR', get_template_directory_uri() . '/assets2024/img/');
 define('UPLOAD_DIR', wp_upload_dir()['baseurl']);
 
 error_reporting(0);

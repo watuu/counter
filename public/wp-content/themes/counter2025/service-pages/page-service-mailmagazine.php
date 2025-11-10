@@ -20,6 +20,7 @@ get_header();
 ?>
 <link href="<?= get_stylesheet_directory_uri() ?>/assets2024/css/style.css" rel="stylesheet"/>
 <link href="<?= get_stylesheet_directory_uri() ?>/assets2024/css/style2.css" rel="stylesheet"/>
+<link href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css" rel="stylesheet"/>
 <p></p>
 <main>
   <div class="service-mail container">
@@ -542,7 +543,7 @@ get_header();
         <script>
           document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.contact-form__input#service').value = "メルマガ制作/配信代行";
-            document.querySelector('.js-fixed-cta-contact').setAttribute('href', '#contact');
+            // document.querySelector('.js-fixed-cta-contact').setAttribute('href', '#contact');
           });
         </script>
       </div>
@@ -553,6 +554,7 @@ get_header();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 <script src="<?= get_stylesheet_directory_uri() ?>/assets2024/js/scripts.js"></script>
+<script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 <?php
 //- フッターテンプレート呼び出し
 get_footer();

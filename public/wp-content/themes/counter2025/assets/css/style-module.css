@@ -1957,6 +1957,10 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.modal.modal {
+  z-index: 600;
+}
+
 /*----------------------------------------------------
 	...
 ----------------------------------------------------*/
@@ -4865,6 +4869,10 @@ body figure {
   .c-form-input textarea::placeholder {
     font-size: 1.125rem;
   }
+}
+.c-form-input select {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .c-form-input textarea {
   height: 12.5rem;

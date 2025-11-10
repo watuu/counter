@@ -25,8 +25,8 @@ function display_service_tiktok_cta() {
         <p class="content__heading"><span>TikTok広告の運用強化</span><br>でお悩みの方<br>お気軽にご相談ください!!</p>
         <p class="content__text">実績豊富な運用担当者が、<br class="utils-block-hidden-pc">課題に応じて、<br class="utils-block-hidden-pc">TikTok広告の運用を支援します。<br>TikTok広告の運用代行は<br class="utils-block-hidden-pc">COUNTER(カウンター)へご相談ください。</p>
         <div class="content__objects">
-          <div class="content__object content__object--001"><img src="<?php echo IMAGE_DIR; ?>03_service/backlink/elm-02.png" alt=""></div>
-          <div class="content__object content__object--002"><img src="<?php echo IMAGE_DIR; ?>03_service/backlink/elm-03.png" alt=""></div>
+          <div class="content__object content__object--001"><img src="<?php echo IMAGE_DIR; ?>03_service/service-cta-bg1.webp" alt=""></div>
+          <div class="content__object content__object--002"><img src="<?php echo IMAGE_DIR; ?>03_service/service-cta-bg2.webp" alt=""></div>
         </div>
         <ul class="content__list">
           <li class="content__item"><a class="service-tiktok-btn service-tiktok-btn--orange service-tiktok-btn--white" href="https://counter-digital.jp/download/document-company/">無料で資料ダウンロード</a></li>
@@ -43,6 +43,7 @@ get_header();
 ?>
 <link href="<?= get_stylesheet_directory_uri() ?>/assets2024/css/style.css" rel="stylesheet"/>
 <link href="<?= get_stylesheet_directory_uri() ?>/assets2024/css/style2.css" rel="stylesheet"/>
+<link href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css" rel="stylesheet"/>
 <p></p>
 <main>
   <div class="service-tiktok container">
@@ -582,7 +583,7 @@ get_header();
         <script>
           document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.contact-form__input#service').value = "TikTok広告運用代行";
-            document.querySelector('.js-fixed-cta-contact').setAttribute('href', '#contact');
+            // document.querySelector('.js-fixed-cta-contact').setAttribute('href', '#contact');
           });
         </script>
       </div>
@@ -593,6 +594,7 @@ get_header();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 <script src="<?= get_stylesheet_directory_uri() ?>/assets2024/js/scripts.js"></script>
+<script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 <?php
 //- フッターテンプレート呼び出し
 get_footer();
