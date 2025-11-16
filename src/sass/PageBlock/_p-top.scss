@@ -494,6 +494,16 @@ $interval: 0.08;
 	}
 }
 .p-top-service-item:nth-child(2) {
+	.p-top-service-item__pic {
+		img {
+			aspect-ratio: 500 / 320;
+		}
+		@include config.pc {
+			img {
+				aspect-ratio: 880 / 560;
+			}
+		}
+	}
 	@include config.pc {
 		margin-left: auto;
 		margin-top: -30/16+rem;
@@ -502,6 +512,16 @@ $interval: 0.08;
 	}
 }
 .p-top-service-item:nth-child(3) {
+	.p-top-service-item__pic {
+		img {
+			aspect-ratio: 500 / 323;
+		}
+		@include config.pc {
+			img {
+				aspect-ratio: 656 / 836;
+			}
+		}
+	}
 	@include config.pc {
 		width: 328/16+rem;
 		margin-top: -106/16+rem;
@@ -512,7 +532,7 @@ $interval: 0.08;
 	position: relative;
 	img {
 		height: auto;
-		aspect-ratio: 1124 / 580;
+		aspect-ratio: 500 / 258;
 		object-fit: cover;
 		opacity: 0;
 	}
@@ -524,6 +544,11 @@ $interval: 0.08;
 		left: 0;
 		top: 0;
 		pointer-events: none;
+	}
+	@include config.pc {
+		img {
+			aspect-ratio: 1124 / 580;
+		}
 	}
 }
 .p-top-service-item__wrap {
@@ -645,11 +670,14 @@ $interval: 0.08;
 }
 .p-top-partnership__blocks {
 	display: flex;
-	justify-content: space-between;
+	//justify-content: space-between;
+	justify-content: flex-end;
+	gap: 30/16+rem;
 	@include config.sp-tab {
-		width: 396/16+rem;
+		//width: 396/16+rem;
 	}
 	@include config.pc {
+		gap: 200/16+rem;
 	}
 }
 .p-top-partnership-block {

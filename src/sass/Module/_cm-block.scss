@@ -327,7 +327,6 @@
 	flex-direction: column;
 	position: relative;
 	color: var(--color-assort);
-	will-change: transform;
 	&:before {
 		content: '';
 		display: block;
@@ -338,16 +337,18 @@
 		bottom: 0;
 		pointer-events: none;
 		background: var(--color-assort);
-		transform: scale(0.95, 0);
+		// transform: scale(0.95, 0);
+		transform: scale(1, 0);
 		transform-origin: top;
 		transition: transform var(--easeDuration) var(--easeOutTheme);
 		will-change: transform;
 	}
 	&:hover {
-		transform: scale(0.9);
+		//transform: scale(0.9);
 		color: #fff;
 		&:before {
-			transform: scale(1.05, 1);
+			// transform: scale(1.05, 1);
+			transform: scale(1, 1);
 			transform-origin: bottom;
 		}
 	}
@@ -360,7 +361,11 @@
 	justify-content: center;
 	text-align: center;
 	height: 130/16+rem;
-
+	will-change: transform;
+	transition: transform var(--easeDuration) var(--easeOutTheme);
+	a:hover & {
+		transform: scale(0.9);
+	}
 	@include config.pc {
 		height: 335/16+rem;
 	}

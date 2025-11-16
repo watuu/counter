@@ -8,11 +8,6 @@
                 "name" => "森 正吾",
             ],
             [
-                "order" => 2,
-                "job" => "SEOコンサルタント",
-                "name" => "金沢 匡史",
-            ],
-            [
                 "order" => 3,
                 "job" => "ブランドグロースマーケター / ECコンサルタント",
                 "name" => "猿川 哲朗",
@@ -271,14 +266,6 @@
                             <p class="c-card-case__desc">埼玉武蔵ヒートベアーズ認知拡大の公式スポンサーです。</p>
                         </a>
                     </div>
-                    <div class="c-card-case c-card-case--sponsored">
-                        <a class="c-card-case__link" href="https://musashibears.com/" target="_blank" rel="noopener">
-                            <figure class="c-card-case__pic"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo-musashibears.webp" alt=""/></figure>
-                            <h3 class="c-card-case__name">埼玉武蔵ヒートベアーズ</h3><i class="c-card-case__arrow">
-                                <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
-                            <p class="c-card-case__desc">埼玉武蔵ヒートベアーズ認知拡大の公式スポンサーです。</p>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -312,13 +299,6 @@
             "job": "CCO/制作プロデューサー",
             "name": "森 正吾",
             "message": "WEBデザイナー ・コーダー としてWEB系ベンチャー企業でキャリアスタートし、株式会社antにてフロントエンドエンジニアとして大企業や官公庁のプロジェクトを経験。 その後、都内WEB系企業にて上場企業を中心に、ディレクション、商談、コンペ提案まで幅広く担当。 BtoB、サービス、IR、採用、イベント系、アプリ(webview)など幅広く経験。<br>COUNTERではクリエイティブと制作部門の統括を行っている。"
-        },
-        {
-            "order": 2,
-            "pic": "<?= get_stylesheet_directory_uri() ?>/assets2024/img/02_company/member-13-3.jpg",
-            "job": "SEOコンサルタント",
-            "name": "金沢 匡史",
-            "message": "機械メーカーにて法人営業を5年ほど経験。GMOインターネットグループにてECサイトやコンテンツマーケティングの営業やディレクションに従事。その後、株式会社cloverにジョイン。マネージャーとして、さまざまな企業のサイト制作やSEOコンサルティング支援を経て、COUNTERへジョインし営業やSEOチームの総括を行っている。"
         },
         {
             "order": 3,
@@ -367,7 +347,7 @@
             "pic": "<?= get_stylesheet_directory_uri() ?>/assets2024/img/02_company/member-18.png",
             "job": "SNSディレクター",
             "name": "北風 和宏",
-            "message": "Rocal代表取締役<br>2007年株式会社イノベーション入社。Web広告代理店事業責任者・自社マーケティング責任者を兼任後、2015年にフリーランスとして独立。 その後、家業を継ぐために福島に戻りつつも、株式会社ハタフルに2017年12月入社。 Web広告代理店事業を立ち上げ、2年間で福島を中心に約50社ほど地方企業様を支援し退職。 2020年7月に株式会社Rocalを創業し、全"
+            "message": "Rocal代表取締役<br>2007年株式会社イノベーション入社。Web広告代理店事業責任者・自社マーケティング責任者を兼任後、2015年にフリーランスとして独立。 その後、家業を継ぐために福島に戻りつつも、株式会社ハタフルに2017年12月入社。 Web広告代理店事業を立ち上げ、2年間で福島を中心に約50社ほど地方企業様を支援し退職。 2020年7月に株式会社Rocalを創業し、全国の地方企業のWebマーケティングを常時20社程支援中。 Web解析士／提案型ウェブアナリスト"
         },
         {
             "order": 10,
@@ -388,7 +368,7 @@
             "pic": "<?= get_stylesheet_directory_uri() ?>/assets2024/img/02_company/member-08.png",
             "job": "アートディレクター",
             "name": "山田 高典",
-            "message": "1974年生まれ。佐賀県出身。<br>九州芸術工科大学（現在は九州大学に統合）に進学。プログラムとデザインの面白さに目覚める。<br>リクルートコンピュータパブリシング（現在はリクルートコミュニケーションズ）でデジタル新規事業開拓を経験。<br><br>アートディレクターとしてWebサイトのト"
+            "message": "1974年生まれ。佐賀県出身。<br>九州芸術工科大学（現在は九州大学に統合）に進学。プログラムとデザインの面白さに目覚める。<br>リクルートコンピュータパブリシング（現在はリクルートコミュニケーションズ）でデジタル新規事業開拓を経験。<br><br>アートディレクターとしてWebサイトのトータルディレクションとデザインを担当。"
         },
         {
             "order": 13,

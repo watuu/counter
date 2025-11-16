@@ -19,7 +19,7 @@ export default {
     {
       format: 'iife',
       sourcemap: false,
-      file: 'public/wp-content/themes/counter2025/assets/js/app.js',
+      file: 'dest/assets/js/app.js',
       plugins: outputPlugin
     },
   ],

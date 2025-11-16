@@ -164,38 +164,16 @@
                         <h3 class="p-top-partnership-block__head">Creator</h3>
                         <div class="p-top-partnership-block__body">
                             <ul>
-                                <li>Abe Haruka /</li>
-                                <li>Baba Kenta /</li>
-                                <li>Chiba Yui /</li>
-                                <li>Doi Riku /</li>
-                                <li>Endo Misaki /</li>
-                                <li>Fujii Takuya /</li>
-                                <li>Goto Rina /</li>
-                                <li>Hoshino Sota /</li>
-                                <li>Ito Manami /</li>
-                                <li>Jinbo Yuto /</li>
-                                <li>Kawamura Aoi /</li>
-                                <li>Lee Haruto /</li>
-                                <li>Murakami Saki /</li>
-                                <li>Nakagawa Ren /</li>
-                                <li>Okamoto Yuka /</li>
-                            </ul>
-                            <ul>
-                                <li>Petani Sho /</li>
-                                <li>Quon Nathelvetica neueki /</li>
-                                <li>Rikimaru Noa /</li>
-                                <li>Saito Hinata /</li>
-                                <li>Tanaka Mei /</li>
-                                <li>Ueda Koki /</li>
-                                <li>Vega Shun /</li>
-                                <li>Watanabe Hina /</li>
-                                <li>Xeno Riko /</li>
-                                <li>Yamada Ithelvetica neueki /</li>
-                                <li>Zaithelvetica neue Nao /</li>
-                                <li>Anzai Moe /</li>
-                                <li>Fukuda Hiroki /</li>
-                                <li>Nagano Emi /</li>
-                                <li>Helvetica neuezuki Reo /</li>
+                                <li>ALGORHYTHM /</li>
+                                <li>KEISUKE ZUZUKI /</li>
+                                <li>KIKUTI KEITA /</li>
+                                <li>KUDOU MASAYA /</li>
+                                <li>SHIORI HIGASHIYAMA /</li>
+                                <li>SHINODA EMI /</li>
+                                <li>TAKANORI YAMDA /</li>
+                                <li>YASUTAKE TERUI /</li>
+                                <li>YUJI AONO /</li>
+                                <li>YOSHIMURA YUKI /</li>
                             </ul>
                         </div>
                     </div>

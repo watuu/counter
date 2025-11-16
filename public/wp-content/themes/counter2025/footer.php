@@ -39,7 +39,7 @@
             <div class="l-footer-top">
                 <p class="l-footer-top__area"><span>SAITAMA</span><span>越谷</span></p>
                 <p>ローカルから最先端をつくる。</p>
-                <p>DOWNLOAD</p>
+                <p><a class="c-btn-txt" href="<?= home_url() ?>/download/"><span class="js-clone">DOWNLOAD</span></a></p>
             </div>
             <p class="l-footer-type js-split-text js-visible-span">Turn the mainstream <br>upside down.</p>
             <div class="l-footer-nav">
@@ -60,8 +60,8 @@
             </div>
             <div class="l-footer-bottom">
                 <ul class="l-footer-bottom__nav">
-                    <li><a href="https://www.youtube.com/@countermarketing" target="_blank" rel="noopener">Youtube</a></li>
-                    <li><a href="<?= home_url() ?>/counter-media/">COUNTER Blog</a></li>
+                    <li><a href="https://www.youtube.com/@countermarketing" target="_blank" rel="noopener">YouTube</a></li>
+                    <li><a href="<?= home_url() ?>/counter-media/">COUNTER MEDIA</a></li>
                     <li><a href="https://x.com/webkirin" target="_blank" rel="noopener">X</a></li>
                 </ul>
                 <figure class="l-footer-bottom__pic"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/footer-pic.webp" alt=""/></figure>

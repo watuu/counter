@@ -92,7 +92,6 @@ export default class Glitch {
     `;
 
         const fragmentShader = /* glsl */`
-      // uniform sampler2D u_texture;
       precision highp float;
       uniform float u_time;
       uniform sampler2D u_texture;

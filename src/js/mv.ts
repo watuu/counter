@@ -257,7 +257,7 @@ export default class GridViewer {
                         group.position.z = zOffset
                         group.position.x = i * size.x * direction
                         group.position.y = modelIndex * 0.001
-                        console.log(group.position.y)
+                        // console.log(group.position.y)
 
                         this.applyMaterialsToModel(model)
                         this.scene.add(group)
