@@ -52,6 +52,9 @@
         <div class="l-container">
             <div class="p-top-service__head">
                 <div class="p-top-service__type js-visible">
+                    <div class="jsGlitchTxt"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-type.webp" alt="デジタル起点 "/></div>
+                </div>
+                <div class="p-top-service__typeSP js-visible">
                     <div>
                         <p class="js-split-text">デジタル起点</p>
                         <p class="js-split-text">全方位支援</p>
