@@ -177,8 +177,9 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 60/16+rem;
-	height: 60/16+rem;
+	width: 180/16+rem;
+	height: 180/16+rem;
+	position: relative;
 }
 .c-btn-stalker__wrap {
 	display: inline-flex;
@@ -188,10 +189,10 @@
 	height: 100%;
 	border-radius: 100%;
 	border: var(--border-assort);
-	transform: scale(0);
-	transition: var(--easeDuration) var(--easeOutTheme);
+	//transform: scale(0);
+	transition: var(--easeDuration) var(--easeOutQuad);
 	.on-stalker-show & {
-		transition-duration: .8s;
+		transition-duration: .4s;
 		transform: scale(1);
 	}
 }
@@ -200,7 +201,7 @@
 	height: 20/16+rem;
 	line-height: 0;
 	transform: scale(1.5);
-	transition: var(--easeDuration) var(--easeOutTheme);
+	transition: var(--easeDuration) var(--easeOutQuad);
 	.on-stalker-show & {
 		transition-duration: .8s;
 		transform: scale(1);
@@ -210,6 +211,70 @@
 		height: auto;
 		fill: var(--color-main);
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+.c-btn-stalker__dot {
+	&:before {
+		content: '';
+		display: block;
+		width: 30%;
+		height: 30%;
+		border-radius: 100%;
+		//background-color: var(--color-main);
+		border: var(--border-assort);
+		position: absolute;
+		z-index: 0;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		pointer-events: none;
+	}
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 100%;
+		background-color: transparent;
+		box-shadow: inset 0 0 0 0 var(--color-main);
+		position: absolute;
+		z-index: 0;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		// transition: .6s .3s var(--easeOutQuad);
+		pointer-events: none;
+	}
+	.on-stalker-show & {
+		&:before {
+			animation: stalkerCircle .3s var(--easeOutQuad) forwards;
+			// transition: .3s var(--easeOutQuad), opacity .3s ease;
+			// transition-delay: 0.1s, 0s;
+		}
+		&:after {
+			width: 115%;
+			height: 115%;
+			box-shadow: inset 0 0 15px 2px var(--color-main);
+			opacity: 0;
+			transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+			transition-delay: 0.3s;
+		}
+	}
+}
+@keyframes stalkerCircle {
+	0% {
+		opacity: 0;
+		width: 30%;
+		height: 30%;
+	}
+	99.99% {
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

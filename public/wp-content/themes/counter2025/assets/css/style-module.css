@@ -2359,7 +2359,6 @@
           flex-direction: column;
   position: relative;
   color: var(--color-assort);
-  will-change: transform;
 }
 .cm-block-cta-item__link:before {
   content: "";
@@ -2371,8 +2370,8 @@
   bottom: 0;
   pointer-events: none;
   background: var(--color-assort);
-  -webkit-transform: scale(0.95, 0);
-          transform: scale(0.95, 0);
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
   -webkit-transform-origin: top;
           transform-origin: top;
   -webkit-transition: -webkit-transform var(--easeDuration) var(--easeOutTheme);
@@ -2382,13 +2381,11 @@
   will-change: transform;
 }
 .cm-block-cta-item__link:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
   color: #fff;
 }
 .cm-block-cta-item__link:hover:before {
-  -webkit-transform: scale(1.05, 1);
-          transform: scale(1.05, 1);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
 }
@@ -2406,6 +2403,15 @@
           justify-content: center;
   text-align: center;
   height: 8.125rem;
+  will-change: transform;
+  -webkit-transition: -webkit-transform var(--easeDuration) var(--easeOutTheme);
+  transition: -webkit-transform var(--easeDuration) var(--easeOutTheme);
+  transition: transform var(--easeDuration) var(--easeOutTheme);
+  transition: transform var(--easeDuration) var(--easeOutTheme), -webkit-transform var(--easeDuration) var(--easeOutTheme);
+}
+a:hover .cm-block-cta-item__wrap {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 @media screen and (min-width: 1024px) {
   .cm-block-cta-item__wrap {

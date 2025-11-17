@@ -1,7 +1,6 @@
 import * as THREE from "three"
-import { GUI } from "lil-gui";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,11 +17,14 @@ export default class GlitchText {
         const settings = {
             params: {
                 // frequency: 15.0,
+                // speed: 1,
                 speed: 1,
                 scroll: 0.5,
                 gain: 1.0,
                 transition: 0.0,
-            }
+
+            },
+            isWhite: container.classList.contains('is-white'),
         };
         // ====== 基本セットアップ ======
         // const container = document.getElementById('canvas_pic');
@@ -48,6 +50,7 @@ export default class GlitchText {
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setPixelRatio(1);
 
         // 透過背景
         renderer.setClearColor(0xffffff, 0);
@@ -55,6 +58,8 @@ export default class GlitchText {
 
         // ====== テクスチャ読み込み ======
         const imgEl = container.querySelector(`img`);
+        let imgRect = imgEl.getBoundingClientRect();
+        console.log(imgRect)
         const loader = new THREE.TextureLoader();
         const texture = loader.load(imgEl.getAttribute('src'), () => {
             texture.wrapS = THREE.ClampToEdgeWrapping;
@@ -72,10 +77,14 @@ export default class GlitchText {
             // gain: { value: settings.params.gain },
             // transition: { value: settings.params.transition },
 
-            // resolution: { value: new THREE.Vector2(container.clientWidth, container.clientHeight) },
+            resolution: { value: new THREE.Vector2() },
             enterTime:  { value: 0 },
             delay:      { value: 0 },
+            lineColor:  { value: new THREE.Color(1,0.333,0.169) },
         };
+        if (settings.isWhite) {
+            uniforms.lineColor.value = new THREE.Color(1,1,1);
+        }
 
         const vertexShader = /* glsl */`
       uniform float u_time;
@@ -90,14 +99,15 @@ export default class GlitchText {
 
         const fragmentShader = /* glsl */`
     precision highp float;
+    varying vec2 vUv;
     uniform sampler2D u_texture;
     uniform vec2 resolution;
-    uniform vec2 offset;
     uniform float u_time;
     uniform float enterTime;
     // uniform float leaveTime;
     uniform float delay;
-    #define speed 0.75
+    uniform vec3 lineColor;
+    #define speed 0.85 // slitscanのスピード
 
     // out vec4 outColor;
 
@@ -115,10 +125,6 @@ export default class GlitchText {
         if (uv.x < 0. || uv.x > 1. || uv.y < 0. || uv.y > 1.) { return vec4(0); }
         // return texture(tex, uv);
         return clamp(texture(tex, uv), 0.0, 1.0);
-    }
-    
-    bool isOut(vec2 u) {
-        return (u.x < 0.0 || u.x > 1.0 || u.y < 0.0 || u.y > 1.0);
     }
 
     vec4 glitch(vec2 uv) {
@@ -143,7 +149,7 @@ export default class GlitchText {
         );
     }
     vec4 slitscan(vec2 uv) {
-        float t = max(u_time - delay, 0.) * speed;
+        float t = max(enterTime - delay, 0.) * speed;
         if (t <= 0.0) {
             return vec4(0);
         }
@@ -169,26 +175,22 @@ export default class GlitchText {
     
         // shifted = 1.0 → 変化なし（そのまま）
         // shifted = 0.0 → ずれている（白く）
-        color.rgb = mix(vec3(1.0, 0.333, 0.169), color.rgb, shifted);
+        // color.rgb = mix(vec3(1.0, 0.333, 0.169), color.rgb, shifted);
+        // color.rgb = mix(vec3(1.0, 1.0, 1.0), color.rgb, shifted);
+        color.rgb = mix(lineColor, color.rgb, shifted);
     
         return color;
     }
 
     void main (void) {
-        vec2 uv = (gl_FragCoord.xy - offset) / resolution;
-        // outColor = slitscan(uv);
+        vec2 uv = gl_FragCoord.xy / resolution;
         gl_FragColor = slitscan(uv);
-        // if (leaveTime > 0.) {
-        //     float t = clamp(leaveTime - 0.5, 0., 1.);
-        //     outColor = glitch(uv) * (1. - t);
-        // } else if (enterTime < 1.0) {
-        //     outColor = slitscan(uv);
+        
+        // if (enterTime < 1.0) {
+        //     gl_FragColor = slitscan(uv);
         // } else {
-        //     outColor = glitch(uv);
+        //     gl_FragColor = glitch(uv);
         // }
-        // float val = enterTime;
-        // val = clamp(val, 0.0, 1.0);
-        // outColor = vec4(val, 1.0 - val, 0.0, 1.0);
     }
     `;
 
@@ -212,16 +214,26 @@ export default class GlitchText {
 
         // ====== アニメーション ======
         const clock = new THREE.Clock();
+        let enterAt = 0;
+        let isEntered = false;
 
         function animate() {
+            const now = Date.now() / 1000;
+            if (!isEntered && isElementInView(container)) {
+                enterAt = now;
+                isEntered = true;
+            }
+
             const elapsed = clock.getElapsedTime();
             uniforms.u_time.value = elapsed * settings.params.speed;
+            uniforms.enterTime.value = isEntered ? (now - enterAt) : 0;
+            uniforms.resolution.value.x = imgRect.width;
+            uniforms.resolution.value.y = imgRect.height;
 
             renderer.render(scene, camera);
             requestAnimationFrame(animate);
         }
         animate();
-
 
         // ====== カメラ調整関数 ======
         function setCameraSize() {
@@ -233,14 +245,32 @@ export default class GlitchText {
             camera.updateProjectionMatrix();
         }
 
+        // ====== ScrollTrigger ======
+        function isElementInView(el) {
+            const rect = el.getBoundingClientRect();
+
+            const vw = window.innerWidth;
+            const vh = window.innerHeight;
+
+            return rect.right >= 0 &&
+                rect.bottom >= 0 &&
+                rect.left <= vw &&
+                rect.top <= vh;
+        }
+
         // ====== リサイズ対応 ======
         function onResize() {
             const w = container.clientWidth;
             const h = container.clientHeight;
             setCameraSize();
             renderer.setSize(w, h);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            // renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            imgRect = imgEl.getBoundingClientRect();
+            uniforms.resolution.value.x = imgRect.width;
+            uniforms.resolution.value.y = imgRect.height;
         }
         window.addEventListener('resize', onResize);
     }
+
 }

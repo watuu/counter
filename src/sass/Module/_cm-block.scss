@@ -48,6 +48,31 @@
 		}
 	}
 }
+.cm-block-header__glitch.is-company {
+	margin-right: calc(50% - 50vw);
+	img {
+		aspect-ratio: 874 / 163;
+		width: 210/390*100vw;
+	}
+	@include config.pc {
+		img {
+			width: 441/1440*100vw;
+		}
+	}
+}
+.cm-block-header__glitch.is-service {
+	margin-right: calc(50% - 50vw);
+	img {
+		aspect-ratio: 718 / 166;
+		width: 172/390*100vw;
+	}
+	@include config.pc {
+		img {
+			width: 374/1440*100vw;
+		}
+	}
+}
+
 .cm-block-header__ja {
 	font-size: 14/16+rem;
 	font-weight: 500;
