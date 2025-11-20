@@ -65,7 +65,7 @@ export default class GridViewer {
         this.controls.dampingFactor = 0.05;
 
         // GUI setup
-        this.initGUI();
+        // this.initGUI();
 
         // Load model
         this.loadModel(aspect);

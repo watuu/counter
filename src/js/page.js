@@ -113,11 +113,17 @@ export default class Page {
     cmBlockMediaYoutube() {
         const mySwiper = new Swiper ('.cm-block-media-youtube .swiper', {
             loop: true,
-            loopAdditionalSlides: 1,
+            loopAdditionalSlides: document.querySelectorAll('.cm-block-media-youtube .swiper-slide').length,
             slidesPerView: 1,
             spaceBetween: 16,
+            speed: 1000,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: '.cm-block-media-youtube__paginate',
+                clickable: true,
             },
             breakpoints: {
                 1024: {
@@ -260,12 +266,18 @@ export default class Page {
     pMediaPickup() {
         const mySwiper = new Swiper ('.p-media-pickup .swiper', {
             loop: true,
-            loopAdditionalSlides: 1,
+            loopAdditionalSlides: document.querySelectorAll('.p-media-pickup .swiper .swiper-slide').length,
             slidesPerView: 1,
             spaceBetween: 12,
             initialSlide: 1,
+            speed: 1000,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: '.p-media-pickup__paginate',
+                clickable: true,
             },
             breakpoints: {
                 1024: {

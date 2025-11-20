@@ -11,9 +11,9 @@
 	font-family: var(--ITCGaramondW01-BookCn);
 	font-size: 32/16+rem;
 	line-height: 1;
-	letter-spacing: 0.04em;
-	transform: translate3d(#{1em},0,0);
-	opacity: 0;
+	letter-spacing: -0.04em;
+	// transform: translate3d(#{1em},0,0);
+	// opacity: 0;
 	.is-visible & {
 		opacity: 1;
 		transition: 1s var(--easeOutTheme) 0.05s;
@@ -28,7 +28,7 @@
 	display: flex;
 	height: 16/16+rem;
 	background: linear-gradient(-270deg, #FF552B 37.02%, #FFF 100%);
-	width: 0;
+	width: 100%;
 	.is-visible & {
 		width: 100%;
 		transition: .25s var(--easeOutTheme);

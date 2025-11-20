@@ -552,6 +552,7 @@
 	height: 16/16+rem;
 }
 .c-btn-footer--contact {
+	letter-spacing: -0.1rem;
 	border-bottom: none;
 	font-size: 24/16+rem;
 	@include config.pc {

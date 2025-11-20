@@ -239,10 +239,6 @@
                                     <figure class="p-top-media-channel__profile"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/media-mori.webp"/>
                                         <figcaption>森</figcaption>
                                     </figure></a></li>
-                            <li><a href="https://x.com/muscle_masa" target="_blank" rel="noopener">
-                                    <figure class="p-top-media-channel__profile"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/media-kanazawa.webp"/>
-                                        <figcaption>金沢</figcaption>
-                                    </figure></a></li>
                         </ul>
                     </div>
                 </div>

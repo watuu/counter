@@ -3,12 +3,12 @@
         <div class="cm-block-header">
             <div class="l-container">
                 <div class="cm-block-header__title">
-                    <p class="cm-block-header__en">Case</p>
+                    <p class="cm-block-header__en">Voice</p>
                     <h1 class="cm-block-header__ja">お客様成功事例</h1>
                 </div>
                 <ul class="cm-block-header__bc">
                     <li><a href="<?= home_url() ?>/">TOP</a></li>
-                    <li><span>Case</span></li>
+                    <li><span>Voice</span></li>
                 </ul>
             </div>
         </div>

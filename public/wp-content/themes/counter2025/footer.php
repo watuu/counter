@@ -38,7 +38,7 @@
             <div class="l-footer-top">
                 <p class="l-footer-top__area"><span>SAITAMA</span><span>越谷</span></p>
                 <p>ローカルから最先端をつくる。</p>
-                <p><a class="c-btn-txt" href="<?= home_url() ?>/download/"><span class="js-clone">DOWNLOAD</span></a></p>
+                <p class="l-footer-top__download"><a class="c-btn-txt" href="<?= home_url() ?>/download/"><span class="js-clone">DOWNLOAD</span></a></p>
             </div>
             <p class="l-footer-type js-split-text js-visible-span">Turn the mainstream <br>upside down.</p>
             <div class="l-footer-nav">

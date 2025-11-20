@@ -518,6 +518,9 @@
 .cm-block-media-sns__links {
 	display: flex;
 	gap: 32/16+rem;
+	a {
+		font-family: var(--Helvetica);
+	}
 	@include config.pc {
 		gap: 64/16+rem;
 		font-size: 20/16+rem;

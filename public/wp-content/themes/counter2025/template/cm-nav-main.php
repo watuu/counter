@@ -22,36 +22,36 @@
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">SEO</h3>
                             <ul class="cm-nav-main-contents-item__list">
-                                <li><a href="<?= home_url() ?>/">SEOコンサルティング</a></li>
-                                <li><a href="<?= home_url() ?>/">被リンク獲得運用代行</a></li>
-                                <li><a href="<?= home_url() ?>/">AI-SEO記事制作/作成代行</a></li>
-                                <li><a href="<?= home_url() ?>/">データベース型サイトSEO支援</a></li>
-                                <li><a href="<?= home_url() ?>/">オウンドメディアコンサルティング</a></li>
+                                <li><a href="<?= HOME_URL . 'service/seo-consulting/' ?>">SEOコンサルティング</a></li>
+                                <li><a href="<?= HOME_URL . 'service/ai/' ?>">AI-SEO記事制作/作成代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/backlink/' ?>">被リンク獲得運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/database-seo/' ?>">データベース型サイトSEO支援</a></li>
+                                <li><a href="<?= HOME_URL . 'service/owned-media-consulting/' ?>">オウンドメディアコンサルティング</a></li>
                             </ul>
                         </div>
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">Web広告</h3>
                             <ul class="cm-nav-main-contents-item__list">
-                                <li><a href="<?= home_url() ?>/">Facebook広告運用代行</a></li>
-                                <li><a href="<?= home_url() ?>/">TikTok広告運用代行</a></li>
-                                <li><a href="<?= home_url() ?>/">Instagram広告運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/facebook/' ?>">Facebook広告運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/tiktok/' ?>">TikTok広告運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/instagram/' ?>">Instagram広告運用代行</a></li>
                             </ul>
                         </div>
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">CRM/MA運用</h3>
                             <ul class="cm-nav-main-contents-item__list">
-                                <li><a href="<?= home_url() ?>/">Hubspot導入支援/運用代行</a></li>
-                                <li><a href="<?= home_url() ?>/">CRM・SFA運用代行</a></li>
-                                <li><a href="<?= home_url() ?>/">Salesforce運用代行</a></li>
-                                <li><a href="<?= home_url() ?>/">MA運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/crm-sfa/' ?>">CRM・SFA運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/salesforce/' ?>">Salesforce運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/hubspot/' ?>">Hubspot導入支援/運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/ma/' ?>">MA運用代行</a></li>
                             </ul>
                         </div>
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">コンテンツ制作</h3>
                             <ul class="cm-nav-main-contents-item__list">
-                                <li><a href="<?= home_url() ?>/">ホワイトペーパー制作/作成代行</a></li>
-                                <li><a href="<?= home_url() ?>/">インタビュー/取材記事制作代行</a></li>
-                                <li><a href="<?= home_url() ?>/">メルマガ制作配信代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/interview/' ?>">インタビュー/取材記事制作代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/white-paper/' ?>">ホワイトペーパー制作/作成代行</a></li>
+                                <li><a href="<?= HOME_URL . 'service/mailmagazine/' ?>">メルマガ制作配信代行</a></li>
                             </ul>
                         </div>
                     </div>
@@ -62,22 +62,25 @@
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">Web制作</h3>
                             <ul class="cm-nav-main-contents-item__list">
-                                <li><a href="<?= home_url() ?>/">グラフィックデザイン</a></li>
-                                <li><a href="<?= home_url() ?>/">オウンドメディア制作・構築</a></li>
-                                <li><a href="<?= home_url() ?>/">ロゴ・VI制作</a></li>
+                                <li><a href="<?= HOME_URL . 'service/btob-website/' ?>">BtoBサイト制作</a></li>
+                                <li><a href="<?= HOME_URL . 'service/ownedmedia/' ?>">オウンドメディア制作・構築</a></li>
+                                <li><a href="<?= home_url() ?>" class="is-disabled">コーポレートサイト制作</a></li>
+                                <li><a href="<?= home_url() ?>" class="is-disabled">LP制作</a></li>
+                                <li><a href="<?= HOME_URL . 'service/maintenance/' ?>">Webサイトの保守・運用代行</a></li>
+                                <li><a href="<?= HOME_URL . 'choice' ?>">SMB向けWebサイト制作サービスChoice</a></li>
                             </ul>
                         </div>
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">グラフィックデザイン</h3>
                             <ul class="cm-nav-main-contents-item__list">
-                                <li><a href="<?= home_url() ?>/">ロゴ・VI制作</a></li>
+                                <li><a href="<?= home_url() ?>" class="is-disabled">ロゴ・VI制作</a></li>
                             </ul>
                         </div>
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">映像制作</h3>
                             <ul class="cm-nav-main-contents-item__list">
-                                <li><a href="<?= home_url() ?>/">動画制作</a></li>
-                                <li><a href="<?= home_url() ?>/">採用動画制作</a></li>
+                                <li><a href="<?= home_url() ?>" class="is-disabled">動画制作</a></li>
+                                <li><a href="<?= home_url() ?>" class="is-disabled">採用動画制作</a></li>
                             </ul>
                         </div>
                     </div>
@@ -88,9 +91,8 @@
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">メディア運営</h3>
                             <ul class="cm-nav-main-contents-item__list">
-                                <li><a href="<?= home_url() ?>/">SAITAMAZINE</a></li>
-                                <li><a href="<?= home_url() ?>/">KOSHIGAYAZINE</a></li>
-                                <li><a href="<?= home_url() ?>/">埼玉ベース</a></li>
+                                <li><a href="https://postcitykoshigaya.jp/" target="_blank" rel="noopener">KOSHIGAYAZINE</a></li>
+                                <li><a href="https://iro-iro-blue.com/" target="_blank" rel="noopener">埼玉ベース</a></li>
                             </ul>
                         </div>
                     </div>

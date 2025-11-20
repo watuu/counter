@@ -102,7 +102,7 @@
                     <div class="c-card-creative c-card-creative--single"></div>
                 <?php endif; ?>
             </div>
-            <div class="p-creative-single__index"><a class="c-btn-txt" href="<?= home_url() ?>/creative-case/"><span class="js-clone">Creative Work</span></a></div>
+            <div class="p-creative-single__index"><a class="c-btn-txt" href="<?= home_url() ?>/creative-case/"><span class="js-clone">Casestudy Index</span></a></div>
             <?php wp_reset_query(); ?>
         </div>
     </div>
