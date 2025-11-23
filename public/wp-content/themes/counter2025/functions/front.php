@@ -26,6 +26,13 @@ function front_load__pre_get_posts($query) {
         $query->set('posts_per_page', THEME_COMMON_ARCHIVE_NUM ?: get_option('posts_per_page'));
         // $query->set('nopaging', 1);
     }
+    if ( $query->is_post_type_archive('creative-case')) {
+        // ピックアップ除外
+        $pickup_id = get_field('ピックアップ制作実績', 'option');
+        if ( $pickup_id ) {
+            $query->set( 'post__not_in', $pickup_id );
+        }
+    }
 }
 add_action('pre_get_posts', 'front_load__pre_get_posts');
 

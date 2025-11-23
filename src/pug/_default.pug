@@ -68,15 +68,16 @@ body#body(class=pageClass data-src=path)
                     li
                         a(href=path+"creative-case/").c-btn-txt
                             span.js-clone Casestudy
-                    li
-                        a(href=path+"case/").c-btn-txt
-                            span.js-clone Voice
-                    li
-                        a(href=path+"counter-media/").c-btn-txt
-                            span.js-clone Blog
-                    li
-                        a(href=path+"news/").c-btn-txt
-                            span.js-clone News
+                    //-
+                        li
+                            a(href=path+"case/").c-btn-txt
+                                span.js-clone Voice
+                        li
+                            a(href=path+"counter-media/").c-btn-txt
+                                span.js-clone Blog
+                        li
+                            a(href=path+"news/").c-btn-txt
+                                span.js-clone News
 
 
             button.l-header-menu.c-btn-menu(aria-label="メニューを開く")
@@ -225,8 +226,19 @@ body#body(class=pageClass data-src=path)
                             li
                                 a(href="https://x.com/webkirin" target="_blank" rel="noopener") X
 
-                        figure.l-footer-bottom__pic
-                            img(src=img+"footer-pic.webp" alt="")
+                        .l-footer-bottom__pic
+                            .swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        figure
+                                            img(src=img+"footer-pic.webp" alt="")
+                                    .swiper-slide
+                                        figure
+                                            img(src=img+"16x9.webp" alt="")
+                                    .swiper-slide
+                                        figure
+                                            img(src=img+"footer-pic.webp" alt="")
+
 
     script(src= path + "assets/js/app.js")
     = "\n"

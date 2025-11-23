@@ -67,7 +67,7 @@
                                 <li><a href="<?= home_url() ?>" class="is-disabled">コーポレートサイト制作</a></li>
                                 <li><a href="<?= home_url() ?>" class="is-disabled">LP制作</a></li>
                                 <li><a href="<?= HOME_URL . 'service/maintenance/' ?>">Webサイトの保守・運用代行</a></li>
-                                <li><a href="<?= HOME_URL . 'choice' ?>">SMB向けWebサイト制作サービスChoice</a></li>
+                                <li><a href="https://counter-digital.jp/choice/" target="_blank" rel="noopener">SMB向けWebサイト制作サービスChoice</a></li>
                             </ul>
                         </div>
                         <div class="cm-nav-main-contents-item__category">

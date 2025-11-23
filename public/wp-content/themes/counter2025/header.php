@@ -21,6 +21,9 @@
     if ( is_parent_slug() == 'service' && (is_page('thanks') )) {
         $bodyClass .= 'thanks';
     }
+    if ( is_parent_slug() == 'contact' ) {
+        $bodyClass .= 'page-contact';
+    }
     ?>
 <?php wp_head(); ?>
 </head>

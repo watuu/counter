@@ -3,6 +3,10 @@
     <?php
     $eyeCatch = esc_url(get_the_post_thumbnail_url());
     $client = get_field('case-client');
+    $page = [
+        '詳細情報' => get_field('実績情報_詳細情報'),
+        'URL' => get_field('実績情報_url'),
+    ];
 //    $eyeCatch = $eyeCatch? $eyeCatch:
 //        sprintf('%s/assets/img/3x2.webp', get_stylesheet_directory_uri());
     ?>
@@ -26,6 +30,21 @@
                     <div class="cm-post cm-post--creative">
                         <?php the_content(); ?>
                     </div>
+                    <?php if ($page['詳細情報']): ?>
+                        <div class="p-creative-single__info">
+                            <div class="cm-post-info">
+                                <dl class="cm-post-info__data">
+                                    <?php foreach ($page['詳細情報'] as $info): ?>
+                                        <dt><?= $info['項目'] ?></dt>
+                                        <dd><?= nl2br($info['詳細']) ?></dd>
+                                    <?php endforeach; ?>
+                                </dl>
+                                <?php if ($page['URL']): ?>
+                                    <p class="cm-post-info__link"><a class="c-link-arrow" href="<?= $page['URL'] ?>" target="_blank" rel="noopener"><span class="c-link-arrow__txt">Launch Site</span><i class="c-link-arrow__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php

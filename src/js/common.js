@@ -412,6 +412,9 @@ export default class common {
         if (domList.length) {
             domList.forEach(el => {
                 const spans = el.querySelectorAll('span');
+                const delay = parseFloat(el.getAttribute('data-delay')) || 0;
+                const each = parseFloat(el.getAttribute('data-each')) || 0.015;
+                const shift = el.getAttribute('data-shift') || '20%';
 
                 gsap.set(spans, { opacity: 0, y: 10 });
                 gsap.set(el, { opacity: 1});
@@ -419,12 +422,13 @@ export default class common {
                 gsap.to(spans, {
                     scrollTrigger: {
                         trigger: el,
-                        start: 'top bottom-=20%',
+                        start: `top bottom-=${shift}`,
                     },
-                    delay: 1.5,
+                    delay: delay,
                     opacity: 1,
+                    duration: 0.01,
                     stagger: {
-                        each: 0.01,
+                        each: each,
                         from: "random",
                     },
                     ease: 'power3.out',

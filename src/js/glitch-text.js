@@ -47,10 +47,10 @@ export default class GlitchText {
         camera.lookAt(0, 0, 0);
 
         // レンダラー
+        const dpr = Math.min(window.devicePixelRatio, 2);
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setPixelRatio(dpr);
         renderer.setSize(container.clientWidth, container.clientHeight);
-        renderer.setPixelRatio(1);
 
         // 透過背景
         renderer.setClearColor(0xffffff, 0);
@@ -59,7 +59,7 @@ export default class GlitchText {
         // ====== テクスチャ読み込み ======
         const imgEl = container.querySelector(`img`);
         let imgRect = imgEl.getBoundingClientRect();
-        console.log(imgRect)
+        // console.log(imgRect)
         const loader = new THREE.TextureLoader();
         const texture = loader.load(imgEl.getAttribute('src'), () => {
             texture.wrapS = THREE.ClampToEdgeWrapping;
@@ -78,6 +78,7 @@ export default class GlitchText {
             // transition: { value: settings.params.transition },
 
             resolution: { value: new THREE.Vector2() },
+            dpr:        { value: dpr },
             enterTime:  { value: 0 },
             delay:      { value: 0 },
             lineColor:  { value: new THREE.Color(1,0.333,0.169) },
@@ -108,7 +109,8 @@ export default class GlitchText {
     uniform float delay;
     uniform vec3 lineColor;
     #define speed 0.85 // slitscanのスピード
-
+    uniform float dpr;
+    
     // out vec4 outColor;
 
     float nn(float y, float t) {
@@ -183,7 +185,8 @@ export default class GlitchText {
     }
 
     void main (void) {
-        vec2 uv = gl_FragCoord.xy / resolution;
+        vec2 frag = gl_FragCoord.xy / dpr;
+        vec2 uv = frag / resolution;
         gl_FragColor = slitscan(uv);
         
         // if (enterTime < 1.0) {

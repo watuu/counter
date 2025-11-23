@@ -13,18 +13,39 @@
             </div>
         </div>
         <div class="p-creative__pickup">
-            <div class="c-card-creative c-card-creative--lg"><a class="c-card-creative__link" href="<?= home_url() ?>/single-creative/">
-                    <figure class="c-card-creative__pic"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/16x9.webp" alt=""/></figure>
-                    <div class="c-card-creative__wrap">
-                        <h3 class="c-card-creative__title">世界へボカン様 BtoBコーポレートサイト</h3>
-                        <ul class="c-card-creative__category">
-                            <li>世界へボカン様</li>
-                            <li>BtoBサービスサイト</li>
-                        </ul>
-                        <p class="c-card-creative__excerpt">世界へボカン株式会社様のロゴデザイン、サイトリニューアル、撮影をCOUNTERで制作しました。「日本の魅力を世界へ届ける。」を体現するデザイン、そしてSEOに強いページを作らせていただきました。</p><i class="c-card-creative__arrow">
-                            <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
-                    </div></a></div>
-
+            <?php
+            $pickup_creatives = get_field('ピックアップ制作実績', 'option');
+            if ($pickup_creatives):
+                $args = [
+                    'post_type' => 'creative-case',
+                    'paged' => 1,
+                    'post__in' => $pickup_creatives,
+                ];
+                $wp_query = new WP_Query($args);
+                if (have_posts()) : while (have_posts()) : the_post();
+                    $terms = get_the_terms(null, 'creative-case-category');
+                    $eyeCatch = esc_url(get_the_post_thumbnail_url());
+                    $eyeCatch = $eyeCatch? $eyeCatch:
+                        sprintf('%s/assets/img/16x9.webp', get_stylesheet_directory_uri());
+                ?>
+                <div class="c-card-creative c-card-creative--lg">
+                    <a class="c-card-creative__link" href="<?= esc_url(get_the_permalink()) ?>">
+                        <figure class="c-card-creative__pic"><img src="<?= $eyeCatch ?>" alt="<?= get_the_title() ?>" loading="lazy"/></figure>
+                        <div class="c-card-creative__wrap">
+                            <h3 class="c-card-creative__title"><?= get_the_title() ?></h3>
+                            <ul class="c-card-creative__category">
+                                <?php
+                                foreach ($terms as $term) {
+                                    echo sprintf('<li>%s</li>', $term->name);
+                                }
+                                ?>
+                            </ul>
+                            <p class="c-card-creative__excerpt"><?= get_excerpt_from_article(get_the_content(), 100); ?></p>
+                            <i class="c-card-creative__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
+                        </div>
+                    </a>
+                </div>
+            <?php endwhile; endif;  endif; wp_reset_query(); ?>
             <div class="l-container">
                 <div class="p-creative__list">
                     <?php if (have_posts()): ?>

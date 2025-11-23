@@ -63,7 +63,29 @@
                     <li><a href="<?= home_url() ?>/counter-media/">COUNTER MEDIA</a></li>
                     <li><a href="https://x.com/webkirin" target="_blank" rel="noopener">X</a></li>
                 </ul>
-                <figure class="l-footer-bottom__pic"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/footer-pic.webp" alt=""/></figure>
+                <?php
+                $pickup_creatives = get_field('ピックアップ制作実績', 'option');
+                if ($pickup_creatives):
+                ?>
+                <div class="l-footer-bottom__pic">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <?php foreach ($pickup_creatives as $creative_post_id): ?>
+                                <?php
+                                $eyeCatch = esc_url(get_the_post_thumbnail_url($creative_post_id));
+                                $eyeCatch = $eyeCatch? $eyeCatch:
+                                    sprintf('%s/assets/img/16x9.webp', get_stylesheet_directory_uri());
+                                ?>
+                                <div class="swiper-slide">
+                                    <a href="<?= get_the_permalink($creative_post_id) ?>">
+                                        <figure><img src="<?= $eyeCatch ?>" alt="<?= get_the_title($creative_post_id) ?>"/></figure>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

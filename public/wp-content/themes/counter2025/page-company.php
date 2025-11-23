@@ -178,6 +178,10 @@
                                 <h3 class="p-company-statement-item-value__title">強く、前向きであり続ける</h3>
                             </div>
                             <div class="p-company-statement-item-value">
+                                <p class="p-company-statement-item-value__en">Well-Being Fuels Excellence</p>
+                                <h3 class="p-company-statement-item-value__title">成果のために、個々の幸福を高める</h3>
+                            </div>
+                            <div class="p-company-statement-item-value">
                                 <p class="p-company-statement-item-value__en">Move Faster</p>
                                 <h3 class="p-company-statement-item-value__title">誰よりも早く動く</h3>
                             </div>
@@ -196,7 +200,11 @@
                         </div>
                     </div>
                     <div class="p-company-member-profile">
-                        <figure class="p-company-member-profile__pic"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/3x4.webp"/></figure>
+                        <figure class="p-company-member-profile__pic">
+                            <video preload="metadata" width="100%" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline">
+                                <source src="<?= get_stylesheet_directory_uri() ?>/assets/img/media-miyata.mp4" type="video/mp4"/>
+                            </video>
+                        </figure>
                         <div class="p-company-member-profile__head">
                             <p class="p-company-member-profile__job">代表取締役 CEO</p>
                             <p class="p-company-member-profile__name">宮田 和也</p>
@@ -214,6 +222,13 @@
                             $member['name'],    
                         );
                     } ?>
+                    <div class="c-btn-member c-btn-member--empty">
+                        <svg width="328" height="61" viewBox="0 0 328 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="327" height="60" stroke="#FF552B"/>
+                            <rect width="332.849" height="0.997162" transform="matrix(0.984384 -0.176033 0.0415703 0.999136 0 59.0923)" fill="#FF552B"/>
+                            <rect width="332.849" height="0.997162" transform="matrix(0.984384 0.176033 0.0415703 -0.999136 0 0.996338)" fill="#FF552B"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>

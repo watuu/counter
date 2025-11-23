@@ -88,8 +88,12 @@ block content
                                 p.p-company-statement-item-value__en Stay Resilient and Positive
                                 h3.p-company-statement-item-value__title 強く、前向きであり続ける
                             .p-company-statement-item-value
+                                p.p-company-statement-item-value__en Well-Being Fuels Excellence
+                                h3.p-company-statement-item-value__title 成果のために、個々の幸福を高める
+                            .p-company-statement-item-value
                                 p.p-company-statement-item-value__en Move Faster
                                 h3.p-company-statement-item-value__title 誰よりも早く動く
+
 
 
         section.p-company-member
@@ -102,7 +106,8 @@ block content
                             h2.c-heading-section__title (Board Member)
                     .p-company-member-profile
                         figure.p-company-member-profile__pic
-                            img(src=img+"3x4.webp")
+                            video(controls=false, preload='metadata', width='100%' autoplay=true muted=true loop=true playsinline=true)
+                                source(src=img + 'media-miyata.mp4', type='video/mp4')
                         .p-company-member-profile__head
                             p.p-company-member-profile__job 代表取締役 CEO
                             p.p-company-member-profile__name 宮田 和也
@@ -139,6 +144,12 @@ block content
                             span.c-btn-member__job #{member.job}
                             span.c-btn-member__name #{member.name}
                             i.c-btn-member__status
+                    .c-btn-member.c-btn-member--empty
+                        <svg width="328" height="61" viewBox="0 0 328 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="327" height="60" stroke="#FF552B"/>
+                        <rect width="332.849" height="0.997162" transform="matrix(0.984384 -0.176033 0.0415703 0.999136 0 59.0923)" fill="#FF552B"/>
+                        <rect width="332.849" height="0.997162" transform="matrix(0.984384 0.176033 0.0415703 -0.999136 0 0.996338)" fill="#FF552B"/>
+                        </svg>
         section.p-company-info
             .l-container
                 .c-heading-section.js-visible

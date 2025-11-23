@@ -40,7 +40,7 @@ block content
                     p
                         span
                             | INNOVATION.
-                p.p-top-mv__en.js-split-text.js-visible-span.js-visible
+                p.p-top-mv__en.js-split-text.js-visible-span.js-visible(data-delay=1.5)
                     | We utilize our digital content and marketing expertise to overcome marketing challenges companies face.
                     //-
                         |The digital content we have
@@ -48,7 +48,7 @@ block content
                         | Utilizing marketing knowledge,
                         br
                         | We aim to solve corporate marketing ishelvetica neuees.
-                p.p-top-mv__ja.js-visible
+                p.p-top-mv__ja.js-split-text.js-visible-span.js-visible(data-delay=1.5 data-each=0.05 data-shift='0%')
                     | ローカルから最先端をつくる。
         // promise
         section.p-top-promise
@@ -184,7 +184,7 @@ block content
             .l-container
                 .p-top-creative__head
                     .c-heading-section.js-visible.js-visible
-                        h2.c-heading-section__title (Creative Work)
+                        h2.c-heading-section__title.js-split-text.js-visible-span(data-each=0.05) (Creative Work)
                         span.c-heading-section__line
                 .p-top-creative__figure
                     figure
@@ -239,7 +239,7 @@ block content
             .l-container
                 .p-top-partnership__head
                     .c-heading-section.js-visible
-                        h2.c-heading-section__title (Partnership)
+                        h2.c-heading-section__title.js-split-text.js-visible-span(data-each=0.05) (Partnership)
                         span.c-heading-section__line
                 .p-top-partnership__body.js-visible.u-mask-block
                     .p-top-partnership__blocks
@@ -310,7 +310,7 @@ block content
             .l-container
                 .p-top-voice__head
                     .c-heading-section.js-visible
-                        h2.c-heading-section__title (Voice)
+                        h2.c-heading-section__title.js-split-text.js-visible-span(data-each=0.05) (Voice)
                         span.c-heading-section__line
                 .p-top-voice__list.js-visible.u-mask-block
                     - for (var x = 1; x <= 3; x++)
@@ -343,12 +343,12 @@ block content
                         <path d="M88 88C88 136.601 48.6011 176 -7.6932e-06 176L0 0C48.6011 2.12442e-06 88 39.3989 88 88Z" fill="#FF552B"/>
                         <path d="M176 88C176 136.601 136.601 176 88 176L88 0C136.601 2.12442e-06 176 39.3989 176 88Z" fill="#FF552B"/>
                         </svg>
-                    h2.p-top-media__title (Counter Media)
-                    p.p-top-media__desc
+                    h2.p-top-media__title.js-split-text.js-visible-span(data-each=0.05) (Counter Media)
+                    p.p-top-media__desc.js-split-text.js-visible-span
                         | COUNTERのデジタルナレッジをシェアするメディアです。
                         br
                         | マーケティングからクリエイティブに関することまで発信しています。
-                .p-top-media__wrap
+                .p-top-media__wrap.js-visible.u-mask-block
                     .p-top-media-channel
                         picture.p-top-media-channel__bg
                             source(srcset=img + "p-top-media-channel-bg-sp.svg" media="(max-width: 1023px)")

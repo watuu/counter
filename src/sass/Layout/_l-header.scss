@@ -44,10 +44,10 @@
 	background: rgba(255, 255, 255, 0.70);
 	backdrop-filter: blur(25/16+rem);
 	top: 35/16+rem;
-	left: calc(50% - #{140/16+rem});
+	left: calc(50% - #{316/2/16+rem});
 	ul {
 		display: flex;
-		gap: 12/16+rem;
+		gap: 30/16+rem;
 		padding: 8/16+rem 30/16+rem 8/16+rem;
 	}
 	a {

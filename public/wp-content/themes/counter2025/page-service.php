@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="l-container">
-            <div class="p-service__lead">デジタルマーケティングを起点にした、オンラインでの売り上げと認知獲得に向けた戦略を立案。<br class="sp">実装までを一気通貫に行います。</div>
+            <div class="p-service__lead">デジタルマーケティングを起点にした、オンラインでの売り上げと<br class="pc">認知獲得に向けた戦略を立案。<br class="sp">実装までを一気通貫に行います。</div>
             <div class="p-service__wrap">
                 <div class="p-service-item">
                     <div class="p-service-item__head">

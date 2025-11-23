@@ -163,7 +163,10 @@ body figure {
 		width: 352/16+rem;
 	}
 }
-.cm-post-lead__info {
+.cm-post-info {
+	color: var(--color-assort);
+}
+.cm-post-info__data {
 	display: grid;
 	grid-template-columns: 54/16+rem 1fr;
 	gap: 12/16+rem 12/16+rem;
@@ -173,12 +176,12 @@ body figure {
 		font-family: var(--Helvetica-Md);
 		letter-spacing: 0.04em;
 		font-size: 12/16+rem;
+		position: relative;
+		top: 0.2em;
 	}
-	@include config.pc {
-
-	}
+	@include config.pc {}
 }
-.cm-post-lead__link {
+.cm-post-info__link {
 	margin-top: var(--padding-block-sm);
 	text-align: right;
 	font-size: 14/16+rem;

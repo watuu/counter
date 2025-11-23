@@ -128,8 +128,8 @@ get_header();
             <p class="content__heading"><span>AI-SEO記事制作/作成代行</span>なら<br>お気軽にご相談ください!!</p>
             <p class="content__text">検索エンジンのアルゴリズム解析の<br class="utils-block-hidden-pc">プロが監修する検索エンジンに評価される<br>AI記事作成が強みです。<br class="utils-block-hidden-pc">AI-SEO記事制作/作成代行は<br class="utils-block-hidden-pc">COUNTER(カウンター)へご相談ください。</p>
             <div class="content__objects">
-              <div class="content__object content__object--001"><img src="<?php echo IMAGE_DIR; ?>03_service/ai/elm-02.png" alt=""></div>
-              <div class="content__object content__object--002"><img src="<?php echo IMAGE_DIR; ?>03_service/ai/elm-03.png" alt=""></div>
+              <div class="content__object content__object--001"><img src="<?php echo IMAGE_DIR; ?>03_service/service-cta-bg1.webp" alt=""></div>
+              <div class="content__object content__object--002"><img src="<?php echo IMAGE_DIR; ?>03_service/service-cta-bg2.webp" alt=""></div>
             </div>
             <ul class="content__list">
               <li class="content__item"><a class="service-ai-btn service-ai-btn--orange service-ai-btn--white" href="/download/document-ai/">無料で資料ダウンロード</a></li>
@@ -278,8 +278,8 @@ get_header();
             <p class="content__heading"><span>AI-SEO記事制作/作成代行</span>なら<br>お気軽にご相談ください!!</p>
             <p class="content__text">検索エンジンのアルゴリズム解析の<br class="utils-block-hidden-pc">プロが監修する検索エンジンに評価される<br>AI記事作成が強みです。<br class="utils-block-hidden-pc">AI-SEO記事制作/作成代行は<br class="utils-block-hidden-pc">COUNTER(カウンター)へご相談ください。</p>
             <div class="content__objects">
-              <div class="content__object content__object--001"><img src="<?php echo IMAGE_DIR; ?>03_service/ai/elm-02.png" alt=""></div>
-              <div class="content__object content__object--002"><img src="<?php echo IMAGE_DIR; ?>03_service/ai/elm-03.png" alt=""></div>
+              <div class="content__object content__object--001"><img src="<?php echo IMAGE_DIR; ?>03_service/service-cta-bg1.webp" alt=""></div>
+              <div class="content__object content__object--002"><img src="<?php echo IMAGE_DIR; ?>03_service/service-cta-bg2.webp" alt=""></div>
             </div>
             <ul class="content__list">
               <li class="content__item"><a class="service-ai-btn service-ai-btn--orange service-ai-btn--white" href="/download/document-ai/">無料で資料ダウンロード</a></li>
@@ -463,8 +463,8 @@ get_header();
             <p class="content__heading"><span>AI-SEO記事制作/作成代行</span>なら<br>お気軽にご相談ください!!</p>
             <p class="content__text">検索エンジンのアルゴリズム解析の<br class="utils-block-hidden-pc">プロが監修する検索エンジンに評価される<br>AI記事作成が強みです。<br class="utils-block-hidden-pc">AI-SEO記事制作/作成代行は<br class="utils-block-hidden-pc">COUNTER(カウンター)へご相談ください。</p>
             <div class="content__objects">
-              <div class="content__object content__object--001"><img src="<?php echo IMAGE_DIR; ?>03_service/ai/elm-02.png" alt=""></div>
-              <div class="content__object content__object--002"><img src="<?php echo IMAGE_DIR; ?>03_service/ai/elm-03.png" alt=""></div>
+              <div class="content__object content__object--001"><img src="<?php echo IMAGE_DIR; ?>03_service/service-cta-bg1.webp" alt=""></div>
+              <div class="content__object content__object--002"><img src="<?php echo IMAGE_DIR; ?>03_service/service-cta-bg2.webp" alt=""></div>
             </div>
             <ul class="content__list">
               <li class="content__item"><a class="service-ai-btn service-ai-btn--orange service-ai-btn--white" href="/download/document-ai/">無料で資料ダウンロード</a></li>

@@ -91,7 +91,7 @@ $creative_work_links = [
     ],
     [
         'name' => 'SMB向けWebサイト制作サービスChoice',
-        'url' => HOME_URL . 'choice','target' => '_blank'
+        'url' => 'https://counter-digital.jp/choice/','target' => '_blank'
     ],
 ];
 
@@ -131,7 +131,7 @@ $creative_work_links2 = [
     ['name' => 'コーポレートサイト制作', 'url' => ''],
     ['name' => 'LP制作', 'url' => ''],
     ['name' => 'Webサイト保守・運用代行サービス', 'url' => HOME_URL . 'service/maintenance/'],
-    ['name' => 'SMB向けWebサイト制作サービスChoice', 'url' => HOME_URL . 'choice', 'target' => '_blank'],
+    ['name' => 'SMB向けWebサイト制作サービスChoice', 'url' => 'https://counter-digital.jp/choice/', 'target' => '_blank'],
   ],
   'グラフィックデザイン' => [
     ['name' => 'ロゴ・VI制作', 'url' => ''],

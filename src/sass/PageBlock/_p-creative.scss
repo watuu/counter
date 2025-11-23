@@ -90,11 +90,30 @@
 }
 .p-creative-single__body {
 	padding-top: var(--padding-block);
+	display: flex;
+	flex-direction: column;
 	@include config.pc {
 		position: relative;
+		flex-direction: row;
+		justify-content: space-between;
 		z-index: 10;
-		width: 872/16+rem;
 		margin-left: 64/16+rem;
+		margin-right: 64/16+rem;
+		.cm-post--creative {
+			max-width: 840/16+rem;
+		}
+	}
+}
+.p-creative-single__info {
+	margin-top: var(--padding-block);
+	@include config.pc {
+		width: 332/16+rem;
+		margin-top: 36/16+rem;
+		> div {
+			position: sticky;
+			top: var(--header-height);
+			padding-bottom: var(--header-height);
+		}
 	}
 }
 .p-creative-single__page {

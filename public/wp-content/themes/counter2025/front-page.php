@@ -17,8 +17,8 @@
                 <p><span>MODELS<span class="_from"> FROM</span><span class="_local">LOCAL</span></span></p>
                 <p><span>INNOVATION.</span></p>
             </div>
-            <p class="p-top-mv__en js-split-text js-visible-span js-visible">We utilize our digital content and marketing expertise to overcome marketing challenges companies face.</p>
-            <p class="p-top-mv__ja js-visible">ローカルから最先端をつくる。</p>
+            <p class="p-top-mv__en js-split-text js-visible-span js-visible" data-delay="1.5">We utilize our digital content and marketing expertise to overcome marketing challenges companies face.</p>
+            <p class="p-top-mv__ja js-split-text js-visible-span js-visible" data-delay="1.5" data-each="0.05" data-shift="0%">ローカルから最先端をつくる。</p>
         </div>
     </section>
     <!-- promise-->
@@ -102,7 +102,7 @@
         <div class="l-container">
             <div class="p-top-creative__head">
                 <div class="c-heading-section js-visible js-visible">
-                    <h2 class="c-heading-section__title">(Creative Work)</h2><span class="c-heading-section__line"></span>
+                    <h2 class="c-heading-section__title js-split-text js-visible-span" data-each="0.05">(Creative Work)</h2><span class="c-heading-section__line"></span>
                 </div>
             </div>
             <div class="p-top-creative__figure">
@@ -142,7 +142,7 @@
         <div class="l-container">
             <div class="p-top-partnership__head">
                 <div class="c-heading-section js-visible">
-                    <h2 class="c-heading-section__title">(Partnership)</h2><span class="c-heading-section__line"></span>
+                    <h2 class="c-heading-section__title js-split-text js-visible-span" data-each="0.05">(Partnership)</h2><span class="c-heading-section__line"></span>
                 </div>
             </div>
             <div class="p-top-partnership__body js-visible u-mask-block">
@@ -189,7 +189,7 @@
         <div class="l-container">
             <div class="p-top-voice__head">
                 <div class="c-heading-section js-visible">
-                    <h2 class="c-heading-section__title">(Voice)</h2><span class="c-heading-section__line"></span>
+                    <h2 class="c-heading-section__title js-split-text js-visible-span" data-each="0.05">(Voice)</h2><span class="c-heading-section__line"></span>
                 </div>
             </div>
             <div class="p-top-voice__list js-visible u-mask-block">
@@ -216,10 +216,10 @@
                         <path d="M88 88C88 136.601 48.6011 176 -7.6932e-06 176L0 0C48.6011 2.12442e-06 88 39.3989 88 88Z" fill="#FF552B"/>
                         <path d="M176 88C176 136.601 136.601 176 88 176L88 0C136.601 2.12442e-06 176 39.3989 176 88Z" fill="#FF552B"/></svg>
                 </figure>
-                <h2 class="p-top-media__title">(Counter Media)</h2>
-                <p class="p-top-media__desc">COUNTERのデジタルナレッジをシェアするメディアです。<br/>マーケティングからクリエイティブに関することまで発信しています。</p>
+                <h2 class="p-top-media__title js-split-text js-visible-span" data-each="0.05">(Counter Media)</h2>
+                <p class="p-top-media__desc js-split-text js-visible-span">COUNTERのデジタルナレッジをシェアするメディアです。<br/>マーケティングからクリエイティブに関することまで発信しています。</p>
             </div>
-            <div class="p-top-media__wrap">
+            <div class="p-top-media__wrap js-visible u-mask-block">
                 <div class="p-top-media-channel">
                     <picture class="p-top-media-channel__bg">
                         <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-media-channel-bg-sp.svg" media="(max-width: 1023px)"/><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-media-channel-bg.svg"/>

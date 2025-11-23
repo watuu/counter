@@ -1,4 +1,5 @@
 @use '../Base/config' as config;
+@use '../Utility/u-utility' as utility;
 /*----------------------------------------------------
 	フッター
 ----------------------------------------------------*/
@@ -121,6 +122,22 @@
 }
 .l-footer-bottom__pic {
 	margin-top: 10/16+rem;
+	width: 360/16+rem;
+	figure {
+		@extend .u-color-blend;
+	}
+	img {
+		width: 100%;
+		aspect-ratio: 480 / 300;
+		object-fit: cover;
+	}
+	.swiper-slide {
+		opacity: 0;
+	}
+	.swiper-slide-active {
+		opacity: 1;
+		transition: var(--easeDuration) var(--easeOutTheme);
+	}
 	@include config.pc {
 		width: 417/16+rem;
 	}

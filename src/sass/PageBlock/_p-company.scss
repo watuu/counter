@@ -308,6 +308,7 @@
 	}
 	@include config.pc {
 		top: 140/16+rem;
+		left: -654/16+rem;
 		img {
 			height: 350/16+rem;
 		}
@@ -338,13 +339,17 @@
 		;
 		grid-template-columns: 264/16+rem 1fr;
 		grid-template-rows: auto 1fr;
-		gap: 12/16+rem 26/16+rem;
+		gap: 12/16+rem 146/16+rem;
 	}
 }
 .p-company-member-profile__pic {
 	grid-area: pic;
 	align-self: flex-start;
-	@extend .u-color-blend;
+	video {
+		width: 100%;
+		vertical-align: bottom;
+	}
+	//@extend .u-color-blend;
 }
 .p-company-member-profile__head {
 	grid-area: head;

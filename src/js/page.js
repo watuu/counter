@@ -44,9 +44,14 @@ export default class Page {
         if (document.querySelector('.cm-modal-blog')) {
             this.cmModalBlog()
         }
+        if (document.querySelector('.l-footer .swiper')) {
+            this.lFooterSlide()
+        }
 
-
-
+        ScrollTrigger.config({ ignoreMobileResize: true });
+        window.addEventListener('resize', () => {
+            ScrollTrigger.refresh();
+        });
     }
     // cHeadingSection() {
     //
@@ -140,7 +145,7 @@ export default class Page {
         },{
             scrollTrigger: {
                 trigger: '.p-top-service',
-                start: 'top top',
+                start: 'top center',
                 markers: false,
             },
             duration: 20,
@@ -155,15 +160,17 @@ export default class Page {
             end: `bottom bottom`,
             pin: '.p-top-service__bg',
             pinSpacing: false,
+            anticipatePin: 1,
             markers: false,
         })
         if (Utility.isPC()) {
             ScrollTrigger.create({
                 trigger: '.p-top-service',
-                start: 'top top',
-                end: 'bottom bottom',
+                start: `top+=${window.innerHeight * 0.25} top`,
+                end: `bottom-=${window.innerHeight * 0.10} bottom`,
                 pin: '.p-top-service__head',
                 pinSpacing: false,
+                anticipatePin: 1,
                 markers: false,
             })
         }
@@ -300,6 +307,19 @@ export default class Page {
                     isOpened = true;
                 }
             });
+        });
+    }
+
+    lFooterSlide() {
+        const mySwiper = new Swiper ('.l-footer .swiper', {
+            loop: true,
+            loopAdditionalSlides: document.querySelectorAll('.l-footer .swiper .swiper-slide').length,
+            slidesPerView: 1,
+            speed: 1,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
         });
     }
 
