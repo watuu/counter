@@ -141,6 +141,9 @@
 			color: var(--color-assort);
 		}
 	}
+	.contact-form__input {
+		height: auto;
+	}
 	@include config.pc {
 		gap: 6/16+rem;
 		dt {

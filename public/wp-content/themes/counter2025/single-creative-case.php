@@ -19,7 +19,7 @@
                 </div>
                 <ul class="cm-block-header__bc">
                     <li><a href="<?= home_url() ?>/">TOP</a></li>
-                    <li><a href="<?= home_url() ?>/creative-case/">Creative Work</a></li>
+                    <li><a href="<?= home_url() ?>/creative-case/">Casestudy</a></li>
                     <li><span><?= get_the_title() ?></span></li>
                 </ul>
             </div>

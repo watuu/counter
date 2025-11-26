@@ -177,6 +177,7 @@
 		margin-left: 12/16+rem;
 	}
 }
+.cm-nav-paginate__dots,
 .cm-nav-paginate__page {
 	span,
 	a {
@@ -220,6 +221,13 @@
 		&:before {
 			width: 100%;
 		}
+	}
+}
+.cm-nav-paginate__dots,
+.cm-nav-paginate__page.is-near-dot:nth-last-child(2),
+.cm-nav-paginate__page.is-near-dot:nth-child(2) {
+	@include config.sp-tab {
+		display: none;
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

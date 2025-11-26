@@ -213,6 +213,9 @@
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }
+.u-mask-block.is-active {
+	clip-path: none;
+}
 .modal.modal {
 	z-index: 600;
 }

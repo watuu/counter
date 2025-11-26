@@ -19,6 +19,10 @@
 	}
 	@include config.pc {}
 }
+.cm-post-info .c-link-arrow,
+.cm-post .c-link-arrow {
+	font-family: var(--Helvetica);
+}
 .c-link-arrow__txt {
 	@include config.pc {}
 }

@@ -9,6 +9,7 @@
 	width: 100%;
 	height: var(--header-height);
 	padding: 15/16+rem 15/16+rem 0;
+	.page-download-single &,
 	.page-contact & {
 		display: none;
 	}
@@ -44,7 +45,7 @@
 	background: rgba(255, 255, 255, 0.70);
 	backdrop-filter: blur(25/16+rem);
 	top: 35/16+rem;
-	left: calc(50% - #{316/2/16+rem});
+	left: calc(50% - #{458/2/16+rem});
 	ul {
 		display: flex;
 		gap: 30/16+rem;

@@ -38,7 +38,7 @@
 }
 .p-download-single__wrap {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	@include config.sp-tab {
 		padding: var(--padding-section) 0;
 		gap: var(--padding-section);

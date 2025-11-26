@@ -402,6 +402,15 @@ export default class common {
                 toggleClass: 'is-visible',
                 start: 'top bottom-=20%',
                 once: true,
+                onEnter: () => {
+                    const handler = (e) => {
+                        if (e.propertyName === 'clip-path') {
+                            el.classList.add('is-active');
+                            el.removeEventListener('transitionend', handler);
+                        }
+                    };
+                    el.addEventListener('transitionend', handler);
+                }
             });
         });
     }

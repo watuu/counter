@@ -52,6 +52,7 @@
                     </div>
                     <p class="p-service-item__desc">越谷市を中心とした、埼玉県のローカルメディアを運営しています。</p>
                     <ul class="p-service-item__list">
+                        <li><a class="c-btn-round" href="https://saitamazine.jp/media/" target="_blank" rel="noopener"><span class="c-btn-round__txt"><span class="js-clone">SAITAMAZINE</span></span></a></li>
                         <li><a class="c-btn-round" href="https://postcitykoshigaya.jp/" target="_blank" rel="noopener"><span class="c-btn-round__txt"><span class="js-clone">KOSHIGAYAZINE</span></span></a></li>
                         <li><a class="c-btn-round" href="https://iro-iro-blue.com/" target="_blank" rel="noopener"><span class="c-btn-round__txt"><span class="js-clone">埼玉ベース</span></span></a></li>
                     </ul>

@@ -38,7 +38,7 @@
 .p-media__wrap {
 	margin-top: 36/16+rem;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	border-top: var(--border-assort);
 	gap: 50/16+rem;
 	@include config.pc {

@@ -3,10 +3,16 @@
         <h3 class="c-heading-caption">Pick Up</h3>
     </div>
     <ul class="p-media-aside-block__pickup">
-        <li><a href="#">
-                <figure><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/16x9.webp" alt=""/></figure></a></li>
-        <li><a href="#">
-                <figure><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/16x9.webp" alt=""/></figure></a></li>
+        <li>
+            <a class="pickup__banner" href="https://www.youtube.com/@countermarketing" target="_blank" alt="" decoding="async"><img src="http://counter-digital.jp/wp-content/uploads/2025/05/img_youtube_01.png" alt="" decoding="async"></a>
+        </li>
+        <?php $pickup = get_pickup_contents(126); ?>
+        <?php if ($pickup['image1'] && $pickup['url1']): ?>
+            <li><a class="pickup__banner" href="<?php echo $pickup['url1']; ?>"><img src="<?php echo $pickup['image1']; ?>" alt="" decoding="async"></a></li>
+        <?php endif; ?>
+        <?php if ($pickup['image2'] && $pickup['url2']): ?>
+            <li><a class="pickup__banner" href="<?php echo $pickup['url2']; ?>"><img src="<?php echo $pickup['image2']; ?>" alt="" decoding="async"></a></li>
+        <?php endif; ?>
     </ul>
     <div class="p-media-aside-block__search">
         <div class="c-form-search c-form-search--aside">

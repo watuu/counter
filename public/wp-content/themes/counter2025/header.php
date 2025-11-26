@@ -21,9 +21,13 @@
     if ( is_parent_slug() == 'service' && (is_page('thanks') )) {
         $bodyClass .= 'thanks';
     }
-    if ( is_parent_slug() == 'contact' ) {
+    if ( is_page('contact') ) {
         $bodyClass .= 'page-contact';
     }
+    if ( is_singular('download') ) {
+        $bodyClass .= 'page-download-single';
+    }
+
     ?>
 <?php wp_head(); ?>
 </head>
@@ -38,6 +42,8 @@
                 <li><a class="c-btn-txt" href="<?= home_url() ?>/company/"><span class="js-clone">about</span></a></li>
                 <li><a class="c-btn-txt" href="<?= home_url() ?>/service/"><span class="js-clone">service</span></a></li>
                 <li><a class="c-btn-txt" href="<?= home_url() ?>/creative-case/"><span class="js-clone">Casestudy</span></a></li>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/counter-media/"><span class="js-clone">Blog</span></a></li>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/news/"><span class="js-clone">News</span></a></li>
             </ul>
         </nav>
         <button class="l-header-menu c-btn-menu" aria-label="メニューを開く"><span class="c-btn-menu__wrap"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span><span class="c-btn-menu__wrap2"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span></button>

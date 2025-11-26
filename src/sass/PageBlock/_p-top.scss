@@ -238,7 +238,11 @@ $interval: 0.08;
 	margin-top: 100/16+rem;
 	position: relative;
 	@include config.sp-tab {
-		padding: 20px 0 60px;
+		padding: 20/16+rem 0 60/16+rem;
+	}
+	@include config.tab {
+		width: 600/16+rem;
+		margin-inline: auto;
 	}
 	@include config.pc {
 		margin-top: 36/16+rem;
@@ -262,7 +266,7 @@ $interval: 0.08;
 		display: none;
 		&:nth-child(2) {
 			display: block;
-			top: 40px;
+			top: 40/16+rem;
 			transform: scale(1.5);
 			opacity: 0.1;
 			.p-top-promise__type {
@@ -275,7 +279,7 @@ $interval: 0.08;
 			}
 			p:nth-child(2) {
 				position: relative;
-				top: -60px;
+				top: -60/16+rem;
 			}
 
 		}
@@ -479,10 +483,13 @@ $interval: 0.08;
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	@include config.sp {
+	gap: 50/16+rem;
+	@include config.sp-tab {
 		width: 250/16+rem;
 		margin-left: auto;
-		gap: 50/16+rem;
+	}
+	@include config.tab {
+		width: 50%;
 	}
 	@include config.pc {
 		gap: 0;
@@ -850,6 +857,10 @@ $interval: 0.08;
 	svg,
 	img {
 		width: 100%;
+	}
+	@include config.tab {
+		width: 375/16+rem;
+		left: -10/16+rem;
 	}
 	@include config.pc {
 		width: 704/16+rem;

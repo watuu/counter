@@ -158,6 +158,9 @@
 	@include config.sp-tab {
 		margin-inline: -15/16+rem;
 	}
+	@include config.tab {
+		justify-content: center;
+	}
 	@include config.pc {
 		margin-top: 10/16+rem;
 		display: flex;

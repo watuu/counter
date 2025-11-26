@@ -75,7 +75,7 @@
             </ul>
         </div>
         <ul class="cm-block-media-sns__links">
-            <li><a class="c-link-arrow" href="<?= home_url() ?>/counter-media/"><span class="c-link-arrow__txt">Couter Media</span><i class="c-link-arrow__arrow">
+            <li><a class="c-link-arrow" href="<?= home_url() ?>/counter-media/"><span class="c-link-arrow__txt">Counter Media</span><i class="c-link-arrow__arrow">
                         <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></li>
             <li><a class="c-link-external" href="https://note.com/webkirin" target="_blank" rel="noopener"><span class="c-link-external__txt">note</span><i class="c-link-external__ico">
                         <svg width="24" height="19"><use href="#ico-external"></use></svg></i></a></li>

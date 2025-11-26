@@ -7,6 +7,7 @@
                 <li><a class="c-btn-round" href="<?= home_url() ?>/company/"><span class="c-btn-round__txt"><span class="js-clone">企業情報</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/creative-case/"><span class="c-btn-round__txt"><span class="js-clone">制作実績</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/case/"><span class="c-btn-round__txt"><span class="js-clone">お客様成功事例</span></span></a></li>
+                <li><a class="c-btn-round" href="<?= home_url() ?>/counter-media/"><span class="c-btn-round__txt"><span class="js-clone">ブログ</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/news/"><span class="c-btn-round__txt"><span class="js-clone">ニュース</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/download/"><span class="c-btn-round__txt"><span class="js-clone">資料請求</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/contact/"><span class="c-btn-round__txt"><span class="js-clone">お問い合わせ</span></span></a></li>
@@ -57,7 +58,7 @@
                     </div>
                 </div>
                 <div class="cm-nav-main-contents-item">
-                    <button class="c-btn-nav-heading js-accordion"><span class="c-btn-nav-heading__txt">Creative Work</span><i class="c-btn-nav-heading__status"></i></button>
+                    <button class="c-btn-nav-heading js-accordion"><span class="c-btn-nav-heading__txt">Casestudy</span><i class="c-btn-nav-heading__status"></i></button>
                     <div class="cm-nav-main-contents-item__body">
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">Web制作</h3>
@@ -91,6 +92,7 @@
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">メディア運営</h3>
                             <ul class="cm-nav-main-contents-item__list">
+                                <li><a href="https://saitamazine.jp/media/" target="_blank" rel="noopener">SAITAMAZINE</a></li>
                                 <li><a href="https://postcitykoshigaya.jp/" target="_blank" rel="noopener">KOSHIGAYAZINE</a></li>
                                 <li><a href="https://iro-iro-blue.com/" target="_blank" rel="noopener">埼玉ベース</a></li>
                             </ul>

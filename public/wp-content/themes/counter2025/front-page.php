@@ -102,7 +102,7 @@
         <div class="l-container">
             <div class="p-top-creative__head">
                 <div class="c-heading-section js-visible js-visible">
-                    <h2 class="c-heading-section__title js-split-text js-visible-span" data-each="0.05">(Creative Work)</h2><span class="c-heading-section__line"></span>
+                    <h2 class="c-heading-section__title js-split-text js-visible-span" data-each="0.05">(Casestudy)</h2><span class="c-heading-section__line"></span>
                 </div>
             </div>
             <div class="p-top-creative__figure">

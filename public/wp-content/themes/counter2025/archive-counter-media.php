@@ -73,10 +73,10 @@
                             <?php endif; ?>
                         </div>
                     </section>
+                    <div class="p-media__paginate">
+                        <?php theme_posts_pagination(); ?>
+                    </div>
                 </div>
-            </div>
-            <div class="p-media__paginate">
-                <?php theme_posts_pagination(); ?>
             </div>
         </div>
         <section class="p-media-ranking">
