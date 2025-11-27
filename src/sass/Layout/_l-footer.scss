@@ -17,6 +17,7 @@
 		"top top"
 		"type nav"
 		"bottom nav"
+		"copyright copyright"
 		;
 		grid-template-columns: 1fr 329/16+rem;
 	}
@@ -89,6 +90,8 @@
 	}
 }
 .l-footer-nav {
+	display: flex;
+	flex-direction: column;
 	@include config.pc {
 		grid-area: nav;
 	}
@@ -103,6 +106,19 @@
 	margin-top: 14/16+rem;
 	@include config.pc {
 		margin-top: 54/16+rem;
+	}
+}
+.l-footer-nav__other {
+	margin-top: 20/16+rem;
+	display: flex;
+	gap: 22/16+rem;
+	justify-content: flex-end;
+
+	font-family: var(--Helvetica);
+	font-size: 14/16+rem;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		margin-top: auto;
 	}
 }
 .l-footer-bottom {
@@ -140,6 +156,17 @@
 	}
 	@include config.pc {
 		width: 417/16+rem;
+	}
+}
+.l-footer-bottom-copyright {
+	margin-top: 10/16+rem;
+	text-align: center;
+	font-family: var(--Helvetica);
+	font-size: 14/16+rem;
+	letter-spacing: 0.01em;
+	@include config.pc {
+		margin-top: -20/16+rem;
+		grid-area: copyright;
 	}
 }
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/

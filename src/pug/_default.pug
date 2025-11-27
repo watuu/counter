@@ -91,6 +91,7 @@ body#body(class=pageClass data-src=path)
                     span.c-btn-menu__square
                     span.c-btn-menu__square
                     span.c-btn-menu__square
+            .l-header-megaMenu__close
             .l-header-megaMenu.is-section-dark
                 .l-header-megaMenu__bg
                 .l-header-megaMenu__wrap
@@ -172,7 +173,7 @@ body#body(class=pageClass data-src=path)
                             span SAITAMA
                             span 越谷
                         p ローカルから最先端をつくる。
-                        p
+                        p.l-footer-top__download
                             a(href= path + "download/").c-btn-txt
                                 span.js-clone DOWNLOAD
                     p.l-footer-type.js-split-text.js-visible-span
@@ -222,6 +223,14 @@ body#body(class=pageClass data-src=path)
                                 i.c-btn-footer__arrow
                                     svg(width=40 height=40)
                                         use(href="#ico-arrow")
+                        ul.l-footer-nav__other
+                            li
+                                a(href= path + "privacy/").c-btn-txt
+                                    span.js-clone PRIVACY
+                            li
+                                a(href= path + "terms/").c-btn-txt
+                                    span.js-clone TERMS
+
                     .l-footer-bottom
                         ul.l-footer-bottom__nav
                             li
@@ -244,6 +253,7 @@ body#body(class=pageClass data-src=path)
                                         figure
                                             img(src=img+"footer-pic.webp" alt="")
 
+                    p.l-footer-bottom-copyright COUNTER co.ltd.
 
     script(src= path + "assets/js/app.js")
     = "\n"

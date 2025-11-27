@@ -88,12 +88,28 @@
 	height: calc(100vh - (2 * var(--header-height)));
 	pointer-events: none;
 	opacity: 0;
+	z-index: 100;
 	.is-megaMenu-closing &,
 	.is-megaMenu-open & {
 		pointer-events: auto;
 		opacity: 1;
 	}
 	@include config.pc {}
+}
+.l-header-megaMenu__close {
+	display: block;
+	width: 100%;
+	height: calc(100vh - var(--header-height));
+	position: fixed;
+	left: 0;
+	top: var(--header-heighta);
+	bottom: 0;
+	z-index: 90;
+	pointer-events: none;
+	.is-megaMenu-closing &,
+	.is-megaMenu-open & {
+		pointer-events: auto;
+	}
 }
 .l-header-megaMenu__bg {
 	content: '';

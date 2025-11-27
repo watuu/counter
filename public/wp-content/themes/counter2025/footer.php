@@ -43,19 +43,41 @@
             <p class="l-footer-type js-split-text js-visible-span">Turn the mainstream <br>upside down.</p>
             <div class="l-footer-nav">
                 <ul class="l-footer-nav__nav">
-                    <li><a class="c-btn-footer" href="<?= home_url() ?>/company/"><span class="c-btn-footer__txt"><span class="js-clone">ABOUT US</span></span><i class="c-btn-footer__arrow">
-                                <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></li>
-                    <li><a class="c-btn-footer" href="<?= home_url() ?>/service/"><span class="c-btn-footer__txt"><span class="js-clone">SERVICE</span></span><i class="c-btn-footer__arrow">
-                                <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></li>
-                    <li><a class="c-btn-footer" href="<?= home_url() ?>/creative-case/"><span class="c-btn-footer__txt"><span class="js-clone">CASESTUDY</span></span><i class="c-btn-footer__arrow">
-                                <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></li>
-                    <li><a class="c-btn-footer" href="<?= home_url() ?>/case/"><span class="c-btn-footer__txt"><span class="js-clone">VOICE</span></span><i class="c-btn-footer__arrow">
-                                <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></li>
-                    <li><a class="c-btn-footer" href="<?= home_url() ?>/news/"><span class="c-btn-footer__txt"><span class="js-clone">NEWS</span></span><i class="c-btn-footer__arrow">
-                                <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></li>
+                    <li>
+                        <a class="c-btn-footer" href="<?= home_url() ?>/company/">
+                            <span class="c-btn-footer__txt"><span class="js-clone">ABOUT US</span></span><i class="c-btn-footer__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="c-btn-footer" href="<?= home_url() ?>/service/">
+                            <span class="c-btn-footer__txt"><span class="js-clone">SERVICE</span></span><i class="c-btn-footer__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="c-btn-footer" href="<?= home_url() ?>/creative-case/">
+                            <span class="c-btn-footer__txt"><span class="js-clone">CASESTUDY</span></span><i class="c-btn-footer__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="c-btn-footer" href="<?= home_url() ?>/case/">
+                            <span class="c-btn-footer__txt"><span class="js-clone">VOICE</span></span><i class="c-btn-footer__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="c-btn-footer" href="<?= home_url() ?>/news/">
+                            <span class="c-btn-footer__txt"><span class="js-clone">NEWS</span></span><i class="c-btn-footer__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
+                        </a>
+                    </li>
                 </ul>
-                <p class="l-footer-nav__contact"><a class="c-btn-footer c-btn-footer--contact" href="<?= home_url() ?>/contact/"><span class="c-btn-footer__txt"><span class="js-clone">Contact Us</span></span><i class="c-btn-footer__arrow">
-                            <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></p>
+                <p class="l-footer-nav__contact">
+                    <a class="c-btn-footer c-btn-footer--contact" href="<?= home_url() ?>/contact/">
+                        <span class="c-btn-footer__txt"><span class="js-clone">Contact Us</span></span><i class="c-btn-footer__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
+                    </a>
+                </p>
+                <ul class="l-footer-nav__other">
+                    <li><a class="c-btn-txt" href="<?= home_url() ?>/privacy/"><span class="js-clone">PRIVACY</span></a></li>
+                    <li><a class="c-btn-txt" href="<?= home_url() ?>/terms/"><span class="js-clone">TERMS</span></a></li>
+                </ul>
             </div>
             <div class="l-footer-bottom">
                 <ul class="l-footer-bottom__nav">
@@ -87,6 +109,7 @@
                 </div>
                 <?php endif; ?>
             </div>
+            <p class="l-footer-bottom-copyright">COUNTER co.ltd.</p>
         </div>
     </div>
 </footer>

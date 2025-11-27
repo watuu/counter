@@ -179,6 +179,15 @@ export default class common {
             }
         });
 
+        // メガメニューエリア外でclose
+        const headerMegaMenuClose = header.querySelector('.l-header-megaMenu__close');
+        headerMegaMenuClose.addEventListener('mouseenter', (e) => {
+            if (document.body.classList.contains('is-megaMenu-open')) {
+                btnMegaMenu.classList.remove('is-megaMenu-open');
+                navClose();
+            }
+        });
+
         // ナビゲーションを閉じる処理
         function navClose() {
             document.body.classList.remove(classNameNavOpen, 'is-megaMenu-open');

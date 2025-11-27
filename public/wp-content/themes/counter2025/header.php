@@ -47,6 +47,7 @@
             </ul>
         </nav>
         <button class="l-header-menu c-btn-menu" aria-label="メニューを開く"><span class="c-btn-menu__wrap"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span><span class="c-btn-menu__wrap2"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span></button>
+        <div class="l-header-megaMenu__close"></div>
         <div class="l-header-megaMenu is-section-dark">
             <div class="l-header-megaMenu__bg"></div>
             <div class="l-header-megaMenu__wrap">
