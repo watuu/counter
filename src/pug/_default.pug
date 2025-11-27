@@ -63,7 +63,7 @@ body#body(class=pageClass data-src=path)
                         a(href=path+"company/").c-btn-txt
                             span.js-clone about
                     li
-                        a(href=path+"service/").c-btn-txt
+                        a(href=path+"service/").c-btn-txt#btnNavService
                             span.js-clone service
                     li
                         a(href=path+"creative-case/").c-btn-txt
@@ -91,6 +91,11 @@ body#body(class=pageClass data-src=path)
                     span.c-btn-menu__square
                     span.c-btn-menu__square
                     span.c-btn-menu__square
+            .l-header-megaMenu.is-section-dark
+                .l-header-megaMenu__bg
+                .l-header-megaMenu__wrap
+                    .l-header-megaMenu__nav
+                        include template/cm-nav-main
             .l-header-drawer.is-section-dark
                 .l-header-drawer__bg
                 .l-header-drawer__wrap

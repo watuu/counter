@@ -52,7 +52,7 @@
         <div class="l-container">
             <div class="p-top-service__head">
                 <div class="p-top-service__type js-visible">
-                    <div class="jsGlitchTxt"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-type.webp" alt="デジタル起点 "/></div>
+                    <div class="_jsGlitchTxt"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-type.webp" alt="デジタル起点 "/></div>
                 </div>
                 <div class="p-top-service__typeSP js-visible">
                     <div>
@@ -65,7 +65,8 @@
             <div class="p-top-service__items">
                 <div class="p-top-service-item js-visible">
                     <picture class="p-top-service-item__pic jsGlitchPic">
-                        <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-marketing-sp.webp" media="(max-width: 1023px)"/><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-marketing.webp" width="1124" height="580" loading="lazy"/>
+                        <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-marketing-sp.webp" media="(max-width: 1023px)"/>
+                        <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-marketing.webp" width="1124" height="580"/>
                     </picture>
                     <div class="p-top-service-item__wrap u-mask-block" data-delay="0.2">
                         <h3 class="p-top-service-item__title">デジタルマーケティング</h3>
@@ -74,7 +75,8 @@
                 </div>
                 <div class="p-top-service-item js-visible">
                     <picture class="p-top-service-item__pic jsGlitchPic">
-                        <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-creative-sp.webp" media="(max-width: 1023px)"/><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-creative.webp" width="1124" height="580" loading="lazy"/>
+                        <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-creative-sp.webp" media="(max-width: 1023px)"/>
+                        <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-creative.webp" width="880" height="560"/>
                     </picture>
                     <div class="p-top-service-item__wrap u-mask-block" data-delay="0.2">
                         <h3 class="p-top-service-item__title">クリエイティブワーク</h3>
@@ -83,7 +85,8 @@
                 </div>
                 <div class="p-top-service-item js-visible">
                     <picture class="p-top-service-item__pic jsGlitchPic">
-                        <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-media-sp.webp" media="(max-width: 1023px)"/><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-media.webp" width="1124" height="580" loading="lazy"/>
+                        <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-media-sp.webp" media="(max-width: 1023px)"/>
+                        <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-service-media.webp" width="656" height="836"/>
                     </picture>
                     <div class="p-top-service-item__wrap u-mask-block" data-delay="0.2">
                         <h3 class="p-top-service-item__title">ローカルメディア運営</h3>
@@ -114,7 +117,7 @@
                 ];
                 $wp_query = new WP_Query($args);
                 if (have_posts()) : while (have_posts()) : the_post();
-                    $eyeCatch = esc_url(get_the_post_thumbnail_url());
+                    $eyeCatch = esc_url(get_the_post_thumbnail_url(null, 'large'));
                     $eyeCatch = $eyeCatch? $eyeCatch:
                         sprintf('%s/assets/img/16x9.webp', get_stylesheet_directory_uri());
                     ?>
@@ -151,7 +154,6 @@
                         <h3 class="p-top-partnership-block__head">Aliance</h3>
                         <div class="p-top-partnership-block__body">
                             <ul>
-                                <li>SAITAMA SHINBUN</li>
                                 <li>ARUTEGA</li>
                                 <li>LEOGRAPH</li>
                                 <li>NOW VILLAGE</li>
@@ -222,7 +224,8 @@
             <div class="p-top-media__wrap js-visible u-mask-block">
                 <div class="p-top-media-channel">
                     <picture class="p-top-media-channel__bg">
-                        <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-media-channel-bg-sp.svg" media="(max-width: 1023px)"/><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-media-channel-bg.svg"/>
+                        <source srcset="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-media-channel-bg-sp.svg" media="(max-width: 1023px)"/>
+                        <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-top-media-channel-bg.svg" loading="lazy"/>
                     </picture>
                     <h3 class="p-top-media-channel__title">COUNTER Channel</h3>
                     <div class="p-top-media-channel__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/2pVh-reDL0U?si=iTT4kEL25VYy9_wr&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>

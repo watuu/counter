@@ -87,7 +87,7 @@
                 <div class="cm-block-header cm-block-header--company">
                     <div class="l-container">
                         <div class="cm-block-header__title">
-                            <div class="cm-block-header__glitch is-company is-white jsGlitchTxt"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-company-title.webp"/></div>
+                            <div class="cm-block-header__glitch is-company is-white _jsGlitchTxt"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-company-title.webp"/></div>
                             <h1 class="cm-block-header__ja">企業情報</h1>
                         </div>
                     </div>

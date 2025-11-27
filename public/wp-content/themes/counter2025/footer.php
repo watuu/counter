@@ -72,13 +72,13 @@
                         <div class="swiper-wrapper">
                             <?php foreach ($pickup_creatives as $creative_post_id): ?>
                                 <?php
-                                $eyeCatch = esc_url(get_the_post_thumbnail_url($creative_post_id));
+                                $eyeCatch = esc_url(get_the_post_thumbnail_url($creative_post_id) );
                                 $eyeCatch = $eyeCatch? $eyeCatch:
                                     sprintf('%s/assets/img/16x9.webp', get_stylesheet_directory_uri());
                                 ?>
                                 <div class="swiper-slide">
                                     <a href="<?= get_the_permalink($creative_post_id) ?>">
-                                        <figure><img src="<?= $eyeCatch ?>" alt="<?= get_the_title($creative_post_id) ?>"/></figure>
+                                        <figure><img src="<?= $eyeCatch ?>" alt="<?= get_the_title($creative_post_id) ?>" loading="lazy"/></figure>
                                     </a>
                                 </div>
                             <?php endforeach; ?>

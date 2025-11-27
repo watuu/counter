@@ -676,7 +676,7 @@ function my_wpcf7_redirect()
   </script>
   <?php
 }
-//add_action('wp_footer', 'my_wpcf7_redirect');
+add_action('wp_footer', 'my_wpcf7_redirect');
 
 /**
  * ダウンロード完了ページのカスタムURLとテンプレートの設定

@@ -55,8 +55,9 @@ export default class Glitch {
 
         // ====== テクスチャ読み込み ======
         const imgEl = container.querySelector(`img`);
+        const src = imgEl.currentSrc || imgEl.src;
         const loader = new THREE.TextureLoader();
-        const texture = loader.load(imgEl.currentSrc, () => {
+        const texture = loader.load(src, () => {
             texture.wrapS = THREE.ClampToEdgeWrapping;
             texture.wrapT = THREE.ClampToEdgeWrapping;
             texture.minFilter = THREE.LinearFilter;

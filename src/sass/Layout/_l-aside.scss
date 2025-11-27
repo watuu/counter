@@ -20,6 +20,7 @@
 	}
 	.is-footer-show & {
 		opacity: 0;
+		pointer-events: none;
 	}
 	@include config.pc {
 		right: 28/16+rem;

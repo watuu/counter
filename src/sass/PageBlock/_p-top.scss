@@ -10,10 +10,13 @@
 .p-top-mv {
 	position: relative;
 	color: #fff;
-	height: 100vh;
+	height: calc(100vh - #{160/16+rem});
 	overflow: hidden;
 	@include config.sp {
 		max-height: 800/16+rem;
+	}
+	@include config.pc {
+		height: 100vh;
 	}
 	canvas {
 		width: 100%;
@@ -59,18 +62,19 @@
 }
 .p-top-mv__wrap {
 	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	z-index: 3;
-	padding: 140/16+rem 15/16+rem 0;
+	padding: 40/16+rem 15/16+rem 0;
 	@include config.pc {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
 		justify-content: flex-end;
-		padding: 0 30/16+rem 20/16+rem;
+		padding: 0 30/16+rem 32/16+rem;
 	}
 }
 .p-top-mv__typeSP {
-	text-shadow: 1/16+rem 1/16+rem 0 #FF552B;
+	//text-shadow: 1/16+rem 1/16+rem 0 #FF552B;
 	font-family: var(--Suisse-Md);
 	font-size: 50/16+rem;
 	font-weight: 500;
@@ -206,7 +210,6 @@ $interval: 0.08;
 /*::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .p-top-promise {
 	position: relative;
-	overflow: hidden;
 }
 
 .p-top-promise__telop {
@@ -225,6 +228,7 @@ $interval: 0.08;
 		will-change: transform;
 		animation: loopLeft linear 20s infinite;
 	}
+	overflow: hidden;
 	@include config.pc {
 		margin-top: 40/16+rem;
 		padding: 14/16+rem 0 10/16+rem;
@@ -287,7 +291,23 @@ $interval: 0.08;
 	@include config.pc {
 		transform: translateX(-105%);
 		&:nth-child(3) {
-			transform: translateX(105%);
+			position: absolute;
+			left: calc(50% - #{180/16+rem});
+			width: calc(50vw + #{180/16+rem});
+			height: 150%;
+			overflow: hidden;
+			opacity: 0.1;
+			transform: none;
+			.p-top-promise__type {
+				display: none;
+			}
+			.p-top-promise__title {
+				display: none;
+			}
+			.p-top-promise__message {
+				transform: scale(1.4);
+				transform-origin: left top;
+			}
 		}
 	}
 }
@@ -660,7 +680,7 @@ $interval: 0.08;
 	}
 	@include config.pc {
 		margin-top: 14/16+rem;
-		padding-left: 463/16+rem;
+		padding-left: 335/16+rem;
 	}
 }
 .p-top-creative__more {
@@ -690,7 +710,7 @@ $interval: 0.08;
 		}
 	}
 	@include config.pc {
-		padding: 30/16+rem 0 0 61/16+rem;
+		padding: 30/16+rem 0 0 335/16+rem;
 	}
 }
 .p-top-partnership__blocks {
@@ -702,7 +722,8 @@ $interval: 0.08;
 		//width: 396/16+rem;
 	}
 	@include config.pc {
-		gap: 200/16+rem;
+		gap: 180/16+rem;
+		justify-content: flex-start;
 	}
 }
 .p-top-partnership-block {

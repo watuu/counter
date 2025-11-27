@@ -4,7 +4,7 @@
         <div class="cm-block-header cm-block-header--service">
             <div class="l-container">
                 <div class="cm-block-header__title">
-                    <div class="cm-block-header__glitch is-service jsGlitchTxt"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-service-title.webp"/></div>
+                    <div class="cm-block-header__glitch is-service _jsGlitchTxt"><img src="<?= get_stylesheet_directory_uri() ?>/assets/img/p-service-title.webp"/></div>
                     <h1 class="cm-block-header__ja">サービス</h1>
                 </div>
                 <div class="cm-block-header__service">

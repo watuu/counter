@@ -135,46 +135,64 @@ export default class common {
         const classNameNavOpen = 'is-nav-open';
         const classNameNavClose = 'is-nav-closing';
         const header = document.querySelector('.l-header');
-        const headerMenu = document.querySelector('.l-header-menu');
+        const btnMenu = document.querySelector('.l-header-menu');
+        const btnMegaMenu = document.querySelector('#btnNavService');
 
-        if (!header || !headerMenu) return;
+        if (!header || !btnMenu) return;
 
-        headerMenu.addEventListener('click', () => {
-            setNavHeight();
-            headerMenu.classList.toggle(classNameNavOpen);
-            if (headerMenu.classList.contains(classNameNavOpen)) {
+        btnMenu.addEventListener('click', () => {
+            btnMenu.classList.toggle(classNameNavOpen);
+            if (btnMenu.classList.contains(classNameNavOpen)) {
                 document.body.classList.add(classNameNavOpen);
             } else {
                 navClose();
             }
         });
 
-        const headerLinks = header.querySelectorAll('a');
-        headerLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                headerMenu.classList.remove(classNameNavOpen);
-                navClose();
-            });
+        btnMegaMenu.addEventListener('mouseenter', (e) => {
+            // e.preventDefault()
+            if (!document.body.classList.contains('is-megaMenu-closing')) {
+                btnMegaMenu.classList.toggle('is-megaMenu-open');
+                if (btnMegaMenu.classList.contains('is-megaMenu-open')) {
+                    document.body.classList.add('is-megaMenu-open');
+                } else {
+                    navClose();
+                }
+            }
         });
 
-        function setNavHeight() {
-            // 任意で実装
-            // headerNav.style.height = `${window.innerHeight - header.offsetHeight}px`;
-        }
+        const headerLinks = header.querySelectorAll('.l-header-nav a');
+        // headerLinks.forEach(link => {
+        //     link.addEventListener('click', () => {
+        //         btnMenu.classList.remove(classNameNavOpen);
+        //         navClose();
+        //     });
+        // });
+        headerLinks.forEach(link => {
+            if (!link.matches('#btnNavService')) {
+                link.addEventListener('mouseenter', () => {
+                    if (document.body.classList.contains('is-megaMenu-open')) {
+                        btnMegaMenu.classList.remove('is-megaMenu-open');
+                        navClose();
+                    }
+                });
+            }
+        });
 
         // ナビゲーションを閉じる処理
         function navClose() {
-            document.body.classList.remove(classNameNavOpen);
-            document.body.classList.add(classNameNavClose);
+            document.body.classList.remove(classNameNavOpen, 'is-megaMenu-open');
+            document.body.classList.add(classNameNavClose, 'is-megaMenu-closing');
             setTimeout(() => {
-                document.body.classList.remove(classNameNavClose);
+                document.body.classList.remove(classNameNavClose, 'is-megaMenu-closing');
             }, 600);
         }
 
         // Escキーでメニューを閉じる
         window.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' || event.keyCode === 27) {
-                headerMenu.classList.remove(classNameNavOpen);
+                btnMenu.classList.remove(classNameNavOpen);
+                btnMegaMenu.classList.remove('is-megaMenu-open');
                 navClose();
             }
         });
@@ -378,7 +396,7 @@ export default class common {
             100/1440*window.innerWidth/2:
             75/390*window.innerWidth/2
 
-        document.querySelectorAll('.is-section-dark:not(.l-header-drawer)').forEach(section => {
+        document.querySelectorAll('.is-section-dark:not(.l-header-drawer):not(.l-header-megaMenu)').forEach(section => {
             ScrollTrigger.create({
                 trigger: section,
                 start: `top-=${shift} top`,

@@ -40,13 +40,21 @@
         <nav class="l-header-nav">
             <ul>
                 <li><a class="c-btn-txt" href="<?= home_url() ?>/company/"><span class="js-clone">about</span></a></li>
-                <li><a class="c-btn-txt" href="<?= home_url() ?>/service/"><span class="js-clone">service</span></a></li>
+                <li><a class="c-btn-txt" href="<?= home_url() ?>/service/" id="btnNavService"><span class="js-clone">service</span></a></li>
                 <li><a class="c-btn-txt" href="<?= home_url() ?>/creative-case/"><span class="js-clone">Casestudy</span></a></li>
                 <li><a class="c-btn-txt" href="<?= home_url() ?>/counter-media/"><span class="js-clone">Blog</span></a></li>
                 <li><a class="c-btn-txt" href="<?= home_url() ?>/news/"><span class="js-clone">News</span></a></li>
             </ul>
         </nav>
         <button class="l-header-menu c-btn-menu" aria-label="メニューを開く"><span class="c-btn-menu__wrap"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span><span class="c-btn-menu__wrap2"><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span><span class="c-btn-menu__square"></span></span></button>
+        <div class="l-header-megaMenu is-section-dark">
+            <div class="l-header-megaMenu__bg"></div>
+            <div class="l-header-megaMenu__wrap">
+                <div class="l-header-megaMenu__nav">
+                    <?php get_template_part('template/cm-nav-main') ?>
+                </div>
+            </div>
+        </div>
         <div class="l-header-drawer is-section-dark">
             <div class="l-header-drawer__bg"></div>
             <div class="l-header-drawer__wrap">

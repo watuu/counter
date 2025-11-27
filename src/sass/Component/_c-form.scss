@@ -141,7 +141,8 @@
 			color: var(--color-assort);
 		}
 	}
-	.contact-form__input {
+	select.contact-form__input,
+	input.contact-form__input {
 		height: auto;
 	}
 	@include config.pc {

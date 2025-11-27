@@ -1,0 +1,38 @@
+extends ./_default
+block vars
+    - var path = "./"
+    - var title = ""
+    - var pageClass = ""
+
+block content
+    .p-thanks
+        .cm-block-header.cm-block-header--contact
+            .l-container
+                .cm-block-header__title
+                    p.cm-block-header__en Contact
+                    h1.cm-block-header__ja お問い合わせ
+                ul.cm-block-header__bc
+                    li
+                        a(href=path + "") TOP
+                    li
+                        span Contact
+        .l-container.l-container--md
+            .p-thanks__wrap
+                .p-thanks-catch
+                    p.p-thanks-catch__ja
+                        | お問い合わせありがとうございます。
+                        br
+                        | 数日以内に担当者からご連絡いたします。
+                    p.p-thanks-catch__en
+                        | Thank You
+                .p-thanks__link
+                    a(href=path + "").c-link-arrow
+                        span.c-link-arrow__txt トップページへ戻る
+                        i.c-link-arrow__arrow
+                            svg(width=40 height=40)
+                                use(href="#ico-arrow")
+        .p-thanks__media
+            .l-container
+                .u-border
+            .l-container.l-container--md
+                include ./template/cm-block-media

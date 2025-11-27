@@ -78,11 +78,11 @@ body figure {
 		border: 1/16+rem solid #ccc;
 	}
 	a {
-		//color: var(--color-assort);
-		//text-decoration: underline;
-		//&:hover {
-		//	text-decoration: none;
-		//}
+		color: var(--color-assort);
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	img {
 		height: auto;
