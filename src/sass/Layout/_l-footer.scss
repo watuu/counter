@@ -152,7 +152,7 @@
 	}
 	.swiper-slide-active {
 		opacity: 1;
-		transition: var(--easeDuration) var(--easeOutTheme);
+		//transition: var(--easeDuration) var(--easeOutTheme);
 	}
 	@include config.pc {
 		width: 417/16+rem;

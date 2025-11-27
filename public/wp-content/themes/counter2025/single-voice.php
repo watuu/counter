@@ -17,7 +17,7 @@
                 </div>
                 <ul class="cm-block-header__bc">
                     <li><a href="<?= home_url() ?>/">TOP</a></li>
-                    <li><a href="<?= home_url() ?>/case/">Voice</a></li>
+                    <li><a href="<?= home_url() ?>/voice/">Voice</a></li>
                     <li><span><?= get_the_title() ?></span></li>
                 </ul>
             </div>

@@ -311,7 +311,7 @@
 	}
 	@include config.pc {
 		top: 140/16+rem;
-		left: -654/16+rem;
+		//left: -654/16+rem;
 		img {
 			height: 350/16+rem;
 		}
@@ -335,14 +335,15 @@
 	grid-template-columns: 154/16+rem 1fr;
 	gap: 18/16+rem 26/16+rem;
 	@include config.pc {
-		margin-top: 30/16+rem;
+		margin-top: 70/16+rem;
+		justify-content: center;
 		grid-template-areas:
-			"pic head"
-			"pic desc"
+			"head pic"
+			"desc pic"
 		;
-		grid-template-columns: 264/16+rem 1fr;
+		grid-template-columns: 600/16+rem 328/16+rem;
 		grid-template-rows: auto 1fr;
-		gap: 12/16+rem 146/16+rem;
+		gap: 12/16+rem 98/16+rem;
 	}
 }
 .p-company-member-profile__pic {
@@ -362,7 +363,9 @@
 	@include config.sp-tab {
 		justify-content: flex-end;
 	}
-	@include config.pc {}
+	@include config.pc {
+		margin-top: 108/16+rem;
+	}
 }
 .p-company-member-profile__job {
 	color: var(--BASECOLOR, #FF552B);
@@ -370,6 +373,7 @@
 	letter-spacing: 0.12/16+rem;
 	background: var(--Gray, #EFECEB);
 	@include config.pc {
+		margin-left: 90/16+rem;
 		line-height: 1;
 		font-size: 18/16+rem;
 	}
@@ -391,7 +395,7 @@
 	background: var(--Gray, #EFECEB);
 	@include config.pc {
 		align-self: flex-start;
-		width: 480/16+rem;
+		//width: 480/16+rem;
 		padding: 0;
 	}
 }

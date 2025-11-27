@@ -669,6 +669,10 @@ function my_wpcf7_redirect()
         redirectUrl = window.location.origin + '/service/instagram/thanks/';
       } else if (currentPath.includes('/service/maintenance/')) {
         redirectUrl = window.location.origin + '/service/maintenance/thanks/';
+      } else if (currentPath.includes('/service/salesforce/')) {
+        redirectUrl = window.location.origin + '/service/salesforce/thanks/';
+      } else if (currentPath.includes('/service/mailmagazine/')) {
+        redirectUrl = window.location.origin + '/service/mailmagazine/thanks/';
       }
       // リダイレクトを実行
       window.location.href = redirectUrl;

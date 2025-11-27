@@ -105,7 +105,7 @@
         <div class="l-container">
             <div class="p-top-creative__head">
                 <div class="c-heading-section js-visible js-visible">
-                    <h2 class="c-heading-section__title js-split-text js-visible-span" data-each="0.05">(Casestudy)</h2><span class="c-heading-section__line"></span>
+                    <h2 class="c-heading-section__title" data-each="0.05">(Casestudy)</h2><span class="c-heading-section__line"></span>
                 </div>
             </div>
             <div class="p-top-creative__figure">
@@ -145,7 +145,7 @@
         <div class="l-container">
             <div class="p-top-partnership__head">
                 <div class="c-heading-section js-visible">
-                    <h2 class="c-heading-section__title js-split-text js-visible-span" data-each="0.05">(Partnership)</h2><span class="c-heading-section__line"></span>
+                    <h2 class="c-heading-section__title" data-each="0.05">(Partnership)</h2><span class="c-heading-section__line"></span>
                 </div>
             </div>
             <div class="p-top-partnership__body js-visible u-mask-block">
@@ -191,13 +191,13 @@
         <div class="l-container">
             <div class="p-top-voice__head">
                 <div class="c-heading-section js-visible">
-                    <h2 class="c-heading-section__title js-split-text js-visible-span" data-each="0.05">(Voice)</h2><span class="c-heading-section__line"></span>
+                    <h2 class="c-heading-section__title" data-each="0.05">(Voice)</h2><span class="c-heading-section__line"></span>
                 </div>
             </div>
             <div class="p-top-voice__list js-visible u-mask-block">
                 <?php
                 $args = [
-                    'post_type' => 'case',
+                    'post_type' => 'voice',
                     'paged' => 1,
                     'posts_per_page' => 3,
                 ];
@@ -206,7 +206,7 @@
                     <?php get_template_part('template/loop-case') ?>
                 <?php endif; ?>
             </div>
-            <div class="p-top-voice__more js-visible u-mask-block"><a class="c-btn-more" href="<?= home_url() ?>/case/"><span class="c-btn-more__txt"><span class="js-clone">MORE</span></span><i class="c-btn-more__arrow">
+            <div class="p-top-voice__more js-visible u-mask-block"><a class="c-btn-more" href="<?= home_url() ?>/voice/"><span class="c-btn-more__txt"><span class="js-clone">MORE</span></span><i class="c-btn-more__arrow">
                         <svg width="40" height="40"><use href="#ico-arrow"></use></svg></i></a></div>
         </div>
     </section>

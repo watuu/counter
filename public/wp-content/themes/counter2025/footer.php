@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="c-btn-footer" href="<?= home_url() ?>/case/">
+                        <a class="c-btn-footer" href="<?= home_url() ?>/voice/">
                             <span class="c-btn-footer__txt"><span class="js-clone">VOICE</span></span><i class="c-btn-footer__arrow"><svg width="40" height="40"><use href="#ico-arrow"></use></svg></i>
                         </a>
                     </li>

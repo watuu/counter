@@ -6,7 +6,7 @@
                 <li><a class="c-btn-round" href="<?= home_url() ?>/"><span class="c-btn-round__txt"><span class="js-clone">サイトTOP</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/company/"><span class="c-btn-round__txt"><span class="js-clone">企業情報</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/creative-case/"><span class="c-btn-round__txt"><span class="js-clone">制作実績</span></span></a></li>
-                <li><a class="c-btn-round" href="<?= home_url() ?>/case/"><span class="c-btn-round__txt"><span class="js-clone">お客様成功事例</span></span></a></li>
+                <li><a class="c-btn-round" href="<?= home_url() ?>/voice/"><span class="c-btn-round__txt"><span class="js-clone">お客様成功事例</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/counter-media/"><span class="c-btn-round__txt"><span class="js-clone">ブログ</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/news/"><span class="c-btn-round__txt"><span class="js-clone">ニュース</span></span></a></li>
                 <li><a class="c-btn-round" href="<?= home_url() ?>/download/"><span class="c-btn-round__txt"><span class="js-clone">資料請求</span></span></a></li>

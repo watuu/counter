@@ -4,6 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GUI } from "lil-gui";
 
 export default class GridViewer {
+    private isActive = true;
     private container: HTMLElement | null = null;
     private renderer!: THREE.WebGLRenderer;
     private camera!: THREE.OrthographicCamera;
@@ -72,6 +73,8 @@ export default class GridViewer {
 
         // Event
         window.addEventListener("resize", this.handleResize);
+
+        this.setupObserver();
     }
 
     private initGUI() {
@@ -289,6 +292,7 @@ export default class GridViewer {
     private animate(clock: THREE.Clock) {
         const loop = () => {
             requestAnimationFrame(loop);
+            if (!this.isActive) return;
             const time = clock.getElapsedTime();
             this.shaderMaterials.forEach((m) => (m.uniforms.uTime.value = time));
 
@@ -327,5 +331,15 @@ export default class GridViewer {
         if (this.container && this.renderer.domElement.parentNode === this.container) {
             this.container.removeChild(this.renderer.domElement);
         }
+    }
+
+    private setupObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                this.isActive = entry.isIntersecting;
+            });
+        });
+
+        observer.observe(this.container);
     }
 }

@@ -13,7 +13,7 @@
 	height: calc(100vh - #{160/16+rem});
 	overflow: hidden;
 	@include config.sp {
-		max-height: 800/16+rem;
+		min-height: 480/16+rem;
 	}
 	@include config.pc {
 		height: 100vh;
@@ -178,8 +178,10 @@ $interval: 0.08;
 		margin-top: 0;
 		position: absolute;
 		width: 244/16+rem;
-		top: 204/16+rem;
-		left: calc(100% - #{114/16+rem});
+		//top: 204/16+rem;
+		top: calc(50% - #{240/16+rem});
+		//left: calc(100% - #{114/16+rem});
+		left: calc(100% - #{100/16+rem});
 		transform: rotate(90deg);
 		transform-origin: left top;
 		//white-space: nowrap;
@@ -202,7 +204,7 @@ $interval: 0.08;
 		margin-top: 0;
 		position: absolute;
 		right: 24/16+rem;
-		bottom: 24/16+rem;
+		bottom: 38/16+rem;
 		font-size: 25/16+rem;
 		letter-spacing: var(--letter-spacing-ja);
 	}
