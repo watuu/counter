@@ -628,6 +628,7 @@ get_header();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+<script src="<?= home_url() ?>/wp-includes/js/jquery/jquery.min.js"></script>
 <script src="<?= get_stylesheet_directory_uri() ?>/assets2024/js/scripts.js"></script>
 <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 <?php

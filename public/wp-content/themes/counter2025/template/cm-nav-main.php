@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="cm-nav-main-contents-item">
-                    <button class="c-btn-nav-heading js-accordion"><span class="c-btn-nav-heading__txt">Casestudy</span><i class="c-btn-nav-heading__status"></i></button>
+                    <button class="c-btn-nav-heading js-accordion"><span class="c-btn-nav-heading__txt">Creative Work</span><i class="c-btn-nav-heading__status"></i></button>
                     <div class="cm-nav-main-contents-item__body">
                         <div class="cm-nav-main-contents-item__category">
                             <h3 class="cm-nav-main-contents-item__sub">Web制作</h3>
